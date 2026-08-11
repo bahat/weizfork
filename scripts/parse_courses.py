@@ -203,6 +203,22 @@ def detect_year_and_field(soup):
     return year, field
 
 
+def detect_pagination(soup):
+    """Look for Oracle APEX's 'row(s) X - Y of Z' pagination footer. Returns
+    (shown, total) or (None, None) if not found. If shown < total, the saved
+    page is missing rows — the report paginates via AJAX, so View Page Source
+    on a later page won't show them; see README for how to grab them."""
+    span = soup.find("span", class_="fielddata")
+    if not span:
+        return None, None
+    text = span.get_text(strip=True)
+    m = re.search(r"row\(s\)\s*(\d+)\s*-\s*(\d+)\s*of\s*(\d+)", text)
+    if not m:
+        return None, None
+    shown_end, total = int(m.group(2)), int(m.group(3))
+    return shown_end, total
+
+
 if __name__ == "__main__":
     html_path = sys.argv[1] if len(sys.argv) > 1 else "/home/claude/source_page.html"
     out_path = sys.argv[2] if len(sys.argv) > 2 else "/home/claude/courses.json"
@@ -222,3 +238,17 @@ if __name__ == "__main__":
         json.dump(courses, f, ensure_ascii=False, indent=2)
 
     print(f"Parsed {len(courses)} courses (field={field_label}, year={year}) -> {out_path}")
+
+    shown_end, total = detect_pagination(soup)
+    if total is not None and shown_end < total:
+        missing = total - shown_end
+        print(
+            f"\n⚠  This page only shows {shown_end} of {total} courses — "
+            f"{missing} more are on the next page(s).\n"
+            f"   Oracle APEX loads extra pages via AJAX, so 'View Page Source' after\n"
+            f"   clicking Next won't capture them. Instead: click Next in the browser,\n"
+            f"   then right-click the results table -> Inspect -> right-click the\n"
+            f"   <table class=\"uReport uReportAlternative\"> element in DevTools ->\n"
+            f"   Copy -> Copy outerHTML, and send that fragment for parsing too.\n"
+            f"   Then merge both files with merge_courses.py."
+        )

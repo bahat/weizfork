@@ -709,7 +709,7 @@ function renderSelected(){
     const pts = getPoints(c);
     div.innerHTML = `
       <div class="row">
-        <span class="title">${c.title}${pts !== null ? `<span class="points-badge">${pts} pts</span>` : ''}${c.isCustom ? `<span class="points-badge">personal</span>` : ''}</span>
+        <span class="title">${c.title}${c.year ? `<span class="points-badge">${c.year}</span>` : ''}${pts !== null ? `<span class="points-badge">${pts} pts</span>` : ''}${c.isCustom ? `<span class="points-badge">personal</span>` : ''}</span>
         <button class="remove" title="Remove">×</button>
       </div>
       <div class="meta">${c.semester} · ${(c.lecturers||[])[0] || ''}</div>

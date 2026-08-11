@@ -137,6 +137,8 @@
   .review-head{display:flex; align-items:center; gap:8px; margin-bottom:2px;}
   .review-head .stars{color:var(--ochre); font-size:13px; letter-spacing:1px;}
   .review-head .reviewer{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-soft);}
+  .review-delete-btn{margin-left:auto; background:none; border:none; cursor:pointer; font-size:12px; opacity:0.6; padding:0 2px;}
+  .review-delete-btn:hover{opacity:1;}
   .review-text{font-size:13px; line-height:1.4;}
   .no-reviews{font-size:12.5px; color:var(--ink-soft); font-style:italic; margin:8px 0;}
   .review-form{margin-top:14px; display:flex; flex-direction:column; gap:8px;}
@@ -434,8 +436,9 @@ let currentUser = null;         // Firebase uid once signed in
 let currentUserName = null;
 let currentUserPicture = null;
 let currentUserEmail = null;
-let pointsMap = {};   // courseKey -> numeric points (shared catalog data, from Firestore)
+let pointsMap = {};   // courseKey -> numeric points (shared catalog data, admin-edited, from Firestore)
 let endDateMap = {};  // courseKey -> "dd/mm/yyyy" real semester end date (shared, from Firestore)
+let personalPointsMap = {}; // courseKey -> this user's own point record for a catalog course they added
 
 /* ---------- Firestore-backed persistence ----------
    Personal data (your selected schedule) lives at users/{uid}.
@@ -457,6 +460,7 @@ async function loadPersisted(){
   }catch(e){ console.error('could not load courseMeta', e); }
 
   // personal schedule, only available once signed in
+  personalPointsMap = {};
   if(currentUser){
     try{
       const doc = await db.collection('users').doc(currentUser).get();
@@ -468,6 +472,7 @@ async function loadPersisted(){
       });
       // personal custom events (never shared) are stored in full, not as ids
       (data.customEvents || []).forEach(ev => selected.set(courseKey(ev), ev));
+      personalPointsMap = data.personalPoints || {};
     }catch(e){ console.error('could not load saved schedule', e); }
   }
 }
@@ -492,7 +497,7 @@ function deleteCustomEvent(c){
   renderAll();
 }
 async function setPoints(c, value){
-  if(!currentUser){ alert('Sign in first to edit shared course info.'); return; }
+  if(currentUserEmail !== OWNER_EMAIL){ alert('Only the admin can edit the shared course points.'); return; }
   const k = courseKey(c);
   const num = (value === '' || value === null || isNaN(value)) ? null : Number(value);
   if(num === null) delete pointsMap[k]; else pointsMap[k] = num;
@@ -502,9 +507,26 @@ async function setPoints(c, value){
 function getPoints(c){
   const v = pointsMap[courseKey(c)];
   if(v !== undefined && v !== null) return v;
-  // Firestore (shared, user-editable) wins when present; otherwise fall back
+  // Firestore (shared, admin-edited) wins when present; otherwise fall back
   // to whatever build_courses.py baked into courses.json from the scrape.
   return (c.points === undefined || c.points === null) ? null : c.points;
+}
+async function setMyPoints(c, value){
+  if(!currentUser){ alert('Sign in first to record your own points for this course.'); return; }
+  const k = courseKey(c);
+  const num = (value === '' || value === null || isNaN(value)) ? null : Number(value);
+  if(num === null) delete personalPointsMap[k]; else personalPointsMap[k] = num;
+  try{ await db.collection('users').doc(currentUser).set({ personalPoints: personalPointsMap }, { merge: true }); }
+  catch(e){ console.error('could not save personal points', e); }
+}
+function getEffectivePoints(c){
+  // Custom events carry their own points directly; for catalog courses each
+  // user's own point record (if they've set one) wins over the shared value
+  // for their own schedule/totals — it never changes what other users see.
+  if(c.isCustom) return (c.points === undefined || c.points === null) ? null : c.points;
+  const mine = personalPointsMap[courseKey(c)];
+  if(mine !== undefined && mine !== null) return mine;
+  return getPoints(c);
 }
 function getEndDate(c){
   const v = endDateMap[courseKey(c)];
@@ -546,7 +568,7 @@ async function loadReviews(courseKey, forceRefresh){
   if(!forceRefresh && reviewsCache[courseKey]) return reviewsCache[courseKey];
   try{
     const snap = await db.collection('reviews').where('courseKey', '==', courseKey).get();
-    reviewsCache[courseKey] = snap.docs.map(d => d.data()).sort((a,b) => (a.ts||0) - (b.ts||0));
+    reviewsCache[courseKey] = snap.docs.map(d => ({ id: d.id, ...d.data() })).sort((a,b) => (a.ts||0) - (b.ts||0));
   }catch(e){
     console.error('could not load reviews', e);
     reviewsCache[courseKey] = [];
@@ -569,6 +591,13 @@ async function addReview(course, rating, text){
   }catch(e){ console.error('review save failed', e); return reviewsCache[key] || []; }
   const arr = await loadReviews(key, true);
   return arr;
+}
+
+async function deleteReview(reviewId){
+  if(currentUserEmail !== OWNER_EMAIL){ alert('Only the admin can delete reviews.'); return false; }
+  if(!confirm('Delete this review?')) return false;
+  try{ await db.collection('reviews').doc(reviewId).delete(); return true; }
+  catch(e){ console.error('could not delete review', e); alert('Could not delete review.'); return false; }
 }
 
 function avgRating(arr){
@@ -735,7 +764,7 @@ function renderSelected(){
     const div = document.createElement('div');
     div.className = 'selected-item';
     div.style.borderLeft = `4px solid ${deptColorMap[c.offered_by || 'Other'] || '#1F6F5C'}`;
-    const pts = getPoints(c);
+    const pts = getEffectivePoints(c);
     div.innerHTML = `
       <div class="row">
         <span class="title">${c.title}${c.year ? `<span class="points-badge">${c.year}</span>` : ''}${pts !== null ? `<span class="points-badge">${pts} pts</span>` : ''}${c.isCustom ? `<span class="points-badge">personal</span>` : ''}</span>
@@ -764,11 +793,11 @@ function renderTotals(items){
   const totalsBox = document.getElementById('totalsBox');
   const sumFor = (sem) => items
     .filter(c => c.semester === sem || c.semester === 'Full Year')
-    .reduce((sum, c) => { const p = getPoints(c); return sum + (p !== null ? p : 0); }, 0);
+    .reduce((sum, c) => { const p = getEffectivePoints(c); return sum + (p !== null ? p : 0); }, 0);
   const sem1 = sumFor('1st');
   const sem2 = sumFor('2nd');
-  const combined = items.reduce((sum, c) => { const p = getPoints(c); return sum + (p !== null ? p : 0); }, 0);
-  const missing = items.filter(c => getPoints(c) === null).length;
+  const combined = items.reduce((sum, c) => { const p = getEffectivePoints(c); return sum + (p !== null ? p : 0); }, 0);
+  const missing = items.filter(c => getEffectivePoints(c) === null).length;
 
   totalsBox.innerHTML = `
     <div class="row"><span class="label">Semester 1 total</span><span class="val">${sem1} pts</span></div>
@@ -892,8 +921,54 @@ function openCourseModal(c){
       `).join('') + '</ul>'
     : '<dd>No fixed weekly time listed.</dd>';
 
-  const currentPts = getPoints(c);
   const realEnd = getEndDate(c);
+  const isOwnerUser = currentUserEmail === OWNER_EMAIL;
+  const isAdded = selected.has(courseKey(c));
+
+  let pointsHtml;
+  if(c.isCustom){
+    const val = (c.points === undefined || c.points === null) ? '' : c.points;
+    pointsHtml = `
+      <dt>Points / credits</dt>
+      <dd>
+        <div class="points-edit">
+          <input type="number" step="0.5" min="0" id="pointsInput" value="${val}" placeholder="e.g. 3">
+          <button id="savePointsBtn">Save</button>
+        </div>
+      </dd>
+    `;
+  } else if(isOwnerUser){
+    const currentPts = getPoints(c);
+    pointsHtml = `
+      <dt>Points / credits <span class="shared-note">(shared — visible to everyone)</span></dt>
+      <dd>
+        <div class="points-edit">
+          <input type="number" step="0.5" min="0" id="pointsInput" value="${currentPts !== null ? currentPts : ''}" placeholder="e.g. 3">
+          <button id="savePointsBtn">Save</button>
+        </div>
+        <div class="points-note">Not on the course list page. Enter it manually, or use the bulk "fetch-points.js" console script to pull points + end dates for every course at once.</div>
+      </dd>
+    `;
+  } else {
+    const sharedPts = getPoints(c);
+    const myPts = personalPointsMap[courseKey(c)];
+    pointsHtml = `
+      <dt>Points / credits</dt>
+      <dd>
+        <div class="points-note" style="margin-top:0; font-style:normal;">${sharedPts !== null ? `Catalog value: ${sharedPts} pts` : 'Not set by the admin yet.'}</div>
+        ${isAdded ? `
+          <div class="points-edit">
+            <input type="number" step="0.5" min="0" id="myPointsInput" value="${myPts !== undefined && myPts !== null ? myPts : ''}" placeholder="e.g. 3">
+            <button id="saveMyPointsBtn">Save my points</button>
+          </div>
+          <div class="points-note">Only affects your own schedule total — doesn't change the shared value.</div>
+        ` : `
+          <div class="points-note">Add this course to your schedule to record your own points for it.</div>
+        `}
+      </dd>
+    `;
+  }
+
   box.innerHTML = `
     <button class="close-btn" id="modalCloseBtn">&times;</button>
     <h3>${c.title}</h3>
@@ -907,14 +982,7 @@ function openCourseModal(c){
       <dd>${c.first_lecture || '—'}</dd>
       <dt>Last lecture</dt>
       <dd>${realEnd ? realEnd : '— (ICS export estimates ~14 weeks from first lecture)'}</dd>
-      <dt>Points / credits</dt>
-      <dd>
-        <div class="points-edit">
-          <input type="number" step="0.5" min="0" id="pointsInput" value="${currentPts !== null ? currentPts : ''}" placeholder="e.g. 3">
-          <button id="savePointsBtn">Save</button>
-        </div>
-        <div class="points-note">Not on the course list page. Enter it manually, or use the bulk "fetch-points.js" console script to pull points + end dates for every course at once.</div>
-      </dd>
+      ${pointsHtml}
       <dt>Schedule</dt>
       ${sessionsHtml}
     </dl>
@@ -943,11 +1011,26 @@ function openCourseModal(c){
   `;
   overlay.classList.remove('hidden');
   document.getElementById('modalCloseBtn').addEventListener('click', closeCourseModal);
-  document.getElementById('savePointsBtn').addEventListener('click', async () => {
-    await setPoints(c, document.getElementById('pointsInput').value);
-    renderCourseList();
-    renderSelected();
-  });
+  if(c.isCustom){
+    document.getElementById('savePointsBtn').addEventListener('click', async () => {
+      const val = document.getElementById('pointsInput').value;
+      c.points = (val === '' || isNaN(val)) ? null : Number(val);
+      await persistCustomEvents();
+      renderSelected();
+      renderCalendar();
+    });
+  } else if(isOwnerUser){
+    document.getElementById('savePointsBtn').addEventListener('click', async () => {
+      await setPoints(c, document.getElementById('pointsInput').value);
+      renderCourseList();
+      renderSelected();
+    });
+  } else if(isAdded){
+    document.getElementById('saveMyPointsBtn').addEventListener('click', async () => {
+      await setMyPoints(c, document.getElementById('myPointsInput').value);
+      renderSelected();
+    });
+  }
 
   if(!c.isCustom){
     renderReviewsInto(c, false);
@@ -1102,15 +1185,27 @@ async function renderReviewsInto(c, forceRefresh){
     return;
   }
   const avg = avgRating(reviews);
+  const isOwnerUser = currentUserEmail === OWNER_EMAIL;
   listEl.innerHTML = `
     <div class="avg-rating">${starString(avg)} <span>${avg} / 5 · ${reviews.length} review${reviews.length>1?'s':''}</span></div>
     ${reviews.slice().reverse().map(r => `
       <div class="review-item">
-        <div class="review-head"><span class="stars">${starString(r.rating)}</span><span class="reviewer">Anonymous</span></div>
+        <div class="review-head">
+          <span class="stars">${starString(r.rating)}</span><span class="reviewer">Anonymous</span>
+          ${isOwnerUser ? `<button class="review-delete-btn" data-id="${r.id}" title="Delete review">🗑</button>` : ''}
+        </div>
         <div class="review-text">${escapeHtml(r.text)}</div>
       </div>
     `).join('')}
   `;
+  if(isOwnerUser){
+    listEl.querySelectorAll('.review-delete-btn').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const ok = await deleteReview(btn.dataset.id);
+        if(ok) renderReviewsInto(c, true);
+      });
+    });
+  }
 }
 function escapeHtml(s){
   const d = document.createElement('div');

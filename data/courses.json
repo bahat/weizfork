@@ -111,12 +111,11 @@
     "sessions": [
       {
         "type": "lecture",
-        "day_name": null,
-        "day_index": null,
-        "start": null,
-        "end": null,
-        "location": null,
-        "note": "09:00 - 13:00, WSoS, Rm A"
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "09:00",
+        "end": "13:00",
+        "location": "WSoS, Rm A"
       }
     ],
     "first_lecture": "11/10/2026",
@@ -933,12 +932,11 @@
     "sessions": [
       {
         "type": "lecture",
-        "day_name": null,
-        "day_index": null,
-        "start": null,
-        "end": null,
-        "location": null,
-        "note": "09:00 - 16:00, Stone, Zacks Meeting Rm"
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "09:00",
+        "end": "16:00",
+        "location": "Stone, Zacks Meeting Rm"
       }
     ],
     "first_lecture": "21/02/2027",
@@ -2258,12 +2256,11 @@
     "sessions": [
       {
         "type": "lecture",
-        "day_name": null,
-        "day_index": null,
-        "start": null,
-        "end": null,
-        "location": null,
-        "note": "13:00 - 16:30"
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "13:00",
+        "end": "16:30",
+        "location": null
       }
     ],
     "first_lecture": "02/02/2027",
@@ -2466,12 +2463,21 @@
     "sessions": [
       {
         "type": "lecture",
-        "day_name": null,
-        "day_index": null,
-        "start": null,
-        "end": null,
-        "location": null,
-        "note": "14:00 - 16:00, WSoS, Rm 3"
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "14:00",
+        "end": "16:00",
+        "location": "WSoS Rm 3",
+        "note": null
+      },
+      {
+        "type": "lecture",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "14:00",
+        "end": "16:00",
+        "location": "WSoS Rm 3",
+        "note": null
       }
     ],
     "first_lecture": "13/06/2027",
@@ -2500,12 +2506,11 @@
     "sessions": [
       {
         "type": "lecture",
-        "day_name": null,
-        "day_index": null,
-        "start": null,
-        "end": null,
-        "location": null,
-        "note": "09:00 - 15:00"
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "09:00",
+        "end": "15:00",
+        "location": null
       }
     ],
     "first_lecture": "16/05/2027",
@@ -2552,12 +2557,11 @@
     "sessions": [
       {
         "type": "lecture",
-        "day_name": null,
-        "day_index": null,
-        "start": null,
-        "end": null,
-        "location": null,
-        "note": "11:30 - 13:00, Benoziyo, room 290c"
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "11:30",
+        "end": "13:00",
+        "location": "Benoziyo, room 290c"
       }
     ],
     "first_lecture": "20/12/2026",
@@ -3035,12 +3039,11 @@
     "sessions": [
       {
         "type": "lecture",
-        "day_name": null,
-        "day_index": null,
-        "start": null,
-        "end": null,
-        "location": null,
-        "note": "10:15 - 11:45, WSoS, Rm  B"
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "10:15",
+        "end": "11:45",
+        "location": "WSoS, Rm  B"
       }
     ],
     "first_lecture": "01/11/2026",
@@ -3111,12 +3114,11 @@
     "sessions": [
       {
         "type": "lecture",
-        "day_name": null,
-        "day_index": null,
-        "start": null,
-        "end": null,
-        "location": null,
-        "note": "13:00 - 15:00, Benoziyo, room 690"
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "13:00",
+        "end": "15:00",
+        "location": "Benoziyo, room 690"
       }
     ],
     "first_lecture": "07/01/2027",
@@ -3433,12 +3435,11 @@
     "sessions": [
       {
         "type": "lecture",
-        "day_name": null,
-        "day_index": null,
-        "start": null,
-        "end": null,
-        "location": null,
-        "note": "09:00 - 13:00"
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "09:00",
+        "end": "13:00",
+        "location": null
       }
     ],
     "first_lecture": "01/11/2026",
@@ -3587,12 +3588,11 @@
     "sessions": [
       {
         "type": "lecture",
-        "day_name": null,
-        "day_index": null,
-        "start": null,
-        "end": null,
-        "location": null,
-        "note": "09:00 - 16:00, De Picciotto, Room 232"
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "09:00",
+        "end": "16:00",
+        "location": "De Picciotto, Room 232"
       }
     ],
     "first_lecture": "04/07/2027",
@@ -3619,12 +3619,11 @@
     "sessions": [
       {
         "type": "lecture",
-        "day_name": null,
-        "day_index": null,
-        "start": null,
-        "end": null,
-        "location": null,
-        "note": "09:00 - 16:00, De Picciotto, Room 232"
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "09:00",
+        "end": "16:00",
+        "location": "De Picciotto, Room 232"
       }
     ],
     "first_lecture": "21/02/2027",
@@ -4127,12 +4126,11 @@
     "sessions": [
       {
         "type": "lecture",
-        "day_name": null,
-        "day_index": null,
-        "start": null,
-        "end": null,
-        "location": null,
-        "note": "09:30 - 17:00"
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "09:30",
+        "end": "17:00",
+        "location": null
       }
     ],
     "first_lecture": "21/02/2027",
@@ -4210,12 +4208,11 @@
     "sessions": [
       {
         "type": "lecture",
-        "day_name": null,
-        "day_index": null,
-        "start": null,
-        "end": null,
-        "location": null,
-        "note": "14:00 - 16:00, Science Teaching Lab 1"
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "14:00",
+        "end": "16:00",
+        "location": "Science Teaching Lab 1"
       }
     ],
     "first_lecture": "08/03/2027",
@@ -8297,12 +8294,11 @@
     "sessions": [
       {
         "type": "lecture",
-        "day_name": null,
-        "day_index": null,
-        "start": null,
-        "end": null,
-        "location": null,
-        "note": "08:30 - 14:00"
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "08:30",
+        "end": "14:00",
+        "location": null
       }
     ],
     "first_lecture": "19/10/2025",
@@ -10403,12 +10399,11 @@
     "sessions": [
       {
         "type": "lecture",
-        "day_name": null,
-        "day_index": null,
-        "start": null,
-        "end": null,
-        "location": null,
-        "note": "09:00 - 12:00"
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "09:00",
+        "end": "12:00",
+        "location": null
       }
     ],
     "first_lecture": "18/01/2026",
@@ -10733,12 +10728,11 @@
     "sessions": [
       {
         "type": "lecture",
-        "day_name": null,
-        "day_index": null,
-        "start": null,
-        "end": null,
-        "location": null,
-        "note": "13:00 - 17:00"
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "13:00",
+        "end": "17:00",
+        "location": null
       }
     ],
     "first_lecture": "15/02/2026",
@@ -10847,12 +10841,11 @@
     "sessions": [
       {
         "type": "lecture",
-        "day_name": null,
-        "day_index": null,
-        "start": null,
-        "end": null,
-        "location": null,
-        "note": "09:00 - 16:00"
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "09:00",
+        "end": "16:00",
+        "location": null
       }
     ],
     "first_lecture": "26/04/2026",
@@ -10879,12 +10872,11 @@
     "sessions": [
       {
         "type": "lecture",
-        "day_name": null,
-        "day_index": null,
-        "start": null,
-        "end": null,
-        "location": null,
-        "note": "09:30 - 15:30, Benoziyo, room 690"
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "09:30",
+        "end": "15:30",
+        "location": "Benoziyo, room 690"
       }
     ],
     "first_lecture": "04/01/2026",
@@ -11254,12 +11246,11 @@
     "sessions": [
       {
         "type": "lecture",
-        "day_name": null,
-        "day_index": null,
-        "start": null,
-        "end": null,
-        "location": null,
-        "note": "09:00 - 15:00"
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "09:00",
+        "end": "15:00",
+        "location": null
       }
     ],
     "first_lecture": "10/05/2026",
@@ -11788,12 +11779,11 @@
     "sessions": [
       {
         "type": "lecture",
-        "day_name": null,
-        "day_index": null,
-        "start": null,
-        "end": null,
-        "location": null,
-        "note": "10:00 - 12:00, Benoziyo, room 690"
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "10:00",
+        "end": "12:00",
+        "location": "Benoziyo, room 690"
       }
     ],
     "first_lecture": "27/10/2025",
@@ -12309,12 +12299,11 @@
     "sessions": [
       {
         "type": "lecture",
-        "day_name": null,
-        "day_index": null,
-        "start": null,
-        "end": null,
-        "location": null,
-        "note": "09:00 - 16:00, De Picciotto, Room 232"
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "09:00",
+        "end": "16:00",
+        "location": "De Picciotto, Room 232"
       }
     ],
     "first_lecture": "26/07/2026",
@@ -12341,12 +12330,11 @@
     "sessions": [
       {
         "type": "lecture",
-        "day_name": null,
-        "day_index": null,
-        "start": null,
-        "end": null,
-        "location": null,
-        "note": "09:00 - 16:00, De Picciotto, Room 232"
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "09:00",
+        "end": "16:00",
+        "location": "De Picciotto, Room 232"
       }
     ],
     "first_lecture": "12/07/2026",
@@ -12374,12 +12362,11 @@
     "sessions": [
       {
         "type": "lecture",
-        "day_name": null,
-        "day_index": null,
-        "start": null,
-        "end": null,
-        "location": null,
-        "note": "10:00 - 15:00"
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "10:00",
+        "end": "15:00",
+        "location": null
       }
     ],
     "first_lecture": "10/05/2026",
@@ -12810,12 +12797,11 @@
     "sessions": [
       {
         "type": "lecture",
-        "day_name": null,
-        "day_index": null,
-        "start": null,
-        "end": null,
-        "location": null,
-        "note": "09:00 - 14:00"
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "09:00",
+        "end": "14:00",
+        "location": null
       }
     ],
     "first_lecture": "28/12/2025",
@@ -12873,12 +12859,11 @@
     "sessions": [
       {
         "type": "lecture",
-        "day_name": null,
-        "day_index": null,
-        "start": null,
-        "end": null,
-        "location": null,
-        "note": "09:30 - 17:00"
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "09:30",
+        "end": "17:00",
+        "location": null
       }
     ],
     "first_lecture": "09/08/2026",
@@ -13089,12 +13074,11 @@
     "sessions": [
       {
         "type": "lecture",
-        "day_name": null,
-        "day_index": null,
-        "start": null,
-        "end": null,
-        "location": null,
-        "note": "14:00 - 16:00, Science Teaching Lab 1"
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "14:00",
+        "end": "16:00",
+        "location": "Science Teaching Lab 1"
       }
     ],
     "first_lecture": "13/04/2026",
@@ -13352,12 +13336,11 @@
     "sessions": [
       {
         "type": "lecture",
-        "day_name": null,
-        "day_index": null,
-        "start": null,
-        "end": null,
-        "location": null,
-        "note": "09:00 - 17:00"
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "09:00",
+        "end": "17:00",
+        "location": null
       }
     ],
     "first_lecture": "31/05/2026",
@@ -13570,12 +13553,11 @@
     "sessions": [
       {
         "type": "lecture",
-        "day_name": null,
-        "day_index": null,
-        "start": null,
-        "end": null,
-        "location": null,
-        "note": "16:00 - 19:00, Belfer, Botnar Auditorium"
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "16:00",
+        "end": "19:00",
+        "location": "Belfer, Botnar Auditorium"
       }
     ],
     "first_lecture": "30/11/2025",
@@ -16216,12 +16198,11 @@
     "sessions": [
       {
         "type": "lecture",
-        "day_name": null,
-        "day_index": null,
-        "start": null,
-        "end": null,
-        "location": null,
-        "note": "09:00 - 17:00, Science Teaching Lab 1"
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "09:00",
+        "end": "17:00",
+        "location": "Science Teaching Lab 1"
       }
     ],
     "first_lecture": "12/07/2026",

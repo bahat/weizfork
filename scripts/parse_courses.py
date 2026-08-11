@@ -1,12 +1,64 @@
 import re
 import json
 import sys
+from datetime import datetime
 from bs4 import BeautifulSoup
 
 DAY_MAP = {
     "Sunday": 0, "Monday": 1, "Tuesday": 2, "Wednesday": 3,
     "Thursday": 4, "Friday": 5, "Saturday": 6,
 }
+DAY_NAME_BY_INDEX = {v: k for k, v in DAY_MAP.items()}
+
+_TIME_ONLY_RE = re.compile(
+    r"^(?P<start>\d{1,2}:\d{2})\s*-\s*(?P<end>\d{1,2}:\d{2})\s*(?:,\s*(?P<loc>.*))?$"
+)
+
+
+def weekday_from_dmy(dmy_str):
+    """dd/mm/yyyy -> (day_index, day_name) using the same Sunday=0..Saturday=6
+    scheme as DAY_MAP, or (None, None) if the date can't be parsed."""
+    try:
+        d, m, y = (int(x) for x in dmy_str.split("/"))
+        date = datetime(y, m, d)
+    except (ValueError, AttributeError, TypeError):
+        return None, None
+    idx = (date.weekday() + 1) % 7  # Python: Mon=0..Sun=6 -> ours: Sun=0..Sat=6
+    return idx, DAY_NAME_BY_INDEX[idx]
+
+
+def fill_computable_days(courses):
+    """Some PLACE cells give a time (+ optional location) with no weekday at
+    all, e.g. "09:00 - 13:00, WSoS, Rm A" — parse_place_cell can't place that
+    on the calendar since it never learns which day. But a course's sessions
+    always recur on the same weekday as its first_lecture date, so that
+    weekday can be computed instead of left blank. Only genuinely irregular
+    sessions (multi-day blocks, free-text schedule notes that don't match a
+    plain time range) are left with day_index=None, so the UI can surface the
+    raw note instead of guessing wrong. Mutates courses in place; returns the
+    number of sessions fixed."""
+    fixed = 0
+    for c in courses:
+        first_lecture = c.get("first_lecture")
+        if not first_lecture:
+            continue
+        for s in c.get("sessions", []):
+            if s.get("day_index") is not None or not s.get("note"):
+                continue
+            m = _TIME_ONLY_RE.match(s["note"])
+            if not m:
+                continue
+            idx, name = weekday_from_dmy(first_lecture)
+            if idx is None:
+                continue
+            s["day_name"] = name
+            s["day_index"] = idx
+            s["start"] = m.group("start")
+            s["end"] = m.group("end")
+            s["location"] = (m.group("loc") or "").strip() or None
+            s.pop("note", None)
+            fixed += 1
+    return fixed
 
 def parse_place_cell(td):
     """
@@ -234,10 +286,13 @@ if __name__ == "__main__":
     year = override_year or detected_year or 2027
 
     courses = parse_courses(html_path, field_label=field_label, year=year)
+    fixed = fill_computable_days(courses)
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(courses, f, ensure_ascii=False, indent=2)
 
     print(f"Parsed {len(courses)} courses (field={field_label}, year={year}) -> {out_path}")
+    if fixed:
+        print(f"Computed the weekday from first_lecture for {fixed} session(s) that only listed a time.")
 
     shown_end, total = detect_pagination(soup)
     if total is not None and shown_end < total:

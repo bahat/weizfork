@@ -119,6 +119,7 @@
   .modal-box .sessions-list li{padding:5px 0; border-bottom:1px dashed var(--border); font-size:13px;}
   .modal-box .sessions-list li:last-child{border-bottom:none;}
   .modal-box .sessions-list .stype{font-family:'IBM Plex Mono',monospace; font-size:10px; text-transform:uppercase; color:var(--teal); margin-right:6px;}
+  .modal-box .sessions-list .session-unparsed{color:var(--brick);}
   .modal-box .modal-link{
     display:inline-block; margin-top:18px; padding:8px 14px; background:var(--teal); color:#fff; text-decoration:none;
     border-radius:var(--radius); font-family:'IBM Plex Mono',monospace; font-size:12.5px;
@@ -278,6 +279,11 @@
   .export-item{display:flex; align-items:center; gap:8px; padding:6px 2px; font-size:13px; border-bottom:1px dashed var(--border);}
   .export-item:last-child{border-bottom:none;}
   .export-item input[type="checkbox"]{width:15px; height:15px; flex-shrink:0; accent-color:var(--teal);}
+  .export-warn-badge{color:var(--brick); border-color:var(--brick);}
+  .export-warning{
+    margin-top:10px; padding:8px 10px; background:#FBEEEA; border:1px solid var(--brick); border-radius:var(--radius);
+    font-size:12px; color:var(--brick); display:flex; flex-direction:column; gap:6px;
+  }
 
   .totals-box{
     margin-top:14px; padding:10px 12px; background:var(--card-bg); border:1px solid var(--border); border-radius:var(--radius);
@@ -611,6 +617,12 @@ function getActiveYear(){
 function courseAppliesToYear(course, year){
   return String(course.year) === String(year);
 }
+function unparsedSessionText(s){
+  return s.note || 'Time not listed clearly — check the official course page';
+}
+function hasUnparsedSession(c){
+  return (c.sessions||[]).some(s => s.day_index === null);
+}
 
 /* ---------- rendering ---------- */
 function renderLegend(){
@@ -673,7 +685,10 @@ function renderCourseList(){
     div.className = 'course-card' + (isAdded ? ' added' : '');
     div.style.setProperty('--dept-color', deptColorMap[c.offered_by || 'Other'] || '#1F6F5C');
     const timeStr = c.sessions.length
-      ? c.sessions.map(s => `${(s.day_name||'?').slice(0,3)} ${s.start||'?'}–${s.end||'?'}`).join(' · ')
+      ? c.sessions.map(s => s.day_index !== null
+          ? `${(s.day_name||'?').slice(0,3)} ${s.start||'?'}–${s.end||'?'}`
+          : `⚠ ${unparsedSessionText(s)}`
+        ).join(' · ')
       : 'No fixed time';
     const pts = getPoints(c);
     const ptsBadge = pts !== null ? `<span class="points-badge">${pts} pts</span>` : '';
@@ -870,8 +885,10 @@ function openCourseModal(c){
     .map(f => `<span class="dept-tag" style="background:${deptColorMap[f] || color}">${f}</span>`).join('');
 
   const sessionsHtml = c.sessions.length
-    ? '<ul class="sessions-list">' + c.sessions.map(s => `
+    ? '<ul class="sessions-list">' + c.sessions.map(s => s.day_index !== null ? `
         <li><span class="stype">${s.type}</span>${s.day_name||'TBA'}, ${s.start||'?'}–${s.end||'?'}${s.location ? ' · '+s.location : ''}</li>
+      ` : `
+        <li class="session-unparsed"><span class="stype">${s.type}</span>⚠ ${unparsedSessionText(s)}</li>
       `).join('') + '</ul>'
     : '<dd>No fixed weekly time listed.</dd>';
 
@@ -1191,12 +1208,23 @@ function openExportModal(){
   const items = [...selected.values()].filter(c => courseAppliesToYear(c, getActiveYear()));
   if(!items.length){ alert(`Add at least one ${getActiveYear()} course first.`); return; }
 
+  const brokenCourses = items.filter(hasUnparsedSession);
+  const warningsHtml = brokenCourses.length ? `
+    <div class="export-warning">
+      ${brokenCourses.map(c => {
+        const allBroken = c.sessions.every(s => s.day_index === null);
+        return `<div>⚠ <strong>${c.title}</strong> ${allBroken ? 'will not be added to the export' : 'is missing one or more sessions in the export'} — its schedule data wasn't parsed properly. Check the official course page or contact your advisor.</div>`;
+      }).join('')}
+    </div>
+  ` : '';
+
   const overlay = document.getElementById('modalOverlay');
   const box = document.getElementById('modalBox');
   box.innerHTML = `
     <button class="close-btn" id="modalCloseBtn">&times;</button>
     <h3>Export to calendar</h3>
     <div class="custom-event-note">Choose which ${getActiveYear()} courses to include in the .ics file.</div>
+    ${warningsHtml}
     <div class="event-form-actions" style="margin-top:10px;">
       <button class="btn" id="exportSelectAllBtn">Select all</button>
       <button class="btn" id="exportSelectNoneBtn">Select none</button>
@@ -1205,7 +1233,7 @@ function openExportModal(){
       ${items.sort((a,b)=>a.title.localeCompare(b.title)).map(c => `
         <label class="export-item">
           <input type="checkbox" class="export-check" data-key="${courseKey(c)}" checked>
-          <span>${c.title} <span class="points-badge">${c.semester}</span></span>
+          <span>${c.title} <span class="points-badge">${c.semester}</span>${hasUnparsedSession(c) ? '<span class="points-badge export-warn-badge">⚠ unparsed</span>' : ''}</span>
         </label>
       `).join('')}
     </div>

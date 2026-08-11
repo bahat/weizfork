@@ -267,8 +267,17 @@
   }
   .event-form textarea{resize:vertical;}
   .event-form .two-col{display:grid; grid-template-columns:1fr 1fr; gap:10px;}
-  .event-form-actions{margin-top:18px;}
+  .event-form-actions{margin-top:18px; display:flex; gap:8px; flex-wrap:wrap;}
   .session-block.custom-event{border-style:dotted;}
+
+  /* --- Export checklist --- */
+  .export-checklist{
+    max-height:280px; overflow-y:auto; margin:12px 0; display:flex; flex-direction:column; gap:2px;
+    border:1px solid var(--border); border-radius:var(--radius); padding:6px 10px;
+  }
+  .export-item{display:flex; align-items:center; gap:8px; padding:6px 2px; font-size:13px; border-bottom:1px dashed var(--border);}
+  .export-item:last-child{border-bottom:none;}
+  .export-item input[type="checkbox"]{width:15px; height:15px; flex-shrink:0; accent-color:var(--teal);}
 
   .totals-box{
     margin-top:14px; padding:10px 12px; background:var(--card-bg); border:1px solid var(--border); border-radius:var(--radius);
@@ -1178,9 +1187,49 @@ function nextWeekday(fromDate, targetDayIdx){
   d.setDate(d.getDate() + diff);
   return d;
 }
-function exportIcs(){
-  const items = [...selected.values()];
-  if(!items.length){ alert('Add at least one course first.'); return; }
+function openExportModal(){
+  const items = [...selected.values()].filter(c => courseAppliesToYear(c, getActiveYear()));
+  if(!items.length){ alert(`Add at least one ${getActiveYear()} course first.`); return; }
+
+  const overlay = document.getElementById('modalOverlay');
+  const box = document.getElementById('modalBox');
+  box.innerHTML = `
+    <button class="close-btn" id="modalCloseBtn">&times;</button>
+    <h3>Export to calendar</h3>
+    <div class="custom-event-note">Choose which ${getActiveYear()} courses to include in the .ics file.</div>
+    <div class="event-form-actions" style="margin-top:10px;">
+      <button class="btn" id="exportSelectAllBtn">Select all</button>
+      <button class="btn" id="exportSelectNoneBtn">Select none</button>
+    </div>
+    <div class="export-checklist" id="exportChecklist">
+      ${items.sort((a,b)=>a.title.localeCompare(b.title)).map(c => `
+        <label class="export-item">
+          <input type="checkbox" class="export-check" data-key="${courseKey(c)}" checked>
+          <span>${c.title} <span class="points-badge">${c.semester}</span></span>
+        </label>
+      `).join('')}
+    </div>
+    <div class="event-form-actions">
+      <button class="btn primary" id="exportConfirmBtn">↓ Export selected (.ics)</button>
+    </div>
+  `;
+  overlay.classList.remove('hidden');
+  document.getElementById('modalCloseBtn').addEventListener('click', closeCourseModal);
+  document.getElementById('exportSelectAllBtn').addEventListener('click', () => {
+    document.querySelectorAll('.export-check').forEach(cb => cb.checked = true);
+  });
+  document.getElementById('exportSelectNoneBtn').addEventListener('click', () => {
+    document.querySelectorAll('.export-check').forEach(cb => cb.checked = false);
+  });
+  document.getElementById('exportConfirmBtn').addEventListener('click', () => {
+    const checkedKeys = new Set([...document.querySelectorAll('.export-check:checked')].map(cb => cb.dataset.key));
+    const chosen = items.filter(c => checkedKeys.has(courseKey(c)));
+    if(!chosen.length){ alert('Check at least one course first.'); return; }
+    exportIcs(chosen);
+    closeCourseModal();
+  });
+}
+function exportIcs(items){
   let ics = 'BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//WSoS Scheduler//EN\r\nCALSCALE:GREGORIAN\r\n';
   const SEMESTER_WEEKS = 14; // approximate semester length
 
@@ -1266,7 +1315,7 @@ document.getElementById('semToggle').addEventListener('click', (e) => {
   renderCalendar();
   renderSelected();
 });
-document.getElementById('exportIcsBtn').addEventListener('click', exportIcs);
+document.getElementById('exportIcsBtn').addEventListener('click', openExportModal);
 document.getElementById('addEventBtn').addEventListener('click', openAddEventModal);
 document.getElementById('supportBtn').addEventListener('click', openSupportModal);
 document.getElementById('clearBtn').addEventListener('click', () => {

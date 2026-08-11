@@ -13,7 +13,11 @@ schedules, shared course points/end-dates, and reviews are backed by Firebase.
 └── scripts/
     ├── parse_courses.py    turns a saved catalog page into courses.json
     ├── merge_courses.py    combines multiple parse_courses.py outputs
+    ├── scrape-pages.js     browser console script: paginates a field/year's
+    │                       search results and fetches those courses' credit
+    │                       points/end-dates, in one run
     └── fetch-points.js     browser console script to bulk-fetch credit points
+                            for the whole already-known catalog at once
 ```
 
 ---
@@ -27,34 +31,43 @@ locally — one page per (Field of study × Academic Year) combination you want 
 **Per field/year:**
 
 1. Open the courses page, set **Academic Year** and **Field of study**, click Search.
-2. View Page Source (`Ctrl+U` / `Cmd+Option+U`), select all, copy.
-3. Save it as an `.html` file, e.g. `raw/math_2027.html`.
-4. Parse it:
+2. Open DevTools (F12) → Console, paste the full contents of
+   `scripts/scrape-pages.js`, press Enter. It pages through every result page
+   (AJAX pagination, so it's safe to click through by script), returns to page 1
+   when it's done, then fetches each course's detail page for its credit points
+   and real end date. It downloads two files:
+   - `wsos_<field>_<year>.html` — the combined course rows, for `parse_courses.py`
+   - `wsos_<field>_<year>_points.json` — points/end-dates, ready to import
+3. Parse the `.html` file:
    ```
-   python3 scripts/parse_courses.py raw/math_2027.html tmp/math_2027.json
+   python3 scripts/parse_courses.py wsos_Mathematics_and_Computer_Science_2027.html tmp/math_2027.json
    ```
    The script auto-detects the year and field from the page itself — no need to
    pass them manually. Repeat for every field/year you want (Physical Sciences,
    Chemical Sciences, Life Sciences, Mathematics and Computer Science, etc.,
    × each year back to 2023).
 
-5. Once you have all the `tmp/*.json` files, merge them into one dataset:
+4. Once you have all the `tmp/*.json` files, merge them into one dataset:
    ```
    python3 scripts/merge_courses.py data/courses.json tmp/*.json
    ```
    This de-duplicates by course ID, so re-running it is always safe.
 
-**Credit points and real semester end dates** (not on the catalog list page):
+5. Once the site is live and Firebase is configured (§4 below), open it, **sign
+   in**, and use **Import parsed JSON** in the sidebar to load each
+   `..._points.json` file — it's auto-detected as a points/end-date map and
+   published to Firestore, so it becomes visible to every visitor immediately,
+   not just you.
+
+**Refreshing points/end-dates later without re-scraping** (e.g. mid-semester,
+to pick up updated end dates for courses you've already imported):
 
 1. Open the courses page in a browser tab (any page on `erez.weizmann.ac.il` works).
 2. Open DevTools (F12) → Console.
 3. Paste the full contents of `scripts/fetch-points.js` and press Enter.
-   It fetches each course's detail page (same-origin, no CORS issues), waits
-   briefly between requests, and downloads `wsos-points.json` when done.
-4. Once the site is live and Firebase is configured (§4 below), open it, **sign
-   in**, and use **Import parsed JSON** in the sidebar to load that file — it's
-   auto-detected as a points/end-date map and published to Firestore, so it
-   becomes visible to every visitor immediately, not just you.
+   It fetches every course the app already knows about (same-origin, no CORS
+   issues), waits briefly between requests, and downloads `wsos-points.json`
+   when done — import it the same way as above.
 
 ---
 

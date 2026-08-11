@@ -1,6 +1,12 @@
 /*
-  WSoS Scheduler — bulk points/end-date fetcher
-  ================================================
+  WSoS Scheduler — bulk points/end-date fetcher (whole known catalog)
+  =======================================================================
+  Scraping a field/year with scrape-pages.js now also fetches points/end-dates
+  for just that field/year automatically. Use THIS script instead when you want
+  to refresh points/end-dates for every course the app already knows about
+  (e.g. mid-semester, to pick up updated end dates) without re-scraping any
+  course lists.
+
   HOW TO USE:
   1. Open https://erez.weizmann.ac.il/apx/r/ws1/f1862681863611861860186/courses
      in your browser (any tab on that site works, since fetch() below is same-origin).

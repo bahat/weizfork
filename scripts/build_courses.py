@@ -44,7 +44,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from bs4 import BeautifulSoup
-from parse_courses import parse_courses, detect_year_and_field
+from parse_courses import parse_courses, detect_year_and_field, fill_computable_days
 from merge_courses import merge_course_lists
 
 
@@ -139,6 +139,10 @@ def main():
 
     merged = list(combined_by_key.values())
 
+    # Applied to the whole merged set (not just this run's fresh parses) so it
+    # also retroactively fixes courses carried forward from a previous run.
+    days_fixed = fill_computable_days(merged)
+
     attached = 0
     for c in merged:
         key = f"{c.get('course_id')}-{c.get('group_id')}"
@@ -174,6 +178,8 @@ def main():
     print(f"Fields: {', '.join(all_fields)}")
     if cross_listed:
         print(f"{cross_listed} course(s) are cross-listed under more than one field.")
+    if days_fixed:
+        print(f"Computed the weekday from first_lecture for {days_fixed} session(s) that only listed a time.")
     print(f"Attached fresh points/end-date to {attached} course(s) from {len(json_paths)} JSON file(s) this run.")
     missing = sum(1 for c in merged if c.get("points") is None)
     if missing:

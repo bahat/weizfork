@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>WSoS Scheduler — Weizmann School of Science</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F8F4;
+    --paper-line: rgba(31,111,92,0.10);
+    --ink:#1E2A22;
+    --ink-soft:#5B6B60;
+    --teal:#1F6F5C;
+    --teal-deep:#154A3D;
+    --ochre:#C77D2E;
+    --brick:#AE4232;
+    --card-bg:#FFFFFF;
+    --border:#DDE3DA;
+    --radius:6px;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;}
+  body{
+    background-image:
+      linear-gradient(var(--paper-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--paper-line) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  h1,h2,h3{font-family:'Fraunces',serif;margin:0;}
+  header.site{
+    padding:28px 32px 20px;
+    border-bottom:2px solid var(--ink);
+    display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:12px;
+  }
+  header.site .brand{display:flex; align-items:baseline; gap:14px;}
+  header.site h1{font-size:28px; font-weight:600; letter-spacing:-0.01em;}
+  header.site .sub{font-size:13px; color:var(--ink-soft); font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.06em;}
+  header.site .meta{font-size:12px; color:var(--ink-soft); font-family:'IBM Plex Mono',monospace;}
+
+  .layout{
+    display:grid;
+    grid-template-columns: 280px 1fr 300px;
+    gap:0;
+    align-items:start;
+    min-height: calc(100vh - 90px);
+  }
+  @media (max-width: 1100px){
+    .layout{grid-template-columns: 1fr;}
+  }
+
+  .panel{padding:20px 22px; border-right:1px solid var(--border);}
+  .panel:last-child{border-right:none;}
+
+  .filters label{display:block; font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:var(--ink-soft); margin:16px 0 6px; font-family:'IBM Plex Mono',monospace;}
+  .filters label:first-child{margin-top:0;}
+  .filters input[type="text"], .filters select{
+    width:100%; padding:8px 10px; border:1px solid var(--border); border-radius:var(--radius);
+    background:var(--card-bg); font-family:'Inter',sans-serif; font-size:14px; color:var(--ink);
+  }
+  .filters input[type="text"]:focus, .filters select:focus{outline:2px solid var(--teal); outline-offset:1px;}
+
+  .legend{margin-top:22px; padding-top:14px; border-top:1px dashed var(--border);}
+  .legend-item{display:flex; align-items:center; gap:8px; font-size:12.5px; margin-bottom:6px; color:var(--ink-soft);}
+  .legend-swatch{width:11px; height:11px; border-radius:2px; flex-shrink:0;}
+
+  .course-list{margin-top:18px; display:flex; flex-direction:column; gap:8px; max-height: 62vh; overflow-y:auto; padding-right:4px;}
+  .course-card{
+    background:var(--card-bg); border:1px solid var(--border); border-left:4px solid var(--dept-color, var(--teal));
+    border-radius:var(--radius); padding:9px 11px; cursor:pointer; transition:box-shadow .12s ease, transform .12s ease;
+  }
+  .course-card:hover{box-shadow: 0 2px 8px rgba(30,42,34,0.10); transform: translateY(-1px);}
+  .course-card.added{background:#F0F6F3;}
+  .course-card .title{font-size:13.5px; font-weight:600; line-height:1.3;}
+  .course-card .info{font-size:11.5px; color:var(--ink-soft); margin-top:3px; font-family:'IBM Plex Mono',monospace;}
+  .course-card .add-btn{
+    float:right; font-size:11px; font-family:'IBM Plex Mono',monospace; padding:2px 8px; border-radius:4px;
+    border:1px solid var(--teal); color:var(--teal); background:transparent;
+  }
+  .course-card.added .add-btn{background:var(--teal); color:#fff; border-color:var(--teal);}
+  .course-card .info-btn{
+    float:right; margin-right:6px; width:20px; height:20px; border-radius:50%; padding:0;
+    border:1px solid var(--border); color:var(--ink-soft); background:var(--card-bg);
+    font-family:'IBM Plex Mono',monospace; font-size:11px; line-height:18px; text-align:center; cursor:pointer;
+  }
+  .course-card .info-btn:hover{border-color:var(--teal); color:var(--teal);}
+
+  /* --- Modal --- */
+  .modal-overlay{
+    position:fixed; inset:0; background:rgba(30,42,34,0.45); display:flex; align-items:center; justify-content:center;
+    z-index:1000; padding:20px;
+  }
+  .modal-overlay.hidden{display:none;}
+  .modal-box{
+    background:var(--paper); border:1px solid var(--ink); border-radius:var(--radius); max-width:460px; width:100%;
+    padding:22px 24px; box-shadow:0 8px 30px rgba(0,0,0,0.25); max-height:80vh; overflow-y:auto; position:relative;
+  }
+  .modal-box .close-btn{
+    position:absolute; top:14px; right:16px; background:none; border:none; font-size:20px; line-height:1;
+    color:var(--ink-soft); cursor:pointer;
+  }
+  .modal-box h3{font-size:19px; margin-bottom:4px; padding-right:20px;}
+  .modal-box .dept-tag{
+    display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:11px; padding:2px 8px; border-radius:10px;
+    color:#fff; margin-bottom:14px;
+  }
+  .modal-box dl{margin:0;}
+  .modal-box dt{font-family:'IBM Plex Mono',monospace; font-size:10.5px; text-transform:uppercase; letter-spacing:0.05em; color:var(--ink-soft); margin-top:12px;}
+  .modal-box dd{margin:3px 0 0; font-size:13.5px; line-height:1.4;}
+  .modal-box .sessions-list{margin:3px 0 0; padding-left:0; list-style:none;}
+  .modal-box .sessions-list li{padding:5px 0; border-bottom:1px dashed var(--border); font-size:13px;}
+  .modal-box .sessions-list li:last-child{border-bottom:none;}
+  .modal-box .sessions-list .stype{font-family:'IBM Plex Mono',monospace; font-size:10px; text-transform:uppercase; color:var(--teal); margin-right:6px;}
+  .modal-box .modal-link{
+    display:inline-block; margin-top:18px; padding:8px 14px; background:var(--teal); color:#fff; text-decoration:none;
+    border-radius:var(--radius); font-family:'IBM Plex Mono',monospace; font-size:12.5px;
+  }
+  .modal-box .modal-link:hover{filter:brightness(0.93);}
+  .modal-box .no-link-note{margin-top:16px; font-size:12px; color:var(--ink-soft); font-style:italic;}
+
+  /* --- Reviews --- */
+  .reviews-section{margin-top:22px; padding-top:14px; border-top:1px solid var(--border);}
+  .shared-note{font-family:'IBM Plex Mono',monospace; font-size:10px; text-transform:none; letter-spacing:0; color:var(--ink-soft); font-weight:400;}
+  .avg-rating{font-size:14px; margin:8px 0 12px; color:var(--ochre);}
+  .avg-rating span{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-soft); margin-left:6px;}
+  .review-item{padding:8px 0; border-bottom:1px dashed var(--border);}
+  .review-item:last-child{border-bottom:none;}
+  .review-head{display:flex; align-items:center; gap:8px; margin-bottom:2px;}
+  .review-head .stars{color:var(--ochre); font-size:13px; letter-spacing:1px;}
+  .review-head .reviewer{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-soft);}
+  .review-text{font-size:13px; line-height:1.4;}
+  .no-reviews{font-size:12.5px; color:var(--ink-soft); font-style:italic; margin:8px 0;}
+  .review-form{margin-top:14px; display:flex; flex-direction:column; gap:8px;}
+  .review-form select{padding:6px 8px; border:1px solid var(--border); border-radius:var(--radius); font-family:'IBM Plex Mono',monospace; font-size:12.5px; width:fit-content;}
+  .review-form textarea{
+    width:100%; min-height:60px; padding:8px 10px; border:1px solid var(--border); border-radius:var(--radius);
+    font-family:'Inter',sans-serif; font-size:13px; resize:vertical;
+  }
+  .review-form button{
+    align-self:flex-start; padding:6px 14px; border:1px solid var(--teal); border-radius:var(--radius);
+    background:var(--teal); color:#fff; font-family:'IBM Plex Mono',monospace; font-size:12px; cursor:pointer;
+  }
+  .review-form button:disabled, .review-form textarea:disabled{opacity:0.5; cursor:not-allowed;}
+
+  .count-badge{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-soft);}
+
+  /* --- Calendar --- */
+  .cal-wrap{padding:20px 22px;}
+  .cal-header{display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;}
+  .cal-header h2{font-size:20px;}
+  .semester-toggle{display:flex; gap:0; border:1px solid var(--ink); border-radius:var(--radius); overflow:hidden;}
+  .semester-toggle button{
+    background:var(--card-bg); border:none; padding:6px 14px; font-family:'IBM Plex Mono',monospace; font-size:12px;
+    cursor:pointer; color:var(--ink); border-right:1px solid var(--ink);
+  }
+  .semester-toggle button:last-child{border-right:none;}
+  .semester-toggle button.active{background:var(--ink); color:var(--paper);}
+
+  .grid-scroll{overflow-x:auto;}
+  .cal-grid{
+    display:grid;
+    grid-template-columns: 52px repeat(6, 1fr);
+    border-top:1px solid var(--ink); border-left:1px solid var(--ink);
+    min-width: 760px;
+    position:relative;
+  }
+  .cal-cell-head{
+    font-family:'IBM Plex Mono',monospace; font-size:12px; text-transform:uppercase; letter-spacing:0.04em;
+    padding:8px 6px; border-right:1px solid var(--ink); border-bottom:1px solid var(--ink);
+    background:var(--ink); color:var(--paper); text-align:center;
+  }
+  .cal-cell-head.time-head{background:transparent; color:transparent;}
+  .time-label{
+    font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--ink-soft);
+    border-right:1px solid var(--ink); border-bottom:1px solid var(--paper-line);
+    padding:2px 4px; text-align:right; height:48px;
+  }
+  .day-col{border-right:1px solid var(--ink); position:relative;}
+  .hour-row{height:48px; border-bottom:1px solid var(--paper-line);}
+
+  .session-block{
+    position:absolute; left:3px; right:3px; border-radius:4px; padding:4px 6px; overflow:hidden;
+    font-size:11px; line-height:1.25; color:#fff; box-shadow:0 1px 3px rgba(0,0,0,0.18);
+    border:1px solid rgba(0,0,0,0.12);
+  }
+  .session-block.tutorial{opacity:0.82; border-style:dashed;}
+  .session-block .t{font-weight:700; font-size:11.5px;}
+  .session-block .r{font-family:'IBM Plex Mono',monospace; font-size:10px; opacity:0.9;}
+  .session-block.conflict{outline:2px solid var(--brick); outline-offset:-2px;}
+
+  /* --- Sidebar: selected courses --- */
+  .selected-list{display:flex; flex-direction:column; gap:8px; margin-top:12px;}
+  .selected-item{
+    background:var(--card-bg); border:1px solid var(--border); border-radius:var(--radius);
+    padding:8px 10px; font-size:12.5px;
+  }
+  .selected-item .row{display:flex; justify-content:space-between; align-items:flex-start; gap:6px;}
+  .selected-item .title{font-weight:600; line-height:1.3;}
+  .selected-item .remove{background:none; border:none; color:var(--brick); cursor:pointer; font-size:15px; line-height:1; padding:0 2px;}
+  .selected-item .meta{color:var(--ink-soft); font-family:'IBM Plex Mono',monospace; font-size:10.5px; margin-top:3px;}
+
+  .conflict-note{
+    margin-top:10px; padding:8px 10px; background:#FBEEEA; border:1px solid var(--brick); border-radius:var(--radius);
+    font-size:12px; color:var(--brick);
+  }
+  .empty-note{font-size:12.5px; color:var(--ink-soft); font-style:italic; margin-top:10px;}
+
+  .actions{margin-top:18px; display:flex; flex-direction:column; gap:8px;}
+  .btn{
+    font-family:'IBM Plex Mono',monospace; font-size:12px; padding:8px 10px; border-radius:var(--radius);
+    border:1px solid var(--ink); background:var(--card-bg); color:var(--ink); cursor:pointer; text-align:left;
+  }
+  .btn.primary{background:var(--teal); color:#fff; border-color:var(--teal);}
+  .btn.ochre{border-color:var(--ochre); color:var(--ochre);}
+  .btn:hover{filter:brightness(0.97);}
+  input[type="file"]{display:none;}
+
+  footer.site{padding:16px 32px; font-size:11px; color:var(--ink-soft); font-family:'IBM Plex Mono',monospace; border-top:1px solid var(--border);}
+  footer.site a{color:var(--teal);}
+
+  /* --- Sign-in --- */
+  .user-bar{display:flex; align-items:center; gap:8px; font-family:'IBM Plex Mono',monospace; font-size:12px;}
+  .user-bar input{
+    padding:6px 8px; border:1px solid var(--border); border-radius:var(--radius); font-family:'IBM Plex Mono',monospace;
+    font-size:12px; width:140px; background:var(--card-bg); color:var(--ink);
+  }
+  .user-bar button{
+    padding:6px 10px; border:1px solid var(--ink); border-radius:var(--radius); background:var(--ink); color:var(--paper);
+    font-family:'IBM Plex Mono',monospace; font-size:12px; cursor:pointer;
+  }
+  .user-bar .signed-in{display:flex; align-items:center; gap:8px;}
+  .user-bar .signed-in img{display:block;}
+  .user-bar .who{color:var(--teal); font-weight:600;}
+  .user-bar .switch-btn{background:transparent; color:var(--ink-soft); border:1px solid var(--border);}
+  #gSignInSlot{line-height:0;}
+
+  /* --- Points --- */
+  .points-badge{
+    font-family:'IBM Plex Mono',monospace; font-size:10.5px; padding:1px 6px; border-radius:8px;
+    background:var(--paper); border:1px solid var(--border); color:var(--ink-soft); margin-left:6px;
+  }
+  .points-edit{display:flex; align-items:center; gap:6px; margin-top:12px;}
+  .points-edit input{
+    width:60px; padding:5px 7px; border:1px solid var(--border); border-radius:var(--radius);
+    font-family:'IBM Plex Mono',monospace; font-size:13px;
+  }
+  .points-edit button{
+    padding:5px 10px; border:1px solid var(--teal); border-radius:var(--radius); background:var(--teal); color:#fff;
+    font-family:'IBM Plex Mono',monospace; font-size:11.5px; cursor:pointer;
+  }
+  .points-note{font-size:11px; color:var(--ink-soft); margin-top:4px; font-style:italic;}
+
+  .totals-box{
+    margin-top:14px; padding:10px 12px; background:var(--card-bg); border:1px solid var(--border); border-radius:var(--radius);
+  }
+  .totals-box .row{display:flex; justify-content:space-between; font-size:12.5px; padding:3px 0;}
+  .totals-box .row.grand{border-top:1px dashed var(--border); margin-top:4px; padding-top:6px; font-weight:700;}
+  .totals-box .label{color:var(--ink-soft); font-family:'IBM Plex Mono',monospace; font-size:11px;}
+  .totals-box .val{font-family:'IBM Plex Mono',monospace;}
+</style>
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="brand">
+    <h1>WSoS Scheduler</h1>
+    <span class="sub">Weizmann School of Science</span>
+  </div>
+  <div style="display:flex; align-items:center; gap:20px;">
+    <div class="meta" id="dataMeta">— loading course data —</div>
+    <div class="user-bar" id="userBar"></div>
+  </div>
+</header>
+
+<div class="layout">
+
+  <!-- FILTERS + BROWSE -->
+  <div class="panel filters">
+    <label for="search">Search</label>
+    <input type="text" id="search" placeholder="Course, lecturer…">
+
+    <label for="yearFilter">Academic year</label>
+    <select id="yearFilter"><option value="">All years loaded</option></select>
+
+    <label for="fieldFilter">Field of study</label>
+    <select id="fieldFilter"><option value="">All fields loaded</option></select>
+
+    <label for="semFilter">Semester</label>
+    <select id="semFilter">
+      <option value="">All</option>
+      <option value="1st">1st</option>
+      <option value="2nd">2nd</option>
+      <option value="Full Year">Full Year</option>
+    </select>
+
+    <label for="dayFilter">Day</label>
+    <select id="dayFilter">
+      <option value="">All</option>
+      <option value="0">Sunday</option>
+      <option value="1">Monday</option>
+      <option value="2">Tuesday</option>
+      <option value="3">Wednesday</option>
+      <option value="4">Thursday</option>
+      <option value="5">Friday</option>
+    </select>
+
+    <div class="legend" id="legendBox">
+      <label style="margin:0 0 8px;">Field colors</label>
+      <div id="legendItems"></div>
+    </div>
+
+    <label style="margin-top:20px;">Import more courses</label>
+    <button class="btn" id="importBtn">＋ Import parsed JSON</button>
+    <input type="file" id="fileInput" accept="application/json">
+    <div class="empty-note" id="importNote">Accepts either a course-list JSON (from parse_courses.py) or a points/end-date map (from fetch-points.js).</div>
+  </div>
+
+  <!-- CALENDAR -->
+  <div class="panel cal-wrap">
+    <div class="cal-header">
+      <h2 id="courseListTitle">Browse courses <span class="count-badge" id="listCount"></span></h2>
+      <div class="semester-toggle" id="semToggle">
+        <button data-sem="1st" class="active">Semester 1</button>
+        <button data-sem="2nd">Semester 2</button>
+      </div>
+    </div>
+    <div class="grid-scroll">
+      <div class="cal-grid" id="calGrid"></div>
+    </div>
+
+    <h2 style="margin-top:26px; font-size:18px;">All courses <span class="count-badge" id="browseCount"></span></h2>
+    <div class="course-list" id="courseList"></div>
+  </div>
+
+  <!-- SELECTED / EXPORT -->
+  <div class="panel">
+    <h2 style="font-size:18px;">My schedule</h2>
+    <div id="conflictBox"></div>
+    <div class="selected-list" id="selectedList"></div>
+    <div class="empty-note" id="emptyNote">No courses added yet. Click “Add” on any course to place it on the calendar.</div>
+    <div class="totals-box" id="totalsBox"></div>
+
+    <div class="actions">
+      <button class="btn primary" id="exportIcsBtn">↓ Export to calendar (.ics)</button>
+      <button class="btn ochre" id="clearBtn">Clear schedule</button>
+    </div>
+  </div>
+
+</div>
+
+<div class="modal-overlay hidden" id="modalOverlay">
+  <div class="modal-box" id="modalBox">
+    <!-- populated by JS -->
+  </div>
+</div>
+
+<footer class="site">
+  Data scraped from the Weizmann School of Science course catalog (erez.weizmann.ac.il). Times/dates are best-effort parses — always confirm against the official system before registering. This is an independent tool, not affiliated with the Weizmann Institute.
+</footer>
+
+<script>
+/* ============ Firebase setup ============
+   1. Create a project at https://console.firebase.google.com
+   2. Add a Web App to it, copy the config object it gives you, paste below.
+   3. Authentication -> Sign-in method -> enable Google.
+   4. Authentication -> Settings -> Authorized domains -> add your GitHub Pages domain.
+   5. Firestore Database -> Create database -> paste the security rules from README.md.
+   Full walkthrough in README.md.
+=========================================== */
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_PROJECT_ID.appspot.com",
+  messagingSenderId: "YOUR_SENDER_ID",
+  appId: "YOUR_APP_ID",
+};
+firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
+const db = firebase.firestore();
+
+const DAY_NAMES = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday"];
+const DEPT_PALETTE = ["#1F6F5C","#C77D2E","#3B5B8C","#8C4B8C","#4C8C6B","#B4432F","#6B6B2F","#2F6B6B"];
+
+let ALL_COURSES = [];
+let deptColorMap = {};
+let selected = new Map(); // course_id+group_id -> course object
+let activeSemester = "1st";
+let currentUser = null;         // Firebase uid once signed in
+let currentUserName = null;
+let currentUserPicture = null;
+let pointsMap = {};   // courseKey -> numeric points (shared catalog data, from Firestore)
+let endDateMap = {};  // courseKey -> "dd/mm/yyyy" real semester end date (shared, from Firestore)
+
+/* ---------- Firestore-backed persistence ----------
+   Personal data (your selected schedule) lives at users/{uid}.
+   Shared data (points, end dates, reviews) is public-read / signed-in-write —
+   see the Firestore security rules in the README.
+--------------------------------------------------- */
+async function loadPersisted(){
+  selected = new Map();
+
+  // shared course metadata (points + end dates), loaded once for everyone
+  try{
+    const snap = await db.collection('courseMeta').get();
+    pointsMap = {}; endDateMap = {};
+    snap.forEach(doc => {
+      const d = doc.data();
+      if(d.points !== undefined && d.points !== null) pointsMap[doc.id] = d.points;
+      if(d.end_date) endDateMap[doc.id] = d.end_date;
+    });
+  }catch(e){ console.error('could not load courseMeta', e); }
+
+  // personal schedule, only available once signed in
+  if(currentUser){
+    try{
+      const doc = await db.collection('users').doc(currentUser).get();
+      const ids = (doc.exists && doc.data().selected) || [];
+      ids.forEach(id => {
+        const c = ALL_COURSES.find(c => courseKey(c) === id);
+        if(c) selected.set(id, c);
+      });
+    }catch(e){ console.error('could not load saved schedule', e); }
+  }
+}
+async function persistSelection(){
+  if(!currentUser) return; // nothing to save to without an account
+  try{
+    await db.collection('users').doc(currentUser).set(
+      { selected: [...selected.keys()] }, { merge: true }
+    );
+  }catch(e){ console.error('could not save schedule', e); }
+}
+async function setPoints(c, value){
+  if(!currentUser){ alert('Sign in first to edit shared course info.'); return; }
+  const k = courseKey(c);
+  const num = (value === '' || value === null || isNaN(value)) ? null : Number(value);
+  if(num === null) delete pointsMap[k]; else pointsMap[k] = num;
+  try{ await db.collection('courseMeta').doc(k).set({ points: num }, { merge: true }); }
+  catch(e){ console.error('could not save points', e); }
+}
+function getPoints(c){
+  const v = pointsMap[courseKey(c)];
+  return (v === undefined || v === null) ? null : v;
+}
+function getEndDate(c){
+  const v = endDateMap[courseKey(c)];
+  return v || null;
+}
+/**
+ * Bulk-write a points/end-date map (e.g. from fetch-points.js) into Firestore
+ * so it's visible to every visitor, not just the browser that imported it.
+ * { "16050-0": { points: 2.0, end_date: "13/01/2027" }, ... }
+ */
+async function mergePointsMap(map){
+  if(!currentUser){ alert('Sign in first to publish shared course info.'); return 0; }
+  const entries = Object.entries(map);
+  let updated = 0;
+  // Firestore batches cap at 500 writes; chunk defensively.
+  for(let i = 0; i < entries.length; i += 400){
+    const batch = db.batch();
+    entries.slice(i, i+400).forEach(([key, info]) => {
+      const payload = {};
+      if(info && typeof info === 'object'){
+        if(info.points !== undefined && info.points !== null){ payload.points = Number(info.points); pointsMap[key] = payload.points; updated++; }
+        if(info.end_date){ payload.end_date = info.end_date; endDateMap[key] = info.end_date; }
+      } else if(typeof info === 'number'){
+        payload.points = info; pointsMap[key] = info; updated++;
+      }
+      if(Object.keys(payload).length) batch.set(db.collection('courseMeta').doc(key), payload, { merge: true });
+    });
+    try{ await batch.commit(); }catch(e){ console.error('batch write failed', e); }
+  }
+  return updated;
+}
+
+function courseKey(c){ return (c.course_id||'')+'-'+(c.group_id||''); }
+
+/* ---------- reviews (Firestore — visible to everyone using this app) ---------- */
+let reviewsCache = {}; // courseKey -> array of {rating, text, ts}
+
+async function loadReviews(courseKey, forceRefresh){
+  if(!forceRefresh && reviewsCache[courseKey]) return reviewsCache[courseKey];
+  try{
+    const snap = await db.collection('reviews').where('courseKey', '==', courseKey).get();
+    reviewsCache[courseKey] = snap.docs.map(d => d.data()).sort((a,b) => (a.ts||0) - (b.ts||0));
+  }catch(e){
+    console.error('could not load reviews', e);
+    reviewsCache[courseKey] = [];
+  }
+  return reviewsCache[courseKey];
+}
+
+async function addReview(course, rating, text){
+  if(!currentUser){ alert('Sign in first — reviews are posted anonymously, but signing in helps prevent spam.'); return null; }
+  const key = courseKey(course);
+  const review = {
+    courseKey: key,
+    authorId: currentUser, // kept for anti-abuse only, never displayed
+    rating: Math.max(1, Math.min(5, Number(rating) || 5)),
+    text: (text || '').trim().slice(0, 1000),
+    ts: Date.now(),
+  };
+  try{
+    await db.collection('reviews').add(review);
+  }catch(e){ console.error('review save failed', e); return reviewsCache[key] || []; }
+  const arr = await loadReviews(key, true);
+  return arr;
+}
+
+function avgRating(arr){
+  if(!arr || !arr.length) return null;
+  return Math.round((arr.reduce((s,r)=>s+r.rating,0) / arr.length) * 10) / 10;
+}
+function starString(n){
+  const full = Math.round(n);
+  return '★'.repeat(full) + '☆'.repeat(5-full);
+}
+
+function mergeCourses(list){
+  const seen = new Set(ALL_COURSES.map(courseKey));
+  let added = 0;
+  list.forEach(c => {
+    const k = courseKey(c);
+    if(!seen.has(k)){ ALL_COURSES.push(c); seen.add(k); added++; }
+  });
+  assignDeptColors();
+  return added;
+}
+
+function assignDeptColors(){
+  const depts = [...new Set(ALL_COURSES.map(c => c.offered_by || "Other"))].sort();
+  deptColorMap = {};
+  depts.forEach((d,i) => deptColorMap[d] = DEPT_PALETTE[i % DEPT_PALETTE.length]);
+}
+
+function timeToMin(t){ if(!t) return null; const [h,m] = t.split(':').map(Number); return h*60+m; }
+
+function sessionsOverlap(a,b){
+  if(a.day_index === null || b.day_index === null) return false;
+  if(a.day_index !== b.day_index) return false;
+  const as = timeToMin(a.start), ae = timeToMin(a.end), bs = timeToMin(b.start), be = timeToMin(b.end);
+  if(as===null||ae===null||bs===null||be===null) return false;
+  return as < be && bs < ae;
+}
+
+function courseAppliesToSemester(course, sem){
+  return course.semester === sem || course.semester === "Full Year";
+}
+
+/* ---------- rendering ---------- */
+function renderLegend(){
+  const box = document.getElementById('legendItems');
+  box.innerHTML = '';
+  Object.entries(deptColorMap).forEach(([dept,color]) => {
+    const div = document.createElement('div');
+    div.className = 'legend-item';
+    div.innerHTML = `<span class="legend-swatch" style="background:${color}"></span>${dept}`;
+    box.appendChild(div);
+  });
+}
+
+function populateFieldFilter(){
+  const sel = document.getElementById('fieldFilter');
+  const prev = sel.value;
+  const fields = [...new Set(ALL_COURSES.map(c => c.field).filter(Boolean))].sort();
+  sel.innerHTML = '<option value="">All fields loaded</option>' + fields.map(f=>`<option value="${f}">${f}</option>`).join('');
+  if(fields.includes(prev)) sel.value = prev;
+}
+
+function populateYearFilter(){
+  const sel = document.getElementById('yearFilter');
+  const prev = sel.value;
+  const years = [...new Set(ALL_COURSES.map(c => c.year).filter(Boolean))].sort((a,b)=>b-a);
+  sel.innerHTML = '<option value="">All years loaded</option>' + years.map(y=>`<option value="${y}">${y}</option>`).join('');
+  if(years.map(String).includes(prev)) sel.value = prev;
+}
+
+function getFiltered(){
+  const q = document.getElementById('search').value.trim().toLowerCase();
+  const year = document.getElementById('yearFilter').value;
+  const field = document.getElementById('fieldFilter').value;
+  const sem = document.getElementById('semFilter').value;
+  const day = document.getElementById('dayFilter').value;
+
+  return ALL_COURSES.filter(c => {
+    if(year && String(c.year) !== year) return false;
+    if(field && c.field !== field) return false;
+    if(sem && c.semester !== sem) return false;
+    if(day !== "" && !c.sessions.some(s => String(s.day_index) === day)) return false;
+    if(q){
+      const hay = (c.title + ' ' + (c.lecturers||[]).join(' ') + ' ' + (c.offered_by||'')).toLowerCase();
+      if(!hay.includes(q)) return false;
+    }
+    return true;
+  });
+}
+
+function renderCourseList(){
+  const list = getFiltered();
+  document.getElementById('browseCount').textContent = `(${list.length})`;
+  const container = document.getElementById('courseList');
+  container.innerHTML = '';
+  list.sort((a,b)=>a.title.localeCompare(b.title)).forEach(c => {
+    const k = courseKey(c);
+    const isAdded = selected.has(k);
+    const div = document.createElement('div');
+    div.className = 'course-card' + (isAdded ? ' added' : '');
+    div.style.setProperty('--dept-color', deptColorMap[c.offered_by || 'Other'] || '#1F6F5C');
+    const timeStr = c.sessions.length
+      ? c.sessions.map(s => `${(s.day_name||'?').slice(0,3)} ${s.start||'?'}–${s.end||'?'}`).join(' · ')
+      : 'No fixed time';
+    const pts = getPoints(c);
+    const ptsBadge = pts !== null ? `<span class="points-badge">${pts} pts</span>` : '';
+    div.innerHTML = `
+      <button class="add-btn">${isAdded ? 'Added ✓' : 'Add'}</button>
+      <button class="info-btn" title="Course info">i</button>
+      <div class="title">${c.title}${ptsBadge}</div>
+      <div class="info">${(c.lecturers||[]).join(', ') || '—'}</div>
+      <div class="info">${c.semester} · ${timeStr}</div>
+    `;
+    div.querySelector('.add-btn').addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleCourse(c);
+    });
+    div.querySelector('.info-btn').addEventListener('click', (e) => {
+      e.stopPropagation();
+      openCourseModal(c);
+    });
+    container.appendChild(div);
+  });
+}
+
+function toggleCourse(c){
+  const k = courseKey(c);
+  if(selected.has(k)) selected.delete(k);
+  else selected.set(k, c);
+  persistSelection();
+  renderAll();
+}
+
+function renderSelected(){
+  const box = document.getElementById('selectedList');
+  const emptyNote = document.getElementById('emptyNote');
+  box.innerHTML = '';
+  const items = [...selected.values()];
+  emptyNote.style.display = items.length ? 'none' : 'block';
+  if(!currentUser){
+    emptyNote.textContent = 'Sign in with Google to save your schedule — otherwise it\'s cleared on refresh.';
+  } else {
+    emptyNote.textContent = 'No courses added yet. Click "Add" on any course to place it on the calendar.';
+  }
+
+  items.sort((a,b)=>a.title.localeCompare(b.title)).forEach(c => {
+    const div = document.createElement('div');
+    div.className = 'selected-item';
+    div.style.borderLeft = `4px solid ${deptColorMap[c.offered_by || 'Other'] || '#1F6F5C'}`;
+    const pts = getPoints(c);
+    div.innerHTML = `
+      <div class="row">
+        <span class="title">${c.title}${pts !== null ? `<span class="points-badge">${pts} pts</span>` : ''}</span>
+        <button class="remove" title="Remove">×</button>
+      </div>
+      <div class="meta">${c.semester} · ${(c.lecturers||[])[0] || ''}</div>
+    `;
+    div.querySelector('.remove').addEventListener('click', () => toggleCourse(c));
+    box.appendChild(div);
+  });
+
+  // conflicts
+  const conflictBox = document.getElementById('conflictBox');
+  const conflicts = findConflicts();
+  if(conflicts.length){
+    conflictBox.innerHTML = `<div class="conflict-note">⚠ ${conflicts.length} time conflict${conflicts.length>1?'s':''} in your ${activeSemester === '1st' ? 'first' : 'second'}-semester schedule. Overlapping sessions are outlined in red on the calendar.</div>`;
+  } else {
+    conflictBox.innerHTML = '';
+  }
+
+  renderTotals(items);
+}
+
+function renderTotals(items){
+  const totalsBox = document.getElementById('totalsBox');
+  const sumFor = (sem) => items
+    .filter(c => c.semester === sem || c.semester === 'Full Year')
+    .reduce((sum, c) => { const p = getPoints(c); return sum + (p !== null ? p : 0); }, 0);
+  const sem1 = sumFor('1st');
+  const sem2 = sumFor('2nd');
+  const combined = items.reduce((sum, c) => { const p = getPoints(c); return sum + (p !== null ? p : 0); }, 0);
+  const missing = items.filter(c => getPoints(c) === null).length;
+
+  totalsBox.innerHTML = `
+    <div class="row"><span class="label">Semester 1 total</span><span class="val">${sem1} pts</span></div>
+    <div class="row"><span class="label">Semester 2 total</span><span class="val">${sem2} pts</span></div>
+    <div class="row grand"><span class="label">Combined (unique courses)</span><span class="val">${combined} pts</span></div>
+    ${missing ? `<div class="points-note">${missing} course${missing>1?'s':''} missing points — open “i” to add.</div>` : ''}
+  `;
+}
+
+function findConflicts(){
+  const relevant = [...selected.values()].filter(c => courseAppliesToSemester(c, activeSemester));
+  const flatSessions = [];
+  relevant.forEach(c => c.sessions.forEach(s => flatSessions.push({course:c, session:s})));
+  const conflictPairs = [];
+  for(let i=0;i<flatSessions.length;i++){
+    for(let j=i+1;j<flatSessions.length;j++){
+      if(flatSessions[i].course === flatSessions[j].course) continue;
+      if(sessionsOverlap(flatSessions[i].session, flatSessions[j].session)){
+        conflictPairs.push([flatSessions[i], flatSessions[j]]);
+      }
+    }
+  }
+  return conflictPairs;
+}
+
+function renderCalendar(){
+  const grid = document.getElementById('calGrid');
+  grid.innerHTML = '';
+  grid.style.position = 'relative';
+
+  // header row
+  grid.appendChild(cell('cal-cell-head time-head', ''));
+  DAY_NAMES.forEach(d => grid.appendChild(cell('cal-cell-head', d)));
+
+  const startHour = 8, endHour = 20;
+  const totalHours = endHour - startHour;
+
+  // time labels + day columns (as background rows), then absolutely position sessions
+  for(let h=startHour; h<endHour; h++){
+    const tl = document.createElement('div');
+    tl.className = 'time-label';
+    tl.textContent = String(h).padStart(2,'0')+':00';
+    grid.appendChild(tl);
+    for(let d=0; d<6; d++){
+      const hr = document.createElement('div');
+      hr.className = 'hour-row';
+      hr.style.borderRight = '1px solid var(--ink)';
+      grid.appendChild(hr);
+    }
+  }
+
+  // build day column wrapper overlay using grid positioning via absolute placement
+  // We compute pixel offsets manually since grid rows are simple divs of 48px height.
+  const rowHeight = 48;
+  const conflicts = findConflicts();
+  const conflictKeySet = new Set();
+  conflicts.forEach(([a,b]) => { conflictKeySet.add(a.course.course_id+a.session.day_index+a.session.start); conflictKeySet.add(b.course.course_id+b.session.day_index+b.session.start); });
+
+  const relevant = [...selected.values()].filter(c => courseAppliesToSemester(c, activeSemester));
+  relevant.forEach(c => {
+    const color = deptColorMap[c.offered_by || 'Other'] || '#1F6F5C';
+    c.sessions.forEach(s => {
+      if(s.day_index === null || s.start === null) return;
+      const startMin = timeToMin(s.start), endMin = timeToMin(s.end);
+      if(startMin === null || endMin === null) return;
+      const top = ((startMin - startHour*60) / 60) * rowHeight + rowHeight; // +rowHeight for header row
+      const height = Math.max(((endMin-startMin)/60) * rowHeight, 20);
+
+      const block = document.createElement('div');
+      block.className = 'session-block' + (s.type === 'tutorial' ? ' tutorial' : '');
+      if(conflictKeySet.has(c.course_id+s.day_index+s.start)) block.classList.add('conflict');
+      block.style.background = color;
+      block.style.top = top + 'px';
+      block.style.height = height + 'px';
+      // column index: 52px + d*colwidth — use grid column via left offset percentage
+      const colPct = (52) + '';
+      block.style.gridColumn = `${s.day_index+2}`;
+      block.title = `${c.title} (${s.type}) — click for details\n${s.start}–${s.end}\n${s.location||'location TBA'}`;
+      block.style.cursor = 'pointer';
+      block.innerHTML = `<div class="t">${c.title}</div><div class="r">${s.start}–${s.end}${s.location? ' · '+s.location:''}</div>`;
+      block.addEventListener('click', () => openCourseModal(c));
+
+      grid.appendChild(block);
+      // position via grid-row start based on absolute top; since block uses position absolute we need grid to be position:relative and blocks placed with left offset per column
+    });
+  });
+
+  // Since CSS grid + absolute children need explicit left offsets, recalc after layout
+  requestAnimationFrame(() => positionBlocksAbsolute(grid, rowHeight));
+}
+
+function positionBlocksAbsolute(grid, rowHeight){
+  const headCells = grid.querySelectorAll('.cal-cell-head');
+  const colRects = [...headCells].map(el => el.getBoundingClientRect());
+  const gridRect = grid.getBoundingClientRect();
+  grid.style.position = 'relative';
+  grid.querySelectorAll('.session-block').forEach(block => {
+    const colIndex = parseInt(block.style.gridColumn) - 1; // 1-based col within headCells array
+    const rect = colRects[colIndex];
+    if(!rect) return;
+    block.style.position = 'absolute';
+    block.style.left = (rect.left - gridRect.left + 3) + 'px';
+    block.style.width = (rect.width - 6) + 'px';
+    block.style.gridColumn = '';
+  });
+}
+
+/* ---------- course info modal ---------- */
+function openCourseModal(c){
+  const overlay = document.getElementById('modalOverlay');
+  const box = document.getElementById('modalBox');
+  const color = deptColorMap[c.offered_by || 'Other'] || '#1F6F5C';
+
+  const sessionsHtml = c.sessions.length
+    ? '<ul class="sessions-list">' + c.sessions.map(s => `
+        <li><span class="stype">${s.type}</span>${s.day_name||'TBA'}, ${s.start||'?'}–${s.end||'?'}${s.location ? ' · '+s.location : ''}</li>
+      `).join('') + '</ul>'
+    : '<dd>No fixed weekly time listed.</dd>';
+
+  const currentPts = getPoints(c);
+  const realEnd = getEndDate(c);
+  box.innerHTML = `
+    <button class="close-btn" id="modalCloseBtn">&times;</button>
+    <h3>${c.title}</h3>
+    <span class="dept-tag" style="background:${color}">${c.offered_by || 'Uncategorized'}</span>
+    <dl>
+      <dt>Lecturer(s)</dt>
+      <dd>${(c.lecturers||[]).join(', ') || '—'}</dd>
+      <dt>Semester</dt>
+      <dd>${c.semester || '—'}</dd>
+      <dt>First lecture</dt>
+      <dd>${c.first_lecture || '—'}</dd>
+      <dt>Last lecture</dt>
+      <dd>${realEnd ? realEnd : '— (ICS export estimates ~14 weeks from first lecture)'}</dd>
+      <dt>Points / credits</dt>
+      <dd>
+        <div class="points-edit">
+          <input type="number" step="0.5" min="0" id="pointsInput" value="${currentPts !== null ? currentPts : ''}" placeholder="e.g. 3">
+          <button id="savePointsBtn">Save</button>
+        </div>
+        <div class="points-note">Not on the course list page. Enter it manually, or use the bulk "fetch-points.js" console script to pull points + end dates for every course at once.</div>
+      </dd>
+      <dt>Schedule</dt>
+      ${sessionsHtml}
+    </dl>
+    ${c.detail_url
+      ? `<a class="modal-link" href="${c.detail_url}" target="_blank" rel="noopener noreferrer">View on erez.weizmann.ac.il ↗</a>`
+      : `<div class="no-link-note">No direct link available for this course.</div>`}
+
+    <div class="reviews-section">
+      <dt style="margin-top:20px;">Reviews <span class="shared-note">(visible to everyone using this app · posted anonymously)</span></dt>
+      <div id="reviewsList">Loading reviews…</div>
+      <div class="review-form">
+        <label for="reviewRating">Your rating</label>
+        <select id="reviewRating">
+          <option value="5">★★★★★ (5)</option>
+          <option value="4">★★★★☆ (4)</option>
+          <option value="3">★★★☆☆ (3)</option>
+          <option value="2">★★☆☆☆ (2)</option>
+          <option value="1">★☆☆☆☆ (1)</option>
+        </select>
+        <textarea id="reviewText" placeholder="${currentUser ? 'Share your thoughts on this course… (posted anonymously)' : 'Sign in (top right) to leave an anonymous review'}" ${currentUser ? '' : 'disabled'}></textarea>
+        <button id="submitReviewBtn" ${currentUser ? '' : 'disabled'}>Post review</button>
+      </div>
+    </div>
+  `;
+  overlay.classList.remove('hidden');
+  document.getElementById('modalCloseBtn').addEventListener('click', closeCourseModal);
+  document.getElementById('savePointsBtn').addEventListener('click', async () => {
+    await setPoints(c, document.getElementById('pointsInput').value);
+    renderCourseList();
+    renderSelected();
+  });
+
+  renderReviewsInto(c, false);
+  document.getElementById('submitReviewBtn').addEventListener('click', async () => {
+    const rating = document.getElementById('reviewRating').value;
+    const text = document.getElementById('reviewText').value;
+    if(!text.trim()){ alert('Add a few words before posting.'); return; }
+    await addReview(c, rating, text);
+    document.getElementById('reviewText').value = '';
+    renderReviewsInto(c, true);
+  });
+}
+
+async function renderReviewsInto(c, forceRefresh){
+  const listEl = document.getElementById('reviewsList');
+  if(!listEl) return; // modal was closed before this resolved
+  const reviews = await loadReviews(courseKey(c), forceRefresh);
+  if(!document.getElementById('reviewsList')) return; // closed while awaiting
+  if(!reviews.length){
+    listEl.innerHTML = `<div class="no-reviews">No reviews yet — be the first.</div>`;
+    return;
+  }
+  const avg = avgRating(reviews);
+  listEl.innerHTML = `
+    <div class="avg-rating">${starString(avg)} <span>${avg} / 5 · ${reviews.length} review${reviews.length>1?'s':''}</span></div>
+    ${reviews.slice().reverse().map(r => `
+      <div class="review-item">
+        <div class="review-head"><span class="stars">${starString(r.rating)}</span><span class="reviewer">Anonymous</span></div>
+        <div class="review-text">${escapeHtml(r.text)}</div>
+      </div>
+    `).join('')}
+  `;
+}
+function escapeHtml(s){
+  const d = document.createElement('div');
+  d.textContent = s || '';
+  return d.innerHTML;
+}
+function closeCourseModal(){
+  document.getElementById('modalOverlay').classList.add('hidden');
+}
+document.getElementById('modalOverlay').addEventListener('click', (e) => {
+  if(e.target.id === 'modalOverlay') closeCourseModal();
+});
+document.addEventListener('keydown', (e) => {
+  if(e.key === 'Escape') closeCourseModal();
+});
+
+function cell(cls, text){
+  const d = document.createElement('div');
+  d.className = cls;
+  d.textContent = text;
+  return d;
+}
+
+/* ---------- sign-in (Firebase Auth, Google provider) ----------
+   Firebase manages the OAuth client for you — no manual Google Cloud Console
+   client-ID setup needed. Just enable Google as a sign-in provider in the
+   Firebase console and add your hosted domain under Authorized domains.
+   See firebaseConfig near the top of this script.
+------------------------------------------------------------------ */
+function renderUserBar(){
+  const bar = document.getElementById('userBar');
+  if(currentUser){
+    bar.innerHTML = `
+      <span class="signed-in">
+        ${currentUserPicture ? `<img src="${currentUserPicture}" alt="" style="width:20px;height:20px;border-radius:50%;">` : ''}
+        <span class="who">${currentUserName || currentUser}</span>
+        <button class="switch-btn" id="switchUserBtn">Sign out</button>
+      </span>
+    `;
+    document.getElementById('switchUserBtn').addEventListener('click', () => auth.signOut());
+    return;
+  }
+  bar.innerHTML = `<button id="signInBtn">Sign in with Google</button>`;
+  document.getElementById('signInBtn').addEventListener('click', () => {
+    auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
+      .catch(err => alert('Sign-in failed: ' + err.message));
+  });
+}
+
+// Fires on load (restoring a previous session) and on every sign-in/out.
+auth.onAuthStateChanged(async (user) => {
+  currentUser = user ? user.uid : null;
+  currentUserName = user ? user.displayName : null;
+  currentUserPicture = user ? user.photoURL : null;
+  await coursesReady; // don't try to resolve selected-course ids before the catalog is loaded
+  await loadPersisted();
+  renderAll();
+});
+
+function renderMeta(){
+  const fields = [...new Set(ALL_COURSES.map(c=>c.field).filter(Boolean))];
+  document.getElementById('dataMeta').textContent = `${ALL_COURSES.length} courses loaded · ${fields.join(', ')}`;
+}
+
+function renderAll(){
+  renderUserBar();
+  renderMeta();
+  populateYearFilter();
+  populateFieldFilter();
+  renderLegend();
+  renderCourseList();
+  renderSelected();
+  renderCalendar();
+}
+
+/* ---------- ICS export ---------- */
+function pad(n){ return String(n).padStart(2,'0'); }
+function parseDMY(str){
+  // dd/mm/yyyy
+  const [d,m,y] = str.split('/').map(Number);
+  return new Date(y, m-1, d);
+}
+function icsDate(date, timeStr){
+  const [h,mi] = timeStr.split(':').map(Number);
+  return `${date.getFullYear()}${pad(date.getMonth()+1)}${pad(date.getDate())}T${pad(h)}${pad(mi)}00`;
+}
+function nextWeekday(fromDate, targetDayIdx){
+  // JS getDay: Sun=0..Sat=6, matches our DAY_NAMES index (Sun=0)
+  const d = new Date(fromDate);
+  const diff = (targetDayIdx - d.getDay() + 7) % 7;
+  d.setDate(d.getDate() + diff);
+  return d;
+}
+function exportIcs(){
+  const items = [...selected.values()];
+  if(!items.length){ alert('Add at least one course first.'); return; }
+  let ics = 'BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//WSoS Scheduler//EN\r\nCALSCALE:GREGORIAN\r\n';
+  const SEMESTER_WEEKS = 14; // approximate semester length
+
+  items.forEach(c => {
+    c.sessions.forEach((s, idx) => {
+      if(s.day_index === null || !s.start || !s.end || !c.first_lecture) return;
+      const firstLecDate = parseDMY(c.first_lecture);
+      const sessionStart = nextWeekday(firstLecDate, s.day_index);
+
+      const realEnd = getEndDate(c);
+      let untilDate;
+      if(realEnd){
+        untilDate = parseDMY(realEnd);
+      } else {
+        untilDate = new Date(sessionStart);
+        untilDate.setDate(untilDate.getDate() + SEMESTER_WEEKS*7);
+      }
+
+      const uid = `${c.course_id}-${c.group_id}-${idx}@wsos-scheduler`;
+      ics += 'BEGIN:VEVENT\r\n';
+      ics += `UID:${uid}\r\n`;
+      ics += `SUMMARY:${escapeIcs(c.title)}${s.type==='tutorial' ? ' (Tutorial)' : ''}\r\n`;
+      ics += `DTSTART:${icsDate(sessionStart, s.start)}\r\n`;
+      ics += `DTEND:${icsDate(sessionStart, s.end)}\r\n`;
+      ics += `RRULE:FREQ=WEEKLY;UNTIL=${icsDate(untilDate, '23:59')}Z\r\n`;
+      if(s.location) ics += `LOCATION:${escapeIcs(s.location)}\r\n`;
+      ics += `DESCRIPTION:${escapeIcs((c.lecturers||[]).join(', '))}\r\n`;
+      ics += 'END:VEVENT\r\n';
+    });
+  });
+  ics += 'END:VCALENDAR\r\n';
+
+  const blob = new Blob([ics], {type: 'text/calendar'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'wsos-schedule.ics';
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+function escapeIcs(s){ return String(s||'').replace(/[\\,;]/g, m => '\\'+m).replace(/\n/g,'\\n'); }
+
+/* ---------- import ---------- */
+document.getElementById('importBtn').addEventListener('click', () => document.getElementById('fileInput').click());
+document.getElementById('fileInput').addEventListener('change', (e) => {
+  const file = e.target.files[0];
+  if(!file) return;
+  const reader = new FileReader();
+  reader.onload = async (ev) => {
+    try{
+      const data = JSON.parse(ev.target.result);
+      if(Array.isArray(data)){
+        const added = mergeCourses(data);
+        document.getElementById('importNote').textContent = `Added ${added} course(s) for this session only — add them to data/courses.json in the repo to make them permanent for everyone.`;
+      } else if(data && typeof data === 'object'){
+        // treat as a points/end-date map, e.g. from fetch-points.js: { "16050-0": {points, end_date}, ... }
+        const updated = await mergePointsMap(data);
+        document.getElementById('importNote').textContent = `Published points for ${updated} course(s) to everyone.`;
+      } else {
+        document.getElementById('importNote').textContent = 'Unrecognized JSON shape.';
+      }
+      renderAll();
+    }catch(err){
+      document.getElementById('importNote').textContent = 'Could not read that file — expected JSON from the parser script.';
+    }
+  };
+  reader.readAsText(file);
+});
+
+/* ---------- wiring ---------- */
+['search','yearFilter','fieldFilter','semFilter','dayFilter'].forEach(id => {
+  document.getElementById(id).addEventListener('input', renderCourseList);
+});
+document.getElementById('semToggle').addEventListener('click', (e) => {
+  const btn = e.target.closest('button');
+  if(!btn) return;
+  activeSemester = btn.dataset.sem;
+  [...document.querySelectorAll('#semToggle button')].forEach(b=>b.classList.toggle('active', b===btn));
+  renderCalendar();
+  renderSelected();
+});
+document.getElementById('exportIcsBtn').addEventListener('click', exportIcs);
+document.getElementById('clearBtn').addEventListener('click', () => {
+  if(confirm('Clear your entire saved schedule?')){
+    selected.clear();
+    persistSelection();
+    renderAll();
+  }
+});
+
+/* ---------- init ---------- */
+let coursesReadyResolve;
+const coursesReady = new Promise(res => { coursesReadyResolve = res; });
+
+async function loadSeedCourses(){
+  try{
+    const res = await fetch('./data/courses.json');
+    if(!res.ok) throw new Error('HTTP ' + res.status);
+    return await res.json();
+  }catch(e){
+    console.error('Could not load data/courses.json', e);
+    document.getElementById('dataMeta').textContent =
+      'Could not load data/courses.json — if you opened this file directly, serve it over http(s) instead (see README).';
+    return [];
+  }
+}
+
+(async function init(){
+  ALL_COURSES = await loadSeedCourses();
+  assignDeptColors();
+  coursesReadyResolve();
+  renderAll(); // draw the shell immediately; auth listener fills in personal data once ready
+})();
+</script>
+</body>
+</html>

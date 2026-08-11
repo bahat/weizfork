@@ -161,27 +161,35 @@ for you, so there's no separate Google Cloud Console step.
    service cloud.firestore {
      match /databases/{database}/documents {
 
-       // Course points & end dates: everyone can read, only signed-in users can edit.
+       // Course points & end dates: everyone can read, only the admin account can
+       // edit — regular users record their own point value for a course inside
+       // their own users/{uid} doc instead (see below), which never touches this
+       // shared collection.
        match /courseMeta/{courseKey} {
          allow read: if true;
-         allow write: if request.auth != null;
+         allow write: if request.auth != null && request.auth.token.email == 'bahat.omer@gmail.com';
        }
 
-       // Reviews: everyone can read, only signed-in users can post, nobody can edit/delete
-       // (keeps things simple; the app already hides who posted what).
+       // Reviews: everyone can read, only signed-in users can post, nobody can
+       // edit, and only the admin account can delete (e.g. to remove abuse).
        match /reviews/{reviewId} {
          allow read: if true;
          allow create: if request.auth != null;
-         allow update, delete: if false;
+         allow update: if false;
+         allow delete: if request.auth != null && request.auth.token.email == 'bahat.omer@gmail.com';
        }
 
-       // Each user's saved schedule: only that user can read/write their own doc.
+       // Each user's saved schedule (including their own personal point records
+       // and custom events): only that user can read/write their own doc.
        match /users/{uid} {
          allow read, write: if request.auth != null && request.auth.uid == uid;
        }
      }
    }
    ```
+   Replace `bahat.omer@gmail.com` with your own admin account's email if it's
+   ever different — it must match the `OWNER_EMAIL` constant near the top of
+   `index.html`'s `<script>` block, which gates the matching UI controls.
 3. Click **Publish**.
 
 ### 4.5 Push and test

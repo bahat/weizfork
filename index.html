@@ -699,12 +699,12 @@ function renderSelected(){
   const box = document.getElementById('selectedList');
   const emptyNote = document.getElementById('emptyNote');
   box.innerHTML = '';
-  const items = [...selected.values()];
+  const items = [...selected.values()].filter(c => courseAppliesToYear(c, getActiveYear()));
   emptyNote.style.display = items.length ? 'none' : 'block';
   if(!currentUser){
     emptyNote.textContent = 'Sign in with Google to save your schedule — otherwise it\'s cleared on refresh.';
   } else {
-    emptyNote.textContent = 'No courses added yet. Click "Add" on any course, or "＋ Add event" above, to place it on the calendar.';
+    emptyNote.textContent = `No ${getActiveYear()} courses added yet. Click "Add" on any course, or "＋ Add event" above, to place it on the calendar.`;
   }
 
   items.sort((a,b)=>a.title.localeCompare(b.title)).forEach(c => {
@@ -736,15 +736,15 @@ function renderSelected(){
 }
 
 function renderTotals(items){
+  // items is already scoped to the active year by renderSelected()
   const totalsBox = document.getElementById('totalsBox');
-  const yearItems = items.filter(c => courseAppliesToYear(c, getActiveYear()));
-  const sumFor = (sem) => yearItems
+  const sumFor = (sem) => items
     .filter(c => c.semester === sem || c.semester === 'Full Year')
     .reduce((sum, c) => { const p = getPoints(c); return sum + (p !== null ? p : 0); }, 0);
   const sem1 = sumFor('1st');
   const sem2 = sumFor('2nd');
-  const combined = yearItems.reduce((sum, c) => { const p = getPoints(c); return sum + (p !== null ? p : 0); }, 0);
-  const missing = yearItems.filter(c => getPoints(c) === null).length;
+  const combined = items.reduce((sum, c) => { const p = getPoints(c); return sum + (p !== null ? p : 0); }, 0);
+  const missing = items.filter(c => getPoints(c) === null).length;
 
   totalsBox.innerHTML = `
     <div class="row"><span class="label">Semester 1 total</span><span class="val">${sem1} pts</span></div>

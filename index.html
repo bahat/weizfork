@@ -256,10 +256,11 @@
   /* --- Personal event form --- */
   .event-form label{display:block; font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:var(--ink-soft); margin:14px 0 6px; font-family:'IBM Plex Mono',monospace;}
   .event-form label:first-child{margin-top:0;}
-  .event-form input[type="text"], .event-form input[type="number"], .event-form input[type="time"], .event-form select{
+  .event-form input[type="text"], .event-form input[type="number"], .event-form input[type="time"], .event-form select, .event-form textarea{
     width:100%; padding:7px 9px; border:1px solid var(--border); border-radius:var(--radius);
     font-family:inherit; font-size:13px; background:var(--card-bg); color:var(--ink); box-sizing:border-box;
   }
+  .event-form textarea{resize:vertical;}
   .event-form .two-col{display:grid; grid-template-columns:1fr 1fr; gap:10px;}
   .event-form-actions{margin-top:18px;}
   .session-block.custom-event{border-style:dotted;}
@@ -285,6 +286,7 @@
   </div>
   <div style="display:flex; align-items:center; gap:20px;">
     <div class="meta" id="dataMeta"></div>
+    <button class="btn" id="supportBtn" title="Contact support">Support</button>
     <div class="user-bar" id="userBar"></div>
   </div>
 </header>
@@ -1023,6 +1025,42 @@ function saveCustomEvent(){
   renderAll();
 }
 
+/* ---------- support ---------- */
+const SUPPORT_EMAIL = "bahat.omer@gmail.com";
+function openSupportModal(){
+  if(!currentUser){ alert('Sign in first to contact support.'); return; }
+  const overlay = document.getElementById('modalOverlay');
+  const box = document.getElementById('modalBox');
+  box.innerHTML = `
+    <button class="close-btn" id="modalCloseBtn">&times;</button>
+    <h3>Contact support</h3>
+    <div class="custom-event-note">Opens your email client with a message addressed to the site admin.</div>
+    <div class="event-form">
+      <label for="supportTopic">Topic</label>
+      <input type="text" id="supportTopic" placeholder="e.g. Course times look wrong">
+      <label for="supportMessage">Message</label>
+      <textarea id="supportMessage" rows="6" placeholder="Describe the issue or question…"></textarea>
+      <div class="event-form-actions">
+        <button class="btn primary" id="supportSendBtn">Send</button>
+      </div>
+    </div>
+  `;
+  overlay.classList.remove('hidden');
+  document.getElementById('modalCloseBtn').addEventListener('click', closeCourseModal);
+  document.getElementById('supportSendBtn').addEventListener('click', sendSupportRequest);
+}
+function sendSupportRequest(){
+  const topic = document.getElementById('supportTopic').value.trim();
+  const message = document.getElementById('supportMessage').value.trim();
+  if(!topic){ alert('Give it a short topic.'); return; }
+  if(!message){ alert('Add a message.'); return; }
+  const from = `${currentUserName || ''} <${currentUserEmail || currentUser}>`;
+  const body = `From: ${from}\n\n${message}`;
+  const mailtoUrl = `mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent(topic)}&body=${encodeURIComponent(body)}`;
+  window.location.href = mailtoUrl;
+  closeCourseModal();
+}
+
 async function renderReviewsInto(c, forceRefresh){
   const listEl = document.getElementById('reviewsList');
   if(!listEl) return; // modal was closed before this resolved
@@ -1225,6 +1263,7 @@ document.getElementById('semToggle').addEventListener('click', (e) => {
 });
 document.getElementById('exportIcsBtn').addEventListener('click', exportIcs);
 document.getElementById('addEventBtn').addEventListener('click', openAddEventModal);
+document.getElementById('supportBtn').addEventListener('click', openSupportModal);
 document.getElementById('clearBtn').addEventListener('click', () => {
   if(confirm('Clear your entire saved schedule?')){
     selected.clear();

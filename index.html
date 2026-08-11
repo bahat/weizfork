@@ -253,6 +253,17 @@
   }
   .points-note{font-size:11px; color:var(--ink-soft); margin-top:4px; font-style:italic;}
 
+  /* --- Personal event form --- */
+  .event-form label{display:block; font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:var(--ink-soft); margin:14px 0 6px; font-family:'IBM Plex Mono',monospace;}
+  .event-form label:first-child{margin-top:0;}
+  .event-form input[type="text"], .event-form input[type="number"], .event-form input[type="time"], .event-form select{
+    width:100%; padding:7px 9px; border:1px solid var(--border); border-radius:var(--radius);
+    font-family:inherit; font-size:13px; background:var(--card-bg); color:var(--ink); box-sizing:border-box;
+  }
+  .event-form .two-col{display:grid; grid-template-columns:1fr 1fr; gap:10px;}
+  .event-form-actions{margin-top:18px;}
+  .session-block.custom-event{border-style:dotted;}
+
   .totals-box{
     margin-top:14px; padding:10px 12px; background:var(--card-bg); border:1px solid var(--border); border-radius:var(--radius);
   }
@@ -315,10 +326,12 @@
       <div id="legendItems"></div>
     </div>
 
-    <label style="margin-top:20px;">Import more courses</label>
-    <button class="btn" id="importBtn">＋ Import parsed JSON</button>
-    <input type="file" id="fileInput" accept="application/json">
-    <div class="empty-note" id="importNote">Accepts either a course-list JSON (from parse_courses.py) or a points/end-date map (from fetch-points.js).</div>
+    <div id="importSection" style="display:none;">
+      <label style="margin-top:20px;">Import more courses</label>
+      <button class="btn" id="importBtn">＋ Import parsed JSON</button>
+      <input type="file" id="fileInput" accept="application/json">
+      <div class="empty-note" id="importNote">Accepts either a course-list JSON (from parse_courses.py) or a points/end-date map (from fetch-points.js).</div>
+    </div>
   </div>
 
   <!-- CALENDAR -->
@@ -341,6 +354,7 @@
   <!-- SELECTED / EXPORT -->
   <div class="panel">
     <h2 style="font-size:18px;">My schedule</h2>
+    <button class="btn" id="addEventBtn" style="margin-bottom:12px;">＋ Add event</button>
     <div id="conflictBox"></div>
     <div class="selected-list" id="selectedList"></div>
     <div class="empty-note" id="emptyNote">No courses added yet. Click “Add” on any course to place it on the calendar.</div>
@@ -388,6 +402,7 @@ const db = firebase.firestore();
 
 const DAY_NAMES = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday"];
 const DEPT_PALETTE = ["#1F6F5C","#C77D2E","#3B5B8C","#8C4B8C","#4C8C6B","#B4432F","#6B6B2F","#2F6B6B"];
+const OWNER_EMAIL = "bahat.omer@gmail.com"; // only this account can import catalog data
 
 let ALL_COURSES = [];
 let deptColorMap = {};
@@ -396,6 +411,7 @@ let activeSemester = "1st";
 let currentUser = null;         // Firebase uid once signed in
 let currentUserName = null;
 let currentUserPicture = null;
+let currentUserEmail = null;
 let pointsMap = {};   // courseKey -> numeric points (shared catalog data, from Firestore)
 let endDateMap = {};  // courseKey -> "dd/mm/yyyy" real semester end date (shared, from Firestore)
 
@@ -422,11 +438,14 @@ async function loadPersisted(){
   if(currentUser){
     try{
       const doc = await db.collection('users').doc(currentUser).get();
-      const ids = (doc.exists && doc.data().selected) || [];
+      const data = doc.exists ? doc.data() : {};
+      const ids = data.selected || [];
       ids.forEach(id => {
         const c = ALL_COURSES.find(c => courseKey(c) === id);
         if(c) selected.set(id, c);
       });
+      // personal custom events (never shared) are stored in full, not as ids
+      (data.customEvents || []).forEach(ev => selected.set(courseKey(ev), ev));
     }catch(e){ console.error('could not load saved schedule', e); }
   }
 }
@@ -434,9 +453,21 @@ async function persistSelection(){
   if(!currentUser) return; // nothing to save to without an account
   try{
     await db.collection('users').doc(currentUser).set(
-      { selected: [...selected.keys()] }, { merge: true }
+      { selected: [...selected.keys()].filter(k => !k.startsWith('custom-')) }, { merge: true }
     );
   }catch(e){ console.error('could not save schedule', e); }
+}
+async function persistCustomEvents(){
+  if(!currentUser) return;
+  try{
+    const events = [...selected.values()].filter(c => c.isCustom);
+    await db.collection('users').doc(currentUser).set({ customEvents: events }, { merge: true });
+  }catch(e){ console.error('could not save custom events', e); }
+}
+function deleteCustomEvent(c){
+  selected.delete(courseKey(c));
+  persistCustomEvents();
+  renderAll();
 }
 async function setPoints(c, value){
   if(!currentUser){ alert('Sign in first to edit shared course info.'); return; }
@@ -448,11 +479,14 @@ async function setPoints(c, value){
 }
 function getPoints(c){
   const v = pointsMap[courseKey(c)];
-  return (v === undefined || v === null) ? null : v;
+  if(v !== undefined && v !== null) return v;
+  // Firestore (shared, user-editable) wins when present; otherwise fall back
+  // to whatever build_courses.py baked into courses.json from the scrape.
+  return (c.points === undefined || c.points === null) ? null : c.points;
 }
 function getEndDate(c){
   const v = endDateMap[courseKey(c)];
-  return v || null;
+  return v || c.end_date || null;
 }
 /**
  * Bulk-write a points/end-date map (e.g. from fetch-points.js) into Firestore
@@ -655,7 +689,7 @@ function renderSelected(){
   if(!currentUser){
     emptyNote.textContent = 'Sign in with Google to save your schedule — otherwise it\'s cleared on refresh.';
   } else {
-    emptyNote.textContent = 'No courses added yet. Click "Add" on any course to place it on the calendar.';
+    emptyNote.textContent = 'No courses added yet. Click "Add" on any course, or "＋ Add event" above, to place it on the calendar.';
   }
 
   items.sort((a,b)=>a.title.localeCompare(b.title)).forEach(c => {
@@ -665,12 +699,12 @@ function renderSelected(){
     const pts = getPoints(c);
     div.innerHTML = `
       <div class="row">
-        <span class="title">${c.title}${pts !== null ? `<span class="points-badge">${pts} pts</span>` : ''}</span>
+        <span class="title">${c.title}${pts !== null ? `<span class="points-badge">${pts} pts</span>` : ''}${c.isCustom ? `<span class="points-badge">personal</span>` : ''}</span>
         <button class="remove" title="Remove">×</button>
       </div>
       <div class="meta">${c.semester} · ${(c.lecturers||[])[0] || ''}</div>
     `;
-    div.querySelector('.remove').addEventListener('click', () => toggleCourse(c));
+    div.querySelector('.remove').addEventListener('click', () => c.isCustom ? deleteCustomEvent(c) : toggleCourse(c));
     box.appendChild(div);
   });
 
@@ -764,7 +798,7 @@ function renderCalendar(){
       const height = Math.max(((endMin-startMin)/60) * rowHeight, 20);
 
       const block = document.createElement('div');
-      block.className = 'session-block' + (s.type === 'tutorial' ? ' tutorial' : '');
+      block.className = 'session-block' + (s.type === 'tutorial' ? ' tutorial' : '') + (c.isCustom ? ' custom-event' : '');
       if(conflictKeySet.has(c.course_id+s.day_index+s.start)) block.classList.add('conflict');
       block.style.background = color;
       block.style.top = top + 'px';
@@ -842,10 +876,11 @@ function openCourseModal(c){
       <dt>Schedule</dt>
       ${sessionsHtml}
     </dl>
-    ${c.detail_url
+    ${c.isCustom ? '' : (c.detail_url
       ? `<a class="modal-link" href="${c.detail_url}" target="_blank" rel="noopener noreferrer">View on erez.weizmann.ac.il ↗</a>`
-      : `<div class="no-link-note">No direct link available for this course.</div>`}
+      : `<div class="no-link-note">No direct link available for this course.</div>`)}
 
+    ${c.isCustom ? '' : `
     <div class="reviews-section">
       <dt style="margin-top:20px;">Reviews <span class="shared-note">(visible to everyone using this app · posted anonymously)</span></dt>
       <div id="reviewsList">Loading reviews…</div>
@@ -862,6 +897,7 @@ function openCourseModal(c){
         <button id="submitReviewBtn" ${currentUser ? '' : 'disabled'}>Post review</button>
       </div>
     </div>
+    `}
   `;
   overlay.classList.remove('hidden');
   document.getElementById('modalCloseBtn').addEventListener('click', closeCourseModal);
@@ -871,15 +907,111 @@ function openCourseModal(c){
     renderSelected();
   });
 
-  renderReviewsInto(c, false);
-  document.getElementById('submitReviewBtn').addEventListener('click', async () => {
-    const rating = document.getElementById('reviewRating').value;
-    const text = document.getElementById('reviewText').value;
-    if(!text.trim()){ alert('Add a few words before posting.'); return; }
-    await addReview(c, rating, text);
-    document.getElementById('reviewText').value = '';
-    renderReviewsInto(c, true);
-  });
+  if(!c.isCustom){
+    renderReviewsInto(c, false);
+    document.getElementById('submitReviewBtn').addEventListener('click', async () => {
+      const rating = document.getElementById('reviewRating').value;
+      const text = document.getElementById('reviewText').value;
+      if(!text.trim()){ alert('Add a few words before posting.'); return; }
+      await addReview(c, rating, text);
+      document.getElementById('reviewText').value = '';
+      renderReviewsInto(c, true);
+    });
+  }
+}
+
+/* ---------- add personal event ---------- */
+function openAddEventModal(){
+  const overlay = document.getElementById('modalOverlay');
+  const box = document.getElementById('modalBox');
+  const yearVal = document.getElementById('yearFilter').value || new Date().getFullYear();
+  box.innerHTML = `
+    <button class="close-btn" id="modalCloseBtn">&times;</button>
+    <h3>Add a personal event</h3>
+    <div class="custom-event-note">Only visible to you — shown on your calendar, not shared with anyone else.</div>
+    <div class="event-form">
+      <label for="evTitle">Title</label>
+      <input type="text" id="evTitle" placeholder="e.g. Private lesson">
+      <label for="evFaculty">Faculty</label>
+      <input type="text" id="evFaculty" placeholder="e.g. Mathematics and Computer Science">
+      <label for="evInstructor">Instructor</label>
+      <input type="text" id="evInstructor" placeholder="optional">
+      <div class="two-col">
+        <div>
+          <label for="evSemester">Semester</label>
+          <select id="evSemester">
+            <option value="1st">1st</option>
+            <option value="2nd">2nd</option>
+            <option value="Full Year">Full Year</option>
+          </select>
+        </div>
+        <div>
+          <label for="evYear">Year</label>
+          <input type="number" id="evYear" value="${yearVal}">
+        </div>
+      </div>
+      <label for="evDay">Day</label>
+      <select id="evDay">
+        ${DAY_NAMES.map((d,i) => `<option value="${i}">${d}</option>`).join('')}
+      </select>
+      <div class="two-col">
+        <div>
+          <label for="evStart">Start time</label>
+          <input type="time" id="evStart" value="10:00">
+        </div>
+        <div>
+          <label for="evEnd">End time</label>
+          <input type="time" id="evEnd" value="12:00">
+        </div>
+      </div>
+      <label for="evLocation">Location</label>
+      <input type="text" id="evLocation" placeholder="optional">
+      <div class="event-form-actions">
+        <button class="btn primary" id="evSaveBtn">Add event</button>
+      </div>
+    </div>
+  `;
+  overlay.classList.remove('hidden');
+  document.getElementById('modalCloseBtn').addEventListener('click', closeCourseModal);
+  document.getElementById('evSaveBtn').addEventListener('click', saveCustomEvent);
+}
+
+function saveCustomEvent(){
+  const title = document.getElementById('evTitle').value.trim();
+  const start = document.getElementById('evStart').value;
+  const end = document.getElementById('evEnd').value;
+  if(!title){ alert('Give the event a title.'); return; }
+  if(!start || !end){ alert('Set a start and end time.'); return; }
+  if(start >= end){ alert('End time must be after start time.'); return; }
+
+  const dayIdx = Number(document.getElementById('evDay').value);
+  const ev = {
+    course_id: 'custom-' + Date.now().toString(36) + Math.random().toString(36).slice(2, 7),
+    group_id: '0',
+    isCustom: true,
+    title,
+    offered_by: document.getElementById('evFaculty').value.trim() || null,
+    fields: [],
+    lecturers: [document.getElementById('evInstructor').value.trim()].filter(Boolean),
+    semester: document.getElementById('evSemester').value,
+    year: Number(document.getElementById('evYear').value) || null,
+    first_lecture: null,
+    detail_url: null,
+    sessions: [{
+      type: 'lecture',
+      day_name: DAY_NAMES[dayIdx],
+      day_index: dayIdx,
+      start,
+      end,
+      location: document.getElementById('evLocation').value.trim() || null,
+    }],
+  };
+
+  selected.set(courseKey(ev), ev);
+  persistSelection();
+  persistCustomEvents();
+  closeCourseModal();
+  renderAll();
 }
 
 async function renderReviewsInto(c, forceRefresh){
@@ -941,6 +1073,7 @@ function renderUserBar(){
       </span>
     `;
     document.getElementById('switchUserBtn').addEventListener('click', () => auth.signOut());
+    renderImportVisibility();
     return;
   }
   bar.innerHTML = `<button id="signInBtn">Sign in with Google</button>`;
@@ -948,6 +1081,10 @@ function renderUserBar(){
     auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
       .catch(err => alert('Sign-in failed: ' + err.message));
   });
+  renderImportVisibility();
+}
+function renderImportVisibility(){
+  document.getElementById('importSection').style.display = (currentUserEmail === OWNER_EMAIL) ? '' : 'none';
 }
 
 // Fires on load (restoring a previous session) and on every sign-in/out.
@@ -955,6 +1092,7 @@ auth.onAuthStateChanged(async (user) => {
   currentUser = user ? user.uid : null;
   currentUserName = user ? user.displayName : null;
   currentUserPicture = user ? user.photoURL : null;
+  currentUserEmail = user ? user.email : null;
   await coursesReady; // don't try to resolve selected-course ids before the catalog is loaded
   await loadPersisted();
   renderAll();
@@ -1078,10 +1216,12 @@ document.getElementById('semToggle').addEventListener('click', (e) => {
   renderSelected();
 });
 document.getElementById('exportIcsBtn').addEventListener('click', exportIcs);
+document.getElementById('addEventBtn').addEventListener('click', openAddEventModal);
 document.getElementById('clearBtn').addEventListener('click', () => {
   if(confirm('Clear your entire saved schedule?')){
     selected.clear();
     persistSelection();
+    persistCustomEvents();
     renderAll();
   }
 });

@@ -46,12 +46,17 @@
     gap:0;
     align-items:start;
     min-height: calc(100vh - 90px);
+    min-width:0;
   }
   @media (max-width: 1100px){
     .layout{grid-template-columns: 1fr;}
   }
 
-  .panel{padding:20px 22px; border-right:1px solid var(--border);}
+  .panel{padding:20px 22px; border-right:1px solid var(--border); min-width:0;}
+  @media (max-width: 1100px){
+    .panel{border-right:none; border-bottom:1px solid var(--border);}
+    .panel:last-child{border-bottom:none;}
+  }
   .panel:last-child{border-right:none;}
 
   .filters label{display:block; font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:var(--ink-soft); margin:16px 0 6px; font-family:'IBM Plex Mono',monospace;}
@@ -149,12 +154,12 @@
 
   /* --- Calendar --- */
   .cal-wrap{padding:20px 22px;}
-  .cal-header{display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;}
+  .cal-header{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:14px;}
   .cal-header h2{font-size:20px;}
   .semester-toggle{display:flex; gap:0; border:1px solid var(--ink); border-radius:var(--radius); overflow:hidden;}
   .semester-toggle button{
     background:var(--card-bg); border:none; padding:6px 14px; font-family:'IBM Plex Mono',monospace; font-size:12px;
-    cursor:pointer; color:var(--ink); border-right:1px solid var(--ink);
+    cursor:pointer; color:var(--ink); border-right:1px solid var(--ink); white-space:nowrap;
   }
   .semester-toggle button:last-child{border-right:none;}
   .semester-toggle button.active{background:var(--ink); color:var(--paper);}

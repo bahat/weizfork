@@ -102,9 +102,10 @@
     color:var(--ink-soft); cursor:pointer;
   }
   .modal-box h3{font-size:19px; margin-bottom:4px; padding-right:20px;}
+  .modal-box .dept-tags{margin-bottom:14px;}
   .modal-box .dept-tag{
     display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:11px; padding:2px 8px; border-radius:10px;
-    color:#fff; margin-bottom:14px;
+    color:#fff; margin-right:6px; margin-bottom:4px;
   }
   .modal-box dl{margin:0;}
   .modal-box dt{font-family:'IBM Plex Mono',monospace; font-size:10.5px; text-transform:uppercase; letter-spacing:0.05em; color:var(--ink-soft); margin-top:12px;}
@@ -569,7 +570,7 @@ function renderLegend(){
 function populateFieldFilter(){
   const sel = document.getElementById('fieldFilter');
   const prev = sel.value;
-  const fields = [...new Set(ALL_COURSES.map(c => c.field).filter(Boolean))].sort();
+  const fields = [...new Set(ALL_COURSES.flatMap(c => c.fields || []).filter(Boolean))].sort();
   sel.innerHTML = '<option value="">All fields loaded</option>' + fields.map(f=>`<option value="${f}">${f}</option>`).join('');
   if(fields.includes(prev)) sel.value = prev;
 }
@@ -591,7 +592,7 @@ function getFiltered(){
 
   return ALL_COURSES.filter(c => {
     if(year && String(c.year) !== year) return false;
-    if(field && c.field !== field) return false;
+    if(field && !(c.fields||[]).includes(field)) return false;
     if(sem && c.semester !== sem) return false;
     if(day !== "" && !c.sessions.some(s => String(s.day_index) === day)) return false;
     if(q){
@@ -806,6 +807,8 @@ function openCourseModal(c){
   const overlay = document.getElementById('modalOverlay');
   const box = document.getElementById('modalBox');
   const color = deptColorMap[c.offered_by || 'Other'] || '#1F6F5C';
+  const fieldTags = (c.fields && c.fields.length ? c.fields : [c.offered_by || 'Uncategorized'])
+    .map(f => `<span class="dept-tag" style="background:${deptColorMap[f] || color}">${f}</span>`).join('');
 
   const sessionsHtml = c.sessions.length
     ? '<ul class="sessions-list">' + c.sessions.map(s => `
@@ -818,7 +821,7 @@ function openCourseModal(c){
   box.innerHTML = `
     <button class="close-btn" id="modalCloseBtn">&times;</button>
     <h3>${c.title}</h3>
-    <span class="dept-tag" style="background:${color}">${c.offered_by || 'Uncategorized'}</span>
+    <div class="dept-tags">${fieldTags}</div>
     <dl>
       <dt>Lecturer(s)</dt>
       <dd>${(c.lecturers||[]).join(', ') || '—'}</dd>
@@ -958,7 +961,7 @@ auth.onAuthStateChanged(async (user) => {
 });
 
 function renderMeta(){
-  const fields = [...new Set(ALL_COURSES.map(c=>c.field).filter(Boolean))];
+  const fields = [...new Set(ALL_COURSES.flatMap(c=>c.fields || []).filter(Boolean))];
   document.getElementById('dataMeta').textContent = `${ALL_COURSES.length} courses loaded · ${fields.join(', ')}`;
 }
 

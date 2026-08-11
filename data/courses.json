@@ -31,7 +31,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15769&pprev=15220",
     "fields": [
       "Chemical Sciences"
-    ]
+    ],
+    "points": 3,
+    "end_date": "27/06/2027",
+    "course_code": "20272082"
   },
   {
     "course_id": "15788",
@@ -59,7 +62,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15788&pprev=0",
     "fields": [
       "Chemical Sciences"
-    ]
+    ],
+    "points": 2,
+    "end_date": "14/01/2027",
+    "course_code": "20272161"
   },
   {
     "course_id": "15765",
@@ -88,7 +94,10 @@
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)",
       "Physical Sciences"
-    ]
+    ],
+    "points": 4,
+    "end_date": "12/01/2027",
+    "course_code": "20272041"
   },
   {
     "course_id": "15772",
@@ -118,7 +127,10 @@
       "Life Sciences",
       "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 1,
+    "end_date": "15/10/2026",
+    "course_code": "20272071"
   },
   {
     "course_id": "15778",
@@ -152,7 +164,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15778&pprev=15586",
     "fields": [
       "Chemical Sciences"
-    ]
+    ],
+    "points": 3,
+    "end_date": "14/01/2027",
+    "course_code": "20272131"
   },
   {
     "course_id": "15776",
@@ -181,7 +196,10 @@
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)",
       "Physical Sciences"
-    ]
+    ],
+    "points": null,
+    "end_date": "28/06/2027",
+    "course_code": "20272172"
   },
   {
     "course_id": "15767",
@@ -215,7 +233,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15767&pprev=0",
     "fields": [
       "Chemical Sciences"
-    ]
+    ],
+    "points": 3,
+    "end_date": "24/06/2027",
+    "course_code": "20272072"
   },
   {
     "course_id": "15762",
@@ -251,7 +272,10 @@
       "Chemical Sciences",
       "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 3,
+    "end_date": "27/06/2027",
+    "course_code": "20272052"
   },
   {
     "course_id": "15773",
@@ -278,7 +302,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15773&pprev=15390",
     "fields": [
       "Chemical Sciences"
-    ]
+    ],
+    "points": 2,
+    "end_date": "11/01/2027",
+    "course_code": "20272081"
   },
   {
     "course_id": "15780",
@@ -304,7 +331,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15780&pprev=15583",
     "fields": [
       "Chemical Sciences"
-    ]
+    ],
+    "points": 3,
+    "end_date": "12/01/2027",
+    "course_code": "20272141"
   },
   {
     "course_id": "15777",
@@ -330,7 +360,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15777&pprev=15585",
     "fields": [
       "Chemical Sciences"
-    ]
+    ],
+    "points": 2,
+    "end_date": "13/01/2027",
+    "course_code": "20272121"
   },
   {
     "course_id": "15757",
@@ -359,7 +392,10 @@
       "Chemical Sciences",
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "14/01/2027",
+    "course_code": "20272011"
   },
   {
     "course_id": "15760",
@@ -385,7 +421,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15760&pprev=0",
     "fields": [
       "Chemical Sciences"
-    ]
+    ],
+    "points": 2,
+    "end_date": "27/06/2027",
+    "course_code": "20272042"
   },
   {
     "course_id": "15787",
@@ -411,7 +450,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15787&pprev=15588",
     "fields": [
       "Chemical Sciences"
-    ]
+    ],
+    "points": 2,
+    "end_date": "24/06/2027",
+    "course_code": "20272182"
   },
   {
     "course_id": "15779",
@@ -446,7 +488,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15779&pprev=2279",
     "fields": [
       "Chemical Sciences"
-    ]
+    ],
+    "points": 3,
+    "end_date": "23/06/2027",
+    "course_code": "20272102"
   },
   {
     "course_id": "15768",
@@ -482,7 +527,10 @@
       "Chemical Sciences",
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 3,
+    "end_date": "14/01/2027",
+    "course_code": "20272051"
   },
   {
     "course_id": "15766",
@@ -510,7 +558,10 @@
       "Chemical Sciences",
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 3,
+    "end_date": "28/06/2027",
+    "course_code": "20272062"
   },
   {
     "course_id": "15764",
@@ -544,7 +595,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15764&pprev=15444",
     "fields": [
       "Chemical Sciences"
-    ]
+    ],
+    "points": 3,
+    "end_date": "13/01/2027",
+    "course_code": "20272031"
   },
   {
     "course_id": "15784",
@@ -571,7 +625,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15784&pprev=0",
     "fields": [
       "Chemical Sciences"
-    ]
+    ],
+    "points": 2,
+    "end_date": "30/06/2027",
+    "course_code": "20272142"
   },
   {
     "course_id": "15783",
@@ -601,7 +658,10 @@
       "Chemical Sciences",
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "22/06/2027",
+    "course_code": "20272132"
   },
   {
     "course_id": "15786",
@@ -627,7 +687,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15786&pprev=14796",
     "fields": [
       "Chemical Sciences"
-    ]
+    ],
+    "points": 2,
+    "end_date": "28/06/2027",
+    "course_code": "20272162"
   },
   {
     "course_id": "15763",
@@ -656,7 +719,10 @@
       "Chemical Sciences",
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "11/01/2027",
+    "course_code": "20272021"
   },
   {
     "course_id": "15770",
@@ -685,7 +751,10 @@
       "Chemical Sciences",
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 3,
+    "end_date": "12/01/2027",
+    "course_code": "20272061"
   },
   {
     "course_id": "15771",
@@ -714,7 +783,10 @@
       "Chemical Sciences",
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "24/06/2027",
+    "course_code": "20272092"
   },
   {
     "course_id": "15775",
@@ -748,7 +820,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15775&pprev=15582",
     "fields": [
       "Chemical Sciences"
-    ]
+    ],
+    "points": 3,
+    "end_date": "12/01/2027",
+    "course_code": "20272101"
   },
   {
     "course_id": "15862",
@@ -774,7 +849,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15862&pprev=15638",
     "fields": [
       "Chemical Sciences"
-    ]
+    ],
+    "points": 0.5,
+    "end_date": "10/01/2027",
+    "course_code": "20272171"
   },
   {
     "course_id": "15774",
@@ -800,7 +878,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15774&pprev=15581",
     "fields": [
       "Chemical Sciences"
-    ]
+    ],
+    "points": 2,
+    "end_date": "13/01/2027",
+    "course_code": "20272091"
   },
   {
     "course_id": "15758",
@@ -834,7 +915,43 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15758&pprev=15229",
     "fields": [
       "Chemical Sciences"
-    ]
+    ],
+    "points": 3,
+    "end_date": "11/01/2027",
+    "course_code": "20272181"
+  },
+  {
+    "course_id": "16065",
+    "group_id": "0",
+    "title": "The Craft of Writing Effectively",
+    "offered_by": "Chemical Sciences",
+    "lecturers": [
+      "Dr. Alexandra Tayar",
+      "Prof. Roi Avraham"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": null,
+        "day_index": null,
+        "start": null,
+        "end": null,
+        "location": null,
+        "note": "09:00 - 16:00, Stone, Zacks Meeting Rm"
+      }
+    ],
+    "first_lecture": "21/02/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16065&pprev=0",
+    "fields": [
+      "Chemical Sciences",
+      "Life Sciences",
+      "Life Sciences (Scientific Archeology Track)"
+    ],
+    "points": 0.5,
+    "end_date": "25/02/2027",
+    "course_code": "20272201"
   },
   {
     "course_id": "15913",
@@ -869,7 +986,10 @@
     "fields": [
       "Chemical Sciences",
       "Physical Sciences"
-    ]
+    ],
+    "points": 1,
+    "end_date": "22/06/2027",
+    "course_code": "20271013"
   },
   {
     "course_id": "16046",
@@ -904,7 +1024,10 @@
     "fields": [
       "Chemical Sciences",
       "Physical Sciences"
-    ]
+    ],
+    "points": 4,
+    "end_date": "12/01/2027",
+    "course_code": "20271211"
   },
   {
     "course_id": "15914",
@@ -948,7 +1071,10 @@
     "fields": [
       "Chemical Sciences",
       "Physical Sciences"
-    ]
+    ],
+    "points": 6,
+    "end_date": "24/06/2027",
+    "course_code": "20271022"
   },
   {
     "course_id": "15920",
@@ -991,7 +1117,10 @@
     "fields": [
       "Chemical Sciences",
       "Physical Sciences"
-    ]
+    ],
+    "points": 6,
+    "end_date": "22/06/2027",
+    "course_code": "20271032"
   },
   {
     "course_id": "15995",
@@ -1000,9 +1129,7 @@
     "offered_by": "Physical Sciences",
     "lecturers": [
       "Dr. Ziv Meir",
-      "Dr. Osip Schwartz",
-      "Dr. Barry Bruner",
-      "Dr. Nitzan Akerman"
+      "Dr. Osip Schwartz"
     ],
     "semester": "1st",
     "sessions": [
@@ -1029,7 +1156,10 @@
     "fields": [
       "Chemical Sciences",
       "Physical Sciences"
-    ]
+    ],
+    "points": 4,
+    "end_date": "14/01/2027",
+    "course_code": "20271181"
   },
   {
     "course_id": "15973",
@@ -1064,7 +1194,10 @@
     "fields": [
       "Chemical Sciences",
       "Physical Sciences"
-    ]
+    ],
+    "points": 4,
+    "end_date": "13/01/2027",
+    "course_code": "20271111"
   },
   {
     "course_id": "15963",
@@ -1100,7 +1233,10 @@
     "fields": [
       "Chemical Sciences",
       "Physical Sciences"
-    ]
+    ],
+    "points": null,
+    "end_date": "13/01/2027",
+    "course_code": "20271071"
   },
   {
     "course_id": "15993",
@@ -1135,7 +1271,10 @@
     "fields": [
       "Chemical Sciences",
       "Physical Sciences"
-    ]
+    ],
+    "points": 3,
+    "end_date": "21/06/2027",
+    "course_code": "20271212"
   },
   {
     "course_id": "15964",
@@ -1170,7 +1309,10 @@
     "fields": [
       "Chemical Sciences",
       "Physical Sciences"
-    ]
+    ],
+    "points": 4,
+    "end_date": "23/06/2027",
+    "course_code": "20271082"
   },
   {
     "course_id": "15925",
@@ -1213,7 +1355,10 @@
     "fields": [
       "Chemical Sciences",
       "Physical Sciences"
-    ]
+    ],
+    "points": null,
+    "end_date": "13/01/2027",
+    "course_code": "20271061"
   },
   {
     "course_id": "15965",
@@ -1240,7 +1385,10 @@
     "fields": [
       "Chemical Sciences",
       "Physical Sciences"
-    ]
+    ],
+    "points": 2,
+    "end_date": "13/01/2027",
+    "course_code": "20271081"
   },
   {
     "course_id": "16057",
@@ -1268,7 +1416,10 @@
     "fields": [
       "Chemical Sciences",
       "Physical Sciences"
-    ]
+    ],
+    "points": null,
+    "end_date": "24/06/2027",
+    "course_code": "20271302"
   },
   {
     "course_id": "15966",
@@ -1296,7 +1447,10 @@
     "fields": [
       "Chemical Sciences",
       "Physical Sciences"
-    ]
+    ],
+    "points": null,
+    "end_date": "23/06/2027",
+    "course_code": "20271092"
   },
   {
     "course_id": "15930",
@@ -1326,7 +1480,10 @@
       "Life Sciences (Computational and Systems Biology Track)",
       "Life Sciences (Scientific Archeology Track)",
       "Physical Sciences"
-    ]
+    ],
+    "points": 4,
+    "end_date": "24/06/2027",
+    "course_code": "20271062"
   },
   {
     "course_id": "15923",
@@ -1361,7 +1518,10 @@
     "fields": [
       "Chemical Sciences",
       "Physical Sciences"
-    ]
+    ],
+    "points": 4,
+    "end_date": "12/01/2027",
+    "course_code": "20271051"
   },
   {
     "course_id": "15991",
@@ -1388,7 +1548,10 @@
     "fields": [
       "Chemical Sciences",
       "Physical Sciences"
-    ]
+    ],
+    "points": null,
+    "end_date": "13/01/2027",
+    "course_code": "20271221"
   },
   {
     "course_id": "15921",
@@ -1431,7 +1594,10 @@
     "fields": [
       "Chemical Sciences",
       "Physical Sciences"
-    ]
+    ],
+    "points": null,
+    "end_date": "23/06/2027",
+    "course_code": "20271042"
   },
   {
     "course_id": "16008",
@@ -1466,7 +1632,10 @@
     "fields": [
       "Chemical Sciences",
       "Physical Sciences"
-    ]
+    ],
+    "points": 5,
+    "end_date": "24/06/2027",
+    "course_code": "20271262"
   },
   {
     "course_id": "15911",
@@ -1510,7 +1679,10 @@
     "fields": [
       "Chemical Sciences",
       "Physical Sciences"
-    ]
+    ],
+    "points": 4,
+    "end_date": "24/06/2027",
+    "course_code": "20271012"
   },
   {
     "course_id": "16029",
@@ -1546,7 +1718,10 @@
     "fields": [
       "Chemical Sciences",
       "Physical Sciences"
-    ]
+    ],
+    "points": null,
+    "end_date": "24/06/2027",
+    "course_code": "20271272"
   },
   {
     "course_id": "15747",
@@ -1589,7 +1764,10 @@
     "fields": [
       "Chemical Sciences",
       "Physical Sciences"
-    ]
+    ],
+    "points": 6,
+    "end_date": "13/01/2027",
+    "course_code": "20271021"
   },
   {
     "course_id": "15748",
@@ -1632,7 +1810,10 @@
     "fields": [
       "Chemical Sciences",
       "Physical Sciences"
-    ]
+    ],
+    "points": 6,
+    "end_date": "12/01/2027",
+    "course_code": "20271031"
   },
   {
     "course_id": "15746",
@@ -1678,7 +1859,10 @@
       "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)",
       "Life Sciences (Scientific Archeology Track)",
       "Physical Sciences"
-    ]
+    ],
+    "points": 6,
+    "end_date": "14/01/2027",
+    "course_code": "20271011"
   },
   {
     "course_id": "15962",
@@ -1716,7 +1900,10 @@
       "Life Sciences (Scientific Archeology Track)",
       "Mathematics and Computer Science",
       "Physical Sciences"
-    ]
+    ],
+    "points": null,
+    "end_date": "20/06/2027",
+    "course_code": "20271072"
   },
   {
     "course_id": "16042",
@@ -1744,7 +1931,10 @@
     "fields": [
       "Chemical Sciences",
       "Physical Sciences"
-    ]
+    ],
+    "points": 1,
+    "end_date": "14/01/2027",
+    "course_code": "20271201"
   },
   {
     "course_id": "16043",
@@ -1772,7 +1962,10 @@
     "fields": [
       "Chemical Sciences",
       "Physical Sciences"
-    ]
+    ],
+    "points": 1,
+    "end_date": "21/06/2027",
+    "course_code": "20271282"
   },
   {
     "course_id": "15802",
@@ -1792,7 +1985,50 @@
       "Chemical Sciences",
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 1,
+    "end_date": "20/12/2026",
+    "course_code": "20273031"
+  },
+  {
+    "course_id": "15919",
+    "group_id": "15740",
+    "title": "Introduction to Matlab and data analysis",
+    "offered_by": "Life Sciences",
+    "lecturers": [
+      "Dr. Natalie Kronik"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Wednesday",
+        "day_index": 3,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "WSoS, Rm  B"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "12:15",
+        "end": "14:00",
+        "location": "WSoS, Rm  B"
+      }
+    ],
+    "first_lecture": "10/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15919&pprev=15740",
+    "fields": [
+      "Chemical Sciences",
+      "Life Sciences",
+      "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)",
+      "Life Sciences (Scientific Archeology Track)"
+    ],
+    "points": null,
+    "end_date": "28/06/2027",
+    "course_code": "20273332"
   },
   {
     "course_id": "15918",
@@ -1830,44 +2066,10 @@
       "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)",
       "Life Sciences (Computational and Systems Biology Track)",
       "Life Sciences (Scientific Archeology Track)"
-    ]
-  },
-  {
-    "course_id": "15919",
-    "group_id": "15740",
-    "title": "Introduction to Matlab and data analysis",
-    "offered_by": "Life Sciences",
-    "lecturers": [
-      "Dr. Natalie Kronik"
     ],
-    "semester": "2nd",
-    "sessions": [
-      {
-        "type": "lecture",
-        "day_name": "Wednesday",
-        "day_index": 3,
-        "start": "14:15",
-        "end": "16:00",
-        "location": "WSoS, Rm  B"
-      },
-      {
-        "type": "tutorial",
-        "day_name": "Monday",
-        "day_index": 1,
-        "start": "12:15",
-        "end": "14:00",
-        "location": "WSoS, Rm  B"
-      }
-    ],
-    "first_lecture": "10/03/2027",
-    "year": 2027,
-    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15919&pprev=15740",
-    "fields": [
-      "Chemical Sciences",
-      "Life Sciences",
-      "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)",
-      "Life Sciences (Scientific Archeology Track)"
-    ]
+    "points": null,
+    "end_date": "14/01/2027",
+    "course_code": "20273241"
   },
   {
     "course_id": "15793",
@@ -1895,7 +2097,10 @@
       "Chemical Sciences",
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "24/06/2027",
+    "course_code": "20273032"
   },
   {
     "course_id": "15915",
@@ -1935,37 +2140,10 @@
       "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)",
       "Life Sciences (Computational and Systems Biology Track)",
       "Life Sciences (Scientific Archeology Track)"
-    ]
-  },
-  {
-    "course_id": "15922",
-    "group_id": "15469",
-    "title": "Programming in Python using AI",
-    "offered_by": "Life Sciences",
-    "lecturers": [
-      "Mr. Gabor  Szabo",
-      "Dr. Yaron Antebi"
     ],
-    "semester": "2nd",
-    "sessions": [
-      {
-        "type": "lecture",
-        "day_name": "Tuesday",
-        "day_index": 2,
-        "start": "09:15",
-        "end": "12:00",
-        "location": "WSoS, Rm C"
-      }
-    ],
-    "first_lecture": "09/03/2027",
-    "year": 2027,
-    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15922&pprev=15469",
-    "fields": [
-      "Chemical Sciences",
-      "Life Sciences",
-      "Life Sciences (Computational and Systems Biology Track)",
-      "Life Sciences (Scientific Archeology Track)"
-    ]
+    "points": 3,
+    "end_date": "14/01/2027",
+    "course_code": "20273221"
   },
   {
     "course_id": "15916",
@@ -1996,7 +2174,43 @@
       "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)",
       "Life Sciences (Computational and Systems Biology Track)",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 2.5,
+    "end_date": "11/01/2027",
+    "course_code": "20273231"
+  },
+  {
+    "course_id": "15922",
+    "group_id": "15469",
+    "title": "Programming in Python using AI",
+    "offered_by": "Life Sciences",
+    "lecturers": [
+      "Mr. Gabor  Szabo",
+      "Dr. Yaron Antebi"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "09:15",
+        "end": "12:00",
+        "location": "WSoS, Rm C"
+      }
+    ],
+    "first_lecture": "09/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15922&pprev=15469",
+    "fields": [
+      "Chemical Sciences",
+      "Life Sciences",
+      "Life Sciences (Computational and Systems Biology Track)",
+      "Life Sciences (Scientific Archeology Track)"
+    ],
+    "points": 2.5,
+    "end_date": "22/06/2027",
+    "course_code": "20273342"
   },
   {
     "course_id": "15848",
@@ -2023,7 +2237,10 @@
       "Chemical Sciences",
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": null,
+    "end_date": "13/04/2027",
+    "course_code": "20273092"
   },
   {
     "course_id": "16002",
@@ -2056,7 +2273,10 @@
       "Chemical Sciences",
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": null,
+    "end_date": "25/02/2027",
+    "course_code": "20273311"
   },
   {
     "course_id": "15927",
@@ -2086,7 +2306,10 @@
       "Life Sciences (Computational and Systems Biology Track)",
       "Life Sciences (Scientific Archeology Track)",
       "Mathematics and Computer Science (Systems Biology / Bioinformatics)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "11/01/2027",
+    "course_code": "20273251"
   },
   {
     "course_id": "15804",
@@ -2118,7 +2341,10 @@
       "Life Sciences (Scientific Archeology Track)",
       "Mathematics and Computer Science",
       "Physical Sciences"
-    ]
+    ],
+    "points": 2,
+    "end_date": "14/01/2027",
+    "course_code": "20273041"
   },
   {
     "course_id": "15885",
@@ -2152,7 +2378,10 @@
       "Life Sciences (Computational and Systems Biology Track)",
       "Life Sciences (Scientific Archeology Track)",
       "Mathematics and Computer Science"
-    ]
+    ],
+    "points": 3,
+    "end_date": "22/06/2027",
+    "course_code": "20274092"
   },
   {
     "course_id": "16036",
@@ -2187,7 +2416,10 @@
     "fields": [
       "Chemical Sciences",
       "Mathematics and Computer Science"
-    ]
+    ],
+    "points": null,
+    "end_date": "24/06/2027",
+    "course_code": "20274132"
   },
   {
     "course_id": "16033",
@@ -2217,7 +2449,10 @@
       "Life Sciences (Scientific Archeology Track)",
       "Mathematics and Computer Science",
       "Obligatory instruction courses or enrichment courses"
-    ]
+    ],
+    "points": 1,
+    "end_date": "01/12/2026",
+    "course_code": "20278031"
   },
   {
     "course_id": "16003",
@@ -2246,7 +2481,10 @@
       "Life Sciences",
       "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 0.5,
+    "end_date": "29/06/2027",
+    "course_code": "20273442"
   },
   {
     "course_id": "15803",
@@ -2276,7 +2514,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 0.5,
+    "end_date": "20/05/2027",
+    "course_code": "20273062"
   },
   {
     "course_id": "16012",
@@ -2292,7 +2533,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 3,
+    "end_date": "26/10/2026",
+    "course_code": "20273351"
   },
   {
     "course_id": "15929",
@@ -2322,7 +2566,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 1,
+    "end_date": "24/12/2026",
+    "course_code": "20273261"
   },
   {
     "course_id": "15807",
@@ -2351,7 +2598,10 @@
       "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)",
       "Life Sciences (Computational and Systems Biology Track)",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 3,
+    "end_date": "12/01/2027",
+    "course_code": "20273051"
   },
   {
     "course_id": "16005",
@@ -2372,7 +2622,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 1,
+    "end_date": "04/03/2027",
+    "course_code": "20273331"
   },
   {
     "course_id": "15877",
@@ -2406,7 +2659,10 @@
       "Life Sciences",
       "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "22/06/2027",
+    "course_code": "20273202"
   },
   {
     "course_id": "15874",
@@ -2444,7 +2700,10 @@
       "Life Sciences (Computational and Systems Biology Track)",
       "Life Sciences (Molecular and Cellular Neuroscience Track)",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 3,
+    "end_date": "27/06/2027",
+    "course_code": "20273192"
   },
   {
     "course_id": "15866",
@@ -2474,7 +2733,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "23/06/2027",
+    "course_code": "20273172"
   },
   {
     "course_id": "15864",
@@ -2504,7 +2766,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 3,
+    "end_date": "13/01/2027",
+    "course_code": "20273121"
   },
   {
     "course_id": "15790",
@@ -2532,7 +2797,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "23/06/2027",
+    "course_code": "20273012"
   },
   {
     "course_id": "15854",
@@ -2560,7 +2828,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "13/01/2027",
+    "course_code": "20273101"
   },
   {
     "course_id": "16011",
@@ -2598,7 +2869,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "23/06/2027",
+    "course_code": "20273472"
   },
   {
     "course_id": "15887",
@@ -2627,7 +2901,10 @@
       "Life Sciences",
       "Life Sciences (Computational and Systems Biology Track)",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": null,
+    "end_date": "27/06/2027",
+    "course_code": "20273232"
   },
   {
     "course_id": "15888",
@@ -2656,7 +2933,10 @@
       "Life Sciences",
       "Life Sciences (Computational and Systems Biology Track)",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 1,
+    "end_date": "27/06/2027",
+    "course_code": "20273242"
   },
   {
     "course_id": "15917",
@@ -2684,7 +2964,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "22/06/2027",
+    "course_code": "20273322"
   },
   {
     "course_id": "15906",
@@ -2711,7 +2994,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "10/01/2027",
+    "course_code": "20273191"
   },
   {
     "course_id": "15879",
@@ -2731,7 +3017,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "10/12/2026",
+    "course_code": "20273151"
   },
   {
     "course_id": "15999",
@@ -2760,7 +3049,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 1,
+    "end_date": "11/11/2026",
+    "course_code": "20273291"
   },
   {
     "course_id": "15847",
@@ -2779,7 +3071,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 1,
+    "end_date": "28/06/2027",
+    "course_code": "20273093"
   },
   {
     "course_id": "15846",
@@ -2798,7 +3093,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 1,
+    "end_date": "28/06/2027",
+    "course_code": "20273083"
   },
   {
     "course_id": "15845",
@@ -2827,7 +3125,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 1,
+    "end_date": "24/06/2027",
+    "course_code": "20273073"
   },
   {
     "course_id": "15795",
@@ -2846,7 +3147,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 1,
+    "end_date": "28/06/2027",
+    "course_code": "20273013"
   },
   {
     "course_id": "15908",
@@ -2872,7 +3176,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "01/06/2027",
+    "course_code": "20273262"
   },
   {
     "course_id": "15958",
@@ -2903,7 +3210,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "22/06/2027",
+    "course_code": "20273402"
   },
   {
     "course_id": "15878",
@@ -2931,7 +3241,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "27/06/2027",
+    "course_code": "20273212"
   },
   {
     "course_id": "15873",
@@ -2959,7 +3272,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "22/06/2027",
+    "course_code": "20273182"
   },
   {
     "course_id": "15960",
@@ -2981,7 +3297,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 1,
+    "end_date": "16/12/2026",
+    "course_code": "20273281"
   },
   {
     "course_id": "16022",
@@ -2997,7 +3316,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "18/12/2026",
+    "course_code": "20273411"
   },
   {
     "course_id": "16010",
@@ -3026,7 +3348,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "11/01/2027",
+    "course_code": "20273341"
   },
   {
     "course_id": "15798",
@@ -3057,7 +3382,10 @@
       "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)",
       "Life Sciences (Computational and Systems Biology Track)",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": null,
+    "end_date": "28/06/2027",
+    "course_code": "20273052"
   },
   {
     "course_id": "15897",
@@ -3084,7 +3412,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 1,
+    "end_date": "24/06/2027",
+    "course_code": "20273252"
   },
   {
     "course_id": "15875",
@@ -3116,7 +3447,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 0.5,
+    "end_date": "05/11/2026",
+    "course_code": "20273131"
   },
   {
     "course_id": "15856",
@@ -3144,7 +3478,10 @@
       "Life Sciences",
       "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "27/06/2027",
+    "course_code": "20273142"
   },
   {
     "course_id": "15910",
@@ -3172,7 +3509,10 @@
       "Life Sciences",
       "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "24/06/2027",
+    "course_code": "20273272"
   },
   {
     "course_id": "15857",
@@ -3199,7 +3539,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "23/06/2027",
+    "course_code": "20273152"
   },
   {
     "course_id": "15858",
@@ -3226,7 +3569,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "23/06/2027",
+    "course_code": "20273312"
   },
   {
     "course_id": "16001",
@@ -3255,7 +3601,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 1,
+    "end_date": "09/07/2027",
+    "course_code": "20273432"
   },
   {
     "course_id": "16000",
@@ -3284,7 +3633,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 1,
+    "end_date": "25/02/2027",
+    "course_code": "20273301"
   },
   {
     "course_id": "15889",
@@ -3313,7 +3665,10 @@
       "Life Sciences",
       "Life Sciences (Computational and Systems Biology Track)",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 3,
+    "end_date": "13/01/2027",
+    "course_code": "20273161"
   },
   {
     "course_id": "15859",
@@ -3344,7 +3699,10 @@
       "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)",
       "Life Sciences (Molecular and Cellular Neuroscience Track)",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 2.5,
+    "end_date": "24/06/2027",
+    "course_code": "20273162"
   },
   {
     "course_id": "15894",
@@ -3382,7 +3740,10 @@
       "Life Sciences",
       "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 2.5,
+    "end_date": "14/01/2027",
+    "course_code": "20273171"
   },
   {
     "course_id": "16021",
@@ -3398,7 +3759,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "04/12/2026",
+    "course_code": "20273401"
   },
   {
     "course_id": "15797",
@@ -3419,7 +3783,10 @@
       "Life Sciences",
       "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 0,
+    "end_date": "28/06/2027",
+    "course_code": "20273033"
   },
   {
     "course_id": "15806",
@@ -3454,7 +3821,10 @@
       "Life Sciences",
       "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "22/06/2027",
+    "course_code": "20273072"
   },
   {
     "course_id": "16018",
@@ -3470,7 +3840,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 3.5,
+    "end_date": "02/04/2027",
+    "course_code": "20273512"
   },
   {
     "course_id": "16017",
@@ -3486,7 +3859,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 3.5,
+    "end_date": "05/08/2027",
+    "course_code": "20273502"
   },
   {
     "course_id": "15843",
@@ -3523,7 +3899,10 @@
       "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)",
       "Life Sciences (Computational and Systems Biology Track)",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 3,
+    "end_date": "11/01/2027",
+    "course_code": "20273081"
   },
   {
     "course_id": "15937",
@@ -3549,7 +3928,10 @@
       "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)",
       "Life Sciences (Molecular and Cellular Neuroscience Track)",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 1,
+    "end_date": "09/09/2027",
+    "course_code": "20273372"
   },
   {
     "course_id": "15936",
@@ -3588,7 +3970,10 @@
       "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)",
       "Life Sciences (Molecular and Cellular Neuroscience Track)",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 1,
+    "end_date": "27/06/2027",
+    "course_code": "20273362"
   },
   {
     "course_id": "15799",
@@ -3617,7 +4002,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 1,
+    "end_date": "11/01/2027",
+    "course_code": "20273021"
   },
   {
     "course_id": "15926",
@@ -3654,7 +4042,10 @@
       "Life Sciences",
       "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 3,
+    "end_date": "23/06/2027",
+    "course_code": "20273352"
   },
   {
     "course_id": "15934",
@@ -3687,7 +4078,10 @@
       "Life Sciences (Computational and Systems Biology Track)",
       "Life Sciences (Molecular and Cellular Neuroscience Track)",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 2.5,
+    "end_date": "13/01/2027",
+    "course_code": "20273271"
   },
   {
     "course_id": "15876",
@@ -3716,7 +4110,10 @@
       "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)",
       "Life Sciences (Molecular and Cellular Neuroscience Track)",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 3,
+    "end_date": "12/01/2027",
+    "course_code": "20273141"
   },
   {
     "course_id": "16004",
@@ -3746,7 +4143,10 @@
       "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)",
       "Life Sciences (Molecular and Cellular Neuroscience Track)",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 1,
+    "end_date": "04/03/2027",
+    "course_code": "20273321"
   },
   {
     "course_id": "15898",
@@ -3773,7 +4173,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 1,
+    "end_date": "02/06/2027",
+    "course_code": "20273113"
   },
   {
     "course_id": "16020",
@@ -3789,7 +4192,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "27/11/2026",
+    "course_code": "20273391"
   },
   {
     "course_id": "15886",
@@ -3819,7 +4225,10 @@
       "Life Sciences",
       "Life Sciences (Computational and Systems Biology Track)",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 3,
+    "end_date": "28/06/2027",
+    "course_code": "20273222"
   },
   {
     "course_id": "16023",
@@ -3835,7 +4244,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "21/05/2027",
+    "course_code": "20273522"
   },
   {
     "course_id": "16041",
@@ -3863,7 +4275,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "28/06/2027",
+    "course_code": "20273532"
   },
   {
     "course_id": "15909",
@@ -3884,36 +4299,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
-  },
-  {
-    "course_id": "16049",
-    "group_id": "15745",
-    "title": "Recent Breakthroughs in Cancer Research",
-    "offered_by": "Life Sciences",
-    "lecturers": [
-      "Prof. Yosef Yarden",
-      "Prof. Rony Seger",
-      "Ms. Michal Mirela  Avineri Goldstein"
     ],
-    "semester": "1st",
-    "sessions": [
-      {
-        "type": "lecture",
-        "day_name": "Thursday",
-        "day_index": 4,
-        "start": "14:00",
-        "end": "15:00",
-        "location": "Candiotty, Auditorium"
-      }
-    ],
-    "first_lecture": "12/11/2026",
-    "year": 2027,
-    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16049&pprev=15745",
-    "fields": [
-      "Life Sciences",
-      "Life Sciences (Scientific Archeology Track)"
-    ]
+    "points": 1,
+    "end_date": "11/01/2027",
+    "course_code": "20273201"
   },
   {
     "course_id": "15844",
@@ -3942,7 +4331,42 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 1,
+    "end_date": "24/06/2027",
+    "course_code": "20273082"
+  },
+  {
+    "course_id": "16049",
+    "group_id": "15745",
+    "title": "Recent Breakthroughs in Cancer Research",
+    "offered_by": "Life Sciences",
+    "lecturers": [
+      "Prof. Yosef Yarden",
+      "Prof. Rony Seger",
+      "Ms. Michal Mirela  Avineri Goldstein"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "14:00",
+        "end": "15:00",
+        "location": "Candiotty, Auditorium"
+      }
+    ],
+    "first_lecture": "12/11/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16049&pprev=15745",
+    "fields": [
+      "Life Sciences",
+      "Life Sciences (Scientific Archeology Track)"
+    ],
+    "points": 1,
+    "end_date": "14/01/2027",
+    "course_code": "20273431"
   },
   {
     "course_id": "16024",
@@ -3958,36 +4382,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
-  },
-  {
-    "course_id": "15852",
-    "group_id": "15557",
-    "title": "Scientific writing  life sciences(MSc students)",
-    "offered_by": "Life Sciences",
-    "lecturers": [
-      "Dr. Mechael Kanovsky"
     ],
-    "semester": "2nd",
-    "sessions": [
-      {
-        "type": "lecture",
-        "day_name": "Monday",
-        "day_index": 1,
-        "start": "09:15",
-        "end": "11:00",
-        "location": "WSoS, Rm C"
-      }
-    ],
-    "first_lecture": "08/03/2027",
-    "year": 2027,
-    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15852&pprev=15557",
-    "fields": [
-      "Life Sciences",
-      "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)",
-      "Life Sciences (Computational and Systems Biology Track)",
-      "Life Sciences (Scientific Archeology Track)"
-    ]
+    "points": 2,
+    "end_date": "11/12/2026",
+    "course_code": "20273421"
   },
   {
     "course_id": "15851",
@@ -4016,7 +4414,42 @@
       "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)",
       "Life Sciences (Computational and Systems Biology Track)",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 1,
+    "end_date": "27/06/2027",
+    "course_code": "20273112"
+  },
+  {
+    "course_id": "15852",
+    "group_id": "15557",
+    "title": "Scientific writing  life sciences(MSc students)",
+    "offered_by": "Life Sciences",
+    "lecturers": [
+      "Dr. Mechael Kanovsky"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "WSoS, Rm C"
+      }
+    ],
+    "first_lecture": "08/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15852&pprev=15557",
+    "fields": [
+      "Life Sciences",
+      "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)",
+      "Life Sciences (Computational and Systems Biology Track)",
+      "Life Sciences (Scientific Archeology Track)"
+    ],
+    "points": 1,
+    "end_date": "21/06/2027",
+    "course_code": "20273122"
   },
   {
     "course_id": "15850",
@@ -4045,7 +4478,10 @@
       "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)",
       "Life Sciences (Computational and Systems Biology Track)",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 1,
+    "end_date": "28/06/2027",
+    "course_code": "20273102"
   },
   {
     "course_id": "15849",
@@ -4073,7 +4509,10 @@
       "Life Sciences",
       "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 1,
+    "end_date": "10/01/2027",
+    "course_code": "20273091"
   },
   {
     "course_id": "15961",
@@ -4095,7 +4534,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "21/03/2027",
+    "course_code": "20273412"
   },
   {
     "course_id": "16006",
@@ -4126,7 +4568,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 1,
+    "end_date": "24/06/2027",
+    "course_code": "20273452"
   },
   {
     "course_id": "15853",
@@ -4154,7 +4599,10 @@
       "Life Sciences",
       "Life Sciences (Computational and Systems Biology Track)",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "22/06/2027",
+    "course_code": "20273132"
   },
   {
     "course_id": "16016",
@@ -4170,7 +4618,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "19/03/2027",
+    "course_code": "20273492"
   },
   {
     "course_id": "15794",
@@ -4197,7 +4648,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "27/06/2027",
+    "course_code": "20273042"
   },
   {
     "course_id": "15895",
@@ -4225,7 +4679,10 @@
       "Life Sciences",
       "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "28/06/2027",
+    "course_code": "20273103"
   },
   {
     "course_id": "15998",
@@ -4252,7 +4709,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "22/06/2027",
+    "course_code": "20273422"
   },
   {
     "course_id": "15841",
@@ -4279,7 +4739,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 1,
+    "end_date": "15/11/2026",
+    "course_code": "20273071"
   },
   {
     "course_id": "15839",
@@ -4306,7 +4769,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "23/06/2027",
+    "course_code": "20273462"
   },
   {
     "course_id": "16019",
@@ -4322,7 +4788,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 3,
+    "end_date": "10/11/2026",
+    "course_code": "20273381"
   },
   {
     "course_id": "15896",
@@ -4349,7 +4818,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "11/01/2027",
+    "course_code": "20273181"
   },
   {
     "course_id": "16013",
@@ -4365,7 +4837,10 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 1.5,
+    "end_date": "03/01/2027",
+    "course_code": "20273361"
   },
   {
     "course_id": "15994",
@@ -4403,7 +4878,10 @@
       "Life Sciences (Scientific Archeology Track)",
       "Mathematics and Computer Science",
       "Physical Sciences"
-    ]
+    ],
+    "points": null,
+    "end_date": "23/06/2027",
+    "course_code": "20271222"
   },
   {
     "course_id": "16066",
@@ -4432,7 +4910,10 @@
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)",
       "Obligatory instruction courses or enrichment courses"
-    ]
+    ],
+    "points": null,
+    "end_date": "13/01/2027",
+    "course_code": "20278071"
   },
   {
     "course_id": "15907",
@@ -4461,7 +4942,10 @@
       "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)",
       "Life Sciences (Scientific Archeology Track)",
       "Obligatory instruction courses or enrichment courses"
-    ]
+    ],
+    "points": 2,
+    "end_date": "10/01/2027",
+    "course_code": "20278021"
   },
   {
     "course_id": "15801",
@@ -4487,7 +4971,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15801&pprev=15528",
     "fields": [
       "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)"
-    ]
+    ],
+    "points": 1,
+    "end_date": "24/06/2027",
+    "course_code": "20273053"
   },
   {
     "course_id": "15884",
@@ -4518,7 +5005,10 @@
       "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)",
       "Life Sciences (Scientific Archeology Track)",
       "Mathematics and Computer Science"
-    ]
+    ],
+    "points": 2,
+    "end_date": "10/01/2027",
+    "course_code": "20274111"
   },
   {
     "course_id": "15805",
@@ -4536,7 +5026,10 @@
     "fields": [
       "Life Sciences (Molecular and Cellular Neuroscience Track)",
       "Life Sciences (Scientific Archeology Track)"
-    ]
+    ],
+    "points": 1,
+    "end_date": "21/06/2027",
+    "course_code": "20273063"
   },
   {
     "course_id": "15883",
@@ -4553,7 +5046,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15883&pprev=0",
     "fields": [
       "Mathematics and Computer Science"
-    ]
+    ],
+    "points": 3,
+    "end_date": "24/06/2027",
+    "course_code": "20274093"
   },
   {
     "course_id": "15880",
@@ -4579,7 +5075,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15880&pprev=13729",
     "fields": [
       "Mathematics and Computer Science"
-    ]
+    ],
+    "points": 3,
+    "end_date": "12/01/2027",
+    "course_code": "20274091"
   },
   {
     "course_id": "15881",
@@ -4605,7 +5104,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15881&pprev=15597",
     "fields": [
       "Mathematics and Computer Science"
-    ]
+    ],
+    "points": 4,
+    "end_date": "22/06/2027",
+    "course_code": "20274082"
   },
   {
     "course_id": "15872",
@@ -4631,7 +5133,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15872&pprev=0",
     "fields": [
       "Mathematics and Computer Science"
-    ]
+    ],
+    "points": 2,
+    "end_date": "10/01/2027",
+    "course_code": "20274081"
   },
   {
     "course_id": "16045",
@@ -4657,7 +5162,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16045&pprev=15026",
     "fields": [
       "Mathematics and Computer Science"
-    ]
+    ],
+    "points": 2,
+    "end_date": "24/06/2027",
+    "course_code": "20274142"
   },
   {
     "course_id": "15833",
@@ -4683,7 +5191,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15833&pprev=15703",
     "fields": [
       "Mathematics and Computer Science"
-    ]
+    ],
+    "points": 4,
+    "end_date": "10/01/2027",
+    "course_code": "20274031"
   },
   {
     "course_id": "15830",
@@ -4709,7 +5220,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15830&pprev=15375",
     "fields": [
       "Mathematics and Computer Science"
-    ]
+    ],
+    "points": 2,
+    "end_date": "14/01/2027",
+    "course_code": "20274011"
   },
   {
     "course_id": "15832",
@@ -4743,7 +5257,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15832&pprev=15573",
     "fields": [
       "Mathematics and Computer Science"
-    ]
+    ],
+    "points": 4,
+    "end_date": "13/01/2027",
+    "course_code": "20274021"
   },
   {
     "course_id": "15831",
@@ -4769,7 +5286,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15831&pprev=15603",
     "fields": [
       "Mathematics and Computer Science"
-    ]
+    ],
+    "points": 2,
+    "end_date": "21/06/2027",
+    "course_code": "20274022"
   },
   {
     "course_id": "15840",
@@ -4795,7 +5315,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15840&pprev=0",
     "fields": [
       "Mathematics and Computer Science"
-    ]
+    ],
+    "points": 4,
+    "end_date": "20/06/2027",
+    "course_code": "20274052"
   },
   {
     "course_id": "16037",
@@ -4829,7 +5352,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16037&pprev=15572",
     "fields": [
       "Mathematics and Computer Science"
-    ]
+    ],
+    "points": 3,
+    "end_date": "13/01/2027",
+    "course_code": "20274151"
   },
   {
     "course_id": "16039",
@@ -4863,7 +5389,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16039&pprev=0",
     "fields": [
       "Mathematics and Computer Science"
-    ]
+    ],
+    "points": 3,
+    "end_date": "12/01/2027",
+    "course_code": "20274171"
   },
   {
     "course_id": "16028",
@@ -4877,19 +5406,22 @@
     "sessions": [
       {
         "type": "lecture",
-        "day_name": "Sunday",
-        "day_index": 0,
-        "start": "11:15",
-        "end": "13:00",
-        "location": "Science Teaching Lab 3"
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "Goldsmith, Rm 108"
       }
     ],
-    "first_lecture": "18/10/2026",
+    "first_lecture": "20/10/2026",
     "year": 2027,
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16028&pprev=15574",
     "fields": [
       "Mathematics and Computer Science"
-    ]
+    ],
+    "points": 2,
+    "end_date": "12/01/2027",
+    "course_code": "20274141"
   },
   {
     "course_id": "15838",
@@ -4916,7 +5448,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15838&pprev=15579",
     "fields": [
       "Mathematics and Computer Science"
-    ]
+    ],
+    "points": 1,
+    "end_date": "10/01/2027",
+    "course_code": "20274061"
   },
   {
     "course_id": "16058",
@@ -4951,7 +5486,10 @@
     "fields": [
       "Mathematics and Computer Science",
       "Physical Sciences"
-    ]
+    ],
+    "points": 3,
+    "end_date": "10/01/2027",
+    "course_code": "20274241"
   },
   {
     "course_id": "16047",
@@ -4977,7 +5515,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16047&pprev=0",
     "fields": [
       "Mathematics and Computer Science"
-    ]
+    ],
+    "points": 2,
+    "end_date": "14/01/2027",
+    "course_code": "20274191"
   },
   {
     "course_id": "16038",
@@ -5011,7 +5552,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16038&pprev=0",
     "fields": [
       "Mathematics and Computer Science"
-    ]
+    ],
+    "points": 4,
+    "end_date": "21/06/2027",
+    "course_code": "20274152"
   },
   {
     "course_id": "16044",
@@ -5033,11 +5577,11 @@
       },
       {
         "type": "tutorial",
-        "day_name": "TBA",
-        "day_index": null,
-        "start": "09:00",
-        "end": "11:00",
-        "location": null
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "11:15",
+        "end": "12:00",
+        "location": "Goldsmith, room 108"
       }
     ],
     "first_lecture": "22/10/2026",
@@ -5045,7 +5589,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16044&pprev=13727",
     "fields": [
       "Mathematics and Computer Science"
-    ]
+    ],
+    "points": 4,
+    "end_date": "14/01/2027",
+    "course_code": "20274181"
   },
   {
     "course_id": "15882",
@@ -5071,7 +5618,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15882&pprev=15592",
     "fields": [
       "Mathematics and Computer Science"
-    ]
+    ],
+    "points": 3,
+    "end_date": "12/01/2027",
+    "course_code": "20274101"
   },
   {
     "course_id": "16009",
@@ -5097,7 +5647,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16009&pprev=15576",
     "fields": [
       "Mathematics and Computer Science"
-    ]
+    ],
+    "points": 4,
+    "end_date": "23/06/2027",
+    "course_code": "20274172"
   },
   {
     "course_id": "15828",
@@ -5123,7 +5676,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15828&pprev=15240",
     "fields": [
       "Mathematics and Computer Science"
-    ]
+    ],
+    "points": 2,
+    "end_date": "22/06/2027",
+    "course_code": "20274012"
   },
   {
     "course_id": "16035",
@@ -5149,7 +5705,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16035&pprev=15339",
     "fields": [
       "Mathematics and Computer Science"
-    ]
+    ],
+    "points": 3,
+    "end_date": "23/06/2027",
+    "course_code": "20274122"
   },
   {
     "course_id": "16059",
@@ -5175,7 +5734,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16059&pprev=15595",
     "fields": [
       "Mathematics and Computer Science"
-    ]
+    ],
+    "points": 3,
+    "end_date": "11/01/2027",
+    "course_code": "20274251"
   },
   {
     "course_id": "15829",
@@ -5202,7 +5764,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15829&pprev=15609",
     "fields": [
       "Mathematics and Computer Science"
-    ]
+    ],
+    "points": 0,
+    "end_date": "22/06/2027",
+    "course_code": "20274013"
   },
   {
     "course_id": "16025",
@@ -5228,7 +5793,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16025&pprev=0",
     "fields": [
       "Mathematics and Computer Science"
-    ]
+    ],
+    "points": 1,
+    "end_date": "23/06/2027",
+    "course_code": "20274103"
   },
   {
     "course_id": "16052",
@@ -5262,7 +5830,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16052&pprev=15575",
     "fields": [
       "Mathematics and Computer Science"
-    ]
+    ],
+    "points": 3,
+    "end_date": "21/06/2027",
+    "course_code": "20274162"
   },
   {
     "course_id": "15836",
@@ -5289,7 +5860,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15836&pprev=15599",
     "fields": [
       "Mathematics and Computer Science"
-    ]
+    ],
+    "points": 2,
+    "end_date": "21/06/2027",
+    "course_code": "20274032"
   },
   {
     "course_id": "15837",
@@ -5316,7 +5890,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15837&pprev=15600",
     "fields": [
       "Mathematics and Computer Science"
-    ]
+    ],
+    "points": 2,
+    "end_date": "21/06/2027",
+    "course_code": "20274042"
   },
   {
     "course_id": "15834",
@@ -5343,7 +5920,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15834&pprev=15570",
     "fields": [
       "Mathematics and Computer Science"
-    ]
+    ],
+    "points": 2,
+    "end_date": "11/01/2027",
+    "course_code": "20274041"
   },
   {
     "course_id": "15835",
@@ -5370,7 +5950,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15835&pprev=15571",
     "fields": [
       "Mathematics and Computer Science"
-    ]
+    ],
+    "points": 2,
+    "end_date": "11/01/2027",
+    "course_code": "20274051"
   },
   {
     "course_id": "16050",
@@ -5396,7 +5979,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16050&pprev=0",
     "fields": [
       "Mathematics and Computer Science"
-    ]
+    ],
+    "points": 2,
+    "end_date": "13/01/2027",
+    "course_code": "20274221"
   },
   {
     "course_id": "16034",
@@ -5422,7 +6008,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16034&pprev=15237",
     "fields": [
       "Mathematics and Computer Science"
-    ]
+    ],
+    "points": 2,
+    "end_date": "20/06/2027",
+    "course_code": "20274112"
   },
   {
     "course_id": "15865",
@@ -5448,7 +6037,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15865&pprev=0",
     "fields": [
       "Mathematics and Computer Science"
-    ]
+    ],
+    "points": 3,
+    "end_date": "23/06/2027",
+    "course_code": "20274072"
   },
   {
     "course_id": "15842",
@@ -5475,7 +6067,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15842&pprev=15165",
     "fields": [
       "Mathematics and Computer Science"
-    ]
+    ],
+    "points": 3,
+    "end_date": "11/01/2027",
+    "course_code": "20274071"
   },
   {
     "course_id": "15928",
@@ -5501,7 +6096,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15928&pprev=0",
     "fields": [
       "Mathematics and Computer Science"
-    ]
+    ],
+    "points": 1,
+    "end_date": "23/06/2027",
+    "course_code": "20274102"
   },
   {
     "course_id": "16061",
@@ -5527,7 +6125,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16061&pprev=15235",
     "fields": [
       "Mathematics and Computer Science"
-    ]
+    ],
+    "points": 2,
+    "end_date": "22/06/2027",
+    "course_code": "20274192"
   },
   {
     "course_id": "16051",
@@ -5553,7 +6154,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16051&pprev=0",
     "fields": [
       "Mathematics and Computer Science"
-    ]
+    ],
+    "points": 1,
+    "end_date": "11/01/2027",
+    "course_code": "20274231"
   },
   {
     "course_id": "16053",
@@ -5577,7 +6181,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16053&pprev=16051",
     "fields": [
       "Mathematics and Computer Science"
-    ]
+    ],
+    "points": 1,
+    "end_date": "21/06/2027",
+    "course_code": "20274182"
   },
   {
     "course_id": "15912",
@@ -5611,7 +6218,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15912&pprev=15594",
     "fields": [
       "Mathematics and Computer Science"
-    ]
+    ],
+    "points": 3,
+    "end_date": "12/01/2027",
+    "course_code": "20274121"
   },
   {
     "course_id": "15860",
@@ -5637,7 +6247,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15860&pprev=0",
     "fields": [
       "Mathematics and Computer Science"
-    ]
+    ],
+    "points": 3,
+    "end_date": "20/06/2027",
+    "course_code": "20274062"
   },
   {
     "course_id": "16032",
@@ -5663,7 +6276,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16032&pprev=15728",
     "fields": [
       "Obligatory instruction courses or enrichment courses"
-    ]
+    ],
+    "points": 1,
+    "end_date": "28/06/2027",
+    "course_code": "20278012"
   },
   {
     "course_id": "15931",
@@ -5689,7 +6305,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15931&pprev=15657",
     "fields": [
       "Physical Sciences"
-    ]
+    ],
+    "points": 1,
+    "end_date": "22/06/2027",
+    "course_code": "20271023"
   },
   {
     "course_id": "15974",
@@ -5715,7 +6334,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15974&pprev=15688",
     "fields": [
       "Physical Sciences"
-    ]
+    ],
+    "points": 2,
+    "end_date": "23/06/2027",
+    "course_code": "20271152"
   },
   {
     "course_id": "15988",
@@ -5750,7 +6372,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15988&pprev=15648",
     "fields": [
       "Physical Sciences"
-    ]
+    ],
+    "points": 4,
+    "end_date": "22/06/2027",
+    "course_code": "20271182"
   },
   {
     "course_id": "15971",
@@ -5776,7 +6401,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15971&pprev=0",
     "fields": [
       "Physical Sciences"
-    ]
+    ],
+    "points": 2,
+    "end_date": "21/06/2027",
+    "course_code": "20271132"
   },
   {
     "course_id": "15997",
@@ -5810,7 +6438,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15997&pprev=15650",
     "fields": [
       "Physical Sciences"
-    ]
+    ],
+    "points": 3,
+    "end_date": "11/01/2027",
+    "course_code": "20271191"
   },
   {
     "course_id": "15990",
@@ -5844,7 +6475,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15990&pprev=15193",
     "fields": [
       "Physical Sciences"
-    ]
+    ],
+    "points": 4,
+    "end_date": "21/06/2027",
+    "course_code": "20271192"
   },
   {
     "course_id": "15855",
@@ -5862,7 +6496,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15855&pprev=15679",
     "fields": [
       "Physical Sciences"
-    ]
+    ],
+    "points": 0,
+    "end_date": "16/10/2026",
+    "course_code": "20271041"
   },
   {
     "course_id": "15989",
@@ -5889,7 +6526,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15989&pprev=15707",
     "fields": [
       "Physical Sciences"
-    ]
+    ],
+    "points": 2,
+    "end_date": "10/01/2027",
+    "course_code": "20271161"
   },
   {
     "course_id": "15975",
@@ -5915,7 +6555,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15975&pprev=0",
     "fields": [
       "Physical Sciences"
-    ]
+    ],
+    "points": 2,
+    "end_date": "21/06/2027",
+    "course_code": "20271172"
   },
   {
     "course_id": "15957",
@@ -5941,7 +6584,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15957&pprev=15634",
     "fields": [
       "Physical Sciences"
-    ]
+    ],
+    "points": 4,
+    "end_date": "22/06/2027",
+    "course_code": "20271033"
   },
   {
     "course_id": "15924",
@@ -5967,7 +6613,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15924&pprev=15649",
     "fields": [
       "Physical Sciences"
-    ]
+    ],
+    "points": 0,
+    "end_date": "23/06/2027",
+    "course_code": "20271052"
   },
   {
     "course_id": "15992",
@@ -6001,7 +6650,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15992&pprev=15361",
     "fields": [
       "Physical Sciences"
-    ]
+    ],
+    "points": 4,
+    "end_date": "14/01/2027",
+    "course_code": "20271171"
   },
   {
     "course_id": "15821",
@@ -6028,7 +6680,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15821&pprev=0",
     "fields": [
       "Science Teaching"
-    ]
+    ],
+    "points": 2,
+    "end_date": "24/06/2027",
+    "course_code": "20275052"
   },
   {
     "course_id": "15810",
@@ -6052,7 +6707,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15810&pprev=15412",
     "fields": [
       "Science Teaching"
-    ]
+    ],
+    "points": 0,
+    "end_date": "21/06/2027",
+    "course_code": "20275013"
   },
   {
     "course_id": "15813",
@@ -6079,7 +6737,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15813&pprev=15415",
     "fields": [
       "Science Teaching"
-    ]
+    ],
+    "points": 2,
+    "end_date": "11/01/2027",
+    "course_code": "20275011"
   },
   {
     "course_id": "15811",
@@ -6105,7 +6766,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15811&pprev=15416",
     "fields": [
       "Science Teaching"
-    ]
+    ],
+    "points": 2,
+    "end_date": "21/06/2027",
+    "course_code": "20275023"
   },
   {
     "course_id": "15816",
@@ -6132,7 +6796,10 @@
     "fields": [
       "Science Teaching",
       "Science Teaching -Teaching Certificate"
-    ]
+    ],
+    "points": 2,
+    "end_date": "24/06/2027",
+    "course_code": "20275012"
   },
   {
     "course_id": "15815",
@@ -6159,7 +6826,10 @@
     "fields": [
       "Science Teaching",
       "Science Teaching -Teaching Certificate"
-    ]
+    ],
+    "points": 2,
+    "end_date": "14/01/2027",
+    "course_code": "20275021"
   },
   {
     "course_id": "15812",
@@ -6186,7 +6856,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15812&pprev=15284",
     "fields": [
       "Science Teaching"
-    ]
+    ],
+    "points": 2,
+    "end_date": "21/06/2027",
+    "course_code": "20275033"
   },
   {
     "course_id": "15818",
@@ -6212,7 +6885,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15818&pprev=15422",
     "fields": [
       "Science Teaching"
-    ]
+    ],
+    "points": 2,
+    "end_date": "21/06/2027",
+    "course_code": "20275022"
   },
   {
     "course_id": "15820",
@@ -6240,7 +6916,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15820&pprev=15313",
     "fields": [
       "Science Teaching"
-    ]
+    ],
+    "points": 2,
+    "end_date": "14/01/2027",
+    "course_code": "20275031"
   },
   {
     "course_id": "15819",
@@ -6267,7 +6946,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15819&pprev=0",
     "fields": [
       "Science Teaching"
-    ]
+    ],
+    "points": 2,
+    "end_date": "24/06/2027",
+    "course_code": "20275042"
   },
   {
     "course_id": "15814",
@@ -6295,7 +6977,10 @@
     "fields": [
       "Science Teaching",
       "Science Teaching (non thesis MSc Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "24/11/2026",
+    "course_code": "20276011"
   },
   {
     "course_id": "15824",
@@ -6321,7 +7006,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15824&pprev=15311",
     "fields": [
       "Science Teaching -Teaching Certificate"
-    ]
+    ],
+    "points": 0,
+    "end_date": "24/06/2027",
+    "course_code": "20275063"
   },
   {
     "course_id": "15823",
@@ -6347,7 +7035,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15823&pprev=15292",
     "fields": [
       "Science Teaching -Teaching Certificate"
-    ]
+    ],
+    "points": 0,
+    "end_date": "24/06/2027",
+    "course_code": "20275053"
   },
   {
     "course_id": "15825",
@@ -6373,7 +7064,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15825&pprev=15294",
     "fields": [
       "Science Teaching -Teaching Certificate"
-    ]
+    ],
+    "points": 0,
+    "end_date": "24/06/2027",
+    "course_code": "20275073"
   },
   {
     "course_id": "15822",
@@ -6399,7 +7093,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15822&pprev=15293",
     "fields": [
       "Science Teaching -Teaching Certificate"
-    ]
+    ],
+    "points": 0,
+    "end_date": "24/06/2027",
+    "course_code": "20275043"
   },
   {
     "course_id": "15826",
@@ -6425,7 +7122,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15826&pprev=15291",
     "fields": [
       "Science Teaching -Teaching Certificate"
-    ]
+    ],
+    "points": 0,
+    "end_date": "24/06/2027",
+    "course_code": "20275083"
   },
   {
     "course_id": "15827",
@@ -6442,7 +7142,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15827&pprev=15420",
     "fields": [
       "Science Teaching -Teaching Certificate"
-    ]
+    ],
+    "points": 0,
+    "end_date": "24/06/2027",
+    "course_code": "20275093"
   },
   {
     "course_id": "15938",
@@ -6469,7 +7172,10 @@
     "fields": [
       "Science Teaching -Teaching Certificate",
       "Science Teaching (non thesis MSc Track)"
-    ]
+    ],
+    "points": null,
+    "end_date": "26/01/2027",
+    "course_code": "20276121"
   },
   {
     "course_id": "15890",
@@ -6496,7 +7202,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15890&pprev=15523",
     "fields": [
       "Science Teaching (non thesis MSc Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "29/06/2027",
+    "course_code": "20276012"
   },
   {
     "course_id": "15891",
@@ -6522,7 +7231,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15891&pprev=15259",
     "fields": [
       "Science Teaching (non thesis MSc Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "29/06/2027",
+    "course_code": "20276022"
   },
   {
     "course_id": "15892",
@@ -6546,7 +7258,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15892&pprev=15260",
     "fields": [
       "Science Teaching (non thesis MSc Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "26/01/2027",
+    "course_code": "20276021"
   },
   {
     "course_id": "15893",
@@ -6573,7 +7288,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15893&pprev=15261",
     "fields": [
       "Science Teaching (non thesis MSc Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "26/01/2027",
+    "course_code": "20276031"
   },
   {
     "course_id": "15935",
@@ -6605,7 +7323,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15935&pprev=0",
     "fields": [
       "Science Teaching (non thesis MSc Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "26/01/2027",
+    "course_code": "20276111"
   },
   {
     "course_id": "15899",
@@ -6632,7 +7353,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15899&pprev=15503",
     "fields": [
       "Science Teaching (non thesis MSc Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "29/06/2027",
+    "course_code": "20276032"
   },
   {
     "course_id": "15900",
@@ -6652,7 +7376,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15900&pprev=15262",
     "fields": [
       "Science Teaching (non thesis MSc Track)"
-    ]
+    ],
+    "points": 1,
+    "end_date": "27/07/2027",
+    "course_code": "20276042"
   },
   {
     "course_id": "15901",
@@ -6679,7 +7406,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15901&pprev=15502",
     "fields": [
       "Science Teaching (non thesis MSc Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "24/11/2026",
+    "course_code": "20276041"
   },
   {
     "course_id": "15903",
@@ -6705,7 +7435,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15903&pprev=15501",
     "fields": [
       "Science Teaching (non thesis MSc Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "24/11/2026",
+    "course_code": "20276051"
   },
   {
     "course_id": "15904",
@@ -6731,7 +7464,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15904&pprev=15265",
     "fields": [
       "Science Teaching (non thesis MSc Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "26/01/2027",
+    "course_code": "20276061"
   },
   {
     "course_id": "15905",
@@ -6757,7 +7493,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15905&pprev=15266",
     "fields": [
       "Science Teaching (non thesis MSc Track)"
-    ]
+    ],
+    "points": 4,
+    "end_date": "29/06/2027",
+    "course_code": "20276052"
   },
   {
     "course_id": "15978",
@@ -6783,7 +7522,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15978&pprev=15295",
     "fields": [
       "Science Teaching (non thesis MSc Track)"
-    ]
+    ],
+    "points": 4,
+    "end_date": "29/06/2027",
+    "course_code": "20276212"
   },
   {
     "course_id": "15979",
@@ -6809,7 +7551,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15979&pprev=15302",
     "fields": [
       "Science Teaching (non thesis MSc Track)"
-    ]
+    ],
+    "points": 4,
+    "end_date": "06/04/2027",
+    "course_code": "20276221"
   },
   {
     "course_id": "15985",
@@ -6835,7 +7580,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15985&pprev=15497",
     "fields": [
       "Science Teaching (non thesis MSc Track)"
-    ]
+    ],
+    "points": 4,
+    "end_date": "29/06/2027",
+    "course_code": "20276033"
   },
   {
     "course_id": "15984",
@@ -6862,7 +7610,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15984&pprev=15495",
     "fields": [
       "Science Teaching (non thesis MSc Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "29/06/2027",
+    "course_code": "20276192"
   },
   {
     "course_id": "15983",
@@ -6888,7 +7639,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15983&pprev=15494",
     "fields": [
       "Science Teaching (non thesis MSc Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "24/11/2026",
+    "course_code": "20276241"
   },
   {
     "course_id": "15982",
@@ -6912,7 +7666,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15982&pprev=15491",
     "fields": [
       "Science Teaching (non thesis MSc Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "26/01/2027",
+    "course_code": "20276231"
   },
   {
     "course_id": "15981",
@@ -6938,7 +7695,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15981&pprev=15300",
     "fields": [
       "Science Teaching (non thesis MSc Track)"
-    ]
+    ],
+    "points": 4,
+    "end_date": "26/01/2027",
+    "course_code": "20276271"
   },
   {
     "course_id": "15980",
@@ -6955,7 +7715,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15980&pprev=15490",
     "fields": [
       "Science Teaching (non thesis MSc Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "27/07/2027",
+    "course_code": "20276172"
   },
   {
     "course_id": "15945",
@@ -6982,7 +7745,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15945&pprev=15524",
     "fields": [
       "Science Teaching (non thesis MSc Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "29/06/2027",
+    "course_code": "20276092"
   },
   {
     "course_id": "15946",
@@ -6999,7 +7765,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15946&pprev=15488",
     "fields": [
       "Science Teaching (non thesis MSc Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "26/01/2027",
+    "course_code": "20276141"
   },
   {
     "course_id": "15944",
@@ -7016,7 +7785,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15944&pprev=15487",
     "fields": [
       "Science Teaching (non thesis MSc Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "26/01/2027",
+    "course_code": "20276131"
   },
   {
     "course_id": "15940",
@@ -7042,7 +7814,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15940&pprev=15482",
     "fields": [
       "Science Teaching (non thesis MSc Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "29/06/2027",
+    "course_code": "20276023"
   },
   {
     "course_id": "15943",
@@ -7068,7 +7843,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15943&pprev=15305",
     "fields": [
       "Science Teaching (non thesis MSc Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "06/04/2027",
+    "course_code": "20276082"
   },
   {
     "course_id": "15932",
@@ -7094,7 +7872,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15932&pprev=15306",
     "fields": [
       "Science Teaching (non thesis MSc Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "24/11/2026",
+    "course_code": "20276071"
   },
   {
     "course_id": "15942",
@@ -7120,7 +7901,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15942&pprev=15307",
     "fields": [
       "Science Teaching (non thesis MSc Track)"
-    ]
+    ],
+    "points": 3,
+    "end_date": "29/06/2027",
+    "course_code": "20276072"
   },
   {
     "course_id": "15939",
@@ -7146,7 +7930,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15939&pprev=15461",
     "fields": [
       "Science Teaching (non thesis MSc Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "29/06/2027",
+    "course_code": "20276013"
   },
   {
     "course_id": "15941",
@@ -7172,7 +7959,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15941&pprev=15310",
     "fields": [
       "Science Teaching (non thesis MSc Track)"
-    ]
+    ],
+    "points": 3,
+    "end_date": "29/06/2027",
+    "course_code": "20276062"
   },
   {
     "course_id": "15933",
@@ -7198,7 +7988,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15933&pprev=15303",
     "fields": [
       "Science Teaching (non thesis MSc Track)"
-    ]
+    ],
+    "points": 4,
+    "end_date": "26/01/2027",
+    "course_code": "20276081"
   },
   {
     "course_id": "16007",
@@ -7224,7 +8017,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16007&pprev=15317",
     "fields": [
       "Science Teaching (non thesis MSc Track)"
-    ]
+    ],
+    "points": 2.5,
+    "end_date": "26/01/2027",
+    "course_code": "20276251"
   },
   {
     "course_id": "15956",
@@ -7250,7 +8046,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15956&pprev=15457",
     "fields": [
       "Science Teaching (non thesis MSc Track)"
-    ]
+    ],
+    "points": 0.5,
+    "end_date": "29/06/2027",
+    "course_code": "20276162"
   },
   {
     "course_id": "15952",
@@ -7276,7 +8075,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15952&pprev=15456",
     "fields": [
       "Science Teaching (non thesis MSc Track)"
-    ]
+    ],
+    "points": 1,
+    "end_date": "26/01/2027",
+    "course_code": "20276201"
   },
   {
     "course_id": "15954",
@@ -7303,7 +8105,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15954&pprev=15321",
     "fields": [
       "Science Teaching (non thesis MSc Track)"
-    ]
+    ],
+    "points": 2.5,
+    "end_date": "29/06/2027",
+    "course_code": "20276112"
   },
   {
     "course_id": "15955",
@@ -7329,7 +8134,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15955&pprev=15322",
     "fields": [
       "Science Teaching (non thesis MSc Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "29/06/2027",
+    "course_code": "20276122"
   },
   {
     "course_id": "15948",
@@ -7355,7 +8163,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15948&pprev=12699",
     "fields": [
       "Science Teaching (non thesis MSc Track)"
-    ]
+    ],
+    "points": 3,
+    "end_date": "26/01/2027",
+    "course_code": "20276161"
   },
   {
     "course_id": "16030",
@@ -7381,7 +8192,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16030&pprev=15324",
     "fields": [
       "Science Teaching (non thesis MSc Track)"
-    ]
+    ],
+    "points": 4,
+    "end_date": "26/01/2027",
+    "course_code": "20276261"
   },
   {
     "course_id": "15953",
@@ -7407,7 +8221,10 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15953&pprev=15326",
     "fields": [
       "Science Teaching (non thesis MSc Track)"
-    ]
+    ],
+    "points": 4,
+    "end_date": "29/06/2027",
+    "course_code": "20276102"
   },
   {
     "course_id": "15951",
@@ -7433,6 +8250,9 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15951&pprev=15428",
     "fields": [
       "Science Teaching (non thesis MSc Track)"
-    ]
+    ],
+    "points": 2,
+    "end_date": "26/01/2027",
+    "course_code": "20276191"
   }
 ]

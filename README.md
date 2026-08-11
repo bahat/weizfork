@@ -13,6 +13,8 @@ schedules, shared course points/end-dates, and reviews are backed by Firebase.
 └── scripts/
     ├── parse_courses.py    turns a saved catalog page into courses.json
     ├── merge_courses.py    combines multiple parse_courses.py outputs
+    ├── build_courses.py    one-shot: turns a folder of raw/*.html + raw/*.json
+    │                       (scrape-pages.js's downloads) into one courses.json
     ├── scrape-pages.js     browser console script: paginates a field/year's
     │                       search results and fetches those courses' credit
     │                       points/end-dates, in one run
@@ -38,26 +40,31 @@ locally — one page per (Field of study × Academic Year) combination you want 
    and real end date. It downloads two files:
    - `wsos_<field>_<year>.html` — the combined course rows, for `parse_courses.py`
    - `wsos_<field>_<year>_points.json` — points/end-dates, ready to import
-3. Parse the `.html` file:
-   ```
-   python3 scripts/parse_courses.py wsos_Mathematics_and_Computer_Science_2027.html tmp/math_2027.json
-   ```
-   The script auto-detects the year and field from the page itself — no need to
-   pass them manually. Repeat for every field/year you want (Physical Sciences,
-   Chemical Sciences, Life Sciences, Mathematics and Computer Science, etc.,
-   × each year back to 2023).
+3. Move both files into `raw/` and repeat for every field/year you want
+   (Physical Sciences, Chemical Sciences, Life Sciences, Mathematics and
+   Computer Science, etc., × each year back to 2023).
 
-4. Once you have all the `tmp/*.json` files, merge them into one dataset:
+4. Once `raw/` has all the `.html` + `.json` pairs, build the combined dataset
+   in one shot:
    ```
-   python3 scripts/merge_courses.py data/courses.json tmp/*.json
+   python3 scripts/build_courses.py raw data/courses.json
    ```
-   This de-duplicates by course ID, so re-running it is always safe.
+   This parses every `.html` file, merges them (de-duplicating cross-listed
+   courses into a `fields` list, same as `merge_courses.py`), and attaches
+   `points`/`end_date` from every `.json` file it finds — safe to re-run
+   any time `raw/` gets new files.
+
+   (`parse_courses.py` + `merge_courses.py` still work individually the same
+   way if you'd rather process files one at a time.)
 
 5. Once the site is live and Firebase is configured (§4 below), open it, **sign
    in**, and use **Import parsed JSON** in the sidebar to load each
    `..._points.json` file — it's auto-detected as a points/end-date map and
    published to Firestore, so it becomes visible to every visitor immediately,
-   not just you.
+   not just you. (`build_courses.py` bakes points/end-dates into
+   `data/courses.json` too, but the live app currently reads them from
+   Firestore, not from that file — so this step is still needed for other
+   visitors to see them.)
 
 **Refreshing points/end-dates later without re-scraping** (e.g. mid-semester,
 to pick up updated end dates for courses you've already imported):

@@ -38,11 +38,12 @@ def _fields_of(course):
     return []
 
 
-def merge(paths):
+def merge_course_lists(course_lists):
+    """Same de-dupe/field-accumulation logic as merge(), but takes already-loaded
+    lists of course dicts instead of file paths — lets other scripts (e.g.
+    build_courses.py) reuse it without round-tripping through temp files."""
     merged = {}  # (course_id, group_id) -> course dict, with a running `fields` list
-    for p in paths:
-        with open(p, "r", encoding="utf-8") as f:
-            courses = json.load(f)
+    for courses in course_lists:
         for c in courses:
             key = (c.get("course_id"), c.get("group_id"))
             incoming_fields = _fields_of(c)
@@ -60,6 +61,14 @@ def merge(paths):
 
             merged[key] = entry
     return list(merged.values())
+
+
+def merge(paths):
+    course_lists = []
+    for p in paths:
+        with open(p, "r", encoding="utf-8") as f:
+            course_lists.append(json.load(f))
+    return merge_course_lists(course_lists)
 
 
 if __name__ == "__main__":

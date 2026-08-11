@@ -17242,5 +17242,34 @@
     "points": 2,
     "end_date": "03/02/2026",
     "course_code": "20266021"
+  },
+  {
+    "course_id": "16060",
+    "group_id": "0",
+    "title": "Basic Probability",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Dr. Zhenhao Cai"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Wednesday",
+        "day_index": 3,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "Jacob Ziskind Building, Rm 155"
+      }
+    ],
+    "first_lecture": "21/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16060&pprev=0",
+    "fields": [
+      "Mathematics and Computer Science"
+    ],
+    "points": 2,
+    "end_date": "13/01/2027",
+    "course_code": "20274261"
   }
 ]

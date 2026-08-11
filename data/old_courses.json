@@ -1,0 +1,3285 @@
+[
+  {
+    "course_id": "15883",
+    "group_id": "0",
+    "title": "A reading course on fundamental Concepts of Number Theory",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Prof. Ran  Tessler"
+    ],
+    "semester": "Full Year",
+    "sessions": [],
+    "first_lecture": "18/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15883&pprev=0",
+    "fields": [
+      "Mathematics and Computer Science"
+    ]
+  },
+  {
+    "course_id": "15880",
+    "group_id": "13729",
+    "title": "A seminar on knots, braids and relations to physics",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Prof. Ran  Tessler"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "15:15",
+        "end": "18:00",
+        "location": "Jacob Ziskind Building, Rm 155"
+      }
+    ],
+    "first_lecture": "20/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15880&pprev=13729",
+    "fields": [
+      "Mathematics and Computer Science"
+    ]
+  },
+  {
+    "course_id": "15881",
+    "group_id": "15597",
+    "title": "A workshop in problem solving",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Prof. Ran  Tessler"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "15:15",
+        "end": "18:00",
+        "location": "Jacob Ziskind Building, Rm 155"
+      }
+    ],
+    "first_lecture": "09/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15881&pprev=15597",
+    "fields": [
+      "Mathematics and Computer Science"
+    ]
+  },
+  {
+    "course_id": "15872",
+    "group_id": "0",
+    "title": "Active LLM paper reading",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Dr. Choshen Leshem"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "Ziskind, Rm 1"
+      }
+    ],
+    "first_lecture": "18/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15872&pprev=0",
+    "fields": [
+      "Mathematics and Computer Science"
+    ]
+  },
+  {
+    "course_id": "16045",
+    "group_id": "15026",
+    "title": "Advanced Algebraic Topology",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Dr. Shachar Carmeli"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "10:15",
+        "end": "12:00",
+        "location": "Jacob Ziskind Building, Rm 155"
+      }
+    ],
+    "first_lecture": "11/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16045&pprev=15026",
+    "fields": [
+      "Mathematics and Computer Science"
+    ]
+  },
+  {
+    "course_id": "15885",
+    "group_id": "15696",
+    "title": "Advanced Topics in Computer Vision and Deep Learning",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Prof. Ronen Basri",
+      "Dr. Mark Sheinin",
+      "Dr. Shai Bagon",
+      "Prof. Michal Irani"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "10:15",
+        "end": "12:00",
+        "location": "Ziskind, Rm 1"
+      }
+    ],
+    "first_lecture": "09/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15885&pprev=15696",
+    "fields": [
+      "Mathematics and Computer Science",
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15833",
+    "group_id": "15703",
+    "title": "Algebraic topology",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Prof. Daniel Tzvi Wise"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "Goldsmith, Rm 108"
+      }
+    ],
+    "first_lecture": "18/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15833&pprev=15703",
+    "fields": [
+      "Mathematics and Computer Science"
+    ]
+  },
+  {
+    "course_id": "15830",
+    "group_id": "15375",
+    "title": "Algorithms, Games, and Economics",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Prof. Shahar Dobzinski"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "10:15",
+        "end": "12:00",
+        "location": "Ziskind, Rm 1"
+      }
+    ],
+    "first_lecture": "22/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15830&pprev=15375",
+    "fields": [
+      "Mathematics and Computer Science"
+    ]
+  },
+  {
+    "course_id": "15832",
+    "group_id": "15573",
+    "title": "Basic Topics 1",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Dr. Crystal Hoyt"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "11:15",
+        "end": "13:00",
+        "location": "Jacob Ziskind Building, Rm 155"
+      },
+      {
+        "type": "lecture",
+        "day_name": "Wednesday",
+        "day_index": 3,
+        "start": "11:15",
+        "end": "13:00",
+        "location": "Jacob Ziskind Building, Rm 155"
+      }
+    ],
+    "first_lecture": "19/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15832&pprev=15573",
+    "fields": [
+      "Mathematics and Computer Science"
+    ]
+  },
+  {
+    "course_id": "15831",
+    "group_id": "15603",
+    "title": "Basic Topics 2",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Dr. Crystal Hoyt"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "11:15",
+        "end": "13:00",
+        "location": "Jacob Ziskind Building, Rm 155"
+      }
+    ],
+    "first_lecture": "08/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15831&pprev=15603",
+    "fields": [
+      "Mathematics and Computer Science"
+    ]
+  },
+  {
+    "course_id": "15840",
+    "group_id": "0",
+    "title": "Cube Complexes",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Prof. Daniel Tzvi Wise"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "Goldsmith, Rm 108"
+      }
+    ],
+    "first_lecture": "07/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15840&pprev=0",
+    "fields": [
+      "Mathematics and Computer Science"
+    ]
+  },
+  {
+    "course_id": "16037",
+    "group_id": "15572",
+    "title": "Differential Geometry",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Dr. Sybille Marie Paul Rosset"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "Goldsmith, Rm 108"
+      },
+      {
+        "type": "lecture",
+        "day_name": "Wednesday",
+        "day_index": 3,
+        "start": "10:15",
+        "end": "12:00",
+        "location": "Goldsmith, Rm 108"
+      }
+    ],
+    "first_lecture": "19/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16037&pprev=15572",
+    "fields": [
+      "Mathematics and Computer Science"
+    ]
+  },
+  {
+    "course_id": "16039",
+    "group_id": "0",
+    "title": "Enumerative Combinatorics and Commutative Algebra",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Dr. Sybille Marie Paul Rosset"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "11:15",
+        "end": "13:00",
+        "location": "Goldsmith, Rm 108"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Wednesday",
+        "day_index": 3,
+        "start": "14:15",
+        "end": "15:00",
+        "location": "Jacob Ziskind Building Room 108"
+      }
+    ],
+    "first_lecture": "20/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16039&pprev=0",
+    "fields": [
+      "Mathematics and Computer Science"
+    ]
+  },
+  {
+    "course_id": "16028",
+    "group_id": "15574",
+    "title": "Finite algebraic structures for Computer Scientists",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Dr. Josephine Shamash"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "11:15",
+        "end": "13:00",
+        "location": "Science Teaching Lab 3"
+      }
+    ],
+    "first_lecture": "18/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16028&pprev=15574",
+    "fields": [
+      "Mathematics and Computer Science"
+    ]
+  },
+  {
+    "course_id": "15838",
+    "group_id": "15579",
+    "title": "FUN (Faculty Union New students) seminar",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Prof. Boaz Nadler",
+      "Prof. Michal Irani"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "12:15",
+        "end": "13:15",
+        "location": "Ziskind, Rm 1"
+      }
+    ],
+    "first_lecture": "25/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15838&pprev=15579",
+    "fields": [
+      "Mathematics and Computer Science"
+    ]
+  },
+  {
+    "course_id": "16058",
+    "group_id": "15605",
+    "title": "Generalized Geometry, an introduction",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Dr. Roberto Rubio"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "10:15",
+        "end": "12:00",
+        "location": "Jacob Ziskind Building, Rm 155"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Wednesday",
+        "day_index": 3,
+        "start": "09:15",
+        "end": "10:00",
+        "location": "Jacob Ziskind Building Room 108"
+      }
+    ],
+    "first_lecture": "18/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16058&pprev=15605",
+    "fields": [
+      "Mathematics and Computer Science"
+    ]
+  },
+  {
+    "course_id": "16047",
+    "group_id": "0",
+    "title": "Generative Models for Computer Vision and Graphics",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Dr. Yael Vinker"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "10:15",
+        "end": "12:00",
+        "location": "Jacob Ziskind Building, Rm 155"
+      }
+    ],
+    "first_lecture": "22/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16047&pprev=0",
+    "fields": [
+      "Mathematics and Computer Science"
+    ]
+  },
+  {
+    "course_id": "16038",
+    "group_id": "0",
+    "title": "Intersection Theory",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Dr. Sybille Marie Paul Rosset"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "Goldsmith, Rm 108"
+      },
+      {
+        "type": "lecture",
+        "day_name": "Wednesday",
+        "day_index": 3,
+        "start": "13:15",
+        "end": "15:00",
+        "location": "Goldsmith, Rm 108"
+      }
+    ],
+    "first_lecture": "08/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16038&pprev=0",
+    "fields": [
+      "Mathematics and Computer Science"
+    ]
+  },
+  {
+    "course_id": "16044",
+    "group_id": "13727",
+    "title": "Introduction to Algebraic Geometry",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Dr. Shachar Carmeli"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "10:15",
+        "end": "13:00",
+        "location": "Goldsmith, Rm 108"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "TBA",
+        "day_index": null,
+        "start": "09:00",
+        "end": "11:00",
+        "location": null
+      }
+    ],
+    "first_lecture": "22/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16044&pprev=13727",
+    "fields": [
+      "Mathematics and Computer Science"
+    ]
+  },
+  {
+    "course_id": "15882",
+    "group_id": "15592",
+    "title": "Introduction to Computational Imaging",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Dr. Mark Sheinin"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "Ziskind, Rm 1"
+      }
+    ],
+    "first_lecture": "20/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15882&pprev=15592",
+    "fields": [
+      "Mathematics and Computer Science"
+    ]
+  },
+  {
+    "course_id": "15884",
+    "group_id": "15580",
+    "title": "Introduction to computer vision",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Prof. Ronen Basri",
+      "Dr. Shai Bagon",
+      "Dr. Meirav Galun",
+      "Prof. Michal Irani"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "Ziskind, Rm 1"
+      }
+    ],
+    "first_lecture": "18/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15884&pprev=15580",
+    "fields": [
+      "Mathematics and Computer Science"
+    ]
+  },
+  {
+    "course_id": "16009",
+    "group_id": "15576",
+    "title": "Introduction to Lie algebras",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Prof. Maria Gorelik"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Wednesday",
+        "day_index": 3,
+        "start": "13:15",
+        "end": "15:00",
+        "location": null
+      }
+    ],
+    "first_lecture": "10/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16009&pprev=15576",
+    "fields": [
+      "Mathematics and Computer Science"
+    ]
+  },
+  {
+    "course_id": "16036",
+    "group_id": "15566",
+    "title": "Introduction to Representation Theory",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Dr. Vladimir Hinich"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "10:15",
+        "end": "12:00",
+        "location": "Ziskind, Rm 1"
+      },
+      {
+        "type": "lecture",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "14:15",
+        "end": "15:00",
+        "location": "Ziskind, Rm 1"
+      }
+    ],
+    "first_lecture": "11/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16036&pprev=15566",
+    "fields": [
+      "Mathematics and Computer Science",
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15828",
+    "group_id": "15240",
+    "title": "Introduction to symplectic geometry",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Dr. Shira Tanny"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "13:15",
+        "end": "15:00",
+        "location": "Ziskind, Rm 1"
+      }
+    ],
+    "first_lecture": "09/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15828&pprev=15240",
+    "fields": [
+      "Mathematics and Computer Science"
+    ]
+  },
+  {
+    "course_id": "16035",
+    "group_id": "15339",
+    "title": "Introduction to the theory of algebraic D-modules",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Prof. Dmitry Gourevitch"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Wednesday",
+        "day_index": 3,
+        "start": "10:15",
+        "end": "13:00",
+        "location": "Jacob Ziskind Building, Rm 155"
+      }
+    ],
+    "first_lecture": "10/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16035&pprev=15339",
+    "fields": [
+      "Mathematics and Computer Science"
+    ]
+  },
+  {
+    "course_id": "16059",
+    "group_id": "15595",
+    "title": "Introduction to Verification",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Dr. Oded Padon"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "Jacob Ziskind Building, Rm 155"
+      }
+    ],
+    "first_lecture": "19/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16059&pprev=15595",
+    "fields": [
+      "Mathematics and Computer Science"
+    ]
+  },
+  {
+    "course_id": "15829",
+    "group_id": "15609",
+    "title": "Math Colloquium",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Dr. Shira Tanny",
+      "Dr. Shachar Carmeli"
+    ],
+    "semester": "Full Year",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "11:00",
+        "end": "12:30",
+        "location": null
+      }
+    ],
+    "first_lecture": "20/01/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15829&pprev=15609",
+    "fields": [
+      "Mathematics and Computer Science"
+    ]
+  },
+  {
+    "course_id": "16025",
+    "group_id": "0",
+    "title": "Math students? seminar 26-27",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Prof. Ehud Friedgut"
+    ],
+    "semester": "Full Year",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Wednesday",
+        "day_index": 3,
+        "start": "16:15",
+        "end": "18:00",
+        "location": "Goldsmith, Rm 108"
+      }
+    ],
+    "first_lecture": "21/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16025&pprev=0",
+    "fields": [
+      "Mathematics and Computer Science"
+    ]
+  },
+  {
+    "course_id": "16052",
+    "group_id": "15575",
+    "title": "Mathematics of machine learning and machine learning for mathematics",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Dr. Roberto Rubio"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "Jacob Ziskind Building, Rm 155"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Wednesday",
+        "day_index": 3,
+        "start": "09:15",
+        "end": "10:00",
+        "location": null
+      }
+    ],
+    "first_lecture": "08/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16052&pprev=15575",
+    "fields": [
+      "Mathematics and Computer Science"
+    ]
+  },
+  {
+    "course_id": "15836",
+    "group_id": "15599",
+    "title": "Midrasha on groups A",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Prof. Alexander Lubotzky",
+      "Dr. Guy Salomon"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "11:15",
+        "end": "13:00",
+        "location": "Goldsmith, room 108"
+      }
+    ],
+    "first_lecture": "08/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15836&pprev=15599",
+    "fields": [
+      "Mathematics and Computer Science"
+    ]
+  },
+  {
+    "course_id": "15837",
+    "group_id": "15600",
+    "title": "Midrasha on groups B",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Dr. Guy Salomon",
+      "Prof. Alexander Lubotzky"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "Goldsmith, room 108"
+      }
+    ],
+    "first_lecture": "08/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15837&pprev=15600",
+    "fields": [
+      "Mathematics and Computer Science"
+    ]
+  },
+  {
+    "course_id": "15834",
+    "group_id": "15570",
+    "title": "Midrasha on groups I",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Dr. Guy Salomon",
+      "Prof. Alexander Lubotzky"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "11:15",
+        "end": "13:00",
+        "location": "Goldsmith, room 108"
+      }
+    ],
+    "first_lecture": "19/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15834&pprev=15570",
+    "fields": [
+      "Mathematics and Computer Science"
+    ]
+  },
+  {
+    "course_id": "15835",
+    "group_id": "15571",
+    "title": "Midrasha on groups II",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Prof. Alexander Lubotzky",
+      "Dr. Guy Salomon"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "Goldsmith, room 108"
+      }
+    ],
+    "first_lecture": "19/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15835&pprev=15571",
+    "fields": [
+      "Mathematics and Computer Science"
+    ]
+  },
+  {
+    "course_id": "16050",
+    "group_id": "0",
+    "title": "Orderable groups",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Prof. Daniel Tzvi Wise"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Wednesday",
+        "day_index": 3,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "Jacob Ziskind Building, Rm 155"
+      }
+    ],
+    "first_lecture": "21/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16050&pprev=0",
+    "fields": [
+      "Mathematics and Computer Science"
+    ]
+  },
+  {
+    "course_id": "16034",
+    "group_id": "15237",
+    "title": "Proofs from The Book",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Prof. Ehud Friedgut"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "11:15",
+        "end": "13:00",
+        "location": "Jacob Ziskind Building, Rm 155"
+      }
+    ],
+    "first_lecture": "07/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16034&pprev=15237",
+    "fields": [
+      "Mathematics and Computer Science"
+    ]
+  },
+  {
+    "course_id": "15865",
+    "group_id": "0",
+    "title": "Quantum Cryptography",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Prof. Zvika Brakerski"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Wednesday",
+        "day_index": 3,
+        "start": "10:15",
+        "end": "12:00",
+        "location": "Goldsmith, room 108"
+      }
+    ],
+    "first_lecture": "10/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15865&pprev=0",
+    "fields": [
+      "Mathematics and Computer Science"
+    ]
+  },
+  {
+    "course_id": "15842",
+    "group_id": "15165",
+    "title": "Randomized Algorithms",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Prof. Robert Krauthgamer",
+      "Prof. Moni Naor"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "14:15",
+        "end": "17:00",
+        "location": "Jacob Ziskind Building, Rm 155"
+      }
+    ],
+    "first_lecture": "19/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15842&pprev=15165",
+    "fields": [
+      "Mathematics and Computer Science"
+    ]
+  },
+  {
+    "course_id": "15928",
+    "group_id": "0",
+    "title": "Reinforcement Learning",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Dr. Armin Biess"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Wednesday",
+        "day_index": 3,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "Ziskind, Rm 1"
+      }
+    ],
+    "first_lecture": "10/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15928&pprev=0",
+    "fields": [
+      "Mathematics and Computer Science"
+    ]
+  },
+  {
+    "course_id": "16061",
+    "group_id": "15235",
+    "title": "Representations and Characters of Finite groups",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Dr. Josephine Shamash"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "Goldsmith, Rm 108"
+      }
+    ],
+    "first_lecture": "09/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16061&pprev=15235",
+    "fields": [
+      "Mathematics and Computer Science"
+    ]
+  },
+  {
+    "course_id": "16051",
+    "group_id": "0",
+    "title": "STARS Seminar-Part 1",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Prof. Maria Gorelik"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "13:30",
+        "end": "15:30",
+        "location": "Ziskind, Rm 1"
+      }
+    ],
+    "first_lecture": "19/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16051&pprev=0",
+    "fields": [
+      "Mathematics and Computer Science"
+    ]
+  },
+  {
+    "course_id": "16053",
+    "group_id": "16051",
+    "title": "STARS Seminar-Part 2",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "13:30",
+        "end": "15:30",
+        "location": "Ziskind, Rm 1"
+      }
+    ],
+    "first_lecture": "08/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16053&pprev=16051",
+    "fields": [
+      "Mathematics and Computer Science"
+    ]
+  },
+  {
+    "course_id": "15912",
+    "group_id": "15594",
+    "title": "Topics in Machine Learning Theory",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Dr. Gal Vardi"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "Ziskind, Rm 1"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "13:15",
+        "end": "14:00",
+        "location": null
+      }
+    ],
+    "first_lecture": "20/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15912&pprev=15594",
+    "fields": [
+      "Mathematics and Computer Science"
+    ]
+  },
+  {
+    "course_id": "15860",
+    "group_id": "0",
+    "title": "Topics in statistical inference and learning",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Prof. Boaz Nadler"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "09:15",
+        "end": "12:00",
+        "location": "Ziskind, Rm 1"
+      }
+    ],
+    "first_lecture": "07/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15860&pprev=0",
+    "fields": [
+      "Mathematics and Computer Science"
+    ]
+  },
+  {
+    "course_id": "15994",
+    "group_id": "15200",
+    "title": "From biomolecules to biosystems",
+    "offered_by": "Physical Sciences",
+    "lecturers": [
+      "Prof. Joel Stavans"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "Drori Auditorium"
+      },
+      {
+        "type": "lecture",
+        "day_name": "Wednesday",
+        "day_index": 3,
+        "start": "14:15",
+        "end": "16:00",
+        "location": null
+      }
+    ],
+    "first_lecture": "09/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15994&pprev=15200",
+    "fields": [
+      "Mathematics and Computer Science"
+    ]
+  },
+  {
+    "course_id": "15962",
+    "group_id": "15191",
+    "title": "Statistics, Algorithms and Experimental design",
+    "offered_by": "Physical Sciences",
+    "lecturers": [
+      "Dr. Barak Zackay"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "11:15",
+        "end": "13:00",
+        "location": "Drori Auditorium"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "WSoS, Rm A"
+      }
+    ],
+    "first_lecture": "07/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15962&pprev=15191",
+    "fields": [
+      "Mathematics and Computer Science",
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15804",
+    "group_id": "15427",
+    "title": "Systems biology of aging and longevity",
+    "offered_by": "Life Sciences",
+    "lecturers": [
+      "Prof. Uri Alon"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "Belfer, Botnar Auditorium"
+      }
+    ],
+    "first_lecture": "22/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15804&pprev=15427",
+    "fields": [
+      "Mathematics and Computer Science",
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "16033",
+    "group_id": "0",
+    "title": "Science Communication Presentation Skills",
+    "offered_by": null,
+    "lecturers": [
+      "Ms. Meital Salmor"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "10:00",
+        "end": "13:00",
+        "location": "Neve Matz"
+      }
+    ],
+    "first_lecture": "20/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16033&pprev=0",
+    "fields": [
+      "Mathematics and Computer Science",
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15769",
+    "group_id": "15220",
+    "title": "Advanced topics in mid-latitude dynamics",
+    "offered_by": "Chemical Sciences",
+    "lecturers": [
+      "Dr. Rei Chemke"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "WSoS, Rm 2"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "14:15",
+        "end": "15:00",
+        "location": "WSoS, Rm 2"
+      }
+    ],
+    "first_lecture": "11/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15769&pprev=15220",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15788",
+    "group_id": "0",
+    "title": "Analytical Tools for Surface Science",
+    "offered_by": "Chemical Sciences",
+    "lecturers": [
+      "Dr. Ayelet  Vilan",
+      "Dr. Nir Kampf",
+      "Dr. Anna Eden Kossoy"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "11:15",
+        "end": "13:00",
+        "location": "WSoS, Rm A"
+      }
+    ],
+    "first_lecture": "22/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15788&pprev=0",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15765",
+    "group_id": "15204",
+    "title": "Atmospheric and Oceanic Fluid Dynamics",
+    "offered_by": "Chemical Sciences",
+    "lecturers": [
+      "Prof. Yohai Kaspi"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "WSoS, Rm 1"
+      }
+    ],
+    "first_lecture": "20/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15765&pprev=15204",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15772",
+    "group_id": "15205",
+    "title": "Basic methods in biology for non biologists",
+    "offered_by": "Chemical Sciences",
+    "lecturers": [
+      "Dr. Tal Ilani"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": null,
+        "day_index": null,
+        "start": null,
+        "end": null,
+        "location": null,
+        "note": "09:00 - 13:00, WSoS, Rm A"
+      }
+    ],
+    "first_lecture": "11/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15772&pprev=15205",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15778",
+    "group_id": "15586",
+    "title": "Chemistry of Elements",
+    "offered_by": "Chemical Sciences",
+    "lecturers": [
+      "Prof. Igor Lubomirsky"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Wednesday",
+        "day_index": 3,
+        "start": "11:15",
+        "end": "13:00",
+        "location": "WSoS, Rm A"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "WSoS, Rm  B"
+      }
+    ],
+    "first_lecture": "21/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15778&pprev=15586",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15776",
+    "group_id": "15222",
+    "title": "Critical Assessment of Energy, Sustainability & Climate change (CAESC)",
+    "offered_by": "Chemical Sciences",
+    "lecturers": [
+      "Prof. David Cahen"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "11:15",
+        "end": "13:00",
+        "location": "WSoS, Rm 1"
+      }
+    ],
+    "first_lecture": "08/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15776&pprev=15222",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15767",
+    "group_id": "0",
+    "title": "Data Science and AI for Earth Studies",
+    "offered_by": "Chemical Sciences",
+    "lecturers": [
+      "Dr. Gali Dekel"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "11:15",
+        "end": "13:00",
+        "location": "WSoS, Rm C"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "11:15",
+        "end": "12:00",
+        "location": "WSoS, Rm A"
+      }
+    ],
+    "first_lecture": "11/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15767&pprev=0",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15762",
+    "group_id": "15443",
+    "title": "Differential Equations for Chemists",
+    "offered_by": "Chemical Sciences",
+    "lecturers": [
+      "Dr. Lev Melnikovsky"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "WSoS, Rm 1"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Wednesday",
+        "day_index": 3,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "WSoS, Rm 1"
+      }
+    ],
+    "first_lecture": "07/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15762&pprev=15443",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15773",
+    "group_id": "15390",
+    "title": "Exploring Topics in Protein-Nucleic Acid Interactions: From Binding Specificity to Cellular Roles.",
+    "offered_by": "Chemical Sciences",
+    "lecturers": [
+      "Dr. Ariel Afek",
+      "Dr. Naama Kessler"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "WSoS, Rm 1"
+      }
+    ],
+    "first_lecture": "19/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15773&pprev=15390",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15780",
+    "group_id": "15583",
+    "title": "General chemistry",
+    "offered_by": "Chemical Sciences",
+    "lecturers": [
+      "Dr. Sergey Semenov"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "11:15",
+        "end": "13:00",
+        "location": "WSoS, Rm 3"
+      }
+    ],
+    "first_lecture": "20/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15780&pprev=15583",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15777",
+    "group_id": "15585",
+    "title": "Guided Reading Course in Nanomaterials",
+    "offered_by": "Chemical Sciences",
+    "lecturers": [
+      "Prof. Ernesto Joselevich"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Wednesday",
+        "day_index": 3,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "WSoS, Rm 3"
+      }
+    ],
+    "first_lecture": "21/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15777&pprev=15585",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15757",
+    "group_id": "15442",
+    "title": "Guided reading course in single-molecule biophysics",
+    "offered_by": "Chemical Sciences",
+    "lecturers": [
+      "Prof. Gilad Haran",
+      "Dr. Inbal Riven"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "WSoS, Rm A"
+      }
+    ],
+    "first_lecture": "22/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15757&pprev=15442",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15760",
+    "group_id": "0",
+    "title": "Imaging Brain Function and Biophysics",
+    "offered_by": "Chemical Sciences",
+    "lecturers": [
+      "Prof. Noam Shemesh"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "11:15",
+        "end": "13:00",
+        "location": "WSoS, Rm 1"
+      }
+    ],
+    "first_lecture": "07/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15760&pprev=0",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15787",
+    "group_id": "15588",
+    "title": "Introduction to Electrochemistry",
+    "offered_by": "Chemical Sciences",
+    "lecturers": [
+      "Dr. Michal Lahav"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "WSoS, Rm A"
+      }
+    ],
+    "first_lecture": "11/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15787&pprev=15588",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15779",
+    "group_id": "2279",
+    "title": "Introduction to Materials Science",
+    "offered_by": "Chemical Sciences",
+    "lecturers": [
+      "Prof. Igor Lubomirsky",
+      "Dr. David Ehre"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Wednesday",
+        "day_index": 3,
+        "start": "11:15",
+        "end": "13:00",
+        "location": "WSoS, Rm A"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "12:15",
+        "end": "14:00",
+        "location": "WSoS, Rm A"
+      }
+    ],
+    "first_lecture": "10/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15779&pprev=2279",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15768",
+    "group_id": "15214",
+    "title": "Introduction to Mathematical Methods for Modeling and Data Analysis",
+    "offered_by": "Chemical Sciences",
+    "lecturers": [
+      "Dr. Eli Galanti"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "WSoS, Rm A"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "14:15",
+        "end": "15:00",
+        "location": "WSoS, Rm A"
+      }
+    ],
+    "first_lecture": "19/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15768&pprev=15214",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15766",
+    "group_id": "15223",
+    "title": "Isotope Geochemistry",
+    "offered_by": "Chemical Sciences",
+    "lecturers": [
+      "Dr. Yael Kiro"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "13:15",
+        "end": "16:00",
+        "location": "WSoS, Rm 1"
+      }
+    ],
+    "first_lecture": "08/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15766&pprev=15223",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15764",
+    "group_id": "15444",
+    "title": "Linear Algebra for Chemists",
+    "offered_by": "Chemical Sciences",
+    "lecturers": [
+      "Dr. Lev Melnikovsky"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "11:15",
+        "end": "13:00",
+        "location": "WSoS, Rm 1"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Wednesday",
+        "day_index": 3,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "WSoS, Rm 2"
+      }
+    ],
+    "first_lecture": "18/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15764&pprev=15444",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15784",
+    "group_id": "0",
+    "title": "Name reactions in Organic Chemistry",
+    "offered_by": "Chemical Sciences",
+    "lecturers": [
+      "Dr. Samer Gnaim",
+      "Dr. Elena Meirzadeh"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Wednesday",
+        "day_index": 3,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "WSoS, Rm A"
+      }
+    ],
+    "first_lecture": "10/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15784&pprev=0",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15783",
+    "group_id": "0",
+    "title": "Nucleic Acids: From Molecular Principles to Function and Applications",
+    "offered_by": "Chemical Sciences",
+    "lecturers": [
+      "Dr. Artemy Beniaminov",
+      "Dr. Michael O'Hagan",
+      "Dr. Ariel Afek"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "WSoS, Rm A"
+      }
+    ],
+    "first_lecture": "09/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15783&pprev=0",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15786",
+    "group_id": "14796",
+    "title": "Organometallic chemistry",
+    "offered_by": "Chemical Sciences",
+    "lecturers": [
+      "Dr. Moran Feller"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "WSoS, Rm  B"
+      }
+    ],
+    "first_lecture": "08/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15786&pprev=14796",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15763",
+    "group_id": "15216",
+    "title": "Practical Hands-on NMR",
+    "offered_by": "Chemical Sciences",
+    "lecturers": [
+      "Dr. Tali Scherf",
+      "Dr. Liat Avram-Biton"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "WSoS, Rm  B"
+      }
+    ],
+    "first_lecture": "19/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15763&pprev=15216",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15770",
+    "group_id": "15438",
+    "title": "Protein Structure and Function 1",
+    "offered_by": "Chemical Sciences",
+    "lecturers": [
+      "Prof. Deborah Fass",
+      "Prof. Ron Diskin"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "Belfer, Botnar Auditorium"
+      }
+    ],
+    "first_lecture": "20/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15770&pprev=15438",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15771",
+    "group_id": "15439",
+    "title": "Protein Structure and Function 2",
+    "offered_by": "Chemical Sciences",
+    "lecturers": [
+      "Prof. Deborah Fass",
+      "Dr. Ofrah Faust"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "WSoS, Rm 1"
+      }
+    ],
+    "first_lecture": "11/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15771&pprev=15439",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15775",
+    "group_id": "15582",
+    "title": "Quantum Mechanics",
+    "offered_by": "Chemical Sciences",
+    "lecturers": [
+      "Prof. Leeor Kronik"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "WSoS, Rm 3"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "13:15",
+        "end": "15:00",
+        "location": "Stone, Zacks Hall"
+      }
+    ],
+    "first_lecture": "18/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15775&pprev=15582",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15862",
+    "group_id": "15638",
+    "title": "Research presentations",
+    "offered_by": "Chemical Sciences",
+    "lecturers": [
+      "Prof. Yinon Rudich"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "14:00",
+        "end": "16:00",
+        "location": "WSoS, Rm A"
+      }
+    ],
+    "first_lecture": "18/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15862&pprev=15638",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15774",
+    "group_id": "15581",
+    "title": "Scientific writing",
+    "offered_by": "Chemical Sciences",
+    "lecturers": [
+      "Prof. Gershom Martin"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Wednesday",
+        "day_index": 3,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "WSoS, Rm 1"
+      }
+    ],
+    "first_lecture": "21/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15774&pprev=15581",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15758",
+    "group_id": "15229",
+    "title": "Statistical Thermodynamics",
+    "offered_by": "Chemical Sciences",
+    "lecturers": [
+      "Prof. David Tannor"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "WSoS, Rm 1"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "10:15",
+        "end": "11:00",
+        "location": "WSoS, Rm  B"
+      }
+    ],
+    "first_lecture": "19/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15758&pprev=15229",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15913",
+    "group_id": "15633",
+    "title": "Advanced topics in astrophysics seminar",
+    "offered_by": "Physical Sciences",
+    "lecturers": [
+      "Prof. Doron Kushnir"
+    ],
+    "semester": "Full Year",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "13:15",
+        "end": "14:00",
+        "location": "Benozio Center for Astrophysics, astrophysics meeting room (number 270"
+      },
+      {
+        "type": "lecture",
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "13:15",
+        "end": "14:00",
+        "location": "Benozio Center for Astrophysics, astrophysics meeting room (number 270"
+      }
+    ],
+    "first_lecture": "18/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15913&pprev=15633",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "16046",
+    "group_id": "14851",
+    "title": "Condensed Matter 2: Advanced Principles",
+    "offered_by": "Physical Sciences",
+    "lecturers": [
+      "Prof. Yuval Oreg"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "Weissman, Seminar Rm A"
+      },
+      {
+        "type": "lecture",
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "11:15",
+        "end": "13:00",
+        "location": "Weissman, Seminar Rm A"
+      }
+    ],
+    "first_lecture": "18/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16046&pprev=14851",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15914",
+    "group_id": "15629",
+    "title": "Cosmology",
+    "offered_by": "Physical Sciences",
+    "lecturers": [
+      "Prof. Eli Waxman",
+      "Prof. Doron Kushnir"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "11:15",
+        "end": "13:00",
+        "location": "Weissman, Seminar Rm A"
+      },
+      {
+        "type": "lecture",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "Weissman, Seminar Rm A"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "Weissman, Seminar Rm A"
+      }
+    ],
+    "first_lecture": "09/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15914&pprev=15629",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15920",
+    "group_id": "15642",
+    "title": "Elementary particles 1",
+    "offered_by": "Physical Sciences",
+    "lecturers": [
+      "Prof. Yosef Nir"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "Weissman, Auditorium"
+      },
+      {
+        "type": "lecture",
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "Weissman, Auditorium"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "Weissman, Seminar Rm A"
+      }
+    ],
+    "first_lecture": "07/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15920&pprev=15642",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15995",
+    "group_id": "15186",
+    "title": "Experimental methods in AMO physics",
+    "offered_by": "Physical Sciences",
+    "lecturers": [
+      "Dr. Ziv Meir",
+      "Dr. Osip Schwartz",
+      "Dr. Barry Bruner",
+      "Dr. Nitzan Akerman"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "09:15",
+        "end": "10:00",
+        "location": "WSoS, Rm C"
+      },
+      {
+        "type": "lecture",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "WSoS, Rm C"
+      }
+    ],
+    "first_lecture": "20/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15995&pprev=15186",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15973",
+    "group_id": "15175",
+    "title": "Experimental Particle Cosmology",
+    "offered_by": "Physical Sciences",
+    "lecturers": [
+      "Prof. Ran Budnik"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "11:15",
+        "end": "13:00",
+        "location": "Weissman, Seminar Rm A"
+      },
+      {
+        "type": "lecture",
+        "day_name": "Wednesday",
+        "day_index": 3,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "Weissman, Seminar Rm A"
+      }
+    ],
+    "first_lecture": "19/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15973&pprev=15175",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15963",
+    "group_id": "15645",
+    "title": "Experimental projects",
+    "offered_by": "Physical Sciences",
+    "lecturers": [
+      "Prof. Eran Ofek",
+      "Dr. Nurit Avraham Tayar"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "WSoS, Rm C"
+      },
+      {
+        "type": "lecture",
+        "day_name": "Wednesday",
+        "day_index": 3,
+        "start": "14:00",
+        "end": "16:00",
+        "location": "WSoS, Rm C"
+      }
+    ],
+    "first_lecture": "18/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15963&pprev=15645",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15993",
+    "group_id": "14271",
+    "title": "Fluid mechanics",
+    "offered_by": "Physical Sciences",
+    "lecturers": [
+      "Prof. Gregory Falkovich"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "Weissman, Seminar Rm A"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Wednesday",
+        "day_index": 3,
+        "start": "11:15",
+        "end": "12:00",
+        "location": "Weissman, Seminar Rm A"
+      }
+    ],
+    "first_lecture": "08/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15993&pprev=14271",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15964",
+    "group_id": "15201",
+    "title": "Free Space and Guided Wave Optics",
+    "offered_by": "Physical Sciences",
+    "lecturers": [
+      "Prof. Dan Oron"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "Drori Auditorium"
+      },
+      {
+        "type": "lecture",
+        "day_name": "Wednesday",
+        "day_index": 3,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "Weissman, Auditorium"
+      }
+    ],
+    "first_lecture": "07/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15964&pprev=15201",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15925",
+    "group_id": "15673",
+    "title": "General relativity",
+    "offered_by": "Physical Sciences",
+    "lecturers": [
+      "Prof. Ulf Leonhardt"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "Drori Auditorium"
+      },
+      {
+        "type": "lecture",
+        "day_name": "Wednesday",
+        "day_index": 3,
+        "start": "11:15",
+        "end": "13:00",
+        "location": "Physics Library"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "Drori Auditorium"
+      }
+    ],
+    "first_lecture": "18/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15925&pprev=15673",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15965",
+    "group_id": "15627",
+    "title": "Hands on astronomy",
+    "offered_by": "Physical Sciences",
+    "lecturers": [
+      "Dr. David Polishook"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Wednesday",
+        "day_index": 3,
+        "start": "16:15",
+        "end": "18:00",
+        "location": "WSoS, Rm C"
+      }
+    ],
+    "first_lecture": "21/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15965&pprev=15627",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "16057",
+    "group_id": "13479",
+    "title": "Microscopy and Spectroscopy of Quantum Condensed Matter",
+    "offered_by": "Physical Sciences",
+    "lecturers": [
+      "Prof. Haim Beidenkopf",
+      "Dr. Nurit Avraham Tayar"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "Weissman, Seminar Rm A"
+      }
+    ],
+    "first_lecture": "11/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16057&pprev=13479",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15966",
+    "group_id": "15630",
+    "title": "Observational astrophysics: from exoplanets to supernovae",
+    "offered_by": "Physical Sciences",
+    "lecturers": [
+      "Prof. Eran Ofek",
+      "Dr. Yossi Shvartzvald"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Wednesday",
+        "day_index": 3,
+        "start": "13:15",
+        "end": "15:00",
+        "location": "Weissman, Seminar Rm B"
+      }
+    ],
+    "first_lecture": "10/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15966&pprev=15630",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15930",
+    "group_id": "15643",
+    "title": "Practical Deep Learning for Science",
+    "offered_by": "Physical Sciences",
+    "lecturers": [
+      "Prof. Eilam Gross"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "14:00",
+        "end": "17:30",
+        "location": "Drori Auditorium"
+      }
+    ],
+    "first_lecture": "11/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15930&pprev=15643",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15923",
+    "group_id": "15685",
+    "title": "Practical Lens and Imaging System Design",
+    "offered_by": "Physical Sciences",
+    "lecturers": [
+      "Dr. Sagi Ben-Ami"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "Benozio Center for Astrophysics, astrophysics meeting room (number 270"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "TBA",
+        "day_index": null,
+        "start": "09:15",
+        "end": "11:00",
+        "location": null
+      }
+    ],
+    "first_lecture": "18/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15923&pprev=15685",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15991",
+    "group_id": "0",
+    "title": "Principles and Applications of Nanofabrication",
+    "offered_by": "Physical Sciences",
+    "lecturers": [
+      "Dr. Alexey Ilin"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Wednesday",
+        "day_index": 3,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "Weissman, Seminar Rm A"
+      }
+    ],
+    "first_lecture": "21/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15991&pprev=0",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15921",
+    "group_id": "15639",
+    "title": "Quantum field theory 1",
+    "offered_by": "Physical Sciences",
+    "lecturers": [
+      "Prof. Ofer Aharony"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "Weissman, Auditorium"
+      },
+      {
+        "type": "lecture",
+        "day_name": "Wednesday",
+        "day_index": 3,
+        "start": "11:15",
+        "end": "13:00",
+        "location": "Weissman, Auditorium"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "11:15",
+        "end": "13:00",
+        "location": "Drori Auditorium"
+      }
+    ],
+    "first_lecture": "08/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15921&pprev=15639",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "16008",
+    "group_id": "15178",
+    "title": "Quantum field theory 2 2D field theories",
+    "offered_by": "Physical Sciences",
+    "lecturers": [
+      "Prof. Micha Berkooz"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Wednesday",
+        "day_index": 3,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "Weissman, Seminar Rm B"
+      },
+      {
+        "type": "lecture",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "Weissman, Seminar Rm B"
+      }
+    ],
+    "first_lecture": "10/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16008&pprev=15178",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15911",
+    "group_id": "15651",
+    "title": "Quantum information processing",
+    "offered_by": "Physical Sciences",
+    "lecturers": [
+      "Dr. Tom Manovitz",
+      "Prof. Roee Ozeri"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "11:15",
+        "end": "13:00",
+        "location": "Weissman, Auditorium"
+      },
+      {
+        "type": "lecture",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "14:15",
+        "end": "15:00",
+        "location": "Weissman, Auditorium"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "15:00",
+        "end": "16:00",
+        "location": "Weissman, Auditorium"
+      }
+    ],
+    "first_lecture": "09/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15911&pprev=15651",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "16029",
+    "group_id": "15202",
+    "title": "Quantum Light and Matter",
+    "offered_by": "Physical Sciences",
+    "lecturers": [
+      "Dr. Ziv Meir",
+      "Prof. Barak Dayan"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "Drori Auditorium"
+      },
+      {
+        "type": "lecture",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "Drori Auditorium"
+      }
+    ],
+    "first_lecture": "09/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16029&pprev=15202",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15747",
+    "group_id": "15593",
+    "title": "Quantum mechanics 1",
+    "offered_by": "Physical Sciences",
+    "lecturers": [
+      "Prof. Shimon Levit"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "11:15",
+        "end": "13:00",
+        "location": "WSoS, Rm C"
+      },
+      {
+        "type": "lecture",
+        "day_name": "Wednesday",
+        "day_index": 3,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "WSoS, Rm C"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "WSoS, Rm C"
+      }
+    ],
+    "first_lecture": "18/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15747&pprev=15593",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15748",
+    "group_id": "15625",
+    "title": "Quantum mechanics 2",
+    "offered_by": "Physical Sciences",
+    "lecturers": [
+      "Prof. Kfir Blum"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "11:15",
+        "end": "13:00",
+        "location": "Drori Auditorium"
+      },
+      {
+        "type": "lecture",
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "Drori Auditorium"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "Drori Auditorium"
+      }
+    ],
+    "first_lecture": "19/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15748&pprev=15625",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15746",
+    "group_id": "15652",
+    "title": "Statistical Mechanics",
+    "offered_by": "Physical Sciences",
+    "lecturers": [
+      "Prof. Oren Raz",
+      "Dr. Yael Avni"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "Drori Auditorium"
+      },
+      {
+        "type": "lecture",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "Drori Auditorium"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "11:15",
+        "end": "13:00",
+        "location": "Drori Auditorium"
+      }
+    ],
+    "first_lecture": "20/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15746&pprev=15652",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "16042",
+    "group_id": "15176",
+    "title": "Student seminar in high energy physics, part 3",
+    "offered_by": "Physical Sciences",
+    "lecturers": [
+      "Prof. Ofer Aharony",
+      "Prof. Micha Berkooz"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "Weissman, Seminar Rm A"
+      }
+    ],
+    "first_lecture": "22/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16042&pprev=15176",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "16043",
+    "group_id": "15194",
+    "title": "Student seminar in high energy physics, part 4",
+    "offered_by": "Physical Sciences",
+    "lecturers": [
+      "Prof. Micha Berkooz",
+      "Prof. Ofer Aharony"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "14:15",
+        "end": "15:00",
+        "location": "Weissman, Seminar Rm A"
+      }
+    ],
+    "first_lecture": "08/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16043&pprev=15194",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15802",
+    "group_id": "15466",
+    "title": "Analysis of proteins by liquid chromatography mass-spectrometry",
+    "offered_by": "Life Sciences",
+    "lecturers": [
+      "Dr. Yishai Levin",
+      "Dr. Gili Ben-Nisan"
+    ],
+    "semester": "1st",
+    "sessions": [],
+    "first_lecture": "29/11/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15802&pprev=15466",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15918",
+    "group_id": "15517",
+    "title": "Introduction to Matlab and data analysis",
+    "offered_by": "Life Sciences",
+    "lecturers": [
+      "Dr. Natalie Kronik"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "12:15",
+        "end": "14:00",
+        "location": "WSoS, Rm  B"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "12:15",
+        "end": "14:00",
+        "location": "WSoS, Rm  B"
+      }
+    ],
+    "first_lecture": "22/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15918&pprev=15517",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15919",
+    "group_id": "15740",
+    "title": "Introduction to Matlab and data analysis",
+    "offered_by": "Life Sciences",
+    "lecturers": [
+      "Dr. Natalie Kronik"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Wednesday",
+        "day_index": 3,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "WSoS, Rm  B"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "12:15",
+        "end": "14:00",
+        "location": "WSoS, Rm  B"
+      }
+    ],
+    "first_lecture": "10/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15919&pprev=15740",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15793",
+    "group_id": "15622",
+    "title": "Philosophy of science",
+    "offered_by": "Life Sciences",
+    "lecturers": [
+      "Dr. Tamar Schneider"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "11:15",
+        "end": "13:00",
+        "location": "WSoS, Rm A"
+      }
+    ],
+    "first_lecture": "11/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15793&pprev=15622",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15915",
+    "group_id": "15546",
+    "title": "Principles and practice of large scale data analysis using R",
+    "offered_by": "Life Sciences",
+    "lecturers": [
+      "Dr. Yaron Antebi",
+      "Prof. Igor Ulitsky",
+      "Prof. Schraga Schwartz"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "WSoS, Rm C"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "12:15",
+        "end": "14:00",
+        "location": "WSoS, Rm C"
+      }
+    ],
+    "first_lecture": "18/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15915&pprev=15546",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15922",
+    "group_id": "15469",
+    "title": "Programming in Python using AI",
+    "offered_by": "Life Sciences",
+    "lecturers": [
+      "Mr. Gabor  Szabo",
+      "Dr. Yaron Antebi"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "09:15",
+        "end": "12:00",
+        "location": "WSoS, Rm C"
+      }
+    ],
+    "first_lecture": "09/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15922&pprev=15469",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15916",
+    "group_id": "15468",
+    "title": "Programming in Python using AI",
+    "offered_by": "Life Sciences",
+    "lecturers": [
+      "Mr. Gabor  Szabo",
+      "Dr. Yaron Antebi"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "09:15",
+        "end": "12:00",
+        "location": "WSoS, Rm C"
+      }
+    ],
+    "first_lecture": "19/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15916&pprev=15468",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15848",
+    "group_id": "15548",
+    "title": "Protein purification, protein-protein interactions and protein crystallization & structural analysis",
+    "offered_by": "Life Sciences",
+    "lecturers": [
+      "Dr. Shira Albeck",
+      "Dr. Orly Dym",
+      "Dr. Yael Fridmann-Sirkis",
+      "Ms. Shelly Hamer-Rogotner",
+      "Mr. Jossef Jacobovitch",
+      "Ms. Hedva Hamawi",
+      "Dr. Irina Shin",
+      "Dr. Moshe Goldsmith",
+      "Dr. Eliane Hadas Yardeni"
+    ],
+    "semester": "2nd",
+    "sessions": [],
+    "first_lecture": "04/04/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15848&pprev=15548",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "16002",
+    "group_id": "15544",
+    "title": "Strategies for cloning and protein expression",
+    "offered_by": "Life Sciences",
+    "lecturers": [
+      "Dr. Tamar Unger",
+      "Dr. Yoav Peleg",
+      "Ms. Adele Ben Harush",
+      "Ms. Lior Yakir",
+      "Ms. Eden Levi"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": null,
+        "day_index": null,
+        "start": null,
+        "end": null,
+        "location": null,
+        "note": "13:00 - 16:30"
+      }
+    ],
+    "first_lecture": "02/02/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16002&pprev=15544",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  },
+  {
+    "course_id": "15927",
+    "group_id": "15472",
+    "title": "Sustainability by the numbers",
+    "offered_by": "Life Sciences",
+    "lecturers": [
+      "Prof. Ron Milo"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "10:45",
+        "end": "12:30",
+        "location": "Belfer, Botnar Auditorium"
+      }
+    ],
+    "first_lecture": "02/11/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15927&pprev=15472",
+    "fields": [
+      "Chemical Sciences"
+    ]
+  }
+]

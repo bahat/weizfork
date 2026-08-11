@@ -11,7 +11,16 @@ Point this at the folder you've been dropping scrape-pages.js's downloads into
      "*_points.json" files scrape-pages.js downloads, or a wsos-points.json
      from fetch-points.js) and attaches `points`/`end_date`/`course_code`
      directly onto the matching course.
-  4. Writes the result to a single output file.
+  4. Merges all of that ONTO whatever is already at the output path (if it
+     exists), rather than replacing it outright — so running this with only
+     e.g. 2026's raw files doesn't wipe out 2027 courses from a previous run
+     just because their raw/*.html isn't sitting in the folder this time.
+     A course re-scraped this run has its catalog fields (title, sessions,
+     lecturers, ...) refreshed and its `fields` list unioned with what was
+     already there; its points/end-date carry forward from the existing file
+     unless this run's *.json data refreshes them. A course not touched by
+     this run's raw/ files at all is left exactly as it was.
+  5. Writes the result to a single output file.
 
 Only looks directly inside the given folder (not subfolders), so scratch
 files you keep in e.g. raw/tmp/ are left alone.
@@ -75,6 +84,17 @@ def load_points_map(json_paths):
     return points
 
 
+def load_existing(out_path):
+    if not os.path.exists(out_path):
+        return []
+    with open(out_path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def key_of(c):
+    return (c.get("course_id"), c.get("group_id"))
+
+
 def main():
     raw_dir = sys.argv[1] if len(sys.argv) > 1 else "raw"
     out_path = sys.argv[2] if len(sys.argv) > 2 else "data/courses.json"
@@ -90,10 +110,34 @@ def main():
 
     print("Parsing course lists...")
     course_lists = parse_html_files(html_paths)
-    merged = merge_course_lists(course_lists)
+    fresh = merge_course_lists(course_lists)  # only what THIS run's raw/*.html covers
+
+    existing = load_existing(out_path)
+    existing_by_key = {key_of(c): c for c in existing}
+    print(f"\n{len(existing)} course(s) already in {out_path}" if existing else f"\nNo existing {out_path} — starting fresh.")
 
     print("\nLoading points/end-date data...")
     points_map = load_points_map(json_paths)
+
+    # Start from the existing file so courses this run's raw/ doesn't cover
+    # (e.g. a different year/field scraped previously) are left untouched.
+    combined_by_key = dict(existing_by_key)
+    refreshed = 0
+    for c in fresh:
+        key = key_of(c)
+        old = existing_by_key.get(key)
+        entry = dict(c)  # freshly-scraped catalog fields (title, sessions, ...) win
+        if old:
+            refreshed += 1
+            old_fields = old.get("fields", [])
+            entry["fields"] = old_fields + [f for f in entry.get("fields", []) if f not in old_fields]
+            # carry forward points/end-date/course_code unless this run's *.json refreshes them below
+            for field in ("points", "end_date", "course_code"):
+                if entry.get(field) is None and field in old:
+                    entry[field] = old[field]
+        combined_by_key[key] = entry
+
+    merged = list(combined_by_key.values())
 
     attached = 0
     for c in merged:
@@ -120,16 +164,20 @@ def main():
     years = sorted(set(str(c.get("year")) for c in merged if c.get("year")))
     all_fields = sorted(set(f for c in merged for f in c.get("fields", [])))
     cross_listed = sum(1 for c in merged if len(c.get("fields", [])) > 1)
+    untouched = len(existing_by_key) - refreshed
 
-    print(f"\nMerged {len(html_paths)} page(s) -> {len(merged)} unique courses -> {out_path}")
+    print(f"\n{len(fresh)} course(s) parsed from this run's raw/*.html ({refreshed} already existed and were refreshed).")
+    if untouched > 0:
+        print(f"{untouched} previously-known course(s) not covered by this run's raw/ were left as-is.")
+    print(f"Merged -> {len(merged)} unique courses total -> {out_path}")
     print(f"Years: {', '.join(years)}")
     print(f"Fields: {', '.join(all_fields)}")
     if cross_listed:
         print(f"{cross_listed} course(s) are cross-listed under more than one field.")
-    print(f"Attached points/end-date to {attached}/{len(merged)} courses from {len(json_paths)} JSON file(s).")
-    missing = len(merged) - attached
+    print(f"Attached fresh points/end-date to {attached} course(s) from {len(json_paths)} JSON file(s) this run.")
+    missing = sum(1 for c in merged if c.get("points") is None)
     if missing:
-        print(f"  {missing} course(s) have no points data yet — scrape that field/year's points, or run fetch-points.js.")
+        print(f"  {missing} course(s) have no points data at all yet — scrape that field/year's points, or run fetch-points.js.")
 
 
 if __name__ == "__main__":

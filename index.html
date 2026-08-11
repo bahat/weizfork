@@ -284,7 +284,7 @@
     <span class="sub">Weizmann School of Science Course Scheduler</span>
   </div>
   <div style="display:flex; align-items:center; gap:20px;">
-    <div class="meta" id="dataMeta">— loading course data —</div>
+    <div class="meta" id="dataMeta"></div>
     <div class="user-bar" id="userBar"></div>
   </div>
 </header>
@@ -1107,14 +1107,8 @@ auth.onAuthStateChanged(async (user) => {
   renderAll();
 });
 
-function renderMeta(){
-  const fields = [...new Set(ALL_COURSES.flatMap(c=>c.fields || []).filter(Boolean))];
-  document.getElementById('dataMeta').textContent = `${ALL_COURSES.length} courses loaded · ${fields.join(', ')}`;
-}
-
 function renderAll(){
   renderUserBar();
-  renderMeta();
   populateYearFilter();
   populateFieldFilter();
   renderLegend();

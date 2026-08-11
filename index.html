@@ -297,7 +297,7 @@
     <input type="text" id="search" placeholder="Course, lecturer…">
 
     <label for="yearFilter">Academic year</label>
-    <select id="yearFilter"><option value="">All years loaded</option></select>
+    <select id="yearFilter"><option value="">Loading years…</option></select>
 
     <label for="fieldFilter">Field of study</label>
     <select id="fieldFilter"><option value="">All fields loaded</option></select>
@@ -589,6 +589,13 @@ function courseAppliesToSemester(course, sem){
   return course.semester === sem || course.semester === "Full Year";
 }
 
+function getActiveYear(){
+  return document.getElementById('yearFilter').value;
+}
+function courseAppliesToYear(course, year){
+  return String(course.year) === String(year);
+}
+
 /* ---------- rendering ---------- */
 function renderLegend(){
   const box = document.getElementById('legendItems');
@@ -613,8 +620,9 @@ function populateYearFilter(){
   const sel = document.getElementById('yearFilter');
   const prev = sel.value;
   const years = [...new Set(ALL_COURSES.map(c => c.year).filter(Boolean))].sort((a,b)=>b-a);
-  sel.innerHTML = '<option value="">All years loaded</option>' + years.map(y=>`<option value="${y}">${y}</option>`).join('');
-  if(years.map(String).includes(prev)) sel.value = prev;
+  sel.innerHTML = years.map(y=>`<option value="${y}">${y}</option>`).join('');
+  // Academic year is mandatory — keep the current choice if still valid, otherwise default to the latest.
+  sel.value = years.map(String).includes(prev) ? prev : String(years[0] || '');
 }
 
 function getFiltered(){
@@ -722,13 +730,14 @@ function renderSelected(){
 
 function renderTotals(items){
   const totalsBox = document.getElementById('totalsBox');
-  const sumFor = (sem) => items
+  const yearItems = items.filter(c => courseAppliesToYear(c, getActiveYear()));
+  const sumFor = (sem) => yearItems
     .filter(c => c.semester === sem || c.semester === 'Full Year')
     .reduce((sum, c) => { const p = getPoints(c); return sum + (p !== null ? p : 0); }, 0);
   const sem1 = sumFor('1st');
   const sem2 = sumFor('2nd');
-  const combined = items.reduce((sum, c) => { const p = getPoints(c); return sum + (p !== null ? p : 0); }, 0);
-  const missing = items.filter(c => getPoints(c) === null).length;
+  const combined = yearItems.reduce((sum, c) => { const p = getPoints(c); return sum + (p !== null ? p : 0); }, 0);
+  const missing = yearItems.filter(c => getPoints(c) === null).length;
 
   totalsBox.innerHTML = `
     <div class="row"><span class="label">Semester 1 total</span><span class="val">${sem1} pts</span></div>
@@ -739,7 +748,7 @@ function renderTotals(items){
 }
 
 function findConflicts(){
-  const relevant = [...selected.values()].filter(c => courseAppliesToSemester(c, activeSemester));
+  const relevant = [...selected.values()].filter(c => courseAppliesToSemester(c, activeSemester) && courseAppliesToYear(c, getActiveYear()));
   const flatSessions = [];
   relevant.forEach(c => c.sessions.forEach(s => flatSessions.push({course:c, session:s})));
   const conflictPairs = [];
@@ -787,7 +796,7 @@ function renderCalendar(){
   const conflictKeySet = new Set();
   conflicts.forEach(([a,b]) => { conflictKeySet.add(a.course.course_id+a.session.day_index+a.session.start); conflictKeySet.add(b.course.course_id+b.session.day_index+b.session.start); });
 
-  const relevant = [...selected.values()].filter(c => courseAppliesToSemester(c, activeSemester));
+  const relevant = [...selected.values()].filter(c => courseAppliesToSemester(c, activeSemester) && courseAppliesToYear(c, getActiveYear()));
   relevant.forEach(c => {
     const color = deptColorMap[c.offered_by || 'Other'] || '#1F6F5C';
     c.sessions.forEach(s => {
@@ -1206,6 +1215,11 @@ document.getElementById('fileInput').addEventListener('change', (e) => {
 /* ---------- wiring ---------- */
 ['search','yearFilter','fieldFilter','semFilter','dayFilter'].forEach(id => {
   document.getElementById(id).addEventListener('input', renderCourseList);
+});
+// Academic year also scopes the calendar/totals/conflicts, not just the browse list.
+document.getElementById('yearFilter').addEventListener('input', () => {
+  renderCalendar();
+  renderSelected();
 });
 document.getElementById('semToggle').addEventListener('click', (e) => {
   const btn = e.target.closest('button');

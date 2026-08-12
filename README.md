@@ -15,6 +15,9 @@ schedules, shared course points/end-dates, and reviews are backed by Firebase.
     ├── merge_courses.py    combines multiple parse_courses.py outputs
     ├── build_courses.py    one-shot: turns a folder of raw/*.html + raw/*.json
     │                       (scrape-pages.js's downloads) into one courses.json
+    ├── scrape_all.py       fully automated: drives a local browser (Playwright)
+    │                       through every Year x Field combination, running
+    │                       scrape-pages.js + build_courses.py for you
     ├── scrape-pages.js     browser console script: paginates a field/year's
     │                       search results and fetches those courses' credit
     │                       points/end-dates, in one run
@@ -27,10 +30,32 @@ schedules, shared course points/end-dates, and reviews are backed by Firebase.
 ## 1. Collect the data
 
 The catalog (`https://erez.weizmann.ac.il/apx/r/ws1/f1862681863611861860186/courses`)
-blocks automated scraping (`robots.txt`), so pages are collected by hand and parsed
-locally — one page per (Field of study × Academic Year) combination you want covered.
+blocks automated *remote* scraping (`robots.txt`) — but a real local browser under
+your own session, driven by you (or by a script you run yourself), isn't a remote
+scraper, so it isn't subject to that.
 
-**Per field/year:**
+**Fully automated (recommended):**
+
+```
+raw/my_env/bin/pip install playwright        # once
+raw/my_env/bin/playwright install chromium   # once
+raw/my_env/bin/python3 scripts/scrape_all.py
+```
+
+This opens a real (visible, by default) browser, reads every option currently in
+the site's own Year and Field dropdowns, and for each combination not already in
+`raw/`: selects it, clicks Search, injects `scrape-pages.js` unmodified, and saves
+the two files it downloads straight into `raw/` — same thing you'd do by hand,
+just not one combination at a time. When it's done it runs `build_courses.py`
+automatically. Safe to interrupt and re-run — combinations already in `raw/` are
+skipped unless you pass `--force`. See `python3 scripts/scrape_all.py --help`
+for `--years`/`--fields`/`--headless`/`--list`/etc.
+
+If the Year dropdown never shows up (login page, VPN wall, ...), run without
+`--headless` so you can see what actually loaded and intervene.
+
+**Manual, one field/year at a time** (what the automated script above does for
+you — useful if you just want one or two, or the automated version hits a snag):
 
 1. Open the courses page, set **Academic Year** and **Field of study**, click Search.
 2. Open DevTools (F12) → Console, paste the full contents of

@@ -200,7 +200,11 @@
   .session-block.conflict{outline:2px solid var(--brick); outline-offset:-2px;}
 
   /* --- Sidebar: selected courses --- */
-  .selected-list{display:flex; flex-direction:column; gap:8px; margin-top:12px;}
+  .selected-list{display:flex; flex-direction:column; margin-top:12px;}
+  .schedule-group{display:flex; flex-direction:column; gap:8px;}
+  .schedule-group + .schedule-group{margin-top:16px;}
+  .schedule-group-title{font-family:'IBM Plex Mono',monospace; font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:var(--ink-soft); margin-bottom:2px;}
+  .schedule-group-empty{font-size:12px; color:var(--ink-soft); font-style:italic;}
   .selected-item{
     background:var(--card-bg); border:1px solid var(--border); border-radius:var(--radius);
     padding:8px 10px; font-size:12.5px;
@@ -748,6 +752,22 @@ function toggleCourse(c){
   renderAll();
 }
 
+function buildSelectedItemEl(c){
+  const div = document.createElement('div');
+  div.className = 'selected-item';
+  div.style.borderLeft = `4px solid ${deptColorMap[c.offered_by || 'Other'] || '#1F6F5C'}`;
+  const pts = getEffectivePoints(c);
+  div.innerHTML = `
+    <div class="row">
+      <span class="title">${c.title}${c.year ? `<span class="points-badge">${c.year}</span>` : ''}${pts !== null ? `<span class="points-badge">${pts} pts</span>` : ''}${c.isCustom ? `<span class="points-badge">personal</span>` : ''}</span>
+      <button class="remove" title="Remove">×</button>
+    </div>
+    <div class="meta">${c.semester} · ${(c.lecturers||[])[0] || ''}</div>
+  `;
+  div.querySelector('.remove').addEventListener('click', () => c.isCustom ? deleteCustomEvent(c) : toggleCourse(c));
+  return div;
+}
+
 function renderSelected(){
   const box = document.getElementById('selectedList');
   const emptyNote = document.getElementById('emptyNote');
@@ -760,21 +780,28 @@ function renderSelected(){
     emptyNote.textContent = `No ${getActiveYear()} courses added yet. Click "Add" on any course, or "＋ Add event" above, to place it on the calendar.`;
   }
 
-  items.sort((a,b)=>a.title.localeCompare(b.title)).forEach(c => {
-    const div = document.createElement('div');
-    div.className = 'selected-item';
-    div.style.borderLeft = `4px solid ${deptColorMap[c.offered_by || 'Other'] || '#1F6F5C'}`;
-    const pts = getEffectivePoints(c);
-    div.innerHTML = `
-      <div class="row">
-        <span class="title">${c.title}${c.year ? `<span class="points-badge">${c.year}</span>` : ''}${pts !== null ? `<span class="points-badge">${pts} pts</span>` : ''}${c.isCustom ? `<span class="points-badge">personal</span>` : ''}</span>
-        <button class="remove" title="Remove">×</button>
-      </div>
-      <div class="meta">${c.semester} · ${(c.lecturers||[])[0] || ''}</div>
-    `;
-    div.querySelector('.remove').addEventListener('click', () => c.isCustom ? deleteCustomEvent(c) : toggleCourse(c));
-    box.appendChild(div);
-  });
+  if(items.length){
+    const sorted = [...items].sort((a,b)=>a.title.localeCompare(b.title));
+    const sem1Items = sorted.filter(c => c.semester === '1st' || c.semester === 'Full Year');
+    const sem2Items = sorted.filter(c => c.semester === '2nd' || c.semester === 'Full Year');
+    [['Semester 1', sem1Items], ['Semester 2', sem2Items]].forEach(([label, list]) => {
+      const group = document.createElement('div');
+      group.className = 'schedule-group';
+      const heading = document.createElement('div');
+      heading.className = 'schedule-group-title';
+      heading.textContent = label;
+      group.appendChild(heading);
+      if(list.length){
+        list.forEach(c => group.appendChild(buildSelectedItemEl(c)));
+      } else {
+        const empty = document.createElement('div');
+        empty.className = 'schedule-group-empty';
+        empty.textContent = 'No courses yet.';
+        group.appendChild(empty);
+      }
+      box.appendChild(group);
+    });
+  }
 
   // conflicts
   const conflictBox = document.getElementById('conflictBox');

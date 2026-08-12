@@ -231,8 +231,11 @@ def parse_course_detail(html_text):
         "end_date": grab(r'id="P30_END_DATE"[^>]*>([^<]*)<'),
         "language": grab(r'id="P30_LANGUAGE"[^>]*>([^<]*)<'),
         "grade_type": grab(r'id="P30_GRADE_TYPE"[^>]*>([^<]*)<'),
-        "syllabus": grab(r'id="P30_COURSE_SYLLABUS_NEW"[^>]*>([^<]*)<'),
-        "learning_outcomes": grab(r'id="P30_LEARNING_OUTCOME"[^>]*>([^<]*)<'),
+        # Syllabus/learning-outcomes render as HTML (a <ul><li> list / a <p>),
+        # not plain text, so capture up to the closing </span> instead of
+        # stopping at the first "<" (confirmed against a real detail page).
+        "syllabus": grab(r'id="P30_COURSE_SYLLABUS_NEW"[^>]*>([\s\S]*?)<\/span>'),
+        "learning_outcomes": grab(r'id="P30_LEARNING_OUTCOME"[^>]*>([\s\S]*?)<\/span>'),
         "prerequisites": grab(r'id="P30_PREREQ"[^>]*>([^<]*)<'),
     }
 

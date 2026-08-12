@@ -15,9 +15,12 @@
      instead of a hand-maintained list. Downloads a second file with the result.
 
   WHAT THIS DOES NOT DO:
-  It can't pick the Year/Field dropdowns and click Search for you — that's a
-  real page navigation, which would kill this script mid-run. You still do
-  that part by hand, once per field/year combination.
+  On its own, it can't pick the Year/Field dropdowns and click Search for
+  you — from inside the page, that's a real navigation that would kill this
+  script mid-run, so pasted into DevTools by hand you do that part yourself,
+  once per field/year combination. scripts/scrape_all.py automates exactly
+  that part (and running this script) from outside the page via a real
+  local browser, if you want every combination done for you instead.
 
   HOW TO USE:
   1. On the courses page, set Academic Year + Field of study, click Search.
@@ -195,8 +198,12 @@ ${allRowsHTML.join('\n')}
       const points = creditRaw ? parseFloat(creditRaw) : null;
       const end_date = grab(html, /id="P30_END_DATE"[^>]*>([^<]*)</);
       const course_code = grab(html, /id="P30_COURSE_CODE"[^>]*>([^<]*)</);
-      const syllabus = grab(html, /id="P30_COURSE_SYLLABUS_NEW"[^>]*>([^<]*)</);
-      const learning_outcomes = grab(html, /id="P30_LEARNING_OUTCOME"[^>]*>([^<]*)</);
+      // Syllabus/learning-outcomes render as HTML (a <ul><li> list / a <p>),
+      // not plain text, so capture everything up to the closing </span>
+      // instead of stopping at the first "<" (which matched empty every
+      // time — confirmed against a real detail page).
+      const syllabus = grab(html, /id="P30_COURSE_SYLLABUS_NEW"[^>]*>([\s\S]*?)<\/span>/);
+      const learning_outcomes = grab(html, /id="P30_LEARNING_OUTCOME"[^>]*>([\s\S]*?)<\/span>/);
       const prerequisites = grab(html, /id="P30_PREREQ"[^>]*>([^<]*)</);
       pointsResults[key] = {
         points: isNaN(points) ? null : points, end_date: end_date || null, course_code: course_code || null,

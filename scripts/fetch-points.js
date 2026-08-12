@@ -45,8 +45,12 @@
       const points = creditRaw ? parseFloat(creditRaw) : null;
       const end_date = grab(html, /id="P30_END_DATE"[^>]*>([^<]*)</);
       const course_code = grab(html, /id="P30_COURSE_CODE"[^>]*>([^<]*)</);
-      const syllabus = grab(html, /id="P30_COURSE_SYLLABUS_NEW"[^>]*>([^<]*)</);
-      const learning_outcomes = grab(html, /id="P30_LEARNING_OUTCOME"[^>]*>([^<]*)</);
+      // Syllabus/learning-outcomes render as HTML (a <ul><li> list / a <p>),
+      // not plain text, so capture everything up to the closing </span>
+      // instead of stopping at the first "<" (which matched empty every
+      // time — confirmed against a real detail page).
+      const syllabus = grab(html, /id="P30_COURSE_SYLLABUS_NEW"[^>]*>([\s\S]*?)<\/span>/);
+      const learning_outcomes = grab(html, /id="P30_LEARNING_OUTCOME"[^>]*>([\s\S]*?)<\/span>/);
       const prerequisites = grab(html, /id="P30_PREREQ"[^>]*>([^<]*)</);
 
       results[key] = {

@@ -41,6 +41,7 @@ import glob
 import html
 import json
 import os
+import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -61,16 +62,28 @@ def parse_html_files(html_paths):
     return course_lists
 
 
+_HTML_TAG_RE = re.compile(r"<[^>]+>")
+
+
 def _clean_detail_text(text):
     """Normalize a scraped detail-page text field (syllabus/learning_outcomes/
-    prerequisites): decode HTML entities and de-indent the tab-padded lines
-    Oracle APEX's textarea items come with. Kept raw otherwise (including
+    prerequisites). syllabus/learning_outcomes come through as raw HTML (an
+    Oracle APEX "display as HTML" item rendering a <ul><li> list or a <p>) —
+    convert list items to bullet lines, <br>/</p> to line breaks, and strip
+    any remaining tags; prerequisites is already plain text and passes
+    through unaffected by the tag-stripping. Decodes HTML entities and
+    de-indents/collapses whitespace either way. Kept raw otherwise (including
     values like "No"/"N/A") — display-level formatting belongs in the UI."""
     if not text:
         return None
-    cleaned = html.unescape(text).strip()
-    cleaned = "\n".join(line.strip() for line in cleaned.splitlines()).strip()
-    return cleaned or None
+    cleaned = re.sub(r"</li\s*>", "\n", text, flags=re.IGNORECASE)
+    cleaned = re.sub(r"<li[^>]*>", "• ", cleaned, flags=re.IGNORECASE)
+    cleaned = re.sub(r"<br\s*/?>", "\n", cleaned, flags=re.IGNORECASE)
+    cleaned = re.sub(r"</p\s*>", "\n", cleaned, flags=re.IGNORECASE)
+    cleaned = _HTML_TAG_RE.sub("", cleaned)
+    cleaned = html.unescape(cleaned).strip()
+    lines = [line.strip() for line in cleaned.splitlines() if line.strip()]
+    return "\n".join(lines) or None
 
 
 def load_points_map(json_paths):

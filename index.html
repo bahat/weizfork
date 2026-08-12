@@ -823,17 +823,22 @@ function renderSelected(){
 function renderTotals(items){
   // items is already scoped to the active year by renderSelected()
   const totalsBox = document.getElementById('totalsBox');
-  const sumFor = (sem) => items
-    .filter(c => c.semester === sem || c.semester === 'Full Year')
+  // Each course counted in exactly one bucket (Full Year separate from 1st/2nd)
+  // so these three add up to "combined" cleanly instead of double-counting
+  // Full Year courses in both semester totals.
+  const sumFor = (pred) => items
+    .filter(pred)
     .reduce((sum, c) => { const p = getEffectivePoints(c); return sum + (p !== null ? p : 0); }, 0);
-  const sem1 = sumFor('1st');
-  const sem2 = sumFor('2nd');
+  const sem1 = sumFor(c => c.semester === '1st');
+  const sem2 = sumFor(c => c.semester === '2nd');
+  const fullYear = sumFor(c => c.semester === 'Full Year');
   const combined = items.reduce((sum, c) => { const p = getEffectivePoints(c); return sum + (p !== null ? p : 0); }, 0);
   const missing = items.filter(c => getEffectivePoints(c) === null).length;
 
   totalsBox.innerHTML = `
     <div class="row"><span class="label">Semester 1 total</span><span class="val">${sem1} pts</span></div>
     <div class="row"><span class="label">Semester 2 total</span><span class="val">${sem2} pts</span></div>
+    <div class="row"><span class="label">Full Year total</span><span class="val">${fullYear} pts</span></div>
     <div class="row grand"><span class="label">Combined (unique courses)</span><span class="val">${combined} pts</span></div>
     ${missing ? `<div class="points-note">${missing} course${missing>1?'s':''} missing points — open “i” to add.</div>` : ''}
   `;

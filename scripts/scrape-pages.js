@@ -195,7 +195,13 @@ ${allRowsHTML.join('\n')}
       const points = creditRaw ? parseFloat(creditRaw) : null;
       const end_date = grab(html, /id="P30_END_DATE"[^>]*>([^<]*)</);
       const course_code = grab(html, /id="P30_COURSE_CODE"[^>]*>([^<]*)</);
-      pointsResults[key] = { points: isNaN(points) ? null : points, end_date: end_date || null, course_code: course_code || null };
+      const syllabus = grab(html, /id="P30_COURSE_SYLLABUS_NEW"[^>]*>([^<]*)</);
+      const learning_outcomes = grab(html, /id="P30_LEARNING_OUTCOME"[^>]*>([^<]*)</);
+      const prerequisites = grab(html, /id="P30_PREREQ"[^>]*>([^<]*)</);
+      pointsResults[key] = {
+        points: isNaN(points) ? null : points, end_date: end_date || null, course_code: course_code || null,
+        syllabus: syllabus || null, learning_outcomes: learning_outcomes || null, prerequisites: prerequisites || null,
+      };
     } catch (e) {
       pointsResults[key] = { points: null, end_date: null, error: String(e) };
     }

@@ -9,8 +9,9 @@ Point this at the folder you've been dropping scrape-pages.js's downloads into
      Field of study).
   3. Reads every *.json file in there as a points/end-date map (the
      "*_points.json" files scrape-pages.js downloads, or a wsos-points.json
-     from fetch-points.js) and attaches `points`/`end_date`/`course_code`
-     directly onto the matching course.
+     from fetch-points.js) and attaches `points`/`end_date`/`course_code`/
+     `syllabus`/`learning_outcomes`/`prerequisites` directly onto the
+     matching course.
   4. Merges all of that ONTO whatever is already at the output path (if it
      exists), rather than replacing it outright — so running this with only
      e.g. 2026's raw files doesn't wipe out 2027 courses from a previous run
@@ -58,6 +59,18 @@ def parse_html_files(html_paths):
         print(f"  {hp}: {len(courses)} course(s) (field={field}, year={year})")
         course_lists.append(courses)
     return course_lists
+
+
+def _clean_detail_text(text):
+    """Normalize a scraped detail-page text field (syllabus/learning_outcomes/
+    prerequisites): decode HTML entities and de-indent the tab-padded lines
+    Oracle APEX's textarea items come with. Kept raw otherwise (including
+    values like "No"/"N/A") — display-level formatting belongs in the UI."""
+    if not text:
+        return None
+    cleaned = html.unescape(text).strip()
+    cleaned = "\n".join(line.strip() for line in cleaned.splitlines()).strip()
+    return cleaned or None
 
 
 def load_points_map(json_paths):
@@ -150,13 +163,17 @@ def main():
         if not info:
             continue
         c["points"] = info.get("points")
-        # scrape-pages.js/fetch-points.js grab end_date/course_code straight from
-        # innerHTML, so "/" comes through HTML-escaped ("&#x2F;") — decode it.
+        # scrape-pages.js/fetch-points.js grab these straight from innerHTML,
+        # so "/" comes through HTML-escaped ("&#x2F;") — decode it.
         end_date = info.get("end_date")
         c["end_date"] = html.unescape(end_date) if end_date else None
         course_code = info.get("course_code")
         if course_code:
             c["course_code"] = html.unescape(course_code)
+        for field in ("syllabus", "learning_outcomes", "prerequisites"):
+            val = _clean_detail_text(info.get(field))
+            if val:
+                c[field] = val
         attached += 1
 
     out_dir = os.path.dirname(out_path)

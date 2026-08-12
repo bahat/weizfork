@@ -115,6 +115,7 @@
   .modal-box dl{margin:0;}
   .modal-box dt{font-family:'IBM Plex Mono',monospace; font-size:10.5px; text-transform:uppercase; letter-spacing:0.05em; color:var(--ink-soft); margin-top:12px;}
   .modal-box dd{margin:3px 0 0; font-size:13.5px; line-height:1.4;}
+  .modal-box dd.detail-text{white-space:pre-line;}
   .modal-box .sessions-list{margin:3px 0 0; padding-left:0; list-style:none;}
   .modal-box .sessions-list li{padding:5px 0; border-bottom:1px dashed var(--border); font-size:13px;}
   .modal-box .sessions-list li:last-child{border-bottom:none;}
@@ -656,6 +657,10 @@ function unparsedSessionText(s){
 function hasUnparsedSession(c){
   return (c.sessions||[]).some(s => s.day_index === null);
 }
+function formatPrerequisites(text){
+  if(!text) return null;
+  return /^(no|n\/a|none|-)$/i.test(text.trim()) ? 'None' : text;
+}
 
 /* ---------- rendering ---------- */
 function renderLegend(){
@@ -952,6 +957,13 @@ function openCourseModal(c){
   const isOwnerUser = currentUserEmail === OWNER_EMAIL;
   const isAdded = selected.has(courseKey(c));
 
+  const prereqDisplay = formatPrerequisites(c.prerequisites);
+  const extraDetailsHtml = [
+    prereqDisplay ? `<dt>Prerequisites</dt><dd>${escapeHtml(prereqDisplay)}</dd>` : '',
+    c.syllabus ? `<dt>Syllabus</dt><dd class="detail-text">${escapeHtml(c.syllabus)}</dd>` : '',
+    c.learning_outcomes ? `<dt>Learning outcomes</dt><dd class="detail-text">${escapeHtml(c.learning_outcomes)}</dd>` : '',
+  ].join('');
+
   let pointsHtml;
   if(c.isCustom){
     const val = (c.points === undefined || c.points === null) ? '' : c.points;
@@ -1012,6 +1024,7 @@ function openCourseModal(c){
       ${pointsHtml}
       <dt>Schedule</dt>
       ${sessionsHtml}
+      ${extraDetailsHtml}
     </dl>
     ${c.isCustom ? '' : (c.detail_url
       ? `<a class="modal-link" href="${c.detail_url}" target="_blank" rel="noopener noreferrer">View on erez.weizmann.ac.il ↗</a>`

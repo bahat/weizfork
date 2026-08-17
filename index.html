@@ -154,6 +154,23 @@
   }
   .review-form button:disabled, .review-form textarea:disabled{opacity:0.5; cursor:not-allowed;}
 
+  /* --- WhatsApp group links --- */
+  .whatsapp-section{margin-top:22px; padding-top:14px; border-top:1px solid var(--border);}
+  .whatsapp-item{display:flex; align-items:center; gap:8px; padding:6px 0; border-bottom:1px dashed var(--border); font-size:13px;}
+  .whatsapp-item:last-child{border-bottom:none;}
+  .whatsapp-item a{color:var(--teal); text-decoration:none;}
+  .whatsapp-item a:hover{text-decoration:underline;}
+  .whatsapp-form{margin-top:12px; display:flex; gap:8px; flex-wrap:wrap;}
+  .whatsapp-form input{
+    flex:1; min-width:180px; padding:7px 9px; border:1px solid var(--border); border-radius:var(--radius);
+    font-family:'IBM Plex Mono',monospace; font-size:12.5px;
+  }
+  .whatsapp-form button{
+    padding:6px 14px; border:1px solid var(--teal); border-radius:var(--radius);
+    background:var(--teal); color:#fff; font-family:'IBM Plex Mono',monospace; font-size:12px; cursor:pointer;
+  }
+  .whatsapp-form input:disabled, .whatsapp-form button:disabled{opacity:0.5; cursor:not-allowed;}
+
   .count-badge{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-soft);}
 
   /* --- Calendar --- */
@@ -605,6 +622,52 @@ async function deleteReview(reviewId){
   catch(e){ console.error('could not delete review', e); alert('Could not delete review.'); return false; }
 }
 
+/* ---------- WhatsApp group links (Firestore — visible to everyone) ----------
+   Any signed-in user can add a link; multiple different links per course are
+   allowed on purpose (no dedup) — only the admin account can remove one. */
+let whatsappLinksCache = {}; // courseKey -> array of {id, url, addedByEmail, addedAt}
+
+function isWhatsappInviteUrl(url){
+  return /^https:\/\/chat\.whatsapp\.com\/\S+$/.test((url || '').trim());
+}
+
+async function loadWhatsappLinks(courseKey, forceRefresh){
+  if(!forceRefresh && whatsappLinksCache[courseKey]) return whatsappLinksCache[courseKey];
+  try{
+    const snap = await db.collection('whatsappLinks').where('courseKey', '==', courseKey).get();
+    whatsappLinksCache[courseKey] = snap.docs.map(d => ({ id: d.id, ...d.data() })).sort((a,b) => (a.addedAt||0) - (b.addedAt||0));
+  }catch(e){
+    console.error('could not load whatsapp links', e);
+    whatsappLinksCache[courseKey] = [];
+  }
+  return whatsappLinksCache[courseKey];
+}
+
+async function addWhatsappLink(course, url){
+  if(!currentUser){ alert('Sign in first to add a WhatsApp group link.'); return false; }
+  const clean = (url || '').trim();
+  if(!isWhatsappInviteUrl(clean)){
+    alert("That doesn't look like a WhatsApp invite link (should look like https://chat.whatsapp.com/XXXXXXXX).");
+    return false;
+  }
+  const link = {
+    courseKey: courseKey(course),
+    url: clean,
+    addedByUid: currentUser,
+    addedByEmail: currentUserEmail,
+    addedAt: Date.now(),
+  };
+  try{ await db.collection('whatsappLinks').add(link); return true; }
+  catch(e){ console.error('whatsapp link save failed', e); alert('Could not save that link.'); return false; }
+}
+
+async function deleteWhatsappLink(linkId){
+  if(currentUserEmail !== OWNER_EMAIL){ alert('Only the admin can remove WhatsApp group links.'); return false; }
+  if(!confirm('Remove this WhatsApp group link?')) return false;
+  try{ await db.collection('whatsappLinks').doc(linkId).delete(); return true; }
+  catch(e){ console.error('could not delete whatsapp link', e); alert('Could not remove that link.'); return false; }
+}
+
 function avgRating(arr){
   if(!arr || !arr.length) return null;
   return Math.round((arr.reduce((s,r)=>s+r.rating,0) / arr.length) * 10) / 10;
@@ -1036,6 +1099,17 @@ function openCourseModal(c){
       : `<div class="no-link-note">No direct link available for this course.</div>`)}
 
     ${c.isCustom ? '' : `
+    <div class="whatsapp-section">
+      <dt style="margin-top:20px;">WhatsApp group <span class="shared-note">(shared — visible to everyone)</span></dt>
+      <div id="whatsappList">Loading…</div>
+      <div class="whatsapp-form">
+        <input type="text" id="whatsappUrlInput" placeholder="${currentUser ? 'https://chat.whatsapp.com/...' : 'Sign in (top right) to add a group link'}" ${currentUser ? '' : 'disabled'}>
+        <button id="addWhatsappBtn" ${currentUser ? '' : 'disabled'}>Add link</button>
+      </div>
+    </div>
+    `}
+
+    ${c.isCustom ? '' : `
     <div class="reviews-section">
       <dt style="margin-top:20px;">Reviews <span class="shared-note">(visible to everyone using this app · posted anonymously)</span></dt>
       <div id="reviewsList">Loading reviews…</div>
@@ -1078,6 +1152,15 @@ function openCourseModal(c){
   }
 
   if(!c.isCustom){
+    renderWhatsappLinksInto(c, false);
+    document.getElementById('addWhatsappBtn').addEventListener('click', async () => {
+      const val = document.getElementById('whatsappUrlInput').value;
+      const ok = await addWhatsappLink(c, val);
+      if(!ok) return;
+      document.getElementById('whatsappUrlInput').value = '';
+      renderWhatsappLinksInto(c, true);
+    });
+
     renderReviewsInto(c, false);
     document.getElementById('submitReviewBtn').addEventListener('click', async () => {
       const rating = document.getElementById('reviewRating').value;
@@ -1086,6 +1169,32 @@ function openCourseModal(c){
       await addReview(c, rating, text);
       document.getElementById('reviewText').value = '';
       renderReviewsInto(c, true);
+    });
+  }
+}
+
+async function renderWhatsappLinksInto(c, forceRefresh){
+  const listEl = document.getElementById('whatsappList');
+  if(!listEl) return; // modal was closed before this resolved
+  const links = await loadWhatsappLinks(courseKey(c), forceRefresh);
+  if(!document.getElementById('whatsappList')) return; // closed while awaiting
+  if(!links.length){
+    listEl.innerHTML = `<div class="no-reviews">No group links yet — be the first to add one.</div>`;
+    return;
+  }
+  const isOwnerUser = currentUserEmail === OWNER_EMAIL;
+  listEl.innerHTML = links.map((l, i) => `
+    <div class="whatsapp-item">
+      <a href="${escapeHtml(l.url)}" target="_blank" rel="noopener noreferrer">Join group${links.length > 1 ? ' #' + (i+1) : ''} ↗</a>
+      ${isOwnerUser ? `<button class="review-delete-btn" data-id="${l.id}" title="Remove link">🗑</button>` : ''}
+    </div>
+  `).join('');
+  if(isOwnerUser){
+    listEl.querySelectorAll('.review-delete-btn').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const ok = await deleteWhatsappLink(btn.dataset.id);
+        if(ok) renderWhatsappLinksInto(c, true);
+      });
     });
   }
 }

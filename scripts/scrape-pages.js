@@ -81,6 +81,16 @@
     const m = html.match(pattern);
     return m ? m[1].trim() : null;
   }
+  // Syllabus/learning-outcomes render as HTML (headings, <p>, <ul><li>), and
+  // commonly start with a nested <span> (an APEX accessibility label inside
+  // an <h1>) -- a regex stopping at the first </span> grabs that nested
+  // span's close tag instead of the real end of the field, truncating almost
+  // everything after it. Parse with the real DOM instead so nesting is
+  // handled correctly.
+  function grabHtml(doc, elementId){
+    const el = doc.getElementById(elementId);
+    return el ? el.innerHTML.trim() : null;
+  }
   function download(content, type, filename){
     const blob = new Blob([content], { type });
     const a = document.createElement('a');
@@ -194,16 +204,13 @@ ${allRowsHTML.join('\n')}
     try {
       const res = await fetch(url, { credentials: 'include' });
       const html = await res.text();
+      const doc = new DOMParser().parseFromString(html, 'text/html');
       const creditRaw = grab(html, /id="P30_CREDIT"[^>]*value="([^"]*)"/);
       const points = creditRaw ? parseFloat(creditRaw) : null;
       const end_date = grab(html, /id="P30_END_DATE"[^>]*>([^<]*)</);
       const course_code = grab(html, /id="P30_COURSE_CODE"[^>]*>([^<]*)</);
-      // Syllabus/learning-outcomes render as HTML (a <ul><li> list / a <p>),
-      // not plain text, so capture everything up to the closing </span>
-      // instead of stopping at the first "<" (which matched empty every
-      // time — confirmed against a real detail page).
-      const syllabus = grab(html, /id="P30_COURSE_SYLLABUS_NEW"[^>]*>([\s\S]*?)<\/span>/);
-      const learning_outcomes = grab(html, /id="P30_LEARNING_OUTCOME"[^>]*>([\s\S]*?)<\/span>/);
+      const syllabus = grabHtml(doc, 'P30_COURSE_SYLLABUS_NEW');
+      const learning_outcomes = grabHtml(doc, 'P30_LEARNING_OUTCOME');
       const prerequisites = grab(html, /id="P30_PREREQ"[^>]*>([^<]*)</);
       pointsResults[key] = {
         points: isNaN(points) ? null : points, end_date: end_date || null, course_code: course_code || null,

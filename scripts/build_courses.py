@@ -10,8 +10,13 @@ Point this at the folder you've been dropping scrape-pages.js's downloads into
   3. Reads every *.json file in there as a points/end-date map (the
      "*_points.json" files scrape-pages.js downloads, or a wsos-points.json
      from fetch-points.js) and attaches `points`/`end_date`/`course_code`/
-     `syllabus`/`learning_outcomes`/`prerequisites` directly onto the
-     matching course.
+     `prerequisites` directly onto the matching course. `syllabus`/
+     `learning_outcomes` are deliberately NOT attached from here — confirmed
+     against the real site, scrape-pages.js/fetch-points.js's plain fetch()
+     of a detail page can render those two fields differently (placeholder/
+     incomplete) than a real page navigation does. Only refresh_details.py
+     (Playwright, real navigation) is trusted for them; whatever it already
+     wrote to the existing output file always carries forward untouched.
   4. Merges all of that ONTO whatever is already at the output path (if it
      exists), rather than replacing it outright — so running this with only
      e.g. 2026's raw files doesn't wipe out 2027 courses from a previous run
@@ -161,6 +166,11 @@ def main():
             for field in ("points", "end_date", "course_code"):
                 if entry.get(field) is None and field in old:
                     entry[field] = old[field]
+            # syllabus/learning_outcomes always carry forward as-is (never
+            # attached from raw/*.json below) — see the attach loop for why.
+            for field in ("syllabus", "learning_outcomes"):
+                if field in old:
+                    entry[field] = old[field]
         combined_by_key[key] = entry
 
     merged = list(combined_by_key.values())
@@ -183,10 +193,15 @@ def main():
         course_code = info.get("course_code")
         if course_code:
             c["course_code"] = html.unescape(course_code)
-        for field in ("syllabus", "learning_outcomes", "prerequisites"):
-            val = _clean_detail_text(info.get(field))
-            if val:
-                c[field] = val
+        # syllabus/learning_outcomes are deliberately NOT attached from here.
+        # scrape-pages.js/fetch-points.js fetch the detail page with a plain
+        # fetch(), which — confirmed against the real site — can render these
+        # two fields differently (placeholder/incomplete content) than a real
+        # page navigation does. Only refresh_details.py (Playwright, real
+        # navigation) is trusted for them; see its module docstring.
+        val = _clean_detail_text(info.get("prerequisites"))
+        if val:
+            c["prerequisites"] = val
         attached += 1
 
     out_dir = os.path.dirname(out_path)

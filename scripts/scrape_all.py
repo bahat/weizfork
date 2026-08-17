@@ -21,6 +21,7 @@ SETUP (once):
 USAGE:
     raw/my_env/bin/python3 scripts/scrape_all.py                          # everything: every year x every field
     raw/my_env/bin/python3 scripts/scrape_all.py --latest-year             # just the newest year (for periodic re-checks)
+    raw/my_env/bin/python3 scripts/scrape_all.py --check-latest            # re-check the latest year; "no update needed" or a full changed-course list + push recommendation
     raw/my_env/bin/python3 scripts/scrape_all.py --list                    # see available years/fields, scrape nothing
     raw/my_env/bin/python3 scripts/scrape_all.py --years 2026,2027         # only these years (by dropdown value)
     raw/my_env/bin/python3 scripts/scrape_all.py --fields 30,40            # only these fields (by dropdown value)
@@ -237,17 +238,49 @@ def print_diff_report(before, after, added, removed, changed, limit=20):
             print(f"    ... and {len(changed) - limit} more")
 
 
+def print_check_latest_report(added, removed, changed, before, after):
+    """Focused report for --check-latest: either exactly "no update needed",
+    or every changed course's number + name (no cap) plus a push recommendation."""
+    if not (added or removed or changed):
+        print("\nno update needed")
+        return
+
+    def describe(key, from_map):
+        c = from_map[key]
+        number = c.get("course_code") or c.get("course_id") or "?"
+        return f"{number}  {c.get('title', '?')}"
+
+    total = len(added) + len(removed) + len(changed)
+    print(f"\n{total} course(s) changed on the site:")
+    for key in added:
+        print(f"  [new]      {describe(key, after)}")
+    for key in removed:
+        print(f"  [removed]  {describe(key, before)}")
+    for key, fields in changed:
+        print(f"  [changed]  {describe(key, after)}  ({', '.join(fields)})")
+    print("\nRecommend pushing the updated data/courses.json.")
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--years", help="Comma-separated Year dropdown VALUES to scrape (default: all)")
     parser.add_argument("--latest-year", action="store_true",
                          help="Only scrape the single highest-numbered year in the dropdown (overrides --years)")
+    parser.add_argument("--check-latest", action="store_true",
+                         help="Re-check the latest year against the live site and report whether anything "
+                              "changed (implies --latest-year --force). Prints exactly 'no update needed' if "
+                              "nothing did, otherwise every changed course's number + name and a push recommendation.")
     parser.add_argument("--fields", help="Comma-separated Field dropdown VALUES to scrape (default: all)")
     parser.add_argument("--force", action="store_true", help="Re-scrape combinations already present in raw/")
     parser.add_argument("--headless", action="store_true", help="Run without a visible browser window")
     parser.add_argument("--skip-build", action="store_true", help="Don't run build_courses.py automatically at the end")
     parser.add_argument("--list", action="store_true", help="Print available years/fields and exit, scraping nothing")
     args = parser.parse_args()
+    if args.check_latest:
+        # A "did anything change" check only means something if we actually
+        # re-fetch the latest year instead of skipping it as already-scraped.
+        args.latest_year = True
+        args.force = True
 
     scrape_script_source = SCRAPE_SCRIPT_PATH.read_text(encoding="utf-8")
 
@@ -317,7 +350,10 @@ def main():
     if args.skip_build:
         return
     if scraped == 0:
-        print("Nothing new was scraped — skipping build_courses.py.")
+        if args.check_latest:
+            print("\nno update needed")
+        else:
+            print("Nothing new was scraped — skipping build_courses.py.")
         return
 
     courses_path = REPO_ROOT / "data" / "courses.json"
@@ -332,7 +368,10 @@ def main():
 
     after = load_courses_by_key(courses_path)
     added, removed, changed = diff_courses(before, after)
-    print_diff_report(before, after, added, removed, changed)
+    if args.check_latest:
+        print_check_latest_report(added, removed, changed, before, after)
+    else:
+        print_diff_report(before, after, added, removed, changed)
 
 
 if __name__ == "__main__":

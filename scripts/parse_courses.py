@@ -223,6 +223,17 @@ def parse_course_detail(html_text):
         except ValueError:
             credit = None
 
+    # Syllabus/learning-outcomes render as HTML (headings, <p>, <ul><li>), and
+    # commonly start with a nested <span> (an APEX accessibility label inside
+    # an <h1>) — a regex stopping at the first </span> grabs that nested span's
+    # close tag instead of the real end of the field, truncating almost
+    # everything after it. A real HTML parser handles the nesting correctly.
+    soup = BeautifulSoup(html_text, "lxml")
+
+    def grab_html(element_id):
+        el = soup.find(id=element_id)
+        return el.decode_contents() if el else None
+
     return {
         "course_id": grab(r'id="PID"[^>]*value="([^"]*)"'),
         "group_id": grab(r'id="PPREV"[^>]*value="([^"]*)"'),
@@ -231,11 +242,8 @@ def parse_course_detail(html_text):
         "end_date": grab(r'id="P30_END_DATE"[^>]*>([^<]*)<'),
         "language": grab(r'id="P30_LANGUAGE"[^>]*>([^<]*)<'),
         "grade_type": grab(r'id="P30_GRADE_TYPE"[^>]*>([^<]*)<'),
-        # Syllabus/learning-outcomes render as HTML (a <ul><li> list / a <p>),
-        # not plain text, so capture up to the closing </span> instead of
-        # stopping at the first "<" (confirmed against a real detail page).
-        "syllabus": grab(r'id="P30_COURSE_SYLLABUS_NEW"[^>]*>([\s\S]*?)<\/span>'),
-        "learning_outcomes": grab(r'id="P30_LEARNING_OUTCOME"[^>]*>([\s\S]*?)<\/span>'),
+        "syllabus": grab_html("P30_COURSE_SYLLABUS_NEW"),
+        "learning_outcomes": grab_html("P30_LEARNING_OUTCOME"),
         "prerequisites": grab(r'id="P30_PREREQ"[^>]*>([^<]*)<'),
     }
 

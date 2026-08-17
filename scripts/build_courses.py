@@ -27,6 +27,9 @@ Point this at the folder you've been dropping scrape-pages.js's downloads into
      unless this run's *.json data refreshes them. A course not touched by
      this run's raw/ files at all is left exactly as it was.
   5. Writes the result to a single output file.
+  6. Appends one entry to update_log.json (next to the output file) describing
+     what this run actually added/removed/changed — skipped if nothing did.
+     Read by admin.html's "Update log" dashboard.
 
 Only looks directly inside the given folder (not subfolders), so scratch
 files you keep in e.g. raw/tmp/ are left alone.
@@ -48,6 +51,7 @@ import json
 import os
 import re
 import sys
+from datetime import datetime, timezone
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from bs4 import BeautifulSoup
@@ -124,6 +128,48 @@ def load_existing(out_path):
 
 def key_of(c):
     return (c.get("course_id"), c.get("group_id"))
+
+
+def _describe(key, c):
+    return {"key": f"{key[0]}-{key[1]}", "course_code": c.get("course_code"), "title": c.get("title")}
+
+
+def write_update_log(before_by_key, merged, out_path):
+    """Append one entry to update_log.json (next to out_path) describing what
+    this run actually changed vs. before_by_key — skipped entirely if nothing
+    did. Read by admin.html's "Update log" dashboard."""
+    after_by_key = {key_of(c): c for c in merged}
+    added = [_describe(k, after_by_key[k]) for k in sorted(after_by_key.keys() - before_by_key.keys())]
+    removed = [_describe(k, before_by_key[k]) for k in sorted(before_by_key.keys() - after_by_key.keys())]
+    changed = []
+    for k in sorted(before_by_key.keys() & after_by_key.keys()):
+        b, a = before_by_key[k], after_by_key[k]
+        diff_fields = sorted(f for f in set(b) | set(a) if b.get(f) != a.get(f))
+        if diff_fields:
+            entry = _describe(k, a)
+            entry["fields"] = diff_fields
+            changed.append(entry)
+
+    if not (added or removed or changed):
+        return
+
+    log_path = os.path.join(os.path.dirname(out_path) or ".", "update_log.json")
+    log = []
+    if os.path.exists(log_path):
+        with open(log_path, "r", encoding="utf-8") as f:
+            try:
+                log = json.load(f)
+            except json.JSONDecodeError:
+                log = []
+    log.append({
+        "timestamp": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "added": added,
+        "removed": removed,
+        "changed": changed,
+    })
+    with open(log_path, "w", encoding="utf-8") as f:
+        json.dump(log, f, ensure_ascii=False, indent=2)
+    print(f"Logged {len(added)} added / {len(removed)} removed / {len(changed)} changed -> {log_path}")
 
 
 def main():
@@ -209,6 +255,8 @@ def main():
         os.makedirs(out_dir, exist_ok=True)
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(merged, f, ensure_ascii=False, indent=2)
+
+    write_update_log(existing_by_key, merged, out_path)
 
     years = sorted(set(str(c.get("year")) for c in merged if c.get("year")))
     all_fields = sorted(set(f for c in merged for f in c.get("fields", [])))

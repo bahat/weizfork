@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>WeizFork — Admin</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F8F4;
+    --paper-line: rgba(31,111,92,0.10);
+    --ink:#1E2A22;
+    --ink-soft:#5B6B60;
+    --teal:#1F6F5C;
+    --teal-deep:#154A3D;
+    --ochre:#C77D2E;
+    --brick:#AE4232;
+    --card-bg:#FFFFFF;
+    --border:#DDE3DA;
+    --radius:6px;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;}
+  body{
+    background-image:
+      linear-gradient(var(--paper-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--paper-line) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  h1,h2{font-family:'Fraunces',serif;margin:0;}
+  header.site{
+    padding:28px 32px 20px;
+    border-bottom:2px solid var(--ink);
+    display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:12px;
+  }
+  header.site .brand{display:flex; align-items:baseline; gap:14px;}
+  header.site h1{font-size:26px; font-weight:600; letter-spacing:-0.01em;}
+  header.site .sub{font-size:13px; color:var(--ink-soft); font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.06em;}
+  header.site a.back{font-size:12px; color:var(--teal); font-family:'IBM Plex Mono',monospace; text-decoration:none;}
+  header.site a.back:hover{text-decoration:underline;}
+
+  .user-bar{display:flex; align-items:center; gap:8px; font-family:'IBM Plex Mono',monospace; font-size:12px;}
+  .user-bar button{
+    padding:6px 10px; border:1px solid var(--ink); border-radius:var(--radius); background:var(--ink); color:var(--paper);
+    font-family:'IBM Plex Mono',monospace; font-size:12px; cursor:pointer;
+  }
+  .user-bar .signed-in{display:flex; align-items:center; gap:8px;}
+  .user-bar .who{color:var(--teal); font-weight:600;}
+  .user-bar .switch-btn{background:transparent; color:var(--ink-soft); border:1px solid var(--border);}
+
+  main{max-width:900px; margin:0 auto; padding:24px 32px 60px;}
+
+  .gate-message{
+    margin-top:40px; padding:20px; border:1px solid var(--border); border-radius:var(--radius);
+    background:var(--card-bg); color:var(--ink-soft); font-size:14px; text-align:center;
+  }
+
+  section.dash{margin-top:32px;}
+  section.dash h2{font-size:19px; margin-bottom:4px;}
+  section.dash .dash-sub{font-size:12px; color:var(--ink-soft); font-family:'IBM Plex Mono',monospace; margin-bottom:14px;}
+
+  .dash-row{
+    background:var(--card-bg); border:1px solid var(--border); border-radius:var(--radius);
+    padding:10px 14px; margin-bottom:8px;
+  }
+  .dash-row-main{display:flex; align-items:center; gap:10px; flex-wrap:wrap; font-size:13px;}
+  .dash-course{font-weight:600; color:var(--teal-deep);}
+  .dash-time{font-size:11px; color:var(--ink-soft); margin-left:auto;}
+  .dash-row-text{font-size:13px; line-height:1.4; margin-top:6px;}
+  .dash-row a{color:var(--teal); word-break:break-all;}
+  .dash-delete-btn, .log-toggle-btn{
+    margin-top:8px; padding:4px 10px; border:1px solid var(--brick); border-radius:var(--radius);
+    background:none; color:var(--brick); font-family:'IBM Plex Mono',monospace; font-size:11px; cursor:pointer;
+  }
+  .log-toggle-btn{border-color:var(--border); color:var(--ink-soft);}
+  .dash-delete-btn:hover{background:var(--brick); color:#fff;}
+
+  .log-detail{margin-top:8px; padding-top:8px; border-top:1px dashed var(--border);}
+  .log-detail.hidden{display:none;}
+  .log-line{font-family:'IBM Plex Mono',monospace; font-size:11.5px; padding:2px 0; color:var(--ink-soft);}
+
+  .empty-note{font-size:12.5px; color:var(--ink-soft); font-style:italic;}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="brand">
+    <h1>WeizFork Admin</h1>
+    <span class="sub">Reviews · Update log · WhatsApp links</span>
+  </div>
+  <div style="display:flex; align-items:center; gap:16px;">
+    <a class="back" href="./index.html">&larr; Back to WeizFork</a>
+    <div class="user-bar" id="userBar"></div>
+  </div>
+</header>
+
+<main>
+  <div class="gate-message" id="gateMessage">Checking sign-in…</div>
+
+  <div id="adminContent" style="display:none;">
+    <section class="dash">
+      <h2>Reviews</h2>
+      <div class="dash-sub">Every review posted, across every course.</div>
+      <div id="reviewsDash">Loading…</div>
+    </section>
+
+    <section class="dash">
+      <h2>Update log</h2>
+      <div class="dash-sub">History of catalog changes — written by scripts/build_courses.py each time it runs.</div>
+      <div id="logDash">Loading…</div>
+    </section>
+
+    <section class="dash">
+      <h2>WhatsApp group links</h2>
+      <div class="dash-sub">Every group link added, across every course. Multiple links per course are expected.</div>
+      <div id="whatsappDash">Loading…</div>
+    </section>
+  </div>
+</main>
+
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
+
+<script>
+/* Same Firebase project as index.html — keep firebaseConfig and OWNER_EMAIL
+   in sync with that file if you fork this project. */
+const firebaseConfig = {
+    apiKey: "AIzaSyAuCwFJ_tZDf1wpLI9rnWct4pDSMpL2O-c",
+    authDomain: "wiezfork.firebaseapp.com",
+    projectId: "wiezfork",
+    storageBucket: "wiezfork.firebasestorage.app",
+    messagingSenderId: "985904689991",
+    appId: "1:985904689991:web:ffb0b6575bfe6434929262",
+    measurementId: "G-K3F8F0WMRT"
+  };
+firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
+const db = firebase.firestore();
+const OWNER_EMAIL = "bahat.omer@gmail.com";
+
+let currentUser = null, currentUserName = null, currentUserPicture = null, currentUserEmail = null;
+let ALL_COURSES = [];
+let courseTitleByKey = {};
+
+function courseKeyOf(c){ return (c.course_id||'')+'-'+(c.group_id||''); }
+function courseLabel(key){ return courseTitleByKey[key] || key; }
+function escapeHtml(s){
+  const d = document.createElement('div');
+  d.textContent = s || '';
+  return d.innerHTML;
+}
+function formatTs(ts){ return ts ? new Date(ts).toLocaleString() : ''; }
+
+async function loadCourses(){
+  try{
+    const res = await fetch('./data/courses.json');
+    ALL_COURSES = res.ok ? await res.json() : [];
+  }catch(e){ console.error('could not load courses.json', e); ALL_COURSES = []; }
+  courseTitleByKey = {};
+  ALL_COURSES.forEach(c => { courseTitleByKey[courseKeyOf(c)] = c.title; });
+}
+
+/* ---------- reviews dashboard ---------- */
+async function loadReviewsDashboard(){
+  const el = document.getElementById('reviewsDash');
+  el.innerHTML = 'Loading…';
+  try{
+    const snap = await db.collection('reviews').get();
+    const reviews = snap.docs.map(d => ({ id: d.id, ...d.data() })).sort((a,b) => (b.ts||0) - (a.ts||0));
+    if(!reviews.length){ el.innerHTML = '<div class="empty-note">No reviews yet.</div>'; return; }
+    el.innerHTML = reviews.map(r => `
+      <div class="dash-row">
+        <div class="dash-row-main">
+          <span class="dash-course">${escapeHtml(courseLabel(r.courseKey))}</span>
+          <span>${'★'.repeat(r.rating||0)}${'☆'.repeat(5-(r.rating||0))}</span>
+          <span class="dash-time mono">${formatTs(r.ts)}</span>
+        </div>
+        <div class="dash-row-text">${escapeHtml(r.text||'')}</div>
+        <button class="dash-delete-btn" data-id="${r.id}">Delete review</button>
+      </div>
+    `).join('');
+    el.querySelectorAll('.dash-delete-btn').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        if(!confirm('Delete this review?')) return;
+        try{ await db.collection('reviews').doc(btn.dataset.id).delete(); loadReviewsDashboard(); }
+        catch(e){ console.error(e); alert('Could not delete: ' + e.message); }
+      });
+    });
+  }catch(e){ console.error(e); el.innerHTML = '<div class="empty-note">Could not load reviews.</div>'; }
+}
+
+/* ---------- WhatsApp links dashboard ---------- */
+async function loadWhatsappDashboard(){
+  const el = document.getElementById('whatsappDash');
+  el.innerHTML = 'Loading…';
+  try{
+    const snap = await db.collection('whatsappLinks').get();
+    const links = snap.docs.map(d => ({ id: d.id, ...d.data() })).sort((a,b) => (b.addedAt||0) - (a.addedAt||0));
+    if(!links.length){ el.innerHTML = '<div class="empty-note">No group links yet.</div>'; return; }
+    el.innerHTML = links.map(l => `
+      <div class="dash-row">
+        <div class="dash-row-main">
+          <span class="dash-course">${escapeHtml(courseLabel(l.courseKey))}</span>
+          <span class="dash-time mono">${formatTs(l.addedAt)}</span>
+        </div>
+        <div class="dash-row-text"><a href="${escapeHtml(l.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(l.url)}</a></div>
+        <div class="dash-row-text mono" style="color:var(--ink-soft); font-size:11px;">added by ${escapeHtml(l.addedByEmail || l.addedByUid || 'unknown')}</div>
+        <button class="dash-delete-btn" data-id="${l.id}">Remove link</button>
+      </div>
+    `).join('');
+    el.querySelectorAll('.dash-delete-btn').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        if(!confirm('Remove this WhatsApp group link?')) return;
+        try{ await db.collection('whatsappLinks').doc(btn.dataset.id).delete(); loadWhatsappDashboard(); }
+        catch(e){ console.error(e); alert('Could not remove: ' + e.message); }
+      });
+    });
+  }catch(e){ console.error(e); el.innerHTML = '<div class="empty-note">Could not load group links.</div>'; }
+}
+
+/* ---------- update log dashboard (static file, not Firestore) ---------- */
+async function loadUpdateLogDashboard(){
+  const el = document.getElementById('logDash');
+  el.innerHTML = 'Loading…';
+  try{
+    const res = await fetch('./data/update_log.json');
+    if(!res.ok){ el.innerHTML = '<div class="empty-note">No update log yet — it\'s created the next time scripts/build_courses.py runs and changes something.</div>'; return; }
+    const log = await res.json();
+    if(!log.length){ el.innerHTML = '<div class="empty-note">No update log entries yet.</div>'; return; }
+    el.innerHTML = log.slice().reverse().map((entry, idx) => {
+      const total = entry.added.length + entry.removed.length + entry.changed.length;
+      const detailId = `logDetail${idx}`;
+      const lines = [
+        ...entry.added.map(c => `<div class="log-line">+ added &nbsp; ${escapeHtml(c.course_code || c.key)} — ${escapeHtml(c.title || '')}</div>`),
+        ...entry.removed.map(c => `<div class="log-line">− removed ${escapeHtml(c.course_code || c.key)} — ${escapeHtml(c.title || '')}</div>`),
+        ...entry.changed.map(c => `<div class="log-line">~ changed ${escapeHtml(c.course_code || c.key)} — ${escapeHtml(c.title || '')} (${escapeHtml((c.fields||[]).join(', '))})</div>`),
+      ].join('');
+      return `
+        <div class="dash-row">
+          <div class="dash-row-main">
+            <span class="dash-time mono">${escapeHtml(entry.timestamp)}</span>
+            <span>${total} course(s): ${entry.added.length} added, ${entry.removed.length} removed, ${entry.changed.length} changed</span>
+            <button class="log-toggle-btn" data-target="${detailId}">Details</button>
+          </div>
+          <div class="log-detail hidden" id="${detailId}">${lines}</div>
+        </div>
+      `;
+    }).join('');
+    el.querySelectorAll('.log-toggle-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.getElementById(btn.dataset.target).classList.toggle('hidden');
+      });
+    });
+  }catch(e){ console.error(e); el.innerHTML = '<div class="empty-note">Could not load update log.</div>'; }
+}
+
+async function loadEverything(){
+  await loadCourses();
+  loadReviewsDashboard();
+  loadWhatsappDashboard();
+  loadUpdateLogDashboard();
+}
+
+/* ---------- auth / gate ---------- */
+function renderUserBar(){
+  const bar = document.getElementById('userBar');
+  if(currentUser){
+    bar.innerHTML = `
+      <span class="signed-in">
+        ${currentUserPicture ? `<img src="${currentUserPicture}" alt="" style="width:20px;height:20px;border-radius:50%;">` : ''}
+        <span class="who">${currentUserName || currentUser}</span>
+        <button class="switch-btn" id="switchUserBtn">Sign out</button>
+      </span>
+    `;
+    document.getElementById('switchUserBtn').addEventListener('click', () => auth.signOut());
+    return;
+  }
+  bar.innerHTML = `<button id="signInBtn">Sign in with Google</button>`;
+  document.getElementById('signInBtn').addEventListener('click', () => {
+    auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
+      .catch(err => alert('Sign-in failed: ' + err.message));
+  });
+}
+
+function renderGate(){
+  const gate = document.getElementById('gateMessage');
+  const content = document.getElementById('adminContent');
+  if(currentUserEmail === OWNER_EMAIL){
+    gate.style.display = 'none';
+    content.style.display = '';
+    loadEverything();
+  } else {
+    gate.style.display = '';
+    content.style.display = 'none';
+    gate.textContent = currentUser
+      ? 'Signed in, but this account is not the admin account.'
+      : 'Sign in with the admin account (top right) to view this page.';
+  }
+}
+
+auth.onAuthStateChanged(async (user) => {
+  currentUser = user ? user.uid : null;
+  currentUserName = user ? user.displayName : null;
+  currentUserPicture = user ? user.photoURL : null;
+  currentUserEmail = user ? user.email : null;
+  renderUserBar();
+  renderGate();
+});
+</script>
+</body>
+</html>

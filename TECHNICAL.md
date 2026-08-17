@@ -16,8 +16,12 @@ schedules, shared course points/end-dates, and reviews are backed by Firebase.
 ```
 .
 ├── index.html              the whole app (UI + logic)
+├── admin.html              admin-only dashboard (reviews, update log, WhatsApp links) —
+│                           not linked from index.html, gated by OWNER_EMAIL
 ├── data/
-│   └── courses.json        course data, loaded at runtime via fetch()
+│   ├── courses.json        course data, loaded at runtime via fetch()
+│   └── update_log.json     history of added/removed/changed courses, appended to by
+│                           build_courses.py every run — read by admin.html
 └── scripts/
     ├── parse_courses.py    turns a saved catalog page into courses.json
     ├── merge_courses.py    combines multiple parse_courses.py outputs
@@ -85,7 +89,10 @@ you — useful if you just want one or two, or the automated version hits a snag
    This parses every `.html` file, merges them (de-duplicating cross-listed
    courses into a `fields` list, same as `merge_courses.py`), and attaches
    `points`/`end_date` from every `.json` file it finds — safe to re-run
-   any time `raw/` gets new files.
+   any time `raw/` gets new files. It also appends an entry to
+   `data/update_log.json` (added/removed/changed courses) whenever this run
+   actually changed something — that log is what `admin.html`'s "Update log"
+   dashboard reads (see §4.6).
 
    (`parse_courses.py` + `merge_courses.py` still work individually the same
    way if you'd rather process files one at a time.)
@@ -217,6 +224,20 @@ for you, so there's no separate Google Cloud Console step.
        match /users/{uid} {
          allow read, write: if request.auth != null && request.auth.uid == uid;
        }
+
+       // WhatsApp group invite links: everyone can read, any signed-in user can
+       // add one (multiple different links per course are allowed on purpose,
+       // no dedup) — nobody can edit, only the admin account can remove one.
+       match /whatsappLinks/{linkId} {
+         allow read: if true;
+         allow create: if request.auth != null
+                       && request.resource.data.addedByUid == request.auth.uid
+                       && request.resource.data.courseKey is string
+                       && request.resource.data.url is string
+                       && request.resource.data.url.matches('^https://chat\\.whatsapp\\.com/.+');
+         allow update: if false;
+         allow delete: if request.auth != null && request.auth.token.email == 'bahat.omer@gmail.com';
+       }
      }
    }
    ```
@@ -249,6 +270,23 @@ button. Once signed in:
   Firestore security rules above, not by hiding the config.
 - If you use a custom domain with GitHub Pages later, add it under
   Authentication → Settings → Authorized domains the same way.
+
+### 4.6 The admin page
+
+`admin.html` is a separate, unlinked page (`https://<your-username>.github.io/<repo-name>/admin.html`)
+for the admin account only — nothing in `index.html` links to it. It shows
+three dashboards, all gated client-side by `OWNER_EMAIL` (and backed by the
+Firestore rules above, so the gate isn't just cosmetic):
+- **Reviews** — every review across every course, with a delete button.
+- **Update log** — a history of catalog changes, read from
+  `data/update_log.json` (see §1 below — `build_courses.py` appends an entry
+  every time it runs and something actually changed).
+- **WhatsApp group links** — every group link across every course, with a
+  remove button (adding a link is open to any signed-in user from the course
+  popup in `index.html`; removing one is admin-only).
+
+If you fork this project, `OWNER_EMAIL` near the top of `admin.html`'s
+`<script>` block needs to match `index.html`'s.
 
 
 ---

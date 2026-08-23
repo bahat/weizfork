@@ -1292,8 +1292,8 @@
     "title": "Experimental projects",
     "offered_by": "Physical Sciences",
     "lecturers": [
-      "Dr. Nurit Avraham Tayar",
-      "Prof. Eran Ofek"
+      "Prof. Eran Ofek",
+      "Dr. Nurit Avraham Tayar"
     ],
     "semester": "1st",
     "sessions": [
@@ -1648,9 +1648,9 @@
         "type": "lecture",
         "day_name": "Wednesday",
         "day_index": 3,
-        "start": "14:15",
-        "end": "16:00",
-        "location": "Weissman, Seminar Rm A"
+        "start": "11:15",
+        "end": "13:00",
+        "location": "WSoS, Rm C"
       }
     ],
     "first_lecture": "21/10/2026",
@@ -1810,8 +1810,8 @@
     "title": "Quantum Light and Matter",
     "offered_by": "Physical Sciences",
     "lecturers": [
-      "Dr. Ziv Meir",
-      "Prof. Barak Dayan"
+      "Prof. Barak Dayan",
+      "Dr. Ziv Meir"
     ],
     "semester": "2nd",
     "sessions": [
@@ -2796,7 +2796,17 @@
       "Ms. Yulia Frug"
     ],
     "semester": "1st",
-    "sessions": [],
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": null,
+        "day_index": null,
+        "start": null,
+        "end": null,
+        "location": null,
+        "note": "Full schedule is detailed in the comments section,"
+      }
+    ],
     "first_lecture": "28/02/2027",
     "year": 2027,
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16005&pprev=15465",
@@ -3603,7 +3613,9 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16010&pprev=0",
     "fields": [
       "Life Sciences",
-      "Life Sciences (Scientific Archeology Track)"
+      "Life Sciences (Scientific Archeology Track)",
+      "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)",
+      "Life Sciences (Computational and Systems Biology Track)"
     ],
     "points": 2,
     "end_date": "11/01/2027",
@@ -3642,7 +3654,7 @@
       "Life Sciences (Computational and Systems Biology Track)",
       "Life Sciences (Scientific Archeology Track)"
     ],
-    "points": null,
+    "points": 2,
     "end_date": "28/06/2027",
     "course_code": "20273052",
     "syllabus": "The course spans two semesters and is organized into six instructional modules. Each module is taught over four weeks:\nWeek 1: Lecture introducing the statistical concepts and their biological motivation.\nWeeks 2–3: Hands-on computational project analyzing real biological datasets.\nWeek 4: Project-based quiz assessing conceptual understanding and practical data analysis skills.\nThe course concludes with a comprehensive final examination.\nCourse Topics\n1. Probability and Descriptive Statistics\nIntroduction to probability, common probability distributions, descriptive statistics, sampling, and variability in biological data.\n2. Statistical Estimation\nParameter estimation, uncertainty quantification, confidence intervals, and statistical inference from experimental measurements.\n3. Correlation and Multivariable Data Analysis\nMethods for quantifying relationships between variables, including correlation analysis and approaches for analyzing spatial patterns in biological data.\n4. Statistical Inference\nHypothesis testing, resampling methods, statistical power, multiple hypothesis testing, and interpretation of statistical significance.\n5. Regression Analysis\nLinear and nonlinear regression, model fitting, analysis of variance, model assumptions, and evaluation of predictive models.\n6. Clustering and Exploratory Data Analysis\nUnsupervised methods for identifying patterns and structure in complex biological datasets and exploratory analysis of high-dimensional data.",
@@ -3672,7 +3684,8 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15897&pprev=15610",
     "fields": [
       "Life Sciences",
-      "Life Sciences (Scientific Archeology Track)"
+      "Life Sciences (Scientific Archeology Track)",
+      "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)"
     ],
     "points": 1,
     "end_date": "24/06/2027",
@@ -3942,7 +3955,8 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Computational and Systems Biology Track)",
-      "Life Sciences (Scientific Archeology Track)"
+      "Life Sciences (Scientific Archeology Track)",
+      "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)"
     ],
     "points": 3,
     "end_date": "13/01/2027",
@@ -4725,7 +4739,8 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16024&pprev=0",
     "fields": [
       "Life Sciences",
-      "Life Sciences (Scientific Archeology Track)"
+      "Life Sciences (Scientific Archeology Track)",
+      "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)"
     ],
     "points": 2,
     "end_date": "11/12/2026",
@@ -6294,11 +6309,11 @@
       },
       {
         "type": "tutorial",
-        "day_name": "Wednesday",
-        "day_index": 3,
+        "day_name": "Thursday",
+        "day_index": 4,
         "start": "09:15",
         "end": "10:00",
-        "location": null
+        "location": "Jacob Ziskind Building, Rm 155"
       }
     ],
     "first_lecture": "08/03/2027",
@@ -45179,5 +45194,214 @@
     "points": 2,
     "end_date": null,
     "course_code": "20276043"
+  },
+  {
+    "course_id": "15782",
+    "group_id": "15716",
+    "title": "Scientific Communication",
+    "offered_by": "Chemical Sciences",
+    "lecturers": [
+      "Prof. Milko E. Van Der Boom",
+      "Dr. Michal Lahav"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Wednesday",
+        "day_index": 3,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "Kimmelman, Dov Elad Rm"
+      }
+    ],
+    "first_lecture": "10/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15782&pprev=15716",
+    "fields": [
+      "Chemical Sciences",
+      "Life Sciences",
+      "Life Sciences (Scientific Archeology Track)"
+    ],
+    "points": 2,
+    "end_date": "23/06/2027",
+    "course_code": "20272112"
+  },
+  {
+    "course_id": "15781",
+    "group_id": "15587",
+    "title": "Scientific Communication",
+    "offered_by": "Chemical Sciences",
+    "lecturers": [
+      "Prof. Milko E. Van Der Boom",
+      "Dr. Michal Lahav"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "11:15",
+        "end": "13:00",
+        "location": "Kimmelman, Dov Elad Rm"
+      }
+    ],
+    "first_lecture": "19/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15781&pprev=15587",
+    "fields": [
+      "Chemical Sciences",
+      "Life Sciences",
+      "Life Sciences (Scientific Archeology Track)"
+    ],
+    "points": 2,
+    "end_date": "11/01/2027",
+    "course_code": "20272151"
+  },
+  {
+    "course_id": "15759",
+    "group_id": "15228",
+    "title": "Solid State Physics for chemists",
+    "offered_by": "Chemical Sciences",
+    "lecturers": [
+      "Dr. Ayelet  Vilan"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "WSoS, Rm A"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "13:15",
+        "end": "14:00",
+        "location": "WSoS, Rm A"
+      }
+    ],
+    "first_lecture": "09/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15759&pprev=15228",
+    "fields": [
+      "Chemical Sciences"
+    ],
+    "points": 3,
+    "end_date": "24/06/2027",
+    "course_code": "20272022",
+    "prerequisites": "No"
+  },
+  {
+    "course_id": "16056",
+    "group_id": "15712",
+    "title": "Introduction to Laboratory Automation: Theory and Basic Scripting on automated Liquid Handlers",
+    "offered_by": "Life Sciences",
+    "lecturers": [
+      "Dr. Leonardo Solmesky",
+      "Dr. Diego Jaitin",
+      "Yeynit Asraf",
+      "Dr. Michael Chalik"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "11:00",
+        "end": "15:30",
+        "location": null
+      }
+    ],
+    "first_lecture": "02/05/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16056&pprev=15712",
+    "fields": [
+      "Life Sciences",
+      "Life Sciences (Scientific Archeology Track)"
+    ],
+    "points": 2,
+    "end_date": "10/05/2027",
+    "course_code": "20273542",
+    "prerequisites": "No"
+  },
+  {
+    "course_id": "16073",
+    "group_id": "0",
+    "title": "moodle test 2",
+    "offered_by": "Life Sciences",
+    "lecturers": [],
+    "semester": "1st",
+    "sessions": [],
+    "first_lecture": "18/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16073&pprev=0",
+    "fields": [
+      "Life Sciences",
+      "Life Sciences (Scientific Archeology Track)"
+    ],
+    "points": 0,
+    "end_date": "14/01/2027",
+    "course_code": "20273441",
+    "prerequisites": "N/A"
+  },
+  {
+    "course_id": "15792",
+    "group_id": "15623",
+    "title": "Philosophy and History of Microbiology",
+    "offered_by": "Life Sciences",
+    "lecturers": [
+      "Dr. Tamar Schneider"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "12:15",
+        "end": "14:00",
+        "location": "WSoS, Rm 1"
+      }
+    ],
+    "first_lecture": "20/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15792&pprev=15623",
+    "fields": [
+      "Life Sciences",
+      "Life Sciences (Scientific Archeology Track)"
+    ],
+    "points": 2,
+    "end_date": "12/01/2027",
+    "course_code": "20273211",
+    "prerequisites": "No"
+  },
+  {
+    "course_id": "16072",
+    "group_id": "0",
+    "title": "בדיקת שדרוג מודל 2027",
+    "offered_by": null,
+    "lecturers": [
+      "Prof. Ran  Tessler",
+      "Prof. Yosef Nir"
+    ],
+    "semester": "2nd",
+    "sessions": [],
+    "first_lecture": "18/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16072&pprev=0",
+    "fields": [
+      "Obligatory instruction courses or enrichment courses"
+    ],
+    "points": 0,
+    "end_date": "14/01/2027",
+    "course_code": "20278022",
+    "prerequisites": "N/A"
   }
 ]

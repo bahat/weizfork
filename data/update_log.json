@@ -1,0 +1,125 @@
+[
+  {
+    "timestamp": "2026-08-23T12:19:41Z",
+    "added": [
+      {
+        "key": "15759-15228",
+        "course_code": "20272022",
+        "title": "Solid State Physics for chemists"
+      },
+      {
+        "key": "15781-15587",
+        "course_code": "20272151",
+        "title": "Scientific Communication"
+      },
+      {
+        "key": "15782-15716",
+        "course_code": "20272112",
+        "title": "Scientific Communication"
+      },
+      {
+        "key": "15792-15623",
+        "course_code": "20273211",
+        "title": "Philosophy and History of Microbiology"
+      },
+      {
+        "key": "16056-15712",
+        "course_code": "20273542",
+        "title": "Introduction to Laboratory Automation: Theory and Basic Scripting on automated Liquid Handlers"
+      },
+      {
+        "key": "16072-0",
+        "course_code": "20278022",
+        "title": "בדיקת שדרוג מודל 2027"
+      },
+      {
+        "key": "16073-0",
+        "course_code": "20273441",
+        "title": "moodle test 2"
+      }
+    ],
+    "removed": [],
+    "changed": [
+      {
+        "key": "15798-15518",
+        "course_code": "20273052",
+        "title": "Hands-on Data Analysis and Statistics for the Life Sciences 2",
+        "fields": [
+          "points"
+        ]
+      },
+      {
+        "key": "15889-15516",
+        "course_code": "20273161",
+        "title": "Introduction to Machine Learning and Statistics",
+        "fields": [
+          "fields"
+        ]
+      },
+      {
+        "key": "15897-15610",
+        "course_code": "20273252",
+        "title": "High Impact Scientific Writing",
+        "fields": [
+          "fields"
+        ]
+      },
+      {
+        "key": "15963-15645",
+        "course_code": "20271071",
+        "title": "Experimental projects",
+        "fields": [
+          "lecturers"
+        ]
+      },
+      {
+        "key": "15991-0",
+        "course_code": "20271221",
+        "title": "Principles and Applications of Nanofabrication",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "16005-15465",
+        "course_code": "20273331",
+        "title": "Analysis and sorting by flow, image and mass cytometry",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "16010-0",
+        "course_code": "20273341",
+        "title": "Hands-on Data Analysis and Statistics for the Life Sciences",
+        "fields": [
+          "fields"
+        ]
+      },
+      {
+        "key": "16024-0",
+        "course_code": "20273421",
+        "title": "Reef Fish Neurobiology",
+        "fields": [
+          "fields"
+        ]
+      },
+      {
+        "key": "16029-15202",
+        "course_code": "20271272",
+        "title": "Quantum Light and Matter",
+        "fields": [
+          "lecturers"
+        ]
+      },
+      {
+        "key": "16052-15575",
+        "course_code": "20274162",
+        "title": "Mathematics of machine learning and machine learning for mathematics",
+        "fields": [
+          "sessions"
+        ]
+      }
+    ]
+  }
+]

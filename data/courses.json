@@ -793,7 +793,7 @@
         "day_index": 2,
         "start": "09:15",
         "end": "11:00",
-        "location": "Belfer, Botnar Auditorium"
+        "location": "Schmidt, Auditorium"
       }
     ],
     "first_lecture": "20/10/2026",
@@ -1810,8 +1810,8 @@
     "title": "Quantum Light and Matter",
     "offered_by": "Physical Sciences",
     "lecturers": [
-      "Prof. Barak Dayan",
-      "Dr. Ziv Meir"
+      "Dr. Ziv Meir",
+      "Prof. Barak Dayan"
     ],
     "semester": "2nd",
     "sessions": [
@@ -3615,7 +3615,8 @@
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)",
       "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)",
-      "Life Sciences (Computational and Systems Biology Track)"
+      "Life Sciences (Computational and Systems Biology Track)",
+      "Life Sciences (Molecular and Cellular Neuroscience Track)"
     ],
     "points": 2,
     "end_date": "11/01/2027",
@@ -3652,7 +3653,8 @@
       "Life Sciences",
       "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)",
       "Life Sciences (Computational and Systems Biology Track)",
-      "Life Sciences (Scientific Archeology Track)"
+      "Life Sciences (Scientific Archeology Track)",
+      "Life Sciences (Molecular and Cellular Neuroscience Track)"
     ],
     "points": 2,
     "end_date": "28/06/2027",
@@ -4077,7 +4079,7 @@
     ],
     "semester": "Full Year",
     "sessions": [],
-    "first_lecture": "18/10/2026",
+    "first_lecture": "19/10/2026",
     "year": 2027,
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15797&pprev=15521",
     "fields": [
@@ -5350,7 +5352,7 @@
         "day_index": 0,
         "start": "11:15",
         "end": "13:00",
-        "location": "WSoS, Rm 3"
+        "location": "Science Teaching Lab 1"
       }
     ],
     "first_lecture": "18/10/2026",
@@ -5981,7 +5983,8 @@
     "year": 2027,
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16047&pprev=0",
     "fields": [
-      "Mathematics and Computer Science"
+      "Mathematics and Computer Science",
+      "Life Sciences (Computational and Systems Biology Track)"
     ],
     "points": 2,
     "end_date": "14/01/2027",
@@ -7357,9 +7360,9 @@
         "type": "lecture",
         "day_name": "Thursday",
         "day_index": 4,
-        "start": "12:15",
-        "end": "13:45",
-        "location": "Science Teaching Lab 3"
+        "start": "09:00",
+        "end": "10:30",
+        "location": "WSoS, Rm 1"
       }
     ],
     "first_lecture": "11/03/2027",
@@ -7390,9 +7393,9 @@
         "type": "lecture",
         "day_name": "Thursday",
         "day_index": 4,
-        "start": "12:15",
-        "end": "13:45",
-        "location": "Science Teaching Lab 3"
+        "start": "09:00",
+        "end": "10:30",
+        "location": "Science Teaching Lab 2"
       }
     ],
     "first_lecture": "22/10/2026",
@@ -7586,8 +7589,8 @@
         "type": "lecture",
         "day_name": "Thursday",
         "day_index": 4,
-        "start": "09:00",
-        "end": "12:00",
+        "start": "11:00",
+        "end": "14:00",
         "location": "WSoS, Rm 2"
       }
     ],
@@ -7618,9 +7621,9 @@
         "type": "lecture",
         "day_name": "Thursday",
         "day_index": 4,
-        "start": "09:00",
-        "end": "12:00",
-        "location": "Science Teaching Lab 2"
+        "start": "11:00",
+        "end": "14:00",
+        "location": null
       }
     ],
     "first_lecture": "22/10/2026",
@@ -7714,8 +7717,8 @@
         "type": "lecture",
         "day_name": "Thursday",
         "day_index": 4,
-        "start": "09:00",
-        "end": "12:00",
+        "start": "11:00",
+        "end": "14:00",
         "location": "Mausher, Conference Room"
       }
     ],
@@ -45403,5 +45406,87 @@
     "end_date": "14/01/2027",
     "course_code": "20278022",
     "prerequisites": "N/A"
+  },
+  {
+    "course_id": "16076",
+    "group_id": "15178",
+    "title": "Quantum field theory 2 2D field theories",
+    "offered_by": "Physical Sciences",
+    "lecturers": [
+      "Prof. Micha Berkooz"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "11:15",
+        "end": "13:00",
+        "location": "Weissman, Seminar Rm B"
+      },
+      {
+        "type": "lecture",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "11:15",
+        "end": "13:00",
+        "location": "Weissman, Seminar Rm A"
+      }
+    ],
+    "first_lecture": "19/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16076&pprev=15178",
+    "fields": [
+      "Chemical Sciences",
+      "Physical Sciences"
+    ],
+    "points": 5,
+    "end_date": "14/01/2027",
+    "course_code": "20271231"
+  },
+  {
+    "course_id": "15800",
+    "group_id": "15512",
+    "title": "ExCLS Track- Organisms rotations seminars",
+    "offered_by": "Life Sciences",
+    "lecturers": [
+      "Prof. Yonatan Stelzer",
+      "Dr. Ranit Kedmi"
+    ],
+    "semester": "Full Year",
+    "sessions": [],
+    "first_lecture": "18/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15800&pprev=15512",
+    "fields": [
+      "Life Sciences",
+      "Life Sciences (Scientific Archeology Track)"
+    ],
+    "points": 1,
+    "end_date": "28/06/2027",
+    "course_code": "20273043",
+    "prerequisites": "No"
+  },
+  {
+    "course_id": "16075",
+    "group_id": "15489",
+    "title": "General module: Cognition, learning, and instruction",
+    "offered_by": "Science Teaching for Teachers",
+    "lecturers": [
+      "Dr. Yael Shwartz"
+    ],
+    "semester": "2nd",
+    "sessions": [],
+    "first_lecture": "11/05/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16075&pprev=15489",
+    "fields": [
+      "Science Teaching (non thesis MSc Track)"
+    ],
+    "points": 2,
+    "end_date": "29/06/2027",
+    "course_code": "20276222",
+    "prerequisites": "No"
   }
 ]

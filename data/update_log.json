@@ -121,5 +121,124 @@
         ]
       }
     ]
+  },
+  {
+    "timestamp": "2026-08-30T08:08:12Z",
+    "added": [
+      {
+        "key": "15800-15512",
+        "course_code": "20273043",
+        "title": "ExCLS Track- Organisms rotations seminars"
+      },
+      {
+        "key": "16075-15489",
+        "course_code": "20276222",
+        "title": "General module: Cognition, learning, and instruction"
+      },
+      {
+        "key": "16076-15178",
+        "course_code": "20271231",
+        "title": "Quantum field theory 2 2D field theories"
+      }
+    ],
+    "removed": [],
+    "changed": [
+      {
+        "key": "15770-15438",
+        "course_code": "20272061",
+        "title": "Protein Structure and Function 1",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15797-15521",
+        "course_code": "20273033",
+        "title": "Laboratory animals at the Weizmann Institute of Science",
+        "fields": [
+          "first_lecture"
+        ]
+      },
+      {
+        "key": "15798-15518",
+        "course_code": "20273052",
+        "title": "Hands-on Data Analysis and Statistics for the Life Sciences 2",
+        "fields": [
+          "fields"
+        ]
+      },
+      {
+        "key": "15815-15287",
+        "course_code": "20275021",
+        "title": "Philosophy and History of Education",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15816-15288",
+        "course_code": "20275012",
+        "title": "Learning Environments",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15823-15292",
+        "course_code": "20275053",
+        "title": "Didactics of Chemistry",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15824-15311",
+        "course_code": "20275063",
+        "title": "Didactics of Biology",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15826-15291",
+        "course_code": "20275083",
+        "title": "Didactics of teaching Earth Sciences",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15907-15619",
+        "course_code": "20278021",
+        "title": "Evolution of the Scientific Method",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "16010-0",
+        "course_code": "20273341",
+        "title": "Hands-on Data Analysis and Statistics for the Life Sciences",
+        "fields": [
+          "fields"
+        ]
+      },
+      {
+        "key": "16029-15202",
+        "course_code": "20271272",
+        "title": "Quantum Light and Matter",
+        "fields": [
+          "lecturers"
+        ]
+      },
+      {
+        "key": "16047-0",
+        "course_code": "20274191",
+        "title": "Generative Models for Computer Vision and Graphics",
+        "fields": [
+          "fields"
+        ]
+      }
+    ]
   }
 ]

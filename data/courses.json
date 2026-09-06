@@ -1482,7 +1482,8 @@
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15965&pprev=15627",
     "fields": [
       "Chemical Sciences",
-      "Physical Sciences"
+      "Physical Sciences",
+      "Science Teaching"
     ],
     "points": 2,
     "end_date": "13/01/2027",
@@ -2618,7 +2619,8 @@
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)",
       "Mathematics and Computer Science",
-      "Obligatory instruction courses or enrichment courses"
+      "Obligatory instruction courses or enrichment courses",
+      "Science Teaching"
     ],
     "points": 1,
     "end_date": "01/12/2026",
@@ -4439,7 +4441,7 @@
       "Life Sciences (Scientific Archeology Track)"
     ],
     "points": 3,
-    "end_date": "12/01/2027",
+    "end_date": "13/01/2027",
     "course_code": "20273141",
     "syllabus": "This course aims to provide students with a broad introduction to the structure of the nervous system and comparative neuroanatomy. Through frontal lectures and brain models, students will learn to deconstruct the complexity of brain structure into discrete and meaningful anatomical and functional properties. The course will cover the major anatomical parts of the human brain, including cortical and subcortical structures, their organization, and the connections between them. Additionally, we will explore the neuroanatomy of lower mammals, such as mice and rats, to gain insights into evolutionary aspects.\nCourse Instructor: Dr. Liora Las\nGrading Distribution:\nAttendance and Participation: 20%\nMidterm Exam: 20%\nFinal Exam: 60%\nTopics to be covered by lectures:\nLecture 1:  20/10/2026  TuesdayCourse Overview and Introduction to Neuroanatomy\nBasic concepts in neuroanatomy and its broader relation to neuroscience\nDescription of the mammalian brain's basic structures\nDiscussion of key anatomical references, including the neuraxis\nLecture 2: 28/10/2026 Wednesday  Neurons and Glial Cells: The Building Blocks of the Nervous System\nStructure and main parts of neurons\nInformation flow via synapses and neurotransmitters\nOverview of different types of glial cells\nLecture 3: 03/11/2026 Tuesday Development of the Central Nervous System (CNS)\nMajor embryological subdivisions of the CNS and their formation\nLecture 4: 24/11/2026 Tuesday Structural and Functional Organization of the Spinal Cord and Brain Stem\nCommunication at the horizontal and vertical levels of the spinal cord\nMajor sensory and motor tracts\nLecture 5:  25/11/2026 Wednesday brain stem\nLecture 6: 01/12/2026 Tuesday The Cerebral Cortex: Topography and Functional Relevance\nLateral, medial, and ventral views of the human brain\nThe four lobes of the cerebral hemispheres and major gyri and sulci\nFunctional areas of the cortex\nLecture 7: 02/12/2026 Wednesday Layers in the Cortex and Cortical Wiring Diagram\nCytoarchitecture of the cortex and cellular organization\nInformation flow within the cortex and to other brain regions\nLecture 8: 08/12/2026 Wednesday Structural and Functional Organization of the Diencephalon\nThalamus, subthalamus, hypothalamus, and the epithalamus (including the habenula and the pineal body). Their role in regulating various physiological functions\nLecture 9: 15/12/2026 Tuesday Sensory and Motor Nervous Systems\nNeural pathways for vision, audition, olfaction, touch, pain, and temperature sensation\nMotor processing and motor control systems\nLecture 10: 23/12/2026 Wednesday The Coordination of Movement\nStructural and functional organization of the Cerebellum and basal ganglia\nTheir role in motor coordination and learning\nLecture 11: 22/12/2026 Tuesday Protective Structures of the Brain\nMeninges (Dura Mater, Arachnoid Mater, Pia Mater)\nBlood-Brain Barrier, Ventricles, Cerebrospinal Fluid, and choroid plexuses\nLecture 12: 29/12/20206 Tuesday The Limbic System and Cerebral Circuits for Emotion, Learning, and Memory\nLecture 13: 05/01/2027 Tuesday Techniques for Studying the Structure of the Brain\nNoninvasive and invasive techniques for studying the structural connections of the brain\nLecture 14: 13/01/2027 Wednesday Brain Evolution and Comparative Neuroanatomy\nComparison of nervous systems in various organisms from C. elegans to mammals\nExam review and final thoughts",
     "learning_outcomes": "Upon successful completion of this course students should be able to:\n• Disassemble the complexity of brain structure into discrete and meaningful anatomical and functional properties.\n• Examine the brains' evolution within two groups of mammals: primates (humans), and rodents (rats).",
@@ -5628,6 +5630,14 @@
         "start": "14:15",
         "end": "16:00",
         "location": "Goldsmith, Rm 108"
+      },
+      {
+        "type": "lecture",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "WSoS, Rm C"
       }
     ],
     "first_lecture": "18/10/2026",
@@ -5637,7 +5647,7 @@
       "Mathematics and Computer Science"
     ],
     "points": 4,
-    "end_date": "10/01/2027",
+    "end_date": "14/01/2027",
     "course_code": "20274031",
     "syllabus": "Quotient Spaces, Cell Complexes, simplicial complexes\nHomotopy,  Homotopy Equivalence, Deformation Retractions,\nClassification of Surfaces\nFundamental Group, Covering Spaces,\nSimplicial homology, .Singular homology, Cellular Homology, Relative Homology, long exact sequence of a pair, excision, Mayer–Vietoris, geometric meaning via pseudomanifolds, Brouwer fixed-point theorem, euler characteristic, invariance of dimension, Cohomology, Cup product, Universal coefficient theorem.\nTime permitting, we will get through as much of this as we can.",
     "learning_outcomes": "By the end of the course, students have:\n•\nConceptual intuition:\n•\nWhen you walk down the street and see the same bus twice, you will consider the possibility that you are not in the universal cover.\n•\nYou will be comfortable with the idea of homotopy type, recognizing when spaces are quasi “the same” for topological purposes.\n•\nYou will see and understand cycles, both geometrically and algebraically.\n•\nCore skills:\n•\nCompute fundamental groups of standard spaces (spheres, tori, surfaces, CW complexes).\n•\nUse covering space theory to classify covers and connect them with subgroups of the fundamental group.\n•\nCalculate homology and cohomology groups of key examples (spheres, projective spaces, surfaces) using tools such as exact sequences, excision, Mayer–Vietoris, and cellular homology.\n•\nApply invariants (Euler characteristic, homology, cohomology ring) to distinguish spaces and solve problems.\n•\nApplications & broader vision:\n•\nUnderstand the classification of compact surfaces.\n•\nAppreciate major results (Brouwer fixed-point theorem, invariance of dimension) as consequences of algebraic topology.\n•\nDevelop geometric insight into abstract algebraic structures, bridging computation and visualization.",
@@ -7808,7 +7818,7 @@
         "day_index": 2,
         "start": "15:00",
         "end": "18:00",
-        "location": null
+        "location": "Science Teaching Lab 2"
       }
     ],
     "first_lecture": "09/02/2027",
@@ -7974,7 +7984,7 @@
         "day_index": 2,
         "start": "15:00",
         "end": "18:05",
-        "location": "Science Teaching Lab 2"
+        "location": "WSoS, Rm 2"
       }
     ],
     "first_lecture": "09/02/2027",
@@ -8032,7 +8042,7 @@
         "day_index": 2,
         "start": "15:00",
         "end": "17:30",
-        "location": "Science Teaching Lab 2"
+        "location": "WSoS, Rm A"
       }
     ],
     "first_lecture": "06/10/2026",
@@ -8063,7 +8073,7 @@
         "day_index": 2,
         "start": "14:30",
         "end": "17:00",
-        "location": "WSoS, Rm A"
+        "location": "Science Teaching Lab 2"
       }
     ],
     "first_lecture": "06/10/2026",
@@ -8094,7 +8104,7 @@
         "day_name": "Tuesday",
         "day_index": 2,
         "start": "13:15",
-        "end": "14:45",
+        "end": "14:30",
         "location": "Science Teaching Lab 2"
       }
     ],
@@ -8454,7 +8464,7 @@
     ],
     "semester": "1st",
     "sessions": [],
-    "first_lecture": "08/09/2026",
+    "first_lecture": "06/10/2026",
     "year": 2027,
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15944&pprev=15487",
     "fields": [
@@ -45488,5 +45498,62 @@
     "end_date": "29/06/2027",
     "course_code": "20276222",
     "prerequisites": "No"
+  },
+  {
+    "course_id": "16074",
+    "group_id": "0",
+    "title": "Fundamentals of Intellectual Property for Scientists and Entrepreneurs",
+    "offered_by": null,
+    "lecturers": [
+      "Mr. Aaron Jaffe",
+      "Dr. Liora Bogin"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "11:15",
+        "end": "13:00",
+        "location": "Candiotty, Auditorium"
+      }
+    ],
+    "first_lecture": "18/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16074&pprev=0",
+    "fields": [
+      "Chemical Sciences",
+      "Life Sciences",
+      "Life Sciences (Scientific Archeology Track)",
+      "Mathematics and Computer Science",
+      "Obligatory instruction courses or enrichment courses",
+      "Physical Sciences",
+      "Science Teaching"
+    ],
+    "points": null,
+    "end_date": "10/01/2027",
+    "course_code": "20278081",
+    "prerequisites": "No"
+  },
+  {
+    "course_id": "16084",
+    "group_id": "15450",
+    "title": "Physics module: Research laboratory workshop",
+    "offered_by": "Science Teaching for Teachers",
+    "lecturers": [
+      "Prof. Yaron Lehavi"
+    ],
+    "semester": "2nd",
+    "sessions": [],
+    "first_lecture": "13/07/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16084&pprev=15450",
+    "fields": [
+      "Science Teaching (non thesis MSc Track)"
+    ],
+    "points": 1.5,
+    "end_date": "27/07/2027",
+    "course_code": "20276232"
   }
 ]

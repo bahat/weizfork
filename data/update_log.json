@@ -240,5 +240,104 @@
         ]
       }
     ]
+  },
+  {
+    "timestamp": "2026-09-06T10:47:45Z",
+    "added": [
+      {
+        "key": "16074-0",
+        "course_code": "20278081",
+        "title": "Fundamentals of Intellectual Property for Scientists and Entrepreneurs"
+      },
+      {
+        "key": "16084-15450",
+        "course_code": "20276232",
+        "title": "Physics module: Research laboratory workshop"
+      }
+    ],
+    "removed": [],
+    "changed": [
+      {
+        "key": "15833-15703",
+        "course_code": "20274031",
+        "title": "Algebraic topology",
+        "fields": [
+          "end_date",
+          "sessions"
+        ]
+      },
+      {
+        "key": "15876-15529",
+        "course_code": "20273141",
+        "title": "Neuroanatomy",
+        "fields": [
+          "end_date"
+        ]
+      },
+      {
+        "key": "15890-15523",
+        "course_code": "20276012",
+        "title": "Biology module: Assessing Learning",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15899-15503",
+        "course_code": "20276032",
+        "title": "Biology module: Final project in biology education",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15901-15502",
+        "course_code": "20276041",
+        "title": "Biology module: Implementing Assessment",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15903-15501",
+        "course_code": "20276051",
+        "title": "Biology module: Introduction to biology instruction",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15904-15265",
+        "course_code": "20276061",
+        "title": "Biology module: Research in science education and what can we learn from it",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15944-15487",
+        "course_code": "20276131",
+        "title": "General module: Introduction to academic writing",
+        "fields": [
+          "first_lecture"
+        ]
+      },
+      {
+        "key": "15965-15627",
+        "course_code": "20271081",
+        "title": "Hands on astronomy",
+        "fields": [
+          "fields"
+        ]
+      },
+      {
+        "key": "16033-0",
+        "course_code": "20278031",
+        "title": "Science Communication Presentation Skills",
+        "fields": [
+          "fields"
+        ]
+      }
+    ]
   }
 ]

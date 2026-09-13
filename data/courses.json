@@ -1292,8 +1292,8 @@
     "title": "Experimental projects",
     "offered_by": "Physical Sciences",
     "lecturers": [
-      "Prof. Eran Ofek",
-      "Dr. Nurit Avraham Tayar"
+      "Dr. Nurit Avraham Tayar",
+      "Prof. Eran Ofek"
     ],
     "semester": "1st",
     "sessions": [
@@ -2454,8 +2454,8 @@
         "type": "lecture",
         "day_name": "Monday",
         "day_index": 1,
-        "start": "10:45",
-        "end": "12:30",
+        "start": "11:00",
+        "end": "13:00",
         "location": "Belfer, Botnar Auditorium"
       }
     ],
@@ -2620,9 +2620,10 @@
       "Life Sciences (Scientific Archeology Track)",
       "Mathematics and Computer Science",
       "Obligatory instruction courses or enrichment courses",
-      "Science Teaching"
+      "Science Teaching",
+      "Physical Sciences"
     ],
-    "points": 1,
+    "points": null,
     "end_date": "01/12/2026",
     "course_code": "20278031",
     "syllabus": "Science Communication Presentation Skills  (course code20278031)\n• Developing effective scientific presentation skills\n• Identifying and minimizing the use of jargon and overly technical language\n• Tailoring scientific communication to diverse audiences, including experts and non-experts\n• Understanding paradigm gaps, recognizing cognitive biases, and building effective professional relationships through communication\n• Distilling complex research into clear, compelling key messages\n• Communicating effectively in presentations, lab meetings, seminars, conferences, and interdisciplinary collaborations\n• Applying storytelling techniques to enhance scientific communication\n• Strengthening body language and vocal delivery for greater impact\n• Practicing confident communication through improvisation exercises\n• Designing clear and engaging scientific presentations using PowerPoint and AI tools\n• Preparing for academic and industry job interviews\n• Communicating scientific research to policymakers and other non-scientific stakeholders\n• Individual feedback: Each participant will receive before-and-after video recordings to assess progress and communication development.",
@@ -7372,7 +7373,7 @@
         "day_index": 4,
         "start": "09:00",
         "end": "10:30",
-        "location": "WSoS, Rm 1"
+        "location": "Science Teaching Lab 2"
       }
     ],
     "first_lecture": "11/03/2027",
@@ -7633,7 +7634,7 @@
         "day_index": 4,
         "start": "11:00",
         "end": "14:00",
-        "location": null
+        "location": "Science Teaching Lab 2"
       }
     ],
     "first_lecture": "22/10/2026",
@@ -7716,7 +7717,7 @@
   {
     "course_id": "15826",
     "group_id": "15291",
-    "title": "Didactics of teaching Earth Sciences",
+    "title": "Didactics of Earth Sciences",
     "offered_by": "Science Teaching",
     "lecturers": [
       "Prof. Nir Orion"
@@ -8471,7 +8472,7 @@
       "Science Teaching (non thesis MSc Track)"
     ],
     "points": 2,
-    "end_date": "26/01/2027",
+    "end_date": "24/11/2026",
     "course_code": "20276131",
     "syllabus": "קהל היעד\nתכנית רוטשילד [תואר שני בהוראת המדעים], מדרשת פיינברג מכון וייצמן\nרציונל\nהכתיבה המדעית מהווה חלק מן האוריינות האקדמית הנדרשת מסטודנטים הלומדים לתואר אקדמי והנדרשים לבצע עבודה תיאורטית או מחקרית במסגרת לימודיהם. לסגנון כתיבה מדעי מאפיינים המתבטאים בתכנים עצמם ובשאלות המחקר, בסגנון הלשוני, במבנה הטקסט או העבודה, בתפקיד פרקי העבודה, באופני הצגת המידע לסוגיו וכן בכל הקשור לאיתור מקורות, שימוש בהם ואופן רישומם בטקסט. המחקר המדע אינו יכול להתקיים ללא הכתיבה המדעית שכן זו מאפשרת את הדיווח על הממצאים ואת הדיון בהם עם הקהילה המדעית. הכרות עם הטקסט המדעי ואימוץ המאפיינים של הכתיבה המדעית הכרחייםדרכי הוראה ולמידה\nהקורס מקוון, בלמידה מרחוק – א-סינכרונית ברובה, וכולל מפגשים סינכרוניים ב.\nאתר הקורס (במודל) מחולק ליחידות נושאיות (מפורטות בהמשך) שבכל אחת מהן יש:\nהרצאה/מצגת\nהסבר מילולי והרצאה מוקלטת (בזום) או מצגת בלבד להסבר על הנושא\nתרגילים\nלתרגול ולהתנסות. יש חובת הגשה של התרגילים ולא ניתן להתקדם מבלי להגישם. מועדי ההגשה המפורטים בטבלה להלן מתייחסים למועד הסופי. ניתן להגיש לפני כן. תרגילים סגורים ייבדקו אוטומטית (צפייה בציונים תתאפשר לאחר שיחלוף מועד ההגשה); התרגילים הפתוחים לא ייבדקו באופן מפורט עם ציון;\nמשאבים ופעילויות נוספות\nבכל יחידה מצורפים הסברים, דוגמאות ומשחקים ללמידה ולהתנסות א-סינכרונית.\nמטלה סופית בקורס\nהגשת \"שלד\" של עבודת מחקר בנושא נבחר . יש להגדיר שאלת מחקר בתחום של הוראת המדעים, להציג מבוא קצר, כותרות לרקע התאורטי, כותרות לפרקי העבודה; ברקע התאורטי יש לכתוב באחד הפרקים 2-3 פסקאות המבוססות על מקורות (לפחות שלושה); ביבליוגרפיה.\nמפרט נושאי הקורס, מועדים ומפגשים\nנושא\nמושגים\nתרגילים\nמועד הגשה\nהרצאת פתיחה, הכרות עם נושאי הקורס ואופן הלמידה; מפגש סינכרוני\n1. הטקסט המדעי\nמאפייני הכתיבה המדעית האקדמית, רעיון מרכזי ומילות מפתח\nתר1: מסגנון סיפורי לטקסט אקדמי\n2. מיזוג בין מקורות\nממזגים בין מקורות שונים לכדי טקסט מגובש ואחיד\nתר2: מיזוג בין מקורות\n3. איתור ורישום מקורות\nאיתור מקורות אקדמיים ראויים וכיצד יש לאזכר אותם ולהתייחס אליהם בעבודה\nתר3: מבחן רישום מקורות\n4. שאלת מחקר\nניסוח שאלת מחקר בתחום של הוראת המדעים\nתר4: ניסוח שאלת מחקר\n5. עבודה מדעית – סוגים ומבנה\nסוגי עבודות ומאמרים מדעיים; מבנה העבודה המחקרית ומה התפקיד של פרקיה\nתר5: התאמה בין טקסט לפרק בעבודה המחקרית\nעבודה מחקרית ושימוש מושכל ב-וורד לעיצוב, עריכה וכתיבה; מפגש זום סינכרוני 19.9 בשעה 18:00\n6. הצגת המידע\nרציפות וקישוריות, האופנים השונים להצגת מידע בטקסט מדעי\nתר6: הצגת מידע מדעי\n7. עבודה ב-וורד וביישומי אופיס\nדרישות עיצוביות ועריכה; שימוש מושכל בכלים ממוחשבים לארגון, לעריכה ולכתיבה של עבודה מדעית\nמטלה סופית: שלד לעבודה מחקרית",
     "learning_outcomes": "Upon successful completion of the course students will be able to:\n• Describe the structure and various components of academic documents.\n• List the rules of academic writing.\n• Demonstrate efficient use of the web and different resource centers.\n• Use techniques for searching theories.\n• Present data in a lucid way.\n• Write a draft of an academic theoretical research proposal on any topic according to APA citation style.",
@@ -45555,5 +45556,71 @@
     "points": 1.5,
     "end_date": "27/07/2027",
     "course_code": "20276232"
+  },
+  {
+    "course_id": "16087",
+    "group_id": "0",
+    "title": "Commutative algebra",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Dr. Vladimir Hinich"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "10:15",
+        "end": "12:00",
+        "location": "Ziskind, Rm 1"
+      },
+      {
+        "type": "lecture",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "14:15",
+        "end": "15:00",
+        "location": "Ziskind, Rm 1"
+      }
+    ],
+    "first_lecture": "11/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16087&pprev=0",
+    "fields": [
+      "Mathematics and Computer Science"
+    ],
+    "points": 3,
+    "end_date": "24/06/2027",
+    "course_code": "20274212"
+  },
+  {
+    "course_id": "16070",
+    "group_id": "14201",
+    "title": "Fine-Grained Complexity",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Prof. Amir Abboud"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "11:15",
+        "end": "13:00",
+        "location": "Jacob Ziskind Building, Rm 155"
+      }
+    ],
+    "first_lecture": "20/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16070&pprev=14201",
+    "fields": [
+      "Mathematics and Computer Science"
+    ],
+    "points": 2,
+    "end_date": "12/01/2027",
+    "course_code": "20274281"
   }
 ]

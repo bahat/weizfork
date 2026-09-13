@@ -339,5 +339,80 @@
         ]
       }
     ]
+  },
+  {
+    "timestamp": "2026-09-13T16:05:40Z",
+    "added": [
+      {
+        "key": "16070-14201",
+        "course_code": "20274281",
+        "title": "Fine-Grained Complexity"
+      },
+      {
+        "key": "16087-0",
+        "course_code": "20274212",
+        "title": "Commutative algebra"
+      }
+    ],
+    "removed": [],
+    "changed": [
+      {
+        "key": "15816-15288",
+        "course_code": "20275012",
+        "title": "Learning Environments",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15823-15292",
+        "course_code": "20275053",
+        "title": "Didactics of Chemistry",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15826-15291",
+        "course_code": "20275083",
+        "title": "Didactics of Earth Sciences",
+        "fields": [
+          "title"
+        ]
+      },
+      {
+        "key": "15927-15472",
+        "course_code": "20273251",
+        "title": "Sustainability by the numbers",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15944-15487",
+        "course_code": "20276131",
+        "title": "General module: Introduction to academic writing",
+        "fields": [
+          "end_date"
+        ]
+      },
+      {
+        "key": "15963-15645",
+        "course_code": "20271071",
+        "title": "Experimental projects",
+        "fields": [
+          "lecturers"
+        ]
+      },
+      {
+        "key": "16033-0",
+        "course_code": "20278031",
+        "title": "Science Communication Presentation Skills",
+        "fields": [
+          "fields",
+          "points"
+        ]
+      }
+    ]
   }
 ]

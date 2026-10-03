@@ -15,7 +15,7 @@
         "day_index": 4,
         "start": "14:15",
         "end": "16:00",
-        "location": "WSoS, Rm 2"
+        "location": "WISsE, Rm 2"
       },
       {
         "type": "tutorial",
@@ -23,7 +23,7 @@
         "day_index": 0,
         "start": "14:15",
         "end": "15:00",
-        "location": "WSoS, Rm 2"
+        "location": "WISsE, Rm 2"
       }
     ],
     "first_lecture": "11/03/2027",
@@ -56,7 +56,7 @@
         "day_index": 4,
         "start": "11:15",
         "end": "13:00",
-        "location": "WSoS, Rm A"
+        "location": "WISsE, Rm A"
       }
     ],
     "first_lecture": "22/10/2026",
@@ -87,7 +87,23 @@
         "day_index": 2,
         "start": "14:15",
         "end": "16:00",
-        "location": "WSoS, Rm 1"
+        "location": "WISsE, Rm 1"
+      },
+      {
+        "type": "lecture",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "14:15",
+        "end": "15:00",
+        "location": "WISsE, Rm 3"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "15:15",
+        "end": "16:00",
+        "location": "WISsE, Rm 3"
       }
     ],
     "first_lecture": "20/10/2026",
@@ -100,7 +116,7 @@
       "Physical Sciences"
     ],
     "points": 4,
-    "end_date": "12/01/2027",
+    "end_date": "14/01/2027",
     "course_code": "20272041",
     "syllabus": "Week 1:\nIntroduction to geophysical fluid dynamics: motivating questions.\nWeek 2:\nEulerian and Lagrangian approaches to fluid dynamics. Mass and momentum balance. Rotating systems. The Coriolis force.\nWeek 3:\nMomentum equations in a rotating system, Rossby number, scaling theory, geostrophic equations, thermal-wind balance.\nWeek 4:\nShallow water theory: shallow water equations and waves, f-plane, surface gravity waves, Tsunamis, Kelvin waves.\nWeek 5: Frictional boundary layers: The Ekman layer, Ekman spiral, Ekman pumping, costal upwealing.\nWeek 6: Vorticity balance equations, Rossby waves: shallow water Rossby waves, beta-plane, energy and energy flux from Rossby waves.\nWeek 7:\nWind driven ocean circulation: Observed ocean circulation, gyres, Sverdrup balance, western boundary layers / the Gulf Stream. El Nino dynamics.\nWeek 8:\nAtmospheric thermodynamics: Laws of thermodynamics, energy equations, atmospheric lapse rate, potential temperature, static stability.\nWeek 9:\nTropical circulation: Observed tropical circulation, angular momentum equation, the Hadley cell, Held-Hou theory.\nWeek 10:\nExtratropical circulation: Observed extratropical circulation, stationary waves, subtropical jet, the eddy driven jet, Ferrel cell dynamics.\nWeek 11-12:\nQuasi-geostrophy: QG equations, QG Rossby waves, the QG potential vorticity equation, Baroclinic instability: The Eady model\nWeek 13:\nAtmospheric dynamics of other Solar System planets and moons, dynamics on exoplanets.",
     "learning_outcomes": "Upon successful completion of this course students should be able to:\nUnderstand the physics governing the dynamics of atmospheres and oceans, including many observed phenomena such as extratropical storms, hurricanes, jet-streams, boundary currents (e.g., the gulf stream), oceanic and atmospheric waves meridional circulation cells, and climate on other planets.",
@@ -122,7 +138,7 @@
         "day_index": 0,
         "start": "09:00",
         "end": "13:00",
-        "location": "WSoS, Rm A"
+        "location": "WISsE, Rm  B"
       }
     ],
     "first_lecture": "11/10/2026",
@@ -157,7 +173,7 @@
         "day_index": 3,
         "start": "11:15",
         "end": "13:00",
-        "location": "WSoS, Rm A"
+        "location": "WISsE, Rm A"
       },
       {
         "type": "tutorial",
@@ -165,7 +181,7 @@
         "day_index": 4,
         "start": "14:15",
         "end": "16:00",
-        "location": "WSoS, Rm  B"
+        "location": "WISsE, Rm  B"
       }
     ],
     "first_lecture": "21/10/2026",
@@ -196,7 +212,7 @@
         "day_index": 1,
         "start": "11:15",
         "end": "13:00",
-        "location": "WSoS, Rm 1"
+        "location": "WISsE, Rm 1"
       }
     ],
     "first_lecture": "08/03/2027",
@@ -230,7 +246,7 @@
         "day_index": 4,
         "start": "11:15",
         "end": "13:00",
-        "location": "WSoS, Rm C"
+        "location": "WISsE, Rm C"
       },
       {
         "type": "tutorial",
@@ -238,7 +254,7 @@
         "day_index": 2,
         "start": "11:15",
         "end": "12:00",
-        "location": "WSoS, Rm A"
+        "location": "WISsE, Rm A"
       }
     ],
     "first_lecture": "11/03/2027",
@@ -270,7 +286,7 @@
         "day_index": 0,
         "start": "09:15",
         "end": "11:00",
-        "location": "WSoS, Rm 1"
+        "location": "WISsE, Rm 1"
       },
       {
         "type": "tutorial",
@@ -278,7 +294,7 @@
         "day_index": 3,
         "start": "14:15",
         "end": "16:00",
-        "location": "WSoS, Rm 1"
+        "location": "WISsE, Rm 1"
       }
     ],
     "first_lecture": "07/03/2027",
@@ -313,7 +329,7 @@
         "day_index": 1,
         "start": "09:15",
         "end": "11:00",
-        "location": "WSoS, Rm 1"
+        "location": "WISsE, Rm 1"
       }
     ],
     "first_lecture": "19/10/2026",
@@ -344,7 +360,7 @@
         "day_index": 2,
         "start": "11:15",
         "end": "13:00",
-        "location": "WSoS, Rm 3"
+        "location": "WISsE, Rm 3"
       }
     ],
     "first_lecture": "20/10/2026",
@@ -375,7 +391,7 @@
         "day_index": 3,
         "start": "14:15",
         "end": "16:00",
-        "location": "WSoS, Rm 3"
+        "location": "WISsE, Rm 3"
       }
     ],
     "first_lecture": "21/10/2026",
@@ -408,7 +424,7 @@
         "day_index": 4,
         "start": "09:15",
         "end": "11:00",
-        "location": "WSoS, Rm A"
+        "location": "WISsE, Rm A"
       }
     ],
     "first_lecture": "22/10/2026",
@@ -442,7 +458,7 @@
         "day_index": 0,
         "start": "11:15",
         "end": "13:00",
-        "location": "WSoS, Rm 1"
+        "location": "WISsE, Rm 1"
       }
     ],
     "first_lecture": "07/03/2027",
@@ -473,7 +489,7 @@
         "day_index": 4,
         "start": "09:15",
         "end": "11:00",
-        "location": "WSoS, Rm A"
+        "location": "WISsE, Rm A"
       }
     ],
     "first_lecture": "11/03/2027",
@@ -506,7 +522,7 @@
         "day_index": 3,
         "start": "11:15",
         "end": "13:00",
-        "location": "WSoS, Rm A"
+        "location": "WISsE, Rm A"
       },
       {
         "type": "tutorial",
@@ -514,7 +530,7 @@
         "day_index": 2,
         "start": "12:15",
         "end": "14:00",
-        "location": "WSoS, Rm A"
+        "location": "WISsE, Rm A"
       }
     ],
     "first_lecture": "10/03/2027",
@@ -545,7 +561,7 @@
         "day_index": 1,
         "start": "09:15",
         "end": "11:00",
-        "location": "WSoS, Rm A"
+        "location": "WISsE, Rm A"
       },
       {
         "type": "tutorial",
@@ -553,7 +569,7 @@
         "day_index": 4,
         "start": "14:15",
         "end": "15:00",
-        "location": "WSoS, Rm A"
+        "location": "WISsE, Rm A"
       }
     ],
     "first_lecture": "19/10/2026",
@@ -586,7 +602,7 @@
         "day_index": 1,
         "start": "13:15",
         "end": "16:00",
-        "location": "WSoS, Rm 1"
+        "location": "WISsE, Rm 1"
       }
     ],
     "first_lecture": "08/03/2027",
@@ -619,7 +635,7 @@
         "day_index": 0,
         "start": "11:15",
         "end": "13:00",
-        "location": "WSoS, Rm 1"
+        "location": "WISsE, Rm 1"
       },
       {
         "type": "tutorial",
@@ -627,7 +643,7 @@
         "day_index": 3,
         "start": "09:15",
         "end": "11:00",
-        "location": "WSoS, Rm 2"
+        "location": "WISsE, Rm 2"
       }
     ],
     "first_lecture": "18/10/2026",
@@ -660,7 +676,7 @@
         "day_index": 3,
         "start": "09:15",
         "end": "11:00",
-        "location": "WSoS, Rm A"
+        "location": "WISsE, Rm A"
       }
     ],
     "first_lecture": "10/03/2027",
@@ -693,7 +709,15 @@
         "day_index": 2,
         "start": "14:15",
         "end": "16:00",
-        "location": "WSoS, Rm A"
+        "location": "WISsE, Rm A"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "15:15",
+        "end": "16:00",
+        "location": "WISsE, Rm  B"
       }
     ],
     "first_lecture": "09/03/2027",
@@ -704,7 +728,7 @@
       "Life Sciences",
       "Life Sciences (Scientific Archeology Track)"
     ],
-    "points": 2,
+    "points": null,
     "end_date": "22/06/2027",
     "course_code": "20272132",
     "syllabus": "This course provides an accessible introduction to the chemical, physical and mechanistic principles that underpin the structure, function and biological roles of nucleic acids. Emphasis is placed on developing an intuitive understanding of the molecular concepts needed to interpret contemporary research in nucleic acid biology. Foundational concepts are illustrated through examples drawn from the current literature, highlighting how chemistry and biophysics inform modern biological discovery.\n1. Chemical foundations of nucleic acids\n2. The double helix and non-canonical DNA structures\n3. Physical chemistry of nucleic acids\n4. Methods in nucleic acid biophysics\n5. Mechanisms of DNA recognition by proteins and small molecules\n6. DNA topology and genome organization\n7. DNA damage and repair\n8. Chemical and enzymatic synthesis of nucleic acids\n9. Chemical biology of nucleic acids\n10. RNA structure, folding and function",
@@ -726,7 +750,7 @@
         "day_index": 1,
         "start": "09:15",
         "end": "11:00",
-        "location": "WSoS, Rm  B"
+        "location": "WISsE, Rm  B"
       }
     ],
     "first_lecture": "08/03/2027",
@@ -758,7 +782,7 @@
         "day_index": 1,
         "start": "14:15",
         "end": "16:00",
-        "location": "WSoS, Rm  B"
+        "location": "WISsE, Rm  B"
       }
     ],
     "first_lecture": "19/10/2026",
@@ -828,7 +852,7 @@
         "day_index": 4,
         "start": "14:15",
         "end": "16:00",
-        "location": "WSoS, Rm 1"
+        "location": "WISsE, Rm 1"
       }
     ],
     "first_lecture": "11/03/2027",
@@ -861,7 +885,7 @@
         "day_index": 0,
         "start": "09:15",
         "end": "11:00",
-        "location": "WSoS, Rm 3"
+        "location": "WISsE, Rm 3"
       },
       {
         "type": "tutorial",
@@ -901,7 +925,7 @@
         "day_index": 0,
         "start": "14:00",
         "end": "16:00",
-        "location": "WSoS, Rm A"
+        "location": "WISsE, Rm A"
       }
     ],
     "first_lecture": "18/10/2026",
@@ -933,7 +957,7 @@
         "day_index": 3,
         "start": "14:15",
         "end": "16:00",
-        "location": "WSoS, Rm 1"
+        "location": "WISsE, Rm  B"
       }
     ],
     "first_lecture": "21/10/2026",
@@ -964,7 +988,7 @@
         "day_index": 1,
         "start": "14:15",
         "end": "16:00",
-        "location": "WSoS, Rm 1"
+        "location": "WISsE, Rm 1"
       },
       {
         "type": "tutorial",
@@ -972,7 +996,7 @@
         "day_index": 4,
         "start": "10:15",
         "end": "11:00",
-        "location": "WSoS, Rm  B"
+        "location": "WISsE, Rm  B"
       }
     ],
     "first_lecture": "19/10/2026",
@@ -1219,16 +1243,16 @@
         "day_name": "Tuesday",
         "day_index": 2,
         "start": "09:15",
-        "end": "10:00",
-        "location": "WSoS, Rm C"
+        "end": "11:00",
+        "location": "WISsE, Rm C"
       },
       {
         "type": "lecture",
         "day_name": "Thursday",
         "day_index": 4,
         "start": "09:15",
-        "end": "11:00",
-        "location": "WSoS, Rm C"
+        "end": "10:00",
+        "location": "WISsE, Rm C"
       }
     ],
     "first_lecture": "20/10/2026",
@@ -1292,8 +1316,8 @@
     "title": "Experimental projects",
     "offered_by": "Physical Sciences",
     "lecturers": [
-      "Dr. Nurit Avraham Tayar",
-      "Prof. Eran Ofek"
+      "Prof. Eran Ofek",
+      "Dr. Nurit Avraham Tayar"
     ],
     "semester": "1st",
     "sessions": [
@@ -1303,7 +1327,7 @@
         "day_index": 0,
         "start": "09:15",
         "end": "11:00",
-        "location": "WSoS, Rm C"
+        "location": "WISsE, Rm C"
       },
       {
         "type": "lecture",
@@ -1311,7 +1335,7 @@
         "day_index": 3,
         "start": "14:00",
         "end": "16:00",
-        "location": "WSoS, Rm C"
+        "location": "WISsE, Rm C"
       }
     ],
     "first_lecture": "18/10/2026",
@@ -1321,7 +1345,7 @@
       "Chemical Sciences",
       "Physical Sciences"
     ],
-    "points": null,
+    "points": 4,
     "end_date": "13/01/2027",
     "course_code": "20271071",
     "syllabus": "This is an obligatory course for all 1st year MSc students in Physics. The course intends to expose the students to experimental physics, via hands on experience in labs as well as lectures by experimental PIs in the faculty.\nDuring the 1st semester there will be 2-4 weekly hours of frontal presentation by various experimental PIs, presenting their lab activity. Between the 1st and 2nd semester there will be 6 weeks of hands on lab experience, split into two 3 weeks projects that will be performed in two different labs.\nAt the second week of the 2nd semester each student will need to participate in a one full day of presentations, where she/he will give a seminar about their project and hear about the projects done by other students.",
@@ -1474,7 +1498,7 @@
         "day_index": 3,
         "start": "16:15",
         "end": "18:00",
-        "location": "WSoS, Rm C"
+        "location": "WISsE, Rm C"
       }
     ],
     "first_lecture": "21/10/2026",
@@ -1651,7 +1675,7 @@
         "day_index": 3,
         "start": "11:15",
         "end": "13:00",
-        "location": "WSoS, Rm C"
+        "location": "WISsE, Rm C"
       }
     ],
     "first_lecture": "21/10/2026",
@@ -1698,8 +1722,8 @@
         "type": "tutorial",
         "day_name": "Monday",
         "day_index": 1,
-        "start": "11:15",
-        "end": "13:00",
+        "start": "12:15",
+        "end": "14:00",
         "location": "Drori Auditorium"
       }
     ],
@@ -1862,7 +1886,7 @@
         "day_index": 0,
         "start": "11:15",
         "end": "13:00",
-        "location": "WSoS, Rm C"
+        "location": "WISsE, Rm C"
       },
       {
         "type": "lecture",
@@ -1870,7 +1894,7 @@
         "day_index": 3,
         "start": "09:15",
         "end": "11:00",
-        "location": "WSoS, Rm C"
+        "location": "WISsE, Rm C"
       },
       {
         "type": "tutorial",
@@ -1878,7 +1902,7 @@
         "day_index": 1,
         "start": "14:15",
         "end": "16:00",
-        "location": "WSoS, Rm C"
+        "location": "WISsE, Rm C"
       }
     ],
     "first_lecture": "18/10/2026",
@@ -1946,7 +1970,7 @@
   {
     "course_id": "15746",
     "group_id": "15652",
-    "title": "Statistical Mechanics",
+    "title": "Statistical physics 1",
     "offered_by": "Physical Sciences",
     "lecturers": [
       "Prof. Oren Raz",
@@ -2018,7 +2042,7 @@
         "day_index": 0,
         "start": "14:15",
         "end": "16:00",
-        "location": "WSoS, Rm A"
+        "location": "WISsE, Rm A"
       }
     ],
     "first_lecture": "07/03/2027",
@@ -2146,7 +2170,7 @@
         "day_index": 3,
         "start": "14:15",
         "end": "16:00",
-        "location": "WSoS, Rm  B"
+        "location": "WISsE, Rm  B"
       },
       {
         "type": "tutorial",
@@ -2154,7 +2178,7 @@
         "day_index": 1,
         "start": "12:15",
         "end": "14:00",
-        "location": "WSoS, Rm  B"
+        "location": "WISsE, Rm  B"
       }
     ],
     "first_lecture": "10/03/2027",
@@ -2189,7 +2213,7 @@
         "day_index": 4,
         "start": "12:15",
         "end": "14:00",
-        "location": "WSoS, Rm  B"
+        "location": "WISsE, Rm  B"
       },
       {
         "type": "tutorial",
@@ -2197,7 +2221,7 @@
         "day_index": 2,
         "start": "12:15",
         "end": "14:00",
-        "location": "WSoS, Rm  B"
+        "location": "WISsE, Rm  B"
       }
     ],
     "first_lecture": "22/10/2026",
@@ -2233,7 +2257,7 @@
         "day_index": 4,
         "start": "11:15",
         "end": "13:00",
-        "location": "WSoS, Rm A"
+        "location": "WISsE, Rm A"
       }
     ],
     "first_lecture": "11/03/2027",
@@ -2269,7 +2293,7 @@
         "day_index": 0,
         "start": "14:15",
         "end": "16:00",
-        "location": "WSoS, Rm C"
+        "location": "WISsE, Rm C"
       },
       {
         "type": "tutorial",
@@ -2277,7 +2301,7 @@
         "day_index": 4,
         "start": "12:15",
         "end": "14:00",
-        "location": "WSoS, Rm C"
+        "location": "WISsE, Rm C"
       }
     ],
     "first_lecture": "18/10/2026",
@@ -2314,7 +2338,7 @@
         "day_index": 1,
         "start": "09:15",
         "end": "12:00",
-        "location": "WSoS, Rm C"
+        "location": "WISsE, Rm C"
       }
     ],
     "first_lecture": "19/10/2026",
@@ -2351,7 +2375,7 @@
         "day_index": 2,
         "start": "09:15",
         "end": "12:00",
-        "location": "WSoS, Rm C"
+        "location": "WISsE, Rm C"
       }
     ],
     "first_lecture": "09/03/2027",
@@ -2608,7 +2632,7 @@
         "day_index": 2,
         "start": "10:00",
         "end": "13:00",
-        "location": "Neve Matz"
+        "location": "Accelerator"
       }
     ],
     "first_lecture": "20/10/2026",
@@ -2624,7 +2648,7 @@
       "Physical Sciences"
     ],
     "points": null,
-    "end_date": "01/12/2026",
+    "end_date": "08/12/2026",
     "course_code": "20278031",
     "syllabus": "Science Communication Presentation Skills  (course code20278031)\n• Developing effective scientific presentation skills\n• Identifying and minimizing the use of jargon and overly technical language\n• Tailoring scientific communication to diverse audiences, including experts and non-experts\n• Understanding paradigm gaps, recognizing cognitive biases, and building effective professional relationships through communication\n• Distilling complex research into clear, compelling key messages\n• Communicating effectively in presentations, lab meetings, seminars, conferences, and interdisciplinary collaborations\n• Applying storytelling techniques to enhance scientific communication\n• Strengthening body language and vocal delivery for greater impact\n• Practicing confident communication through improvisation exercises\n• Designing clear and engaging scientific presentations using PowerPoint and AI tools\n• Preparing for academic and industry job interviews\n• Communicating scientific research to policymakers and other non-scientific stakeholders\n• Individual feedback: Each participant will receive before-and-after video recordings to assess progress and communication development.",
     "learning_outcomes": "Upon successful completion of this course students should be able to:\n• Communicate scientific messages clearly and effectively to both expert and non-expert audiences\n• Deliver engaging and impactful scientific presentations\n• Speak with greater confidence in academic and professional settings\n• Apply storytelling techniques to strengthen presentations, research articles, posters, and other scientific communications\n• Developing communication and networking skills needed to build meaningful professional relationships with researchers worldwide",
@@ -2646,7 +2670,7 @@
         "day_index": 0,
         "start": "14:00",
         "end": "16:00",
-        "location": "WSoS, Rm 3"
+        "location": "WISsE, Rm 3"
       }
     ],
     "first_lecture": "13/06/2027",
@@ -2769,7 +2793,7 @@
         "day_index": 2,
         "start": "14:15",
         "end": "17:00",
-        "location": "WSoS, Rm C"
+        "location": "WISsE, Rm C"
       }
     ],
     "first_lecture": "20/10/2026",
@@ -2846,7 +2870,7 @@
         "day_index": 2,
         "start": "14:15",
         "end": "16:00",
-        "location": "WSoS, Rm 1"
+        "location": "WISsE, Rm 1"
       }
     ],
     "first_lecture": "09/03/2027",
@@ -2881,7 +2905,7 @@
         "day_index": 0,
         "start": "11:15",
         "end": "13:00",
-        "location": "WSoS, Rm A"
+        "location": "WISsE, Rm A"
       },
       {
         "type": "lecture",
@@ -2889,7 +2913,7 @@
         "day_index": 4,
         "start": "11:15",
         "end": "13:00",
-        "location": "WSoS, Rm  B"
+        "location": "WISsE, Rm  B"
       }
     ],
     "first_lecture": "07/03/2027",
@@ -2926,7 +2950,7 @@
         "day_index": 3,
         "start": "11:15",
         "end": "13:00",
-        "location": "WSoS, Rm 1"
+        "location": "WISsE, Rm 1"
       }
     ],
     "first_lecture": "10/03/2027",
@@ -2961,7 +2985,7 @@
         "day_index": 3,
         "start": "09:15",
         "end": "12:00",
-        "location": "WSoS, Rm 3"
+        "location": "WISsE, Rm 3"
       }
     ],
     "first_lecture": "21/10/2026",
@@ -2994,7 +3018,7 @@
         "day_index": 3,
         "start": "09:15",
         "end": "11:00",
-        "location": "WSoS, Rm  B"
+        "location": "WISsE, Rm  B"
       }
     ],
     "first_lecture": "10/03/2027",
@@ -3028,7 +3052,7 @@
         "day_index": 3,
         "start": "09:15",
         "end": "11:00",
-        "location": "WSoS, Rm 1"
+        "location": "WISsE, Rm A"
       }
     ],
     "first_lecture": "21/10/2026",
@@ -3208,7 +3232,7 @@
         "day_index": 0,
         "start": "11:15",
         "end": "13:00",
-        "location": "WSoS, Rm A"
+        "location": "WISsE, Rm A"
       }
     ],
     "first_lecture": "25/10/2026",
@@ -3268,7 +3292,7 @@
         "day_index": 0,
         "start": "10:15",
         "end": "11:45",
-        "location": "WSoS, Rm  B"
+        "location": "WISsE, Rm  B"
       }
     ],
     "first_lecture": "01/11/2026",
@@ -3456,7 +3480,7 @@
         "day_index": 2,
         "start": "12:15",
         "end": "14:00",
-        "location": "WSoS, Rm 1"
+        "location": "WISsE, Rm 1"
       }
     ],
     "first_lecture": "09/03/2027",
@@ -3523,7 +3547,7 @@
         "day_index": 2,
         "start": "09:15",
         "end": "11:00",
-        "location": "WSoS, Rm 1"
+        "location": "WISsE, Rm 1"
       }
     ],
     "first_lecture": "09/03/2027",
@@ -3609,6 +3633,46 @@
         "start": "14:15",
         "end": "16:00",
         "location": "Benoziyo Biochemistry Auditorium 191"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "WISsE, Rm 2"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "WISsE, Rm 3"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "Benoziyo, room 590c"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "Benoziyo, room 690"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "Stone, Zacks Meeting Rm"
       }
     ],
     "first_lecture": "19/10/2026",
@@ -3681,7 +3745,7 @@
         "day_index": 4,
         "start": "12:15",
         "end": "13:30",
-        "location": "WSoS, Rm 1"
+        "location": "WISsE, Rm 1"
       }
     ],
     "first_lecture": "11/03/2027",
@@ -3751,7 +3815,7 @@
         "day_index": 0,
         "start": "11:15",
         "end": "13:00",
-        "location": "WSoS, Rm C"
+        "location": "WISsE, Rm C"
       }
     ],
     "first_lecture": "07/03/2027",
@@ -3987,7 +4051,7 @@
         "day_index": 4,
         "start": "09:15",
         "end": "11:00",
-        "location": "WSoS, Rm C"
+        "location": "WISsE, Rm C"
       }
     ],
     "first_lecture": "11/03/2027",
@@ -4120,7 +4184,7 @@
         "day_index": 2,
         "start": "11:15",
         "end": "13:00",
-        "location": "WSoS, Rm  B"
+        "location": "WISsE, Rm  B"
       }
     ],
     "first_lecture": "09/03/2027",
@@ -4349,7 +4413,7 @@
         "day_index": 3,
         "start": "09:15",
         "end": "12:00",
-        "location": "WSoS, Rm C"
+        "location": "WISsE, Rm C"
       },
       {
         "type": "tutorial",
@@ -4357,7 +4421,7 @@
         "day_index": 2,
         "start": "13:15",
         "end": "14:00",
-        "location": "WSoS, Rm C"
+        "location": "WISsE, Rm C"
       }
     ],
     "first_lecture": "10/03/2027",
@@ -4385,7 +4449,8 @@
       "Prof. Ido Amit",
       "Prof. Ruth Scherz-Shouval",
       "Prof. Moshe Oren",
-      "Prof. Zvi Livneh"
+      "Prof. Zvi Livneh",
+      "Ms. Noa Aharoni"
     ],
     "semester": "1st",
     "sessions": [
@@ -4429,7 +4494,7 @@
         "day_index": 2,
         "start": "09:15",
         "end": "12:00",
-        "location": "WSoS, Rm A"
+        "location": "WISsE, Rm A"
       }
     ],
     "first_lecture": "20/10/2026",
@@ -4608,7 +4673,7 @@
         "day_index": 1,
         "start": "14:15",
         "end": "16:00",
-        "location": "WSoS, Rm 2"
+        "location": "WISsE, Rm 2"
       }
     ],
     "first_lecture": "08/03/2027",
@@ -4704,7 +4769,8 @@
     "lecturers": [
       "Prof. Yosef Yarden",
       "Prof. Rony Seger",
-      "Ms. Michal Mirela  Avineri Goldstein"
+      "Ms. Michal Mirela  Avineri Goldstein",
+      "Ms. Noa Aharoni"
     ],
     "semester": "1st",
     "sessions": [
@@ -4769,7 +4835,7 @@
         "day_index": 0,
         "start": "14:15",
         "end": "16:00",
-        "location": "WSoS, Rm C"
+        "location": "WISsE, Rm C"
       }
     ],
     "first_lecture": "07/03/2027",
@@ -4804,7 +4870,7 @@
         "day_index": 1,
         "start": "09:15",
         "end": "11:00",
-        "location": "WSoS, Rm C"
+        "location": "WISsE, Rm C"
       }
     ],
     "first_lecture": "08/03/2027",
@@ -4839,7 +4905,7 @@
         "day_index": 1,
         "start": "14:15",
         "end": "16:00",
-        "location": "WSoS, Rm C"
+        "location": "WISsE, Rm C"
       }
     ],
     "first_lecture": "08/03/2027",
@@ -4874,7 +4940,7 @@
         "day_index": 0,
         "start": "11:15",
         "end": "13:00",
-        "location": "WSoS, Rm 2"
+        "location": "WISsE, Rm 2"
       }
     ],
     "first_lecture": "18/10/2026",
@@ -4983,7 +5049,7 @@
         "day_index": 2,
         "start": "13:15",
         "end": "15:00",
-        "location": "WSoS, Rm 2"
+        "location": "WISsE, Rm 2"
       }
     ],
     "first_lecture": "09/03/2027",
@@ -5037,7 +5103,7 @@
         "day_index": 0,
         "start": "09:15",
         "end": "11:00",
-        "location": "WSoS, Rm A"
+        "location": "WISsE, Rm A"
       }
     ],
     "first_lecture": "07/03/2027",
@@ -5103,7 +5169,7 @@
         "day_index": 2,
         "start": "09:15",
         "end": "11:00",
-        "location": "WSoS, Rm 3"
+        "location": "WISsE, Rm 3"
       }
     ],
     "first_lecture": "09/03/2027",
@@ -5168,7 +5234,7 @@
         "day_index": 3,
         "start": "11:15",
         "end": "12:00",
-        "location": "WSoS, Rm 2"
+        "location": "WISsE, Rm 2"
       }
     ],
     "first_lecture": "10/03/2027",
@@ -5222,7 +5288,7 @@
         "day_index": 1,
         "start": "09:15",
         "end": "11:00",
-        "location": "WSoS, Rm 2"
+        "location": "WISsE, Rm 2"
       }
     ],
     "first_lecture": "19/10/2026",
@@ -5390,7 +5456,7 @@
         "day_index": 4,
         "start": "16:15",
         "end": "18:00",
-        "location": "WSoS, Rm 1"
+        "location": "WISsE, Rm 1"
       }
     ],
     "first_lecture": "22/10/2026",
@@ -5600,6 +5666,14 @@
         "start": "10:15",
         "end": "12:00",
         "location": "Jacob Ziskind Building, Rm 155"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "12:15",
+        "end": "13:00",
+        "location": "Jacob Ziskind Building Room 108"
       }
     ],
     "first_lecture": "11/03/2027",
@@ -5638,7 +5712,7 @@
         "day_index": 4,
         "start": "14:15",
         "end": "16:00",
-        "location": "WSoS, Rm C"
+        "location": "Goldsmith, Rm 108"
       }
     ],
     "first_lecture": "18/10/2026",
@@ -6129,7 +6203,15 @@
         "day_index": 3,
         "start": "13:15",
         "end": "15:00",
-        "location": null
+        "location": "Ziskind, Rm 1"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "12:15",
+        "end": "14:00",
+        "location": "Jacob Ziskind Building Room 108"
       }
     ],
     "first_lecture": "10/03/2027",
@@ -6811,7 +6893,7 @@
         "day_index": 1,
         "start": "12:00",
         "end": "13:15",
-        "location": "WSoS, Rm 3"
+        "location": "WISsE, Rm 3"
       }
     ],
     "first_lecture": "15/03/2027",
@@ -7183,7 +7265,7 @@
     "fields": [
       "Physical Sciences"
     ],
-    "points": 0,
+    "points": 1,
     "end_date": "23/06/2027",
     "course_code": "20271052",
     "syllabus": "The primary goal of the student seminar is to assist students in presenting research in the most coherent way and being tuned to the audience and their questions. The talk will preferably be on their own research work. However, the main focus would be on the presentation structure and appearance, content, timing, and speech. The course will start with an introductory lecture and continue with a series of lectures from the participating students, followed by discussions.",
@@ -7511,7 +7593,9 @@
     "year": 2027,
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15820&pprev=15313",
     "fields": [
-      "Science Teaching"
+      "Science Teaching",
+      "Life Sciences",
+      "Life Sciences (Scientific Archeology Track)"
     ],
     "points": 2,
     "end_date": "14/01/2027",
@@ -7569,7 +7653,7 @@
         "day_index": 2,
         "start": "16:00",
         "end": "18:30",
-        "location": "WSoS, Rm 1"
+        "location": "WISsE, Rm 1"
       }
     ],
     "first_lecture": "06/10/2026",
@@ -7602,7 +7686,7 @@
         "day_index": 4,
         "start": "11:00",
         "end": "14:00",
-        "location": "WSoS, Rm 2"
+        "location": "WISsE, Rm 2"
       }
     ],
     "first_lecture": "22/10/2026",
@@ -7785,7 +7869,7 @@
         "day_index": 2,
         "start": "13:00",
         "end": "16:00",
-        "location": "WSoS, Rm A"
+        "location": "WISsE, Rm A"
       }
     ],
     "first_lecture": "08/12/2026",
@@ -7903,8 +7987,7 @@
     "title": "Biology module: environmental biology",
     "offered_by": "Science Teaching for Teachers",
     "lecturers": [
-      "Prof. Tamir Klein",
-      "Prof. Orit Ben- Zvi Assaraf"
+      "Prof. Tamir Klein"
     ],
     "semester": "1st",
     "sessions": [
@@ -7985,7 +8068,7 @@
         "day_index": 2,
         "start": "15:00",
         "end": "18:05",
-        "location": "WSoS, Rm 2"
+        "location": "WISsE, Rm 2"
       }
     ],
     "first_lecture": "09/02/2027",
@@ -8043,7 +8126,7 @@
         "day_index": 2,
         "start": "15:00",
         "end": "17:30",
-        "location": "WSoS, Rm A"
+        "location": "WISsE, Rm A"
       }
     ],
     "first_lecture": "06/10/2026",
@@ -8417,7 +8500,7 @@
         "day_index": 2,
         "start": "17:00",
         "end": "18:30",
-        "location": "WSoS, Rm C"
+        "location": "WISsE, Rm C"
       }
     ],
     "first_lecture": "09/02/2027",
@@ -8525,7 +8608,7 @@
         "day_index": 2,
         "start": "14:00",
         "end": "16:00",
-        "location": "WSoS, Rm  B"
+        "location": "WISsE, Rm  B"
       }
     ],
     "first_lecture": "09/02/2027",
@@ -8557,7 +8640,7 @@
         "day_index": 2,
         "start": "09:15",
         "end": "12:00",
-        "location": "WSoS, Rm 2"
+        "location": "WISsE, Rm 2"
       }
     ],
     "first_lecture": "06/10/2026",
@@ -8589,7 +8672,7 @@
         "day_index": 2,
         "start": "11:00",
         "end": "13:00",
-        "location": "WSoS, Rm 2"
+        "location": "WISsE, Rm 2"
       }
     ],
     "first_lecture": "09/02/2027",
@@ -8621,7 +8704,7 @@
         "day_index": 2,
         "start": "16:00",
         "end": "18:00",
-        "location": "WSoS, Rm 3"
+        "location": "WISsE, Rm 3"
       }
     ],
     "first_lecture": "08/12/2026",
@@ -8653,7 +8736,7 @@
         "day_index": 2,
         "start": "09:15",
         "end": "11:00",
-        "location": "WSoS, Rm 2"
+        "location": "WISsE, Rm 2"
       }
     ],
     "first_lecture": "09/02/2027",
@@ -8685,7 +8768,7 @@
         "day_index": 2,
         "start": "13:00",
         "end": "16:00",
-        "location": "WSoS, Rm 3"
+        "location": "WISsE, Rm 3"
       }
     ],
     "first_lecture": "06/10/2026",
@@ -8973,7 +9056,7 @@
         "day_index": 2,
         "start": "15:45",
         "end": "17:15",
-        "location": "WSoS, Rm  B"
+        "location": "WISsE, Rm  B"
       }
     ],
     "first_lecture": "06/10/2026",
@@ -45154,7 +45237,7 @@
         "day_index": 3,
         "start": "10:15",
         "end": "12:00",
-        "location": "WSoS, Rm 3"
+        "location": "WISsE, Rm 3"
       }
     ],
     "first_lecture": "10/03/2027",
@@ -45289,7 +45372,7 @@
         "day_index": 2,
         "start": "09:15",
         "end": "11:00",
-        "location": "WSoS, Rm A"
+        "location": "WISsE, Rm A"
       },
       {
         "type": "tutorial",
@@ -45297,7 +45380,7 @@
         "day_index": 4,
         "start": "13:15",
         "end": "14:00",
-        "location": "WSoS, Rm A"
+        "location": "WISsE, Rm A"
       }
     ],
     "first_lecture": "09/03/2027",
@@ -45381,7 +45464,7 @@
         "day_index": 2,
         "start": "12:15",
         "end": "14:00",
-        "location": "WSoS, Rm 1"
+        "location": "WISsE, Rm 1"
       }
     ],
     "first_lecture": "20/10/2026",
@@ -45606,21 +45689,326 @@
     "sessions": [
       {
         "type": "lecture",
-        "day_name": "Tuesday",
-        "day_index": 2,
-        "start": "11:15",
-        "end": "13:00",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "13:15",
+        "end": "15:00",
         "location": "Jacob Ziskind Building, Rm 155"
       }
     ],
-    "first_lecture": "20/10/2026",
+    "first_lecture": "22/10/2026",
     "year": 2027,
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16070&pprev=14201",
     "fields": [
       "Mathematics and Computer Science"
     ],
     "points": 2,
-    "end_date": "12/01/2027",
+    "end_date": "14/01/2027",
     "course_code": "20274281"
+  },
+  {
+    "course_id": "16078",
+    "group_id": "0",
+    "title": "Weizmann Athletics - Competitive Beach Volleyball Team",
+    "offered_by": null,
+    "lecturers": [],
+    "semester": "Full Year",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Friday",
+        "day_index": 5,
+        "start": "08:30",
+        "end": "10:00",
+        "location": "Hof Hagolshim, Rishon LeZion"
+      }
+    ],
+    "first_lecture": "23/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16078&pprev=0",
+    "fields": [
+      "Chemical Sciences",
+      "Life Sciences",
+      "Life Sciences (Scientific Archeology Track)",
+      "Mathematics and Computer Science",
+      "Obligatory instruction courses or enrichment courses",
+      "Physical Sciences",
+      "Science Teaching"
+    ],
+    "points": 1,
+    "end_date": "18/06/2027",
+    "course_code": "20278043"
+  },
+  {
+    "course_id": "16083",
+    "group_id": "0",
+    "title": "Weizmann Athletics - Competitive Orienteering Team",
+    "offered_by": null,
+    "lecturers": [],
+    "semester": "Full Year",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Wednesday",
+        "day_index": 3,
+        "start": "18:30",
+        "end": "19:30",
+        "location": null
+      }
+    ],
+    "first_lecture": "28/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16083&pprev=0",
+    "fields": [
+      "Chemical Sciences",
+      "Life Sciences",
+      "Life Sciences (Scientific Archeology Track)",
+      "Mathematics and Computer Science",
+      "Obligatory instruction courses or enrichment courses",
+      "Physical Sciences",
+      "Science Teaching"
+    ],
+    "points": 1,
+    "end_date": "23/06/2027",
+    "course_code": "20278093"
+  },
+  {
+    "course_id": "16082",
+    "group_id": "0",
+    "title": "Weizmann Athletics - Competitive Running Team",
+    "offered_by": null,
+    "lecturers": [],
+    "semester": "Full Year",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Wednesday",
+        "day_index": 3,
+        "start": "18:30",
+        "end": "19:30",
+        "location": null
+      }
+    ],
+    "first_lecture": "21/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16082&pprev=0",
+    "fields": [
+      "Chemical Sciences",
+      "Life Sciences",
+      "Life Sciences (Scientific Archeology Track)",
+      "Mathematics and Computer Science",
+      "Obligatory instruction courses or enrichment courses",
+      "Physical Sciences",
+      "Science Teaching"
+    ],
+    "points": 1,
+    "end_date": "23/06/2027",
+    "course_code": "20278083"
+  },
+  {
+    "course_id": "16077",
+    "group_id": "0",
+    "title": "Weizmann Athletics - Competitive Swimming Team",
+    "offered_by": null,
+    "lecturers": [],
+    "semester": "Full Year",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Sunday",
+        "day_index": 0,
+        "start": "21:00",
+        "end": "22:00",
+        "location": "Weizmann Recreation Center"
+      },
+      {
+        "type": "lecture",
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "21:00",
+        "end": "22:00",
+        "location": "Weizmann Recreation Center"
+      }
+    ],
+    "first_lecture": "25/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16077&pprev=0",
+    "fields": [
+      "Chemical Sciences",
+      "Life Sciences",
+      "Life Sciences (Scientific Archeology Track)",
+      "Mathematics and Computer Science",
+      "Obligatory instruction courses or enrichment courses",
+      "Physical Sciences",
+      "Science Teaching"
+    ],
+    "points": 1,
+    "end_date": "20/06/2027",
+    "course_code": "20278033"
+  },
+  {
+    "course_id": "16080",
+    "group_id": "0",
+    "title": "Weizmann Athletics - Competitive Table Tennis Team",
+    "offered_by": null,
+    "lecturers": [],
+    "semester": "Full Year",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "18:30",
+        "end": "20:00",
+        "location": "Maccabi Rehovot Club, Bechor Levy School"
+      },
+      {
+        "type": "lecture",
+        "day_name": "Wednesday",
+        "day_index": 3,
+        "start": "20:00",
+        "end": "21:30",
+        "location": "Maccabi Rehovot Club, Bechor Levy School"
+      }
+    ],
+    "first_lecture": "28/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16080&pprev=0",
+    "fields": [
+      "Chemical Sciences",
+      "Life Sciences",
+      "Life Sciences (Scientific Archeology Track)",
+      "Mathematics and Computer Science",
+      "Obligatory instruction courses or enrichment courses",
+      "Physical Sciences",
+      "Science Teaching"
+    ],
+    "points": 1,
+    "end_date": "23/06/2027",
+    "course_code": "20278063"
+  },
+  {
+    "course_id": "16081",
+    "group_id": "0",
+    "title": "Weizmann Athletics - Competitive Tennis Team",
+    "offered_by": null,
+    "lecturers": [],
+    "semester": "Full Year",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "08:00",
+        "end": "09:00",
+        "location": "Weizmann Recreation Center"
+      }
+    ],
+    "first_lecture": "19/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16081&pprev=0",
+    "fields": [
+      "Chemical Sciences",
+      "Life Sciences",
+      "Life Sciences (Scientific Archeology Track)",
+      "Mathematics and Computer Science",
+      "Obligatory instruction courses or enrichment courses",
+      "Physical Sciences",
+      "Science Teaching"
+    ],
+    "points": 1,
+    "end_date": "21/06/2027",
+    "course_code": "20278073"
+  },
+  {
+    "course_id": "16079",
+    "group_id": "0",
+    "title": "Weizmann Athletics - Competitive Ultimate Frisbee Team",
+    "offered_by": null,
+    "lecturers": [],
+    "semester": "Full Year",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "17:30",
+        "end": "19:00",
+        "location": "Solar Tower"
+      }
+    ],
+    "first_lecture": "19/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16079&pprev=0",
+    "fields": [
+      "Chemical Sciences",
+      "Life Sciences",
+      "Life Sciences (Scientific Archeology Track)",
+      "Mathematics and Computer Science",
+      "Obligatory instruction courses or enrichment courses",
+      "Physical Sciences",
+      "Science Teaching"
+    ],
+    "points": 1,
+    "end_date": "21/06/2027",
+    "course_code": "20278053"
+  },
+  {
+    "course_id": "16086",
+    "group_id": "0",
+    "title": "Property Testing and Sublinear Algorithms",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Prof. Dana  Ron-Goldreich"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Wednesday",
+        "day_index": 3,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "Ziskind, Rm 1"
+      }
+    ],
+    "first_lecture": "21/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16086&pprev=0",
+    "fields": [
+      "Mathematics and Computer Science"
+    ],
+    "points": 2,
+    "end_date": "13/01/2027",
+    "course_code": "20274301"
+  },
+  {
+    "course_id": "16071",
+    "group_id": "13374",
+    "title": "Reading course on Ergodic Theory",
+    "offered_by": "Mathematics and Computer Science",
+    "lecturers": [
+      "Prof. Omri Sarig"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "16:15",
+        "end": "18:15",
+        "location": "Jacob Ziskind Building, Rm 155"
+      }
+    ],
+    "first_lecture": "22/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16071&pprev=13374",
+    "fields": [
+      "Mathematics and Computer Science"
+    ],
+    "points": 2,
+    "end_date": "14/01/2027",
+    "course_code": "20274291"
   }
 ]

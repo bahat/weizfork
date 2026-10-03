@@ -414,5 +414,849 @@
         ]
       }
     ]
+  },
+  {
+    "timestamp": "2026-10-03T08:08:48Z",
+    "added": [
+      {
+        "key": "16071-13374",
+        "course_code": "20274291",
+        "title": "Reading course on Ergodic Theory"
+      },
+      {
+        "key": "16077-0",
+        "course_code": "20278033",
+        "title": "Weizmann Athletics - Competitive Swimming Team"
+      },
+      {
+        "key": "16078-0",
+        "course_code": "20278043",
+        "title": "Weizmann Athletics - Competitive Beach Volleyball Team"
+      },
+      {
+        "key": "16079-0",
+        "course_code": "20278053",
+        "title": "Weizmann Athletics - Competitive Ultimate Frisbee Team"
+      },
+      {
+        "key": "16080-0",
+        "course_code": "20278063",
+        "title": "Weizmann Athletics - Competitive Table Tennis Team"
+      },
+      {
+        "key": "16081-0",
+        "course_code": "20278073",
+        "title": "Weizmann Athletics - Competitive Tennis Team"
+      },
+      {
+        "key": "16082-0",
+        "course_code": "20278083",
+        "title": "Weizmann Athletics - Competitive Running Team"
+      },
+      {
+        "key": "16083-0",
+        "course_code": "20278093",
+        "title": "Weizmann Athletics - Competitive Orienteering Team"
+      },
+      {
+        "key": "16086-0",
+        "course_code": "20274301",
+        "title": "Property Testing and Sublinear Algorithms"
+      }
+    ],
+    "removed": [],
+    "changed": [
+      {
+        "key": "15746-15652",
+        "course_code": "20271011",
+        "title": "Statistical physics 1",
+        "fields": [
+          "title"
+        ]
+      },
+      {
+        "key": "15747-15593",
+        "course_code": "20271021",
+        "title": "Quantum mechanics 1",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15757-15442",
+        "course_code": "20272011",
+        "title": "Guided reading course in single-molecule biophysics",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15758-15229",
+        "course_code": "20272181",
+        "title": "Statistical Thermodynamics",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15759-15228",
+        "course_code": "20272022",
+        "title": "Solid State Physics for chemists",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15760-0",
+        "course_code": "20272042",
+        "title": "Imaging Brain Function and Biophysics",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15762-15443",
+        "course_code": "20272052",
+        "title": "Differential Equations for Chemists",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15763-15216",
+        "course_code": "20272021",
+        "title": "Practical Hands-on NMR",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15764-15444",
+        "course_code": "20272031",
+        "title": "Linear Algebra for Chemists",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15765-15204",
+        "course_code": "20272041",
+        "title": "Atmospheric and Oceanic Fluid Dynamics",
+        "fields": [
+          "end_date",
+          "sessions"
+        ]
+      },
+      {
+        "key": "15766-15223",
+        "course_code": "20272062",
+        "title": "Isotope Geochemistry",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15767-0",
+        "course_code": "20272072",
+        "title": "Data Science and AI for Earth Studies",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15768-15214",
+        "course_code": "20272051",
+        "title": "Introduction to Mathematical Methods for Modeling and Data Analysis",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15769-15220",
+        "course_code": "20272082",
+        "title": "Advanced topics in mid-latitude dynamics",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15771-15439",
+        "course_code": "20272092",
+        "title": "Protein Structure and Function 2",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15772-15205",
+        "course_code": "20272071",
+        "title": "Basic methods in biology for non biologists",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15773-15390",
+        "course_code": "20272081",
+        "title": "Exploring Topics in Protein-Nucleic Acid Interactions: From Binding Specificity to Cellular Roles.",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15774-15581",
+        "course_code": "20272091",
+        "title": "Scientific writing",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15775-15582",
+        "course_code": "20272101",
+        "title": "Quantum Mechanics",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15776-15222",
+        "course_code": "20272172",
+        "title": "Critical Assessment of Energy, Sustainability & Climate change (CAESC) \nLearn to use your academic training to distinguish facts from factoids",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15777-15585",
+        "course_code": "20272121",
+        "title": "Guided Reading Course in Nanomaterials",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15778-15586",
+        "course_code": "20272131",
+        "title": "Chemistry of Elements",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15779-2279",
+        "course_code": "20272102",
+        "title": "Introduction to Materials Science",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15780-15583",
+        "course_code": "20272141",
+        "title": "General chemistry",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15783-0",
+        "course_code": "20272132",
+        "title": "Nucleic Acids: From Molecular Principles to Function and Applications",
+        "fields": [
+          "points",
+          "sessions"
+        ]
+      },
+      {
+        "key": "15784-0",
+        "course_code": "20272142",
+        "title": "Name reactions in Organic Chemistry",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15786-14796",
+        "course_code": "20272162",
+        "title": "Organometallic chemistry",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15787-15588",
+        "course_code": "20272182",
+        "title": "Introduction to Electrochemistry",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15788-0",
+        "course_code": "20272161",
+        "title": "Analytical Tools for Surface Science",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15790-15531",
+        "course_code": "20273012",
+        "title": "Cancer evolution: from mechanisms to treatment",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15792-15623",
+        "course_code": "20273211",
+        "title": "Philosophy and History of Microbiology",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15793-15622",
+        "course_code": "20273032",
+        "title": "Philosophy of science",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15794-15723",
+        "course_code": "20273042",
+        "title": "Stem cells and tissues disease",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15801-15528",
+        "course_code": "20273053",
+        "title": "MSc seminars - Brain Sciences",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15806-15463",
+        "course_code": "20273072",
+        "title": "Light Microscopy for Biology",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15807-15464",
+        "course_code": "20273051",
+        "title": "An Overview of Molecular Cell Biology- adapted for young in biology",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15814-15419",
+        "course_code": "20276011",
+        "title": "Mathematics module: Introduction to mathematics education",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15820-15313",
+        "course_code": "20275031",
+        "title": "Thinking About Causality: From Philosophy of Science to Psychology and Education",
+        "fields": [
+          "fields"
+        ]
+      },
+      {
+        "key": "15824-15311",
+        "course_code": "20275063",
+        "title": "Didactics of Biology",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15833-15703",
+        "course_code": "20274031",
+        "title": "Algebraic topology",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15839-15243",
+        "course_code": "20273462",
+        "title": "The interaction between the immune system and the environment: seminars in immunology",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15849-15554",
+        "course_code": "20273091",
+        "title": "Scientific writing life sciences(PhD students)",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15850-15556",
+        "course_code": "20273102",
+        "title": "Scientific writing  life sciences(MSc students)",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15851-15555",
+        "course_code": "20273112",
+        "title": "Scientific writing  life sciences(MSc students)",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15852-15557",
+        "course_code": "20273122",
+        "title": "Scientific writing  life sciences(MSc students)",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15853-15559",
+        "course_code": "20273132",
+        "title": "Statistical analysis of research data using R",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15854-15539",
+        "course_code": "20273101",
+        "title": "Circadian Clocks: Exploring Nature's Timekeepers",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15856-15621",
+        "course_code": "20273142",
+        "title": "History and Philosophy, Intelligence and Computing",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15859-15106",
+        "course_code": "20273162",
+        "title": "Introduction to Neuroscience: Molecular Neuroscience - Genes to Behavior",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15862-15638",
+        "course_code": "20272171",
+        "title": "Research presentations",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15864-15474",
+        "course_code": "20273121",
+        "title": "Biology of Mitochondria and Bioenergetics",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15866-15473",
+        "course_code": "20273172",
+        "title": "Biology of Metabolism in health and disease",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15873-15513",
+        "course_code": "20273182",
+        "title": "Frontiers of Molecular Membrane Biology",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15874-15624",
+        "course_code": "20273192",
+        "title": "Bioinformatics",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15876-15529",
+        "course_code": "20273141",
+        "title": "Neuroanatomy",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15877-15545",
+        "course_code": "20273202",
+        "title": "Animal Models of CNS Diseases",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15893-15261",
+        "course_code": "20276031",
+        "title": "Biology module: environmental biology",
+        "fields": [
+          "lecturers"
+        ]
+      },
+      {
+        "key": "15896-15749",
+        "course_code": "20273181",
+        "title": "Trace Elements in Biology: From biochemistry to cellular Mechanisms and physiology",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15897-15610",
+        "course_code": "20273252",
+        "title": "High Impact Scientific Writing",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15899-15503",
+        "course_code": "20276032",
+        "title": "Biology module: Final project in biology education",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15901-15502",
+        "course_code": "20276041",
+        "title": "Biology module: Implementing Assessment",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15906-15479",
+        "course_code": "20273191",
+        "title": "Discovery Milestones in Cell Biology",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15915-15546",
+        "course_code": "20273221",
+        "title": "Principles and practice of large scale data analysis using R",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15916-15468",
+        "course_code": "20273231",
+        "title": "Programming in Python using AI",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15918-15517",
+        "course_code": "20273241",
+        "title": "Introduction to Matlab and data analysis",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15919-15740",
+        "course_code": "20273332",
+        "title": "Introduction to Matlab and data analysis",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15921-15639",
+        "course_code": "20271042",
+        "title": "Quantum field theory 1",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15922-15469",
+        "course_code": "20273342",
+        "title": "Programming in Python using AI",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15924-15649",
+        "course_code": "20271052",
+        "title": "Student seminar",
+        "fields": [
+          "points"
+        ]
+      },
+      {
+        "key": "15926-15111",
+        "course_code": "20273352",
+        "title": "Models and data analysis in neuroscience",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15932-15306",
+        "course_code": "20276071",
+        "title": "Mathematics module: Problem solving in mathematics part B",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15933-15303",
+        "course_code": "20276081",
+        "title": "Mathematics Module:Geometry",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15934-15043",
+        "course_code": "20273271",
+        "title": "Molecular and Cellular Bases of Cancer: Mutations, the Microenvironment, Immunology and Therapies",
+        "fields": [
+          "lecturers"
+        ]
+      },
+      {
+        "key": "15938-15308",
+        "course_code": "20276121",
+        "title": "Mathematics module: Research in teaching and learning geometry",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15939-15461",
+        "course_code": "20276013",
+        "title": "Mathematics module: Seminar in mathematics instruction for 1st year students",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15941-15310",
+        "course_code": "20276062",
+        "title": "Mathematics module: Statistics and probability",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15942-15307",
+        "course_code": "20276072",
+        "title": "Mathematics module: Programming in the service of Mathematics",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15943-15305",
+        "course_code": "20276082",
+        "title": "Mathematics module: Mathematics for All",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15945-15524",
+        "course_code": "20276092",
+        "title": "General module: AI in science education",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15951-15428",
+        "course_code": "20276191",
+        "title": "Physics module: Topics in astrophysics",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15958-0",
+        "course_code": "20273402",
+        "title": "Extracellular Matrix Biology: Structure, Remodeling, and Function in Health and Disease",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15962-15191",
+        "course_code": "20271072",
+        "title": "Statistics, Algorithms and Experimental design",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15963-15645",
+        "course_code": "20271071",
+        "title": "Experimental projects",
+        "fields": [
+          "lecturers",
+          "points",
+          "sessions"
+        ]
+      },
+      {
+        "key": "15965-15627",
+        "course_code": "20271081",
+        "title": "Hands on astronomy",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15991-0",
+        "course_code": "20271221",
+        "title": "Principles and Applications of Nanofabrication",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15995-15186",
+        "course_code": "20271181",
+        "title": "Experimental methods in AMO physics",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15998-0",
+        "course_code": "20273422",
+        "title": "The Hallmarks of Cancer",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15999-0",
+        "course_code": "20273291",
+        "title": "Evolutionary conservation of molecular systems",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "16003-15451",
+        "course_code": "20273442",
+        "title": "3D Printing in Biomedical Research",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "16009-15576",
+        "course_code": "20274172",
+        "title": "Introduction to Lie algebras",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "16010-0",
+        "course_code": "20273341",
+        "title": "Hands-on Data Analysis and Statistics for the Life Sciences",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "16032-15728",
+        "course_code": "20278012",
+        "title": "Navigating Academia: Science, Identity, and Practical Tools for First-Generation Student",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "16033-0",
+        "course_code": "20278031",
+        "title": "Science Communication Presentation Skills",
+        "fields": [
+          "end_date",
+          "sessions"
+        ]
+      },
+      {
+        "key": "16041-15315",
+        "course_code": "20273532",
+        "title": "Raising and killing the messengers: The post-transcriptional fate of mRNAs and other long RNAs",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "16045-15026",
+        "course_code": "20274142",
+        "title": "Advanced Algebraic Topology",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "16049-15745",
+        "course_code": "20273431",
+        "title": "Recent Breakthroughs in Cancer Research",
+        "fields": [
+          "lecturers"
+        ]
+      },
+      {
+        "key": "16067-0",
+        "course_code": "20273552",
+        "title": "Scientific \"soft Skills\"",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "16070-14201",
+        "course_code": "20274281",
+        "title": "Fine-Grained Complexity",
+        "fields": [
+          "end_date",
+          "first_lecture",
+          "sessions"
+        ]
+      }
+    ]
   }
 ]

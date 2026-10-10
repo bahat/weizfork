@@ -329,7 +329,7 @@
         "day_index": 1,
         "start": "09:15",
         "end": "11:00",
-        "location": "WISsE, Rm 1"
+        "location": "Science Teaching Lab 2"
       }
     ],
     "first_lecture": "19/10/2026",
@@ -350,7 +350,8 @@
     "title": "General chemistry",
     "offered_by": "Chemical Sciences",
     "lecturers": [
-      "Dr. Sergey Semenov"
+      "Dr. Sergey Semenov",
+      "Mr. Yarden Daniel"
     ],
     "semester": "1st",
     "sessions": [
@@ -361,6 +362,14 @@
         "start": "11:15",
         "end": "13:00",
         "location": "WISsE, Rm 3"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "11:15",
+        "end": "13:00",
+        "location": "WISsE, Rm 2"
       }
     ],
     "first_lecture": "20/10/2026",
@@ -842,7 +851,7 @@
     "offered_by": "Chemical Sciences",
     "lecturers": [
       "Prof. Deborah Fass",
-      "Dr. Ofrah Faust"
+      "Dr. Ofrah Nadya Faust"
     ],
     "semester": "2nd",
     "sessions": [
@@ -2160,7 +2169,7 @@
     "title": "Introduction to Matlab and data analysis",
     "offered_by": "Life Sciences",
     "lecturers": [
-      "Dr. Natalie Kronik"
+      "Dr. Natalie Kalev-Kronik"
     ],
     "semester": "2nd",
     "sessions": [
@@ -2203,7 +2212,7 @@
     "title": "Introduction to Matlab and data analysis",
     "offered_by": "Life Sciences",
     "lecturers": [
-      "Dr. Natalie Kronik"
+      "Dr. Natalie Kalev-Kronik"
     ],
     "semester": "1st",
     "sessions": [
@@ -2491,7 +2500,8 @@
       "Life Sciences",
       "Life Sciences (Computational and Systems Biology Track)",
       "Life Sciences (Scientific Archeology Track)",
-      "Mathematics and Computer Science (Systems Biology / Bioinformatics)"
+      "Mathematics and Computer Science (Systems Biology / Bioinformatics)",
+      "Science Teaching"
     ],
     "points": 2,
     "end_date": "11/01/2027",
@@ -3504,7 +3514,7 @@
     "offered_by": "Life Sciences",
     "lecturers": [
       "Prof. Tamir Klein",
-      "Dr. Rakefet David-Schwartz"
+      "Dr. Rakefet David"
     ],
     "semester": "2nd",
     "sessions": [
@@ -3640,6 +3650,14 @@
         "day_index": 1,
         "start": "14:15",
         "end": "16:00",
+        "location": "WISsE, Rm A"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "14:15",
+        "end": "16:00",
         "location": "WISsE, Rm 2"
       },
       {
@@ -3656,7 +3674,15 @@
         "day_index": 1,
         "start": "14:15",
         "end": "16:00",
-        "location": "Benoziyo, room 590c"
+        "location": "Science Teaching Lab 2"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "Benoziyo room 591C"
       },
       {
         "type": "tutorial",
@@ -3673,6 +3699,14 @@
         "start": "14:15",
         "end": "16:00",
         "location": "Stone, Zacks Meeting Rm"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "De Picciotto, Room 134"
       }
     ],
     "first_lecture": "19/10/2026",
@@ -3711,6 +3745,30 @@
         "start": "09:15",
         "end": "11:00",
         "location": "Benoziyo Biochemistry Auditorium 191"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "Science Teaching Lab 2"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "Science Teaching Lab 1"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "De Picciotto, Room 134"
       }
     ],
     "first_lecture": "08/03/2027",
@@ -3824,7 +3882,8 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)",
-      "Life Sciences (Scientific Archeology Track)"
+      "Life Sciences (Scientific Archeology Track)",
+      "Science Teaching"
     ],
     "points": 2,
     "end_date": "27/06/2027",
@@ -4383,7 +4442,7 @@
         "location": null
       }
     ],
-    "first_lecture": "19/10/2026",
+    "first_lecture": "07/12/2026",
     "year": 2027,
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15799&pprev=15527",
     "fields": [
@@ -4391,7 +4450,7 @@
       "Life Sciences (Scientific Archeology Track)"
     ],
     "points": 1,
-    "end_date": "11/01/2027",
+    "end_date": "04/01/2027",
     "course_code": "20273021",
     "syllabus": "The absence of formal training in surgical principles can lead to a lack of understanding of the equal significance of both technically correct surgery and pre- and post-operative care of animals. Consideration of both the surgery itself and the peri-operative care of animals will result in an increase in animal welfare and the quality of data obtained from the surgical model. For example, subclinical post-surgical infection can confound results, as can changes in behavior and physiology seen with pain. This course will help to build a strong foundation of knowledge and skill in rodent surgery and allow to train on simple procedures. We will learn about rodent surgery best practice, pre-and postoperative care, ondemand surgical techniques, and animal welfare in the surgical setting Topics\nTheoretical: 1. Principles of Surgical Asepsis 2. Surgical Instrumentation, Care and Handling of Surgical Equipment 3. Biomaterials, glues, clips, suture materials and Suture Patterns 4. Preoperative, Intraoperative and postoperative Care 5. Preparation of the Operative Site 6. Wounds and basic principles of wound management, and bleeding control 7. Principles of Anesthesia and analgesia under experimental constraints 8. Surgical Infections and Antibiotic Selection (experimental limitations) 9. Model specific topographic anatomy\nPractical: Hands-on training based on attendees needs and tips and tricks for the techniques of interest Basic non surgical procedures (intubation, gavage, iv injection, blood collection, intra-articular injections, intrathecal injection) Surgical procedures, examples: intra-cranial injection, Head post implantation, transplantation under the kidney capsule, nephrectomy, splenectomy, catheterization CSF collection,  Orthotopic transplantation models: pancreas, mammary fat pad, prostate",
     "learning_outcomes": "proficiency in aseptic technique, anesthesia, analgesia, and performance of the chosen surgical procedures."
@@ -4693,7 +4752,7 @@
   {
     "course_id": "15909",
     "group_id": "15549",
-    "title": "Real-Time and Digital PCR for the Detection of Low-Copy-Number Targets According to MIQE Guidelines",
+    "title": "Real-Time PCR and beyond for Detection of Low-Copy-Number Targets According to MIQE Guidelines",
     "offered_by": "Life Sciences",
     "lecturers": [
       "Dr. Dan Michael",
@@ -5007,7 +5066,7 @@
       "Dr. Tomer Meir Salame",
       "Dr. Herbert Uwe Heinig",
       "Ms. Ofra Golani",
-      "Dr. Liat Fellus Alyagor",
+      "Dr. Liat Alyagor",
       "Dr. Avital Sarusi- Portuguez",
       "Dr. Bareket Dassa",
       "Ms. Merav  Kedmi",
@@ -6965,7 +7024,7 @@
     "fields": [
       "Physical Sciences"
     ],
-    "points": 2,
+    "points": 1,
     "end_date": "23/06/2027",
     "course_code": "20271152",
     "syllabus": "Hierarchy Problem\nSolutions to naturalness\nEFT\nSUSY\nRS\naxion/relaxion",
@@ -7133,7 +7192,7 @@
     ],
     "semester": "1st",
     "sessions": [],
-    "first_lecture": "13/10/2026",
+    "first_lecture": "11/10/2026",
     "year": 2027,
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15855&pprev=15679",
     "fields": [
@@ -7575,7 +7634,6 @@
     "offered_by": "Science Teaching",
     "lecturers": [
       "Dr. Michal Haskel Ittah",
-      "Dr. Moriah Ariely",
       "Prof. Mordechai Ben-Ari"
     ],
     "semester": "1st",
@@ -7643,7 +7701,7 @@
     "offered_by": "Science Teaching for Teachers",
     "lecturers": [
       "Dr. Jason Cooper",
-      "Dr. Soryna  Sabbah"
+      "Dr. Sorina  Sabbah"
     ],
     "semester": "1st",
     "sessions": [
@@ -7869,7 +7927,7 @@
         "day_index": 2,
         "start": "13:00",
         "end": "16:00",
-        "location": "WISsE, Rm A"
+        "location": "Mausher, Conference Room"
       }
     ],
     "first_lecture": "08/12/2026",
@@ -8126,7 +8184,7 @@
         "day_index": 2,
         "start": "15:00",
         "end": "17:30",
-        "location": "WISsE, Rm A"
+        "location": "WISsE, Rm 3"
       }
     ],
     "first_lecture": "06/10/2026",
@@ -8577,7 +8635,7 @@
         "day_index": 2,
         "start": "16:00",
         "end": "18:00",
-        "location": null
+        "location": "Mausher, Conference Room"
       }
     ],
     "first_lecture": "06/10/2026",
@@ -8640,7 +8698,7 @@
         "day_index": 2,
         "start": "09:15",
         "end": "12:00",
-        "location": "WISsE, Rm 2"
+        "location": "Mausher, Conference Room"
       }
     ],
     "first_lecture": "06/10/2026",
@@ -8704,7 +8762,7 @@
         "day_index": 2,
         "start": "16:00",
         "end": "18:00",
-        "location": "WISsE, Rm 3"
+        "location": null
       }
     ],
     "first_lecture": "08/12/2026",
@@ -8768,7 +8826,7 @@
         "day_index": 2,
         "start": "13:00",
         "end": "16:00",
-        "location": "WISsE, Rm 3"
+        "location": null
       }
     ],
     "first_lecture": "06/10/2026",
@@ -8854,7 +8912,8 @@
     "title": "Physics module: Final project in physics education 2nd year",
     "offered_by": "Science Teaching for Teachers",
     "lecturers": [
-      "Prof. Yaron Lehavi"
+      "Prof. Yaron Lehavi",
+      "Dr. Dan Klein"
     ],
     "semester": "1st",
     "sessions": [
@@ -45517,7 +45576,7 @@
         "day_index": 1,
         "start": "11:15",
         "end": "13:00",
-        "location": "Weissman, Seminar Rm B"
+        "location": "Submicron Meeting Room, Physics"
       },
       {
         "type": "lecture",
@@ -45693,7 +45752,7 @@
         "day_index": 4,
         "start": "13:15",
         "end": "15:00",
-        "location": "Jacob Ziskind Building, Rm 155"
+        "location": "Ziskind, Rm 1"
       }
     ],
     "first_lecture": "22/10/2026",
@@ -46010,5 +46069,41 @@
     "points": 2,
     "end_date": "14/01/2027",
     "course_code": "20274291"
+  },
+  {
+    "course_id": "16091",
+    "group_id": "15271",
+    "title": "Biomineralization",
+    "offered_by": "Chemical Sciences",
+    "lecturers": [
+      "Dr. Dvir Gur",
+      "Prof. Assaf Gal",
+      "Prof. Steve Weiner",
+      "Prof. Lia Addadi"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "Science Teaching Lab 2"
+      }
+    ],
+    "first_lecture": "08/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16091&pprev=15271",
+    "fields": [
+      "Chemical Sciences",
+      "Life Sciences",
+      "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)",
+      "Life Sciences (Scientific Archeology Track)"
+    ],
+    "points": 2,
+    "end_date": "28/06/2027",
+    "course_code": "20272202",
+    "prerequisites": "No"
   }
 ]

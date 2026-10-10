@@ -1258,5 +1258,228 @@
         ]
       }
     ]
+  },
+  {
+    "timestamp": "2026-10-10T05:58:40Z",
+    "added": [
+      {
+        "key": "16091-15271",
+        "course_code": "20272202",
+        "title": "Biomineralization"
+      }
+    ],
+    "removed": [],
+    "changed": [
+      {
+        "key": "15771-15439",
+        "course_code": "20272092",
+        "title": "Protein Structure and Function 2",
+        "fields": [
+          "lecturers"
+        ]
+      },
+      {
+        "key": "15773-15390",
+        "course_code": "20272081",
+        "title": "Exploring Topics in Protein-Nucleic Acid Interactions: From Binding Specificity to Cellular Roles.",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15780-15583",
+        "course_code": "20272141",
+        "title": "General chemistry",
+        "fields": [
+          "lecturers",
+          "sessions"
+        ]
+      },
+      {
+        "key": "15798-15518",
+        "course_code": "20273052",
+        "title": "Hands-on Data Analysis and Statistics for the Life Sciences 2",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15799-15527",
+        "course_code": "20273021",
+        "title": "Microsurgery for studying physiology and cancer in mice",
+        "fields": [
+          "end_date",
+          "first_lecture"
+        ]
+      },
+      {
+        "key": "15814-15419",
+        "course_code": "20276011",
+        "title": "Mathematics module: Introduction to mathematics education",
+        "fields": [
+          "lecturers"
+        ]
+      },
+      {
+        "key": "15820-15313",
+        "course_code": "20275031",
+        "title": "Thinking About Causality: From Philosophy of Science to Psychology and Education",
+        "fields": [
+          "lecturers"
+        ]
+      },
+      {
+        "key": "15855-15679",
+        "course_code": "20271041",
+        "title": "Preparatory Course",
+        "fields": [
+          "first_lecture"
+        ]
+      },
+      {
+        "key": "15856-15621",
+        "course_code": "20273142",
+        "title": "History and Philosophy, Intelligence and Computing",
+        "fields": [
+          "fields"
+        ]
+      },
+      {
+        "key": "15878-15104",
+        "course_code": "20273212",
+        "title": "Forest trees: ecology, physiology, and genetics",
+        "fields": [
+          "lecturers"
+        ]
+      },
+      {
+        "key": "15901-15502",
+        "course_code": "20276041",
+        "title": "Biology module: Implementing Assessment",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15909-15549",
+        "course_code": "20273201",
+        "title": "Real-Time PCR and beyond for Detection of Low-Copy-Number Targets According to MIQE Guidelines",
+        "fields": [
+          "title"
+        ]
+      },
+      {
+        "key": "15918-15517",
+        "course_code": "20273241",
+        "title": "Introduction to Matlab and data analysis",
+        "fields": [
+          "lecturers"
+        ]
+      },
+      {
+        "key": "15919-15740",
+        "course_code": "20273332",
+        "title": "Introduction to Matlab and data analysis",
+        "fields": [
+          "lecturers"
+        ]
+      },
+      {
+        "key": "15927-15472",
+        "course_code": "20273251",
+        "title": "Sustainability by the numbers",
+        "fields": [
+          "fields"
+        ]
+      },
+      {
+        "key": "15932-15306",
+        "course_code": "20276071",
+        "title": "Mathematics module: Problem solving in mathematics part B",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15933-15303",
+        "course_code": "20276081",
+        "title": "Mathematics Module:Geometry",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15938-15308",
+        "course_code": "20276121",
+        "title": "Mathematics module: Research in teaching and learning geometry",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15939-15461",
+        "course_code": "20276013",
+        "title": "Mathematics module: Seminar in mathematics instruction for 1st year students",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15940-15482",
+        "course_code": "20276023",
+        "title": "Mathematics module: Final project in mathematics instruction for 2nd year students-Seminar",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15952-15456",
+        "course_code": "20276201",
+        "title": "Physics module: Final project in physics education 2nd year",
+        "fields": [
+          "lecturers"
+        ]
+      },
+      {
+        "key": "15974-15688",
+        "course_code": "20271152",
+        "title": "Basic concepts in modern particle physics seminar",
+        "fields": [
+          "points"
+        ]
+      },
+      {
+        "key": "16006-15537",
+        "course_code": "20273452",
+        "title": "Spatial Omics: Exploring Cutting-Edge Technologies",
+        "fields": [
+          "lecturers"
+        ]
+      },
+      {
+        "key": "16010-0",
+        "course_code": "20273341",
+        "title": "Hands-on Data Analysis and Statistics for the Life Sciences",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "16070-14201",
+        "course_code": "20274281",
+        "title": "Fine-Grained Complexity",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "16076-15178",
+        "course_code": "20271231",
+        "title": "Quantum field theory 2 2D field theories",
+        "fields": [
+          "sessions"
+        ]
+      }
+    ]
   }
 ]

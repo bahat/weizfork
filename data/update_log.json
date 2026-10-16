@@ -1481,5 +1481,86 @@
         ]
       }
     ]
+  },
+  {
+    "timestamp": "2026-10-16T07:18:27Z",
+    "added": [],
+    "removed": [],
+    "changed": [
+      {
+        "key": "15768-15214",
+        "course_code": "20272051",
+        "title": "Introduction to Mathematical Methods for Modeling and Data Analysis",
+        "fields": [
+          "end_date",
+          "sessions"
+        ]
+      },
+      {
+        "key": "15780-15583",
+        "course_code": "20272141",
+        "title": "General chemistry",
+        "fields": [
+          "lecturers"
+        ]
+      },
+      {
+        "key": "15813-15415",
+        "course_code": "20275011",
+        "title": "Introduction to science education",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15818-15422",
+        "course_code": "20275022",
+        "title": "Thesis seminar",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15878-15104",
+        "course_code": "20273212",
+        "title": "Forest trees: ecology, physiology, and genetics",
+        "fields": [
+          "lecturers"
+        ]
+      },
+      {
+        "key": "15906-15479",
+        "course_code": "20273191",
+        "title": "Discovery Milestones in Cell Biology",
+        "fields": [
+          "first_lecture"
+        ]
+      },
+      {
+        "key": "15963-15645",
+        "course_code": "20271071",
+        "title": "Experimental projects-Theoretical part",
+        "fields": [
+          "points",
+          "title"
+        ]
+      },
+      {
+        "key": "15997-15650",
+        "course_code": "20271191",
+        "title": "Introduction to Molecular Spectroscopy and Dynamics",
+        "fields": [
+          "fields"
+        ]
+      },
+      {
+        "key": "16060-0",
+        "course_code": "20274261",
+        "title": "Basic Probability",
+        "fields": [
+          "lecturers"
+        ]
+      }
+    ]
   }
 ]

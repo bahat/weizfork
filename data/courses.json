@@ -351,7 +351,7 @@
     "offered_by": "Chemical Sciences",
     "lecturers": [
       "Dr. Sergey Semenov",
-      "Mr. Yarden Daniel"
+      "Dr. Yarden Daniel"
     ],
     "semester": "1st",
     "sessions": [
@@ -574,11 +574,11 @@
       },
       {
         "type": "tutorial",
-        "day_name": "Thursday",
-        "day_index": 4,
-        "start": "14:15",
-        "end": "15:00",
-        "location": "WISsE, Rm A"
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "11:15",
+        "end": "12:00",
+        "location": "WISsE, Rm C"
       }
     ],
     "first_lecture": "19/10/2026",
@@ -590,7 +590,7 @@
       "Life Sciences (Scientific Archeology Track)"
     ],
     "points": 3,
-    "end_date": "14/01/2027",
+    "end_date": "12/01/2027",
     "course_code": "20272051",
     "syllabus": "Mathematical models are present in all of the scientific disciplines , providing a quantitative framework for understanding and prediction of natural phenomena. The output from such models, as well as observations, often requires complex mathematical analysis. The course provides an introduction to mathematical modeling and data analysis through in-depth discussion of a series of real examples, with an emphasis on 'hands-on' exercises.\nTopics will include:\n• Ordinary differential equations and numerical solution\n• Linear equations and eigenvalue\n• Data analysis using EOF, PCA, and SVD\n• Mining of Big Data - AI machine learning\n• Advanced modeling and PDEs\n• Combining models and data - optimization",
     "learning_outcomes": "Upon successful completion of this course students should be able to:\n• Demonstrate an understanding of the  principles of mathematical modeling and data analysis\n• Solve analytically and numerically a wide range of problem"
@@ -1322,7 +1322,7 @@
   {
     "course_id": "15963",
     "group_id": "15645",
-    "title": "Experimental projects",
+    "title": "Experimental projects-Theoretical part",
     "offered_by": "Physical Sciences",
     "lecturers": [
       "Prof. Eran Ofek",
@@ -1354,7 +1354,7 @@
       "Chemical Sciences",
       "Physical Sciences"
     ],
-    "points": 4,
+    "points": null,
     "end_date": "13/01/2027",
     "course_code": "20271071",
     "syllabus": "This is an obligatory course for all 1st year MSc students in Physics. The course intends to expose the students to experimental physics, via hands on experience in labs as well as lectures by experimental PIs in the faculty.\nDuring the 1st semester there will be 2-4 weekly hours of frontal presentation by various experimental PIs, presenting their lab activity. Between the 1st and 2nd semester there will be 6 weeks of hands on lab experience, split into two 3 weeks projects that will be performed in two different labs.\nAt the second week of the 2nd semester each student will need to participate in a one full day of presentations, where she/he will give a seminar about their project and hear about the projects done by other students.",
@@ -3245,7 +3245,7 @@
         "location": "WISsE, Rm A"
       }
     ],
-    "first_lecture": "25/10/2026",
+    "first_lecture": "18/10/2026",
     "year": 2027,
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15906&pprev=15479",
     "fields": [
@@ -3514,7 +3514,7 @@
     "offered_by": "Life Sciences",
     "lecturers": [
       "Prof. Tamir Klein",
-      "Dr. Rakefet David"
+      "Dr. Rakefet David-Schwartz"
     ],
     "semester": "2nd",
     "sessions": [
@@ -7134,7 +7134,8 @@
     "year": 2027,
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15997&pprev=15650",
     "fields": [
-      "Physical Sciences"
+      "Physical Sciences",
+      "Chemical Sciences"
     ],
     "points": 3,
     "end_date": "11/01/2027",
@@ -7450,7 +7451,7 @@
         "day_index": 1,
         "start": "10:00",
         "end": "11:30",
-        "location": "Science Teaching Lab 3"
+        "location": "Mausher, Conference Room"
       }
     ],
     "first_lecture": "19/10/2026",
@@ -7612,7 +7613,7 @@
         "day_index": 1,
         "start": "12:30",
         "end": "14:00",
-        "location": "Science Teaching Lab 3"
+        "location": null
       }
     ],
     "first_lecture": "08/03/2027",
@@ -18875,7 +18876,7 @@
     "title": "Basic Probability",
     "offered_by": "Mathematics and Computer Science",
     "lecturers": [
-      "Dr. Zhenhao Cai"
+      "Prof. Gady Kozma"
     ],
     "semester": "1st",
     "sessions": [

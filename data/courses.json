@@ -309,8 +309,7 @@
     "end_date": "27/06/2027",
     "course_code": "20272052",
     "syllabus": "1.         Complex numbers, convergence of complex sequences and series, complex             analytic functions, in particular the exponential function.\nOrdinary Differential Equations\n2.         First order ordinary differential equations: Approximating solutions with direction fields. Linear equations, separable equations, autonomous equations, integration factors. Modelling with first order equations, equilibrium solutions.\nExistence and uniqueness theorem for first order ODEs.\nSpecial cases of second order ODEs.\n3.         Brief review of linear algebra. Homogeneous linear differential equations of order n with constant coefficients. Non-homogeneous linear differential equations: solving by the method of undetermined coefficients. Applications of results on second order linear homogeneous ODEs to mechanical and electrical vibrations.\n4.         Homogenous systems of first order linear differential equations with constant coefficients. Applications to models: concentration of solutions etc. Two-point boundary value problems, eigenvalue problems.\nPartial Differential Equations\n5.         Fourier series. Series solutions to differential equations.\n6.         Solution to the heat equation on a finite rod by separation of variables. Other heat conduction problems with non-homogeneous boundary conditions. Green's functions solutions for PDEs: the heat equation on an infinite rod.\n7.         The wave equation: vibrations of an elastic string and other models. Series solutions using separation of variables. The D'Alembert solution to the wave equation.\n8.         The 2-dimensional heat equation (the Laplace equation) on a rectangle.\n9.         Introduction to Sturm-Liouville theory.\nEvaluation:\nAssignments: 20% of final grade. (Most assignments taken from Boyce and di Prima)\nFinal exam: 80% of final grade.",
-    "learning_outcomes": "Ability to solve first order differential equations of several types with different methods. Also higher order linear differential equations and first order linear systems of of ODEs.\nFamiliarity with .methods for solving some partial differential equations: using separation of variables and Fourier series, Green's functions, and the D'Alembert method.",
-    "prerequisites": "No"
+    "learning_outcomes": "Ability to solve first order differential equations of several types with different methods. Also higher order linear differential equations and first order linear systems of of ODEs.\nFamiliarity with .methods for solving some partial differential equations: using separation of variables and Fourier series, Green's functions, and the D'Alembert method."
   },
   {
     "course_id": "15773",
@@ -894,7 +893,7 @@
         "day_index": 0,
         "start": "09:15",
         "end": "11:00",
-        "location": "WISsE, Rm 3"
+        "location": "WISsE, Rm  B"
       },
       {
         "type": "tutorial",
@@ -6981,9 +6980,9 @@
         "type": "lecture",
         "day_name": "Tuesday",
         "day_index": 2,
-        "start": "13:00",
+        "start": "13:15",
         "end": "15:00",
-        "location": "Weissman, Auditorium"
+        "location": "Physics Library"
       }
     ],
     "first_lecture": "20/10/2026",

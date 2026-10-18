@@ -1562,5 +1562,36 @@
         ]
       }
     ]
+  },
+  {
+    "timestamp": "2026-10-18T08:56:58Z",
+    "added": [],
+    "removed": [],
+    "changed": [
+      {
+        "key": "15762-15443",
+        "course_code": "20272052",
+        "title": "Differential Equations for Chemists",
+        "fields": [
+          "prerequisites"
+        ]
+      },
+      {
+        "key": "15775-15582",
+        "course_code": "20272101",
+        "title": "Quantum Mechanics",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15931-15657",
+        "course_code": "20271023",
+        "title": "AMOS Seminar",
+        "fields": [
+          "sessions"
+        ]
+      }
+    ]
   }
 ]

@@ -432,7 +432,7 @@
         "day_index": 4,
         "start": "09:15",
         "end": "11:00",
-        "location": "WISsE, Rm A"
+        "location": "WISsE, Rm 2"
       }
     ],
     "first_lecture": "22/10/2026",
@@ -931,7 +931,7 @@
         "type": "lecture",
         "day_name": "Sunday",
         "day_index": 0,
-        "start": "14:00",
+        "start": "14:15",
         "end": "16:00",
         "location": "WISsE, Rm A"
       }
@@ -1293,7 +1293,7 @@
         "day_index": 1,
         "start": "11:15",
         "end": "13:00",
-        "location": "Weissman, Seminar Rm A"
+        "location": "WISsE, Rm 1"
       },
       {
         "type": "lecture",
@@ -1843,8 +1843,8 @@
     "title": "Quantum Light and Matter",
     "offered_by": "Physical Sciences",
     "lecturers": [
-      "Dr. Ziv Meir",
-      "Prof. Barak Dayan"
+      "Prof. Barak Dayan",
+      "Dr. Ziv Meir"
     ],
     "semester": "2nd",
     "sessions": [
@@ -6394,11 +6394,11 @@
         "day_name": "Tuesday",
         "day_index": 2,
         "start": "11:00",
-        "end": "12:30",
+        "end": "13:00",
         "location": null
       }
     ],
-    "first_lecture": "20/01/2026",
+    "first_lecture": "03/11/2026",
     "year": 2027,
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15829&pprev=15609",
     "fields": [
@@ -6885,9 +6885,9 @@
         "type": "tutorial",
         "day_name": "Sunday",
         "day_index": 0,
-        "start": "13:15",
-        "end": "14:00",
-        "location": "Jacob Ziskind Building Room 108"
+        "start": "16:15",
+        "end": "17:00",
+        "location": "Goldsmith, Rm 108"
       }
     ],
     "first_lecture": "20/10/2026",
@@ -45523,7 +45523,7 @@
         "day_index": 2,
         "start": "12:15",
         "end": "14:00",
-        "location": "WISsE, Rm 1"
+        "location": "WISsE, Rm C"
       }
     ],
     "first_lecture": "20/10/2026",

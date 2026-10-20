@@ -1593,5 +1593,69 @@
         ]
       }
     ]
+  },
+  {
+    "timestamp": "2026-10-20T09:41:27Z",
+    "added": [],
+    "removed": [],
+    "changed": [
+      {
+        "key": "15757-15442",
+        "course_code": "20272011",
+        "title": "Guided reading course in single-molecule biophysics",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15792-15623",
+        "course_code": "20273211",
+        "title": "Philosophy and History of Microbiology",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15829-15609",
+        "course_code": "20274013",
+        "title": "Math Colloquium",
+        "fields": [
+          "first_lecture",
+          "sessions"
+        ]
+      },
+      {
+        "key": "15862-15638",
+        "course_code": "20272171",
+        "title": "Research presentations",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15912-15594",
+        "course_code": "20274121",
+        "title": "Topics in Machine Learning Theory",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15973-15175",
+        "course_code": "20271111",
+        "title": "Experimental Particle Cosmology",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "16029-15202",
+        "course_code": "20271272",
+        "title": "Quantum Light and Matter",
+        "fields": [
+          "lecturers"
+        ]
+      }
+    ]
   }
 ]

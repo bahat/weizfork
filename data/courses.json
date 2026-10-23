@@ -87,7 +87,7 @@
         "day_index": 2,
         "start": "14:15",
         "end": "16:00",
-        "location": "WISsE, Rm 1"
+        "location": "WISsE, Rm  B"
       },
       {
         "type": "lecture",
@@ -95,7 +95,7 @@
         "day_index": 4,
         "start": "14:15",
         "end": "15:00",
-        "location": "WISsE, Rm 3"
+        "location": "WISsE, Rm A"
       },
       {
         "type": "tutorial",
@@ -103,7 +103,7 @@
         "day_index": 4,
         "start": "15:15",
         "end": "16:00",
-        "location": "WISsE, Rm 3"
+        "location": "WISsE, Rm A"
       }
     ],
     "first_lecture": "20/10/2026",
@@ -1301,7 +1301,7 @@
         "day_index": 3,
         "start": "09:15",
         "end": "11:00",
-        "location": "Weissman, Seminar Rm A"
+        "location": "Complex Systems Meeting Room"
       }
     ],
     "first_lecture": "19/10/2026",
@@ -1843,8 +1843,8 @@
     "title": "Quantum Light and Matter",
     "offered_by": "Physical Sciences",
     "lecturers": [
-      "Prof. Barak Dayan",
-      "Dr. Ziv Meir"
+      "Dr. Ziv Meir",
+      "Prof. Barak Dayan"
     ],
     "semester": "2nd",
     "sessions": [
@@ -5598,7 +5598,7 @@
     "lecturers": [
       "Prof. Ran  Tessler"
     ],
-    "semester": "Full Year",
+    "semester": "1st",
     "sessions": [],
     "first_lecture": "18/10/2026",
     "year": 2027,
@@ -5608,7 +5608,7 @@
     ],
     "points": 3,
     "end_date": "24/06/2027",
-    "course_code": "20274093",
+    "course_code": "20274311",
     "syllabus": "Number theory, nicknamed the \"queen of mathematics\" by Gauss is a classical and beautiful subject. In this reading course we will taste some of the field's basic notions:\n-Basic methods.\n-Diophantine equations.\n-Approximations of irrational numbers.\n-Elliptic curves and modular forms.\n-Applications of characters; quadratic reciprocity and Dirichlet theorem.\n-Prime number theorem.\n-Combinatorial and probabilistic number theory, partitions.\n-Algorithmic number theory.\n-A bit of P-adic analysis.\n-Geometry of numbers.\n-A taste from algebraic number theory.",
     "learning_outcomes": "The student will acquire some of the basic methods of number theory, and will get to know classical, including non elementary results of the field."
   },
@@ -5731,7 +5731,7 @@
         "day_index": 0,
         "start": "12:15",
         "end": "13:00",
-        "location": "Jacob Ziskind Building Room 108"
+        "location": "Goldsmith, room 108"
       }
     ],
     "first_lecture": "11/03/2027",
@@ -6117,7 +6117,7 @@
         "type": "lecture",
         "day_name": "Thursday",
         "day_index": 4,
-        "start": "10:15",
+        "start": "10:00",
         "end": "12:00",
         "location": "Jacob Ziskind Building, Rm 155"
       }
@@ -6269,7 +6269,7 @@
         "day_index": 4,
         "start": "12:15",
         "end": "14:00",
-        "location": "Jacob Ziskind Building Room 108"
+        "location": "Goldsmith, Rm 108"
       }
     ],
     "first_lecture": "10/03/2027",
@@ -7547,7 +7547,7 @@
         "day_index": 4,
         "start": "09:00",
         "end": "10:30",
-        "location": "Science Teaching Lab 2"
+        "location": "Science Teaching Lab 3"
       }
     ],
     "first_lecture": "22/10/2026",
@@ -7633,8 +7633,7 @@
     "title": "Thinking About Causality: From Philosophy of Science to Psychology and Education",
     "offered_by": "Science Teaching",
     "lecturers": [
-      "Dr. Michal Haskel Ittah",
-      "Prof. Mordechai Ben-Ari"
+      "Dr. Michal Haskel Ittah"
     ],
     "semester": "1st",
     "sessions": [
@@ -7644,7 +7643,7 @@
         "day_index": 4,
         "start": "09:15",
         "end": "10:45",
-        "location": "Science Teaching Lab 3"
+        "location": "Science Teaching Lab 2"
       }
     ],
     "first_lecture": "22/10/2026",
@@ -7711,7 +7710,7 @@
         "day_index": 2,
         "start": "16:00",
         "end": "18:30",
-        "location": "WISsE, Rm 1"
+        "location": "Mausher, Conference Room"
       }
     ],
     "first_lecture": "06/10/2026",
@@ -8492,7 +8491,8 @@
     "title": "Chemistry module: Nanochemistry",
     "offered_by": "Science Teaching for Teachers",
     "lecturers": [
-      "Dr. Ora Simcha Bitton Israel"
+      "Dr. Ora Simcha Bitton Israel",
+      "Prof. Ron Blonder"
     ],
     "semester": "1st",
     "sessions": [
@@ -8635,7 +8635,7 @@
         "day_index": 2,
         "start": "16:00",
         "end": "18:00",
-        "location": "Mausher, Conference Room"
+        "location": "WISsE, Rm 1"
       }
     ],
     "first_lecture": "06/10/2026",
@@ -9113,9 +9113,9 @@
         "type": "lecture",
         "day_name": "Tuesday",
         "day_index": 2,
-        "start": "15:45",
+        "start": "15:30",
         "end": "17:15",
-        "location": "WISsE, Rm  B"
+        "location": "WISsE, Rm 2"
       }
     ],
     "first_lecture": "06/10/2026",
@@ -45327,7 +45327,8 @@
     "year": 2027,
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16068&pprev=15711",
     "fields": [
-      "Mathematics and Computer Science"
+      "Mathematics and Computer Science",
+      "Life Sciences (Computational and Systems Biology Track)"
     ],
     "points": 2,
     "end_date": "14/01/2027",
@@ -45576,7 +45577,7 @@
         "day_index": 1,
         "start": "11:15",
         "end": "13:00",
-        "location": "Submicron Meeting Room, Physics"
+        "location": "Physics Library"
       },
       {
         "type": "lecture",

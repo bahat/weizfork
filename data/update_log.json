@@ -1657,5 +1657,134 @@
         ]
       }
     ]
+  },
+  {
+    "timestamp": "2026-10-23T13:17:34Z",
+    "added": [],
+    "removed": [],
+    "changed": [
+      {
+        "key": "15765-15204",
+        "course_code": "20272041",
+        "title": "Atmospheric and Oceanic Fluid Dynamics",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15814-15419",
+        "course_code": "20276011",
+        "title": "Mathematics module: Introduction to mathematics education",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15815-15287",
+        "course_code": "20275021",
+        "title": "Philosophy and History of Education",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15820-15313",
+        "course_code": "20275031",
+        "title": "Thinking About Causality: From Philosophy of Science to Psychology and Education",
+        "fields": [
+          "lecturers",
+          "sessions"
+        ]
+      },
+      {
+        "key": "15883-0",
+        "course_code": "20274311",
+        "title": "A reading course on fundamental Concepts of Number Theory",
+        "fields": [
+          "course_code",
+          "semester"
+        ]
+      },
+      {
+        "key": "15940-15482",
+        "course_code": "20276023",
+        "title": "Mathematics module: Final project in mathematics instruction for 2nd year students-Seminar",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15951-15428",
+        "course_code": "20276191",
+        "title": "Physics module: Topics in astrophysics",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15973-15175",
+        "course_code": "20271111",
+        "title": "Experimental Particle Cosmology",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15981-15300",
+        "course_code": "20276271",
+        "title": "Chemistry module: Nanochemistry",
+        "fields": [
+          "lecturers"
+        ]
+      },
+      {
+        "key": "16009-15576",
+        "course_code": "20274172",
+        "title": "Introduction to Lie algebras",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "16029-15202",
+        "course_code": "20271272",
+        "title": "Quantum Light and Matter",
+        "fields": [
+          "lecturers"
+        ]
+      },
+      {
+        "key": "16045-15026",
+        "course_code": "20274142",
+        "title": "Advanced Algebraic Topology",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "16047-0",
+        "course_code": "20274191",
+        "title": "Generative Models for Computer Vision and Graphics",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "16068-15711",
+        "course_code": "20274271",
+        "title": "Practical Online Course: Deep Learning for Computer Vision",
+        "fields": [
+          "fields"
+        ]
+      },
+      {
+        "key": "16076-15178",
+        "course_code": "20271231",
+        "title": "Quantum field theory 2 2D field theories",
+        "fields": [
+          "sessions"
+        ]
+      }
+    ]
   }
 ]

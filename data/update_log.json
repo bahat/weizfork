@@ -1786,5 +1786,52 @@
         ]
       }
     ]
+  },
+  {
+    "timestamp": "2026-10-28T06:17:57Z",
+    "added": [],
+    "removed": [],
+    "changed": [
+      {
+        "key": "15834-15570",
+        "course_code": "20274041",
+        "title": "Midrasha on groups I",
+        "fields": [
+          "lecturers"
+        ]
+      },
+      {
+        "key": "15835-15571",
+        "course_code": "20274051",
+        "title": "Midrasha on groups II",
+        "fields": [
+          "lecturers"
+        ]
+      },
+      {
+        "key": "15836-15599",
+        "course_code": "20274032",
+        "title": "Midrasha on groups A",
+        "fields": [
+          "lecturers"
+        ]
+      },
+      {
+        "key": "15837-15600",
+        "course_code": "20274042",
+        "title": "Midrasha on groups B",
+        "fields": [
+          "lecturers"
+        ]
+      },
+      {
+        "key": "15875-15515",
+        "course_code": "20273131",
+        "title": "High throughput assay methodologies",
+        "fields": [
+          "lecturers"
+        ]
+      }
+    ]
   }
 ]

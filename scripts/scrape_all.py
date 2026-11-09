@@ -194,6 +194,12 @@ def load_courses_by_key(path):
     return {(c.get("course_id"), c.get("group_id")): c for c in data}
 
 
+def _cmp_value(field, value):
+    # The site returns the same lecturers in varying order between requests;
+    # that's not a real change.
+    return sorted(value) if field == "lecturers" and isinstance(value, list) else value
+
+
 def diff_courses(before, after):
     """(added_keys, removed_keys, [(key, changed_field_names), ...]), all sorted."""
     before_keys, after_keys = set(before), set(after)
@@ -202,7 +208,7 @@ def diff_courses(before, after):
     changed = []
     for key in sorted(before_keys & after_keys):
         b, a = before[key], after[key]
-        diff_fields = sorted(f for f in set(b) | set(a) if b.get(f) != a.get(f))
+        diff_fields = sorted(f for f in set(b) | set(a) if _cmp_value(f, b.get(f)) != _cmp_value(f, a.get(f)))
         if diff_fields:
             changed.append((key, diff_fields))
     return added, removed, changed

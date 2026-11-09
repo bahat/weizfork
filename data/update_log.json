@@ -1833,5 +1833,161 @@
         ]
       }
     ]
+  },
+  {
+    "timestamp": "2026-11-09T07:39:08Z",
+    "added": [
+      {
+        "key": "15779-15344",
+        "course_code": "20272102",
+        "title": "Introduction to Materials Science"
+      },
+      {
+        "key": "16090-15213",
+        "course_code": "20272192",
+        "title": "Introduction to Macromolecular Crystallography"
+      },
+      {
+        "key": "16098-0",
+        "course_code": "20278121",
+        "title": "Essentials of Molecular Biology"
+      },
+      {
+        "key": "16099-0",
+        "course_code": "20278103",
+        "title": "The Weizmann Orchestra"
+      }
+    ],
+    "removed": [],
+    "changed": [
+      {
+        "key": "15775-15582",
+        "course_code": "20272101",
+        "title": "Quantum Mechanics",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15792-15623",
+        "course_code": "20273211",
+        "title": "Philosophy and History of Microbiology",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15798-15518",
+        "course_code": "20273052",
+        "title": "Hands-on Data Analysis and Statistics for the Life Sciences 2",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15834-15570",
+        "course_code": "20274041",
+        "title": "Midrasha on groups I",
+        "fields": [
+          "lecturers"
+        ]
+      },
+      {
+        "key": "15835-15571",
+        "course_code": "20274051",
+        "title": "Midrasha on groups II",
+        "fields": [
+          "lecturers"
+        ]
+      },
+      {
+        "key": "15836-15599",
+        "course_code": "20274032",
+        "title": "Midrasha on groups A",
+        "fields": [
+          "lecturers"
+        ]
+      },
+      {
+        "key": "15837-15600",
+        "course_code": "20274042",
+        "title": "Midrasha on groups B",
+        "fields": [
+          "lecturers"
+        ]
+      },
+      {
+        "key": "15876-15529",
+        "course_code": "20273141",
+        "title": "Neuroanatomy",
+        "fields": [
+          "fields"
+        ]
+      },
+      {
+        "key": "15895-15560",
+        "course_code": "20273103",
+        "title": "Systems neuroscience reading seminar",
+        "fields": [
+          "fields"
+        ]
+      },
+      {
+        "key": "15989-15707",
+        "course_code": "20271161",
+        "title": "Quantum Collective Light-Matter Interactions",
+        "fields": [
+          "fields"
+        ]
+      },
+      {
+        "key": "15991-0",
+        "course_code": "20271221",
+        "title": "Principles and Applications of Nanofabrication",
+        "fields": [
+          "points"
+        ]
+      },
+      {
+        "key": "16010-0",
+        "course_code": "20273341",
+        "title": "Hands-on Data Analysis and Statistics for the Life Sciences",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "16011-14810",
+        "course_code": "20273472",
+        "title": "Clinical, molecular and therapeutic overviews of common types of cancer",
+        "fields": [
+          "lecturers"
+        ]
+      },
+      {
+        "key": "16037-15572",
+        "course_code": "20274151",
+        "title": "Differential Geometry",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "16058-15605",
+        "course_code": "20274241",
+        "title": "Generalized Geometry, an introduction",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "16086-0",
+        "course_code": "20274301",
+        "title": "Property Testing and Sublinear Algorithms",
+        "fields": [
+          "lecturers"
+        ]
+      }
+    ]
   }
 ]

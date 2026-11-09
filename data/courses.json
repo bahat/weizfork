@@ -901,7 +901,7 @@
         "day_index": 2,
         "start": "13:15",
         "end": "15:00",
-        "location": "Stone, Zacks Hall"
+        "location": "WISsE, Rm 3"
       }
     ],
     "first_lecture": "18/10/2026",
@@ -1693,7 +1693,7 @@
       "Chemical Sciences",
       "Physical Sciences"
     ],
-    "points": null,
+    "points": 2,
     "end_date": "13/01/2027",
     "course_code": "20271221",
     "syllabus": "Chapter 1 Introduction to planar technology\nLecture 1: Introduction. Substrates and cleanroom environment.\nChapter 2 Lithography\nLecture 2: Lithography fundamentals. Resists.\nLecture 3: Electron beam lithography (EBL). CD-SEM Inspection.\nLecture 4: Thermal scanning probe lithography (T-SPL). Atomic force microscopy.\nChapter 3 Adding\nLecture 5: Deposition: PVD (Evaporation and conventional sputtering.\nLecture 6: Reactive magnetron sputtering.\nLecture 7: Deposition: CVD.\nLecture 8: Atomic layer deposition (ALD). Ellipsometry.\nChapter 4 Subtracting\nLecture 9: Etching processes: wet & dry (RIE / ICP-RIE).\nChapter 5 Integration\nLecture 10: Van der Waals materials fabrication.\nLecture 11: Device integration examples (Quantum / Mesoscopic).\nChapter 6 Additional topics\nLecture 12: Molecular beam epitaxy (MBE).\nLecture 13: Additional/emerging methods.",
@@ -3085,17 +3085,7 @@
     "offered_by": "Life Sciences",
     "lecturers": [
       "Prof. Yosef Yarden",
-      "Prof. Ayelet Erez",
-      "Prof. Raanan Berger",
-      "Prof. Michal Lotem",
-      "Prof. Eli Pikarsky",
-      "Prof. Amir Sonnenblick",
-      "Prof. Jair Bar",
-      "Prof. Talia Golan",
-      "Prof. Irit Ben Aharon",
-      "Ms. Michal Mirela  Avineri Goldstein",
-      "Prof. Pia Raanani",
-      "Prof. Aaron Popobazer"
+      "Ms. Michal Mirela  Avineri Goldstein"
     ],
     "semester": "2nd",
     "sessions": [
@@ -3689,22 +3679,6 @@
         "day_index": 1,
         "start": "14:15",
         "end": "16:00",
-        "location": "Benoziyo, room 690"
-      },
-      {
-        "type": "tutorial",
-        "day_name": "Monday",
-        "day_index": 1,
-        "start": "14:15",
-        "end": "16:00",
-        "location": "Stone, Zacks Meeting Rm"
-      },
-      {
-        "type": "tutorial",
-        "day_name": "Monday",
-        "day_index": 1,
-        "start": "14:15",
-        "end": "16:00",
         "location": "De Picciotto, Room 134"
       }
     ],
@@ -3751,6 +3725,30 @@
         "day_index": 1,
         "start": "09:15",
         "end": "11:00",
+        "location": "WISsE, Rm 1"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "WISsE, Rm 2"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "WISsE, Rm 3"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "09:15",
+        "end": "11:00",
         "location": "Science Teaching Lab 2"
       },
       {
@@ -3768,6 +3766,14 @@
         "start": "09:15",
         "end": "11:00",
         "location": "De Picciotto, Room 134"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "09:15",
+        "end": "11:00",
+        "location": "WISsE Yard"
       }
     ],
     "first_lecture": "08/03/2027",
@@ -4563,7 +4569,8 @@
       "Life Sciences",
       "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)",
       "Life Sciences (Molecular and Cellular Neuroscience Track)",
-      "Life Sciences (Scientific Archeology Track)"
+      "Life Sciences (Scientific Archeology Track)",
+      "Science Teaching"
     ],
     "points": 3,
     "end_date": "13/01/2027",
@@ -5204,7 +5211,8 @@
     "fields": [
       "Life Sciences",
       "Life Sciences (Brain Sciences: Systems, Computational and Cognitive Neuroscience Track)",
-      "Life Sciences (Scientific Archeology Track)"
+      "Life Sciences (Scientific Archeology Track)",
+      "Science Teaching"
     ],
     "points": 2,
     "end_date": "28/06/2027",
@@ -5941,8 +5949,8 @@
         "type": "lecture",
         "day_name": "Wednesday",
         "day_index": 3,
-        "start": "10:15",
-        "end": "12:00",
+        "start": "11:15",
+        "end": "13:00",
         "location": "Goldsmith, Rm 108"
       }
     ],
@@ -6083,11 +6091,11 @@
       },
       {
         "type": "tutorial",
-        "day_name": "Wednesday",
-        "day_index": 3,
-        "start": "09:15",
-        "end": "10:00",
-        "location": "Jacob Ziskind Building Room 108"
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "10:15",
+        "end": "11:00",
+        "location": "Ziskind, Rm 1"
       }
     ],
     "first_lecture": "18/10/2026",
@@ -6489,8 +6497,8 @@
     "title": "Midrasha on groups A",
     "offered_by": "Mathematics and Computer Science",
     "lecturers": [
-      "Dr. Guy Salomon",
-      "Prof. Alexander Lubotzky"
+      "Prof. Alexander Lubotzky",
+      "Dr. Guy Salomon"
     ],
     "semester": "2nd",
     "sessions": [
@@ -6522,8 +6530,8 @@
     "title": "Midrasha on groups B",
     "offered_by": "Mathematics and Computer Science",
     "lecturers": [
-      "Prof. Alexander Lubotzky",
-      "Dr. Guy Salomon"
+      "Dr. Guy Salomon",
+      "Prof. Alexander Lubotzky"
     ],
     "semester": "2nd",
     "sessions": [
@@ -6555,8 +6563,8 @@
     "title": "Midrasha on groups I",
     "offered_by": "Mathematics and Computer Science",
     "lecturers": [
-      "Prof. Alexander Lubotzky",
-      "Dr. Guy Salomon"
+      "Dr. Guy Salomon",
+      "Prof. Alexander Lubotzky"
     ],
     "semester": "1st",
     "sessions": [
@@ -6588,8 +6596,8 @@
     "title": "Midrasha on groups II",
     "offered_by": "Mathematics and Computer Science",
     "lecturers": [
-      "Dr. Guy Salomon",
-      "Prof. Alexander Lubotzky"
+      "Prof. Alexander Lubotzky",
+      "Dr. Guy Salomon"
     ],
     "semester": "1st",
     "sessions": [
@@ -7229,7 +7237,8 @@
     "year": 2027,
     "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15989&pprev=15707",
     "fields": [
-      "Physical Sciences"
+      "Physical Sciences",
+      "Chemical Sciences"
     ],
     "points": 2,
     "end_date": "10/01/2027",
@@ -45525,7 +45534,7 @@
         "day_index": 2,
         "start": "12:15",
         "end": "14:00",
-        "location": "WISsE, Rm C"
+        "location": "WISsE, Rm 2"
       }
     ],
     "first_lecture": "20/10/2026",
@@ -46020,7 +46029,7 @@
     "title": "Property Testing and Sublinear Algorithms",
     "offered_by": "Mathematics and Computer Science",
     "lecturers": [
-      "Prof. Dana  Ron-Goldreich"
+      "Prof. Dana  Goldreich"
     ],
     "semester": "1st",
     "sessions": [
@@ -46106,6 +46115,147 @@
     "points": 2,
     "end_date": "28/06/2027",
     "course_code": "20272202",
+    "prerequisites": "No"
+  },
+  {
+    "course_id": "16090",
+    "group_id": "15213",
+    "title": "Introduction to Macromolecular Crystallography",
+    "offered_by": "Chemical Sciences",
+    "lecturers": [
+      "Dr. Harry Greenblatt"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "10:15",
+        "end": "12:00",
+        "location": "De Picciotto, Room 134"
+      }
+    ],
+    "first_lecture": "09/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16090&pprev=15213",
+    "fields": [
+      "Chemical Sciences",
+      "Life Sciences",
+      "Life Sciences (Scientific Archeology Track)"
+    ],
+    "points": 2,
+    "end_date": "01/06/2027",
+    "course_code": "20272192",
+    "prerequisites": "No"
+  },
+  {
+    "course_id": "15779",
+    "group_id": "15344",
+    "title": "Introduction to Materials Science",
+    "offered_by": "Chemical Sciences",
+    "lecturers": [
+      "Prof. Igor Lubomirsky",
+      "Dr. David Ehre"
+    ],
+    "semester": "2nd",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Wednesday",
+        "day_index": 3,
+        "start": "11:15",
+        "end": "13:00",
+        "location": "WISsE, Rm A"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "12:15",
+        "end": "14:00",
+        "location": "WISsE, Rm A"
+      }
+    ],
+    "first_lecture": "10/03/2027",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=15779&pprev=15344",
+    "fields": [
+      "Chemical Sciences"
+    ],
+    "points": 3,
+    "end_date": "23/06/2027",
+    "course_code": "20272102"
+  },
+  {
+    "course_id": "16099",
+    "group_id": "0",
+    "title": "The Weizmann Orchestra",
+    "offered_by": null,
+    "lecturers": [],
+    "semester": "Full Year",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "17:30",
+        "end": "20:00",
+        "location": "The Helmsley Community Center, Auditorium"
+      }
+    ],
+    "first_lecture": "19/10/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16099&pprev=0",
+    "fields": [
+      "Chemical Sciences",
+      "Life Sciences",
+      "Life Sciences (Scientific Archeology Track)",
+      "Mathematics and Computer Science",
+      "Obligatory instruction courses or enrichment courses",
+      "Physical Sciences",
+      "Science Teaching"
+    ],
+    "points": 1,
+    "end_date": "28/06/2027",
+    "course_code": "20278103"
+  },
+  {
+    "course_id": "16098",
+    "group_id": "0",
+    "title": "Essentials of Molecular Biology",
+    "offered_by": null,
+    "lecturers": [
+      "Dr. Dan Michael"
+    ],
+    "semester": "1st",
+    "sessions": [
+      {
+        "type": "lecture",
+        "day_name": "Tuesday",
+        "day_index": 2,
+        "start": "11:30",
+        "end": "13:00",
+        "location": "The Schwartz/Reisman Science Education Center ? Campus Arnon 256"
+      },
+      {
+        "type": "lecture",
+        "day_name": "Thursday",
+        "day_index": 4,
+        "start": "10:00",
+        "end": "11:30",
+        "location": "Stone, Zacks Hall"
+      }
+    ],
+    "first_lecture": "17/11/2026",
+    "year": 2027,
+    "detail_url": "https://erez.weizmann.ac.il/apx/r/ws1/186/30?pid=16098&pprev=0",
+    "fields": [
+      "Obligatory instruction courses or enrichment courses"
+    ],
+    "points": 4,
+    "end_date": "28/01/2027",
+    "course_code": "20278121",
     "prerequisites": "No"
   }
 ]

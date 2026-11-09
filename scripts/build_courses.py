@@ -130,6 +130,12 @@ def key_of(c):
     return (c.get("course_id"), c.get("group_id"))
 
 
+def _cmp_value(field, value):
+    # The site returns the same lecturers in varying order between requests;
+    # that's not a real change.
+    return sorted(value) if field == "lecturers" and isinstance(value, list) else value
+
+
 def _describe(key, c):
     return {"key": f"{key[0]}-{key[1]}", "course_code": c.get("course_code"), "title": c.get("title")}
 
@@ -144,7 +150,7 @@ def write_update_log(before_by_key, merged, out_path):
     changed = []
     for k in sorted(before_by_key.keys() & after_by_key.keys()):
         b, a = before_by_key[k], after_by_key[k]
-        diff_fields = sorted(f for f in set(b) | set(a) if b.get(f) != a.get(f))
+        diff_fields = sorted(f for f in set(b) | set(a) if _cmp_value(f, b.get(f)) != _cmp_value(f, a.get(f)))
         if diff_fields:
             entry = _describe(k, a)
             entry["fields"] = diff_fields

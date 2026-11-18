@@ -234,6 +234,10 @@ def parse_course_detail(html_text):
         el = soup.find(id=element_id)
         return el.decode_contents() if el else None
 
+    def grab_text(element_id):
+        el = soup.find(id=element_id)
+        return el.get_text(" ", strip=True) or None if el else None
+
     return {
         "course_id": grab(r'id="PID"[^>]*value="([^"]*)"'),
         "group_id": grab(r'id="PPREV"[^>]*value="([^"]*)"'),
@@ -242,6 +246,7 @@ def parse_course_detail(html_text):
         "end_date": grab(r'id="P30_END_DATE"[^>]*>([^<]*)<'),
         "language": grab(r'id="P30_LANGUAGE"[^>]*>([^<]*)<'),
         "grade_type": grab(r'id="P30_GRADE_TYPE"[^>]*>([^<]*)<'),
+        "evaluation_type": grab_text("P30_EVALUATION_TYPE"),
         "syllabus": grab_html("P30_COURSE_SYLLABUS_NEW"),
         "learning_outcomes": grab_html("P30_LEARNING_OUTCOME"),
         "prerequisites": grab(r'id="P30_PREREQ"[^>]*>([^<]*)<'),

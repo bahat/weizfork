@@ -218,9 +218,10 @@ def main():
             for field in ("points", "end_date", "course_code"):
                 if entry.get(field) is None and field in old:
                     entry[field] = old[field]
-            # syllabus/learning_outcomes always carry forward as-is (never
-            # attached from raw/*.json below) — see the attach loop for why.
-            for field in ("syllabus", "learning_outcomes"):
+            # syllabus/learning_outcomes/evaluation_type always carry forward
+            # as-is (only refresh_details.py sets them, never raw/*.json
+            # below) — see the attach loop for why.
+            for field in ("syllabus", "learning_outcomes", "evaluation_type"):
                 if field in old:
                     entry[field] = old[field]
         combined_by_key[key] = entry

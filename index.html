@@ -240,6 +240,8 @@
   .selected-item .row{display:flex; justify-content:space-between; align-items:flex-start; gap:6px;}
   .selected-item .title{font-weight:600; line-height:1.3;}
   .selected-item .remove{background:none; border:none; color:var(--brick); cursor:pointer; font-size:15px; line-height:1; padding:0 2px;}
+  .selected-item{cursor:pointer;}
+  .selected-item:hover{background:#FBFCF9;}
   .selected-item .meta{color:var(--ink-soft); font-family:'IBM Plex Mono',monospace; font-size:10.5px; margin-top:3px;}
 
   .conflict-note{
@@ -844,7 +846,11 @@ function buildSelectedItemEl(c){
     </div>
     <div class="meta">${c.semester} · ${(c.lecturers||[])[0] || ''}${c.isCustom && !c.sessions.length ? ' · no fixed time' : ''}</div>
   `;
-  div.querySelector('.remove').addEventListener('click', () => c.isCustom ? deleteCustomEvent(c) : toggleCourse(c));
+  div.querySelector('.remove').addEventListener('click', (e) => {
+    e.stopPropagation();
+    c.isCustom ? deleteCustomEvent(c) : toggleCourse(c);
+  });
+  div.addEventListener('click', () => openCourseModal(c));
   return div;
 }
 
@@ -1091,12 +1097,14 @@ function openCourseModal(c){
   box.innerHTML = `
     <button class="close-btn" id="modalCloseBtn">&times;</button>
     <h3>${c.title}</h3>
+    ${c.isCustom ? `<div style="margin:8px 0;"><button class="btn" id="editEventBtn">✎ Edit event</button></div>` : ''}
     <div class="dept-tags">${fieldTags}</div>
     <dl>
       <dt>Lecturer(s)</dt>
       <dd>${(c.lecturers||[]).join(', ') || '—'}</dd>
       <dt>Semester</dt>
       <dd>${c.semester || '—'}</dd>
+      ${c.evaluation_type ? `<dt>Evaluation</dt><dd>${escapeHtml(c.evaluation_type)}</dd>` : ''}
       <dt>First lecture</dt>
       <dd>${c.first_lecture || '—'}</dd>
       <dt>Last lecture</dt>
@@ -1143,23 +1151,27 @@ function openCourseModal(c){
   overlay.classList.remove('hidden');
   document.getElementById('modalCloseBtn').addEventListener('click', closeCourseModal);
   if(c.isCustom){
+    document.getElementById('editEventBtn').addEventListener('click', () => openAddEventModal(c));
     document.getElementById('savePointsBtn').addEventListener('click', async () => {
       const val = document.getElementById('pointsInput').value;
       c.points = (val === '' || isNaN(val)) ? null : Number(val);
       await persistCustomEvents();
       renderSelected();
       renderCalendar();
+      flashSaved(document.getElementById('savePointsBtn'));
     });
   } else if(isOwnerUser){
     document.getElementById('savePointsBtn').addEventListener('click', async () => {
       await setPoints(c, document.getElementById('pointsInput').value);
       renderCourseList();
       renderSelected();
+      flashSaved(document.getElementById('savePointsBtn'));
     });
   } else if(isAdded){
     document.getElementById('saveMyPointsBtn').addEventListener('click', async () => {
       await setMyPoints(c, document.getElementById('myPointsInput').value);
       renderSelected();
+      flashSaved(document.getElementById('saveMyPointsBtn'));
     });
   }
 
@@ -1212,13 +1224,13 @@ async function renderWhatsappLinksInto(c, forceRefresh){
 }
 
 /* ---------- add personal event ---------- */
-function openAddEventModal(){
+function openAddEventModal(editing){
   const overlay = document.getElementById('modalOverlay');
   const box = document.getElementById('modalBox');
-  const yearVal = document.getElementById('yearFilter').value || new Date().getFullYear();
+  const yearVal = (editing && editing.year) || document.getElementById('yearFilter').value || new Date().getFullYear();
   box.innerHTML = `
     <button class="close-btn" id="modalCloseBtn">&times;</button>
-    <h3>Add a personal event</h3>
+    <h3>${editing ? 'Edit personal event' : 'Add a personal event'}</h3>
     <div class="custom-event-note">Only visible to you — not shared with anyone else. Shown on your calendar unless you tick "No specific time".</div>
     <div class="event-form">
       <label for="evTitle">Title</label>
@@ -1263,19 +1275,37 @@ function openAddEventModal(){
         <input type="text" id="evLocation" placeholder="optional">
       </div>
       <div class="event-form-actions">
-        <button class="btn primary" id="evSaveBtn">Add event</button>
+        <button class="btn primary" id="evSaveBtn">${editing ? 'Save changes' : 'Add event'}</button>
       </div>
     </div>
   `;
   overlay.classList.remove('hidden');
   document.getElementById('modalCloseBtn').addEventListener('click', closeCourseModal);
-  document.getElementById('evSaveBtn').addEventListener('click', saveCustomEvent);
+  document.getElementById('evSaveBtn').addEventListener('click', () => saveCustomEvent(editing));
   document.getElementById('evNoTime').addEventListener('change', (e) => {
     document.getElementById('evTimeFields').style.display = e.target.checked ? 'none' : '';
   });
+  if(editing){
+    document.getElementById('evTitle').value = editing.title || '';
+    document.getElementById('evFaculty').value = editing.offered_by || '';
+    document.getElementById('evInstructor').value = (editing.lecturers || [])[0] || '';
+    document.getElementById('evSemester').value = editing.semester || '1st';
+    document.getElementById('evPoints').value = (editing.points === undefined || editing.points === null) ? '' : editing.points;
+    const sess = (editing.sessions || [])[0];
+    if(sess){
+      document.getElementById('evDay').value = String(sess.day_index);
+      document.getElementById('evStart').value = sess.start || '10:00';
+      document.getElementById('evEnd').value = sess.end || '12:00';
+      document.getElementById('evLocation').value = sess.location || '';
+    } else {
+      const cb = document.getElementById('evNoTime');
+      cb.checked = true;
+      cb.dispatchEvent(new Event('change'));
+    }
+  }
 }
 
-function saveCustomEvent(){
+function saveCustomEvent(editing){
   const title = document.getElementById('evTitle').value.trim();
   const noTime = document.getElementById('evNoTime').checked;
   const start = document.getElementById('evStart').value;
@@ -1289,10 +1319,7 @@ function saveCustomEvent(){
   const points = (pointsRaw === '' || isNaN(pointsRaw) || Number(pointsRaw) < 0) ? null : Number(pointsRaw);
 
   const dayIdx = Number(document.getElementById('evDay').value);
-  const ev = {
-    course_id: 'custom-' + Date.now().toString(36) + Math.random().toString(36).slice(2, 7),
-    group_id: '0',
-    isCustom: true,
+  const fields = {
     title,
     offered_by: document.getElementById('evFaculty').value.trim() || null,
     fields: [],
@@ -1312,7 +1339,18 @@ function saveCustomEvent(){
     }],
   };
 
-  selected.set(courseKey(ev), ev);
+  if(editing){
+    // Same course_id/group_id, so it stays the same entry in `selected`.
+    Object.assign(editing, fields);
+  } else {
+    const ev = {
+      course_id: 'custom-' + Date.now().toString(36) + Math.random().toString(36).slice(2, 7),
+      group_id: '0',
+      isCustom: true,
+      ...fields,
+    };
+    selected.set(courseKey(ev), ev);
+  }
   persistSelection();
   persistCustomEvents();
   closeCourseModal();
@@ -1395,9 +1433,24 @@ function escapeHtml(s){
 function closeCourseModal(){
   document.getElementById('modalOverlay').classList.add('hidden');
 }
-document.getElementById('modalOverlay').addEventListener('click', (e) => {
-  if(e.target.id === 'modalOverlay') closeCourseModal();
+// Close on a backdrop click only if the press also STARTED on the backdrop.
+// Otherwise a layout shift mid-tap (e.g. the mobile keyboard hiding after
+// typing in a field) makes a tap on a button inside the window land on the
+// backdrop and close it.
+let overlayPressStartedOnBackdrop = false;
+document.getElementById('modalOverlay').addEventListener('pointerdown', (e) => {
+  overlayPressStartedOnBackdrop = (e.target.id === 'modalOverlay');
 });
+document.getElementById('modalOverlay').addEventListener('click', (e) => {
+  if(e.target.id === 'modalOverlay' && overlayPressStartedOnBackdrop) closeCourseModal();
+  overlayPressStartedOnBackdrop = false;
+});
+function flashSaved(btn){
+  const original = btn.dataset.label || btn.textContent;
+  btn.dataset.label = original;
+  btn.textContent = 'Saved ✓';
+  setTimeout(() => { btn.textContent = original; }, 1500);
+}
 document.addEventListener('keydown', (e) => {
   if(e.key === 'Escape') closeCourseModal();
 });

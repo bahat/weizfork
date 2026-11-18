@@ -112,6 +112,8 @@ def main():
                 val = _clean_detail_text(detail.get(field))
                 if val:
                     c[field] = val
+            if detail.get("evaluation_type"):
+                c["evaluation_type"] = detail["evaluation_type"]
 
             raw_key = f"{pid}-{pprev}"
             for raw_path in raw_key_locations.get(raw_key, ()):

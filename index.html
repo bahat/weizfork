@@ -302,6 +302,8 @@
   }
   .event-form textarea{resize:vertical;}
   .event-form .two-col{display:grid; grid-template-columns:1fr 1fr; gap:10px;}
+  .event-form .ev-notime-label{display:flex; align-items:center; gap:8px; text-transform:none; letter-spacing:0; font-size:12.5px; color:var(--ink); cursor:pointer;}
+  .event-form .ev-notime-label input{width:auto;}
   .event-form-actions{margin-top:18px; display:flex; gap:8px; flex-wrap:wrap;}
   .session-block.custom-event{border-style:dotted;}
 
@@ -840,7 +842,7 @@ function buildSelectedItemEl(c){
       <span class="title">${c.title}${c.year ? `<span class="points-badge">${c.year}</span>` : ''}${pts !== null ? `<span class="points-badge">${pts} pts</span>` : ''}${c.isCustom ? `<span class="points-badge">personal</span>` : ''}</span>
       <button class="remove" title="Remove">×</button>
     </div>
-    <div class="meta">${c.semester} · ${(c.lecturers||[])[0] || ''}</div>
+    <div class="meta">${c.semester} · ${(c.lecturers||[])[0] || ''}${c.isCustom && !c.sessions.length ? ' · no fixed time' : ''}</div>
   `;
   div.querySelector('.remove').addEventListener('click', () => c.isCustom ? deleteCustomEvent(c) : toggleCourse(c));
   return div;
@@ -1217,7 +1219,7 @@ function openAddEventModal(){
   box.innerHTML = `
     <button class="close-btn" id="modalCloseBtn">&times;</button>
     <h3>Add a personal event</h3>
-    <div class="custom-event-note">Only visible to you — shown on your calendar, not shared with anyone else.</div>
+    <div class="custom-event-note">Only visible to you — not shared with anyone else. Shown on your calendar unless you tick "No specific time".</div>
     <div class="event-form">
       <label for="evTitle">Title</label>
       <input type="text" id="evTitle" placeholder="e.g. Private lesson">
@@ -1239,22 +1241,27 @@ function openAddEventModal(){
           <input type="number" id="evYear" value="${yearVal}">
         </div>
       </div>
-      <label for="evDay">Day</label>
-      <select id="evDay">
-        ${DAY_NAMES.map((d,i) => `<option value="${i}">${d}</option>`).join('')}
-      </select>
-      <div class="two-col">
-        <div>
-          <label for="evStart">Start time</label>
-          <input type="time" id="evStart" value="10:00">
+      <label for="evPoints">Points / credits</label>
+      <input type="number" step="0.5" min="0" id="evPoints" placeholder="optional, e.g. 3">
+      <label class="ev-notime-label"><input type="checkbox" id="evNoTime"> No specific time (list it in My schedule, but not on the calendar)</label>
+      <div id="evTimeFields">
+        <label for="evDay">Day</label>
+        <select id="evDay">
+          ${DAY_NAMES.map((d,i) => `<option value="${i}">${d}</option>`).join('')}
+        </select>
+        <div class="two-col">
+          <div>
+            <label for="evStart">Start time</label>
+            <input type="time" id="evStart" value="10:00">
+          </div>
+          <div>
+            <label for="evEnd">End time</label>
+            <input type="time" id="evEnd" value="12:00">
+          </div>
         </div>
-        <div>
-          <label for="evEnd">End time</label>
-          <input type="time" id="evEnd" value="12:00">
-        </div>
+        <label for="evLocation">Location</label>
+        <input type="text" id="evLocation" placeholder="optional">
       </div>
-      <label for="evLocation">Location</label>
-      <input type="text" id="evLocation" placeholder="optional">
       <div class="event-form-actions">
         <button class="btn primary" id="evSaveBtn">Add event</button>
       </div>
@@ -1263,15 +1270,23 @@ function openAddEventModal(){
   overlay.classList.remove('hidden');
   document.getElementById('modalCloseBtn').addEventListener('click', closeCourseModal);
   document.getElementById('evSaveBtn').addEventListener('click', saveCustomEvent);
+  document.getElementById('evNoTime').addEventListener('change', (e) => {
+    document.getElementById('evTimeFields').style.display = e.target.checked ? 'none' : '';
+  });
 }
 
 function saveCustomEvent(){
   const title = document.getElementById('evTitle').value.trim();
+  const noTime = document.getElementById('evNoTime').checked;
   const start = document.getElementById('evStart').value;
   const end = document.getElementById('evEnd').value;
   if(!title){ alert('Give the event a title.'); return; }
-  if(!start || !end){ alert('Set a start and end time.'); return; }
-  if(start >= end){ alert('End time must be after start time.'); return; }
+  if(!noTime){
+    if(!start || !end){ alert('Set a start and end time, or tick "No specific time".'); return; }
+    if(start >= end){ alert('End time must be after start time.'); return; }
+  }
+  const pointsRaw = document.getElementById('evPoints').value;
+  const points = (pointsRaw === '' || isNaN(pointsRaw) || Number(pointsRaw) < 0) ? null : Number(pointsRaw);
 
   const dayIdx = Number(document.getElementById('evDay').value);
   const ev = {
@@ -1286,7 +1301,8 @@ function saveCustomEvent(){
     year: Number(document.getElementById('evYear').value) || null,
     first_lecture: null,
     detail_url: null,
-    sessions: [{
+    points,
+    sessions: noTime ? [] : [{
       type: 'lecture',
       day_name: DAY_NAMES[dayIdx],
       day_index: dayIdx,

@@ -1989,5 +1989,140 @@
         ]
       }
     ]
+  },
+  {
+    "timestamp": "2026-11-18T13:21:54Z",
+    "added": [],
+    "removed": [],
+    "changed": [
+      {
+        "key": "15758-15229",
+        "course_code": "20272181",
+        "title": "Statistical Thermodynamics",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15775-15582",
+        "course_code": "20272101",
+        "title": "Quantum Mechanics",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15777-15585",
+        "course_code": "20272121",
+        "title": "Guided Reading Course in Nanomaterials",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15780-15583",
+        "course_code": "20272141",
+        "title": "General chemistry",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15798-15518",
+        "course_code": "20273052",
+        "title": "Hands-on Data Analysis and Statistics for the Life Sciences 2",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15864-15474",
+        "course_code": "20273121",
+        "title": "Biology of Mitochondria and Bioenergetics",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15891-15259",
+        "course_code": "20276022",
+        "title": "Biology module: Cell biology and cancer",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15901-15502",
+        "course_code": "20276041",
+        "title": "Biology module: Implementing Assessment",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "15945-15524",
+        "course_code": "20276092",
+        "title": "General module: AI in science education",
+        "fields": [
+          "lecturers"
+        ]
+      },
+      {
+        "key": "15983-15494",
+        "course_code": "20276241",
+        "title": "Chemistry module: Introduction to chemistry education",
+        "fields": [
+          "lecturers"
+        ]
+      },
+      {
+        "key": "15998-0",
+        "course_code": "20273422",
+        "title": "The Hallmarks of Cancer",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "16003-15451",
+        "course_code": "20273442",
+        "title": "3D Printing in Biomedical Research",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "16010-0",
+        "course_code": "20273341",
+        "title": "Hands-on Data Analysis and Statistics for the Life Sciences",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "16032-15728",
+        "course_code": "20278012",
+        "title": "Navigating Academia: Science, Identity, and Practical Tools for First-Generation Student",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "16039-0",
+        "course_code": "20274171",
+        "title": "Enumerative Combinatorics and Commutative Algebra",
+        "fields": [
+          "sessions"
+        ]
+      },
+      {
+        "key": "16067-0",
+        "course_code": "20273552",
+        "title": "Scientific \"soft Skills\"",
+        "fields": [
+          "sessions"
+        ]
+      }
+    ]
   }
 ]

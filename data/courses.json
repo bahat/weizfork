@@ -360,7 +360,7 @@
         "day_index": 2,
         "start": "11:15",
         "end": "13:00",
-        "location": "WISsE, Rm 3"
+        "location": "WISsE, Rm 1"
       },
       {
         "type": "tutorial",
@@ -399,7 +399,7 @@
         "day_index": 3,
         "start": "14:15",
         "end": "16:00",
-        "location": "WISsE, Rm 3"
+        "location": "WISsE, Rm 2"
       }
     ],
     "first_lecture": "21/10/2026",
@@ -901,7 +901,7 @@
         "day_index": 2,
         "start": "13:15",
         "end": "15:00",
-        "location": "WISsE, Rm 3"
+        "location": "WISsE, Rm 1"
       }
     ],
     "first_lecture": "18/10/2026",
@@ -1002,9 +1002,9 @@
         "type": "tutorial",
         "day_name": "Thursday",
         "day_index": 4,
-        "start": "10:15",
-        "end": "11:00",
-        "location": "WISsE, Rm  B"
+        "start": "12:15",
+        "end": "13:00",
+        "location": "WISsE Yard"
       }
     ],
     "first_lecture": "19/10/2026",
@@ -2679,7 +2679,7 @@
         "day_index": 0,
         "start": "14:00",
         "end": "16:00",
-        "location": "WISsE, Rm 3"
+        "location": "Hertzberg, Veterinary resources"
       }
     ],
     "first_lecture": "13/06/2027",
@@ -2994,7 +2994,7 @@
         "day_index": 3,
         "start": "09:15",
         "end": "12:00",
-        "location": "WISsE, Rm 3"
+        "location": "WISsE, Rm 1"
       }
     ],
     "first_lecture": "21/10/2026",
@@ -3655,14 +3655,6 @@
         "day_index": 1,
         "start": "14:15",
         "end": "16:00",
-        "location": "WISsE, Rm 3"
-      },
-      {
-        "type": "tutorial",
-        "day_name": "Monday",
-        "day_index": 1,
-        "start": "14:15",
-        "end": "16:00",
         "location": "Science Teaching Lab 2"
       },
       {
@@ -3680,6 +3672,14 @@
         "start": "14:15",
         "end": "16:00",
         "location": "De Picciotto, Room 134"
+      },
+      {
+        "type": "tutorial",
+        "day_name": "Monday",
+        "day_index": 1,
+        "start": "14:15",
+        "end": "16:00",
+        "location": "WISsE Yard"
       }
     ],
     "first_lecture": "19/10/2026",
@@ -3734,14 +3734,6 @@
         "start": "09:15",
         "end": "11:00",
         "location": "WISsE, Rm 2"
-      },
-      {
-        "type": "tutorial",
-        "day_name": "Monday",
-        "day_index": 1,
-        "start": "09:15",
-        "end": "11:00",
-        "location": "WISsE, Rm 3"
       },
       {
         "type": "tutorial",
@@ -5236,7 +5228,7 @@
         "day_index": 2,
         "start": "09:15",
         "end": "11:00",
-        "location": "WISsE, Rm 3"
+        "location": "WISsE Yard"
       }
     ],
     "first_lecture": "09/03/2027",
@@ -5980,8 +5972,8 @@
         "type": "lecture",
         "day_name": "Tuesday",
         "day_index": 2,
-        "start": "11:15",
-        "end": "13:00",
+        "start": "13:15",
+        "end": "15:00",
         "location": "Goldsmith, Rm 108"
       },
       {
@@ -6960,7 +6952,7 @@
         "day_index": 1,
         "start": "12:00",
         "end": "13:15",
-        "location": "WISsE, Rm 3"
+        "location": "WISsE, Rm 2"
       }
     ],
     "first_lecture": "15/03/2027",
@@ -7998,8 +7990,8 @@
     "sessions": [
       {
         "type": "lecture",
-        "day_name": "Monday",
-        "day_index": 1,
+        "day_name": "Tuesday",
+        "day_index": 2,
         "start": "12:45",
         "end": "14:15",
         "location": "Science Teaching Lab 2"
@@ -8193,7 +8185,7 @@
         "day_index": 2,
         "start": "15:00",
         "end": "17:30",
-        "location": "WISsE, Rm 3"
+        "location": "WISsE Yard"
       }
     ],
     "first_lecture": "06/10/2026",
@@ -8439,7 +8431,8 @@
     "title": "Chemistry module: Introduction to chemistry education",
     "offered_by": "Science Teaching for Teachers",
     "lecturers": [
-      "Prof. Ron Blonder"
+      "Prof. Ron Blonder",
+      "Dr. Itsik Aroch"
     ],
     "semester": "1st",
     "sessions": [
@@ -8558,7 +8551,8 @@
     "offered_by": "Science Teaching for Teachers",
     "lecturers": [
       "Prof. Giora Alexandron",
-      "Prof. Ron Blonder"
+      "Prof. Ron Blonder",
+      "Dr. Itsik Aroch"
     ],
     "semester": "2nd",
     "sessions": [
@@ -45306,7 +45300,7 @@
         "day_index": 3,
         "start": "10:15",
         "end": "12:00",
-        "location": "WISsE, Rm 3"
+        "location": "WISsE Yard"
       }
     ],
     "first_lecture": "10/03/2027",

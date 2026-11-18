@@ -1158,20 +1158,20 @@ function openCourseModal(c){
       await persistCustomEvents();
       renderSelected();
       renderCalendar();
-      flashSaved(document.getElementById('savePointsBtn'));
+      closeCourseModal();
     });
   } else if(isOwnerUser){
     document.getElementById('savePointsBtn').addEventListener('click', async () => {
       await setPoints(c, document.getElementById('pointsInput').value);
       renderCourseList();
       renderSelected();
-      flashSaved(document.getElementById('savePointsBtn'));
+      closeCourseModal();
     });
   } else if(isAdded){
     document.getElementById('saveMyPointsBtn').addEventListener('click', async () => {
       await setMyPoints(c, document.getElementById('myPointsInput').value);
       renderSelected();
-      flashSaved(document.getElementById('saveMyPointsBtn'));
+      closeCourseModal();
     });
   }
 
@@ -1445,12 +1445,7 @@ document.getElementById('modalOverlay').addEventListener('click', (e) => {
   if(e.target.id === 'modalOverlay' && overlayPressStartedOnBackdrop) closeCourseModal();
   overlayPressStartedOnBackdrop = false;
 });
-function flashSaved(btn){
-  const original = btn.dataset.label || btn.textContent;
-  btn.dataset.label = original;
-  btn.textContent = 'Saved ✓';
-  setTimeout(() => { btn.textContent = original; }, 1500);
-}
+
 document.addEventListener('keydown', (e) => {
   if(e.key === 'Escape') closeCourseModal();
 });

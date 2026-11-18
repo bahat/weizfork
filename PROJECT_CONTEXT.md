@@ -86,7 +86,8 @@ A flat JSON array of course objects. Each course:
   "course_code": "20274042",
   "prerequisites": "No",           // or real text; "No"/"N/A"/"None"/"-" normalized to "None" in the UI only
   "syllabus": "• Linear Groups,\n• Ergodic Theory,\n...",   // bulleted, from an HTML <ul><li> on the site
-  "learning_outcomes": "Upon successful completion..."       // from an HTML <p> on the site
+  "learning_outcomes": "Upon successful completion...",      // from an HTML <p> on the site
+  "evaluation_type": "Final assignment"                      // P30_EVALUATION_TYPE; set only by refresh_details.py (absent on ~3% of courses)
 }
 ```
 
